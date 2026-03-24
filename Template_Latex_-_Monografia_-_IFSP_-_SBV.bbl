@@ -36,9 +36,34 @@
 Dispon{\'\i}vel em: \url{http://www.btnomenclature.info}. Acesso em: 04 de out.
   de 2016.}
 
+\bibitem[Kumar 1992]{Kumar_1992}
+\abntrefinfo{Kumar}{KUMAR}{1992}
+{KUMAR, V. Algorithms for constraint-satisfaction problems: A survey.
+\textbf{AI Magazine}, v.~13, n.~1, p.~32, Mar. 1992.
+Dispon{\'\i}vel em:
+  \url{https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/976}.}
+
+\bibitem[Mackworth 1977]{MACKWORTH1977}
+\abntrefinfo{Mackworth}{MACKWORTH}{1977}
+{MACKWORTH, A.~K. Consistency in networks of relations.
+\textbf{Artificial Intelligence}, v.~8, n.~1, p. 99--118, 1977.
+ISSN 0004-3702.
+Dispon{\'\i}vel em:
+  \url{https://www.sciencedirect.com/science/article/pii/0004370277900078}.}
+
 \bibitem[Nelson e Cox 2014]{Nelson2014}
 \abntrefinfo{Nelson e Cox}{NELSON; COX}{2014}
 {NELSON, D.~L.; COX, M.~M. \textbf{{P}rincípios de {B}ioquímica de
   {L}ehninger}. 6. ed. Porto Alegre: Artmed, 2014. 1328~p.}
+
+\bibitem[Russell e Norvig 2010]{russel2010}
+\abntrefinfo{Russell e Norvig}{RUSSELL; NORVIG}{2010}
+{RUSSELL, S.; NORVIG, P. \textbf{Artificial Intelligence: A Modern Approach}.
+  3. ed. [S.l.]: Prentice Hall, 2010.}
+
+\bibitem[Sipser 2012]{sipser2012}
+\abntrefinfo{Sipser}{SIPSER}{2012}
+{SIPSER, M. \textbf{Introduction to the Theory of Computation}. 3. ed. [S.l.]:
+  Cengage Learning, 2012.}
 
 \end{thebibliography}

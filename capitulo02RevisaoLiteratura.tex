@@ -2,7 +2,34 @@
 \label{cap:02}
 
 \section{Problemas de Satisfação de Restrições (CSP)}
+Um Problema de Satisfação de Restrições (CSP) é definido por três componentes fundamentais: 
+um conjunto de variáveis $X = \{X_1, \ldots, X_n\}$, um conjunto de domínios $D = \{D_1, \ldots, D_n\}$, 
+onde cada $D_i$ contém os valores permitidos para a variável $X_i$, e um conjunto de restrições $C$ 
+que especifica as combinações válidas entre esses valores \cite{russel2010}. A resolução do 
+problema é alcançada quando se encontra uma atribuição completa e consistente, na qual todas as 
+variáveis recebem valores de seus domínios sem violar nenhuma restrição. 
+No domínio de compatibilidade de hardware, as categorias de componentes (processador, placa-mãe, memória RAM, GPU e fonte 
+de alimentação), constituem o conjunto $X$; os modelos disponíveis em cada categoria formam os domínios $D$; 
+e as regras físicas e elétricas de compatibilidade definem as restrições $C$.
 
+Um Problema de Satisfação de Restrições (CSP) é definido formalmente por um conjunto de variáveis,
+seus respectivos domínios de valores e um conjunto de restrições que limitam as combinações permitidas
+entre esses valores \cite{russel2010}. Diferente de busca em espaço de estados atômicos, onde o estado é uma "caixa preta"
+infivisível, o CSP utiliza uma representação fatorada. Essa estrutura permite que o problema seja visualizado como um
+grafo de restrições, facilitando a aplicação de métodos de busca que utilizam a estrutura do problema para guiar a solução \cite{Kumar_1992}
+
+A resolução de um CSP, em sua forma geral, pertence à classe de problemas NP-completos \cite{sipser2012}. Isso implica que,
+embora uma solução canditada possa ser verificada em tempo polinomial, o tempo necessário para encontrar essa solução cresce
+exponencialmente com o número de variáveis na pior hipótese. Devido a essa complexidade, algoritmos de busca puramente baseados
+em \textit{backtracking} podem ser ineficientes para problemas de larga escala, exigindo o uso de técnicas de poda e simplificação de
+domínio para tornar o processo computacionalmente viável \cite{russel2010}.
+
+Para reduzir o espaço de busca antes ou durante a execução do \textit{backtracking}, utilizam-se algoritmos de consistência.
+O algoritmo AC-3 (\textit{Arc Consistency Algorithm 3}), proposto por Mackworth \cite{MACKWORTH1977}, é um dos métodos mais difundidos
+para garantir a consistência de arco em redes de restrições binárias. Ele opera removendo valores dos domínios das variáveis
+que não possuem suporte em váriaveis vizinhas, propagando essas mudanças através de uma fila de arcos \cite{russel2010}. Essa
+técnica de pré-processamento é fundamental para identificar inconsistências locais que, se não resolvidas, causariam falhas
+repetitivas durante a busca global.
 
 Texto da revisão da literatura, dividido em seções e subseções.
 

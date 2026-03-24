@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  23 MAR 2026 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  23 MAR 2026 22:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1445,23 +1445,24 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 {C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 Cap\'{\i }tulo 2.
-<imagens/LogoIF_BRI10.jpg, id=324, 964.35281pt x 225.09094pt>
-File: imagens/LogoIF_BRI10.jpg Graphic file (type jpg)
-<use imagens/LogoIF_BRI10.jpg>
-Package pdftex.def Info: imagens/LogoIF_BRI10.jpg  used on input line 20.
-(pdftex.def)             Requested size: 289.30807pt x 67.52779pt.
-<imagens/exemploQuadro.png, id=327, 465.74pt x 243.91125pt>
-File: imagens/exemploQuadro.png Graphic file (type png)
-<use imagens/exemploQuadro.png>
-Package pdftex.def Info: imagens/exemploQuadro.png  used on input line 54.
-(pdftex.def)             Requested size: 326.01578pt x 170.7367pt.
 [19
 
- <./imagens/LogoIF_BRI10.jpg> <./imagens/exemploQuadro.png>] (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<imagens/LogoIF_BRI10.jpg, id=351, 964.35281pt x 225.09094pt>
+File: imagens/LogoIF_BRI10.jpg Graphic file (type jpg)
+<use imagens/LogoIF_BRI10.jpg>
+Package pdftex.def Info: imagens/LogoIF_BRI10.jpg  used on input line 47.
+(pdftex.def)             Requested size: 289.30807pt x 67.52779pt.
+<imagens/exemploQuadro.png, id=354, 465.74pt x 243.91125pt>
+File: imagens/exemploQuadro.png Graphic file (type png)
+<use imagens/exemploQuadro.png>
+Package pdftex.def Info: imagens/exemploQuadro.png  used on input line 81.
+(pdftex.def)             Requested size: 326.01578pt x 170.7367pt.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 71.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 71.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 98.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 98.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1469,65 +1470,65 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (fontes/ClasseExemplo.java)
+ (fontes/ClasseExemplo.java
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 106.
- [20{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] [21{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+(babel)             Reported on input line 5.
+ [20{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./imagens/LogoIF_BRI10.jpg> <./imagens/exemploQuadro.png>]) [21] [22]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 154.
+(Font)              <10> on input line 181.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 154.
+(Font)              <7> on input line 181.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 154.
-) (capitulo03Metodologia.tex [22]
+(Font)              <5> on input line 181.
+) (capitulo03Metodologia.tex [23]
 Cap\'{\i }tulo 3.
-) (capitulo04DescricaoGeraldoProduto.tex [23
+) (capitulo04DescricaoGeraldoProduto.tex [24
 
 ]
 Cap\'{\i }tulo 4.
-) (capitulo05ElicitacaodeRequisitosEAnalise.tex [24
+) (capitulo05ElicitacaodeRequisitosEAnalise.tex [25
 
 ]
 Cap\'{\i }tulo 5.
 
-LaTeX Warning: Reference `tab:reqFuncionais' on page 25 undefined on input line 20.
+LaTeX Warning: Reference `tab:reqFuncionais' on page 26 undefined on input line 20.
 
-[25
+[26
 
 ]
-<imagens/DiagramadeCasosdeUso.png, id=440, 407.27156pt x 204.01219pt>
+<imagens/DiagramadeCasosdeUso.png, id=462, 407.27156pt x 204.01219pt>
 File: imagens/DiagramadeCasosdeUso.png Graphic file (type png)
 <use imagens/DiagramadeCasosdeUso.png>
 Package pdftex.def Info: imagens/DiagramadeCasosdeUso.png  used on input line 97.
 (pdftex.def)             Requested size: 407.27055pt x 204.01169pt.
- [26]
+ [27]
 Overfull \hbox (10.31131pt too wide) in paragraph at lines 110--124
  [][] 
  []
 
-[27 <./imagens/DiagramadeCasosdeUso.png>] [28]
-<imagens/ModelodeDominio.png, id=460, 232.61906pt x 396.7322pt>
+[28 <./imagens/DiagramadeCasosdeUso.png>] [29]
+<imagens/ModelodeDominio.png, id=482, 232.61906pt x 396.7322pt>
 File: imagens/ModelodeDominio.png Graphic file (type png)
 <use imagens/ModelodeDominio.png>
 Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 194.
 (pdftex.def)             Requested size: 232.61848pt x 396.73122pt.
- [29] [30 <./imagens/ModelodeDominio.png>]
-<imagens/DiagramadeAtividades.png, id=480, 355.3275pt x 235.63031pt>
+ [30] [31 <./imagens/ModelodeDominio.png>]
+<imagens/DiagramadeAtividades.png, id=503, 355.3275pt x 235.63031pt>
 File: imagens/DiagramadeAtividades.png Graphic file (type png)
 <use imagens/DiagramadeAtividades.png>
 Package pdftex.def Info: imagens/DiagramadeAtividades.png  used on input line 227.
 (pdftex.def)             Requested size: 355.32661pt x 235.62973pt.
- [31
+ [32
 
 ]
-<imagens/DiagramadeEstados.png, id=487, 386.19281pt x 204.765pt>
+<imagens/DiagramadeEstados.png, id=509, 386.19281pt x 204.765pt>
 File: imagens/DiagramadeEstados.png Graphic file (type png)
 <use imagens/DiagramadeEstados.png>
 Package pdftex.def Info: imagens/DiagramadeEstados.png  used on input line 247.
 (pdftex.def)             Requested size: 386.19185pt x 204.76448pt.
-) (capitulo06ProjetodeSoftware.tex [32 <./imagens/DiagramadeAtividades.png> <./imagens/DiagramadeEstados.png>]
+) (capitulo06ProjetodeSoftware.tex [33 <./imagens/DiagramadeAtividades.png> <./imagens/DiagramadeEstados.png>]
 Cap\'{\i }tulo 6.
-[33
+[34
 
 ]
 Overfull \hbox (54.58464pt too wide) in paragraph at lines 52--59
@@ -1544,7 +1545,7 @@ Overfull \hbox (117.79713pt too wide) in paragraph at lines 106--133
  [][] 
  []
 
-[34]
+[35]
 Overfull \hbox (101.99954pt too wide) in paragraph at lines 144--163
  [][] 
  []
@@ -1554,50 +1555,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--179
 \T1/lmr/m/n/12 (-9) usp . br / plugin^^\le . php / 383727 / mod _ resource / content / 2 / Aula07 _ DiagramaDeClasse . pdf>[]$[][]
  []
 
-[35]
-<imagens/DiagramadeSequencia.png, id=515, 322.20375pt x 223.58531pt>
+[36]
+<imagens/DiagramadeSequencia.png, id=537, 322.20375pt x 223.58531pt>
 File: imagens/DiagramadeSequencia.png Graphic file (type png)
 <use imagens/DiagramadeSequencia.png>
 Package pdftex.def Info: imagens/DiagramadeSequencia.png  used on input line 200.
 (pdftex.def)             Requested size: 322.20296pt x 223.58475pt.
-<imagens/ProjetoArquitetural.png, id=517, 426.84468pt x 294.34969pt>
+<imagens/ProjetoArquitetural.png, id=539, 426.84468pt x 294.34969pt>
 File: imagens/ProjetoArquitetural.png Graphic file (type png)
 <use imagens/ProjetoArquitetural.png>
 Package pdftex.def Info: imagens/ProjetoArquitetural.png  used on input line 229.
 (pdftex.def)             Requested size: 426.84364pt x 294.34895pt.
- [36 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [37 <./imagens/ProjetoArquitetural.png>]
+ [37 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [38 <./imagens/ProjetoArquitetural.png>]
 Cap\'{\i }tulo 7.
-) (capitulo08Teste.tex [38
+) (capitulo08Teste.tex [39
 
 ]
 Cap\'{\i }tulo 8.
-[39
+[40
 
 ]
-<imagens/ExcemplodeCasodeTeste.png, id=536, 417.81094pt x 328.22626pt>
+<imagens/ExcemplodeCasodeTeste.png, id=558, 417.81094pt x 328.22626pt>
 File: imagens/ExcemplodeCasodeTeste.png Graphic file (type png)
 <use imagens/ExcemplodeCasodeTeste.png>
 Package pdftex.def Info: imagens/ExcemplodeCasodeTeste.png  used on input line 73.
 (pdftex.def)             Requested size: 417.80992pt x 328.22545pt.
- [40]) (capitulo09Implantacao.tex [41 <./imagens/ExcemplodeCasodeTeste.png>]
+ [41]) (capitulo09Implantacao.tex [42 <./imagens/ExcemplodeCasodeTeste.png>]
 Cap\'{\i }tulo 9.
-) (capitulo10ResultadosDiscussao.tex [42
+) (capitulo10ResultadosDiscussao.tex [43
 
 ]
 Cap\'{\i }tulo 10.
-) (capitulo11TrabalhosRelacionados.tex [43
+) (capitulo11TrabalhosRelacionados.tex [44
 
 ]
 Cap\'{\i }tulo 11.
-) (capitulo12Conclusoes.tex [44
+) (capitulo12Conclusoes.tex [45
 
 ]
 Cap\'{\i }tulo 12.
-) (capitulo13Cronograma.tex [45
+) (capitulo13Cronograma.tex [46
 
 ]
 Cap\'{\i }tulo 13.
-<imagens/cronograma.png, id=562, 423.83344pt x 100.87688pt>
+<imagens/cronograma.png, id=584, 423.83344pt x 100.87688pt>
 File: imagens/cronograma.png Graphic file (type png)
 <use imagens/cronograma.png>
 Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
@@ -1606,51 +1607,51 @@ Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
 \tf@brf=\write6
 \openout6 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.brf'.
 
- [46
+ [47
 
  <./imagens/cronograma.png>]
 bibitemlist
-) (pos01Apendices.tex [47
+) (pos01Apendices.tex [48
 
 ]
 AP\^ENDICE A.
-[48
-
-]
-AP\^ENDICE B.
 [49
 
 ]
-AP\^ENDICE C.
+AP\^ENDICE B.
 [50
 
 ]
-AP\^ENDICE D.
+AP\^ENDICE C.
 [51
 
 ]
+AP\^ENDICE D.
+[52
+
+]
 AP\^ENDICE E.
-) (pos02Anexos.tex [52
+) (pos02Anexos.tex [53
 
 ]
 ANEXO A.
-[53
-
-]
-ANEXO B.
 [54
 
 ]
-ANEXO C.
+ANEXO B.
 [55
 
 ]
-ANEXO D.
+ANEXO C.
 [56
 
 ]
+ANEXO D.
+[57
+
+]
 ANEXO E.
-) [57
+) [58
 
 ]
 \tf@lof=\write7
@@ -1680,20 +1681,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Template_Latex_-_Monografia_-_IFSP_-_SBV.brf' has not changed.
-(rerunfilecheck)             Checksum: EDE96DC47F80BF0D3E6A0103D8B7091A;1180.
+(rerunfilecheck)             Checksum: F2D0C973110D53298877A9831F9A4AEE;1512.
  ) 
 Here is how much of TeX's memory you used:
- 37577 strings out of 467867
- 685823 string characters out of 5416882
- 1432439 words of memory out of 5000000
- 65300 multiletter control sequences out of 15000+600000
- 732881 words of font info for 211 fonts, out of 8000000 for 9000
+ 37625 strings out of 467867
+ 686552 string characters out of 5416882
+ 1432455 words of memory out of 5000000
+ 65337 multiletter control sequences out of 15000+600000
+ 733198 words of font info for 214 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,1048b,1347s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,1048b,2234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (57 pages, 1442768 bytes).
+Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (58 pages, 1456043 bytes).
 PDF statistics:
- 982 PDF objects out of 1000 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
+ 1017 PDF objects out of 1200 (max. 8388607)
+ 221 named destinations out of 1000 (max. 500000)
  59013 words of extra memory for PDF output out of 61914 (max. 10000000)
 

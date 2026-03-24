@@ -578,6 +578,8 @@ INPUT .\capitulo02RevisaoLiteratura.tex
 INPUT .\capitulo02RevisaoLiteratura.tex
 INPUT capitulo02RevisaoLiteratura.tex
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
+INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT .\imagens\LogoIF_BRI10.jpg
 INPUT .\imagens\LogoIF_BRI10.jpg
 INPUT .\imagens\LogoIF_BRI10.jpg
@@ -603,10 +605,8 @@ INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmt
 INPUT fontes\ClasseExemplo.java
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
-INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
-INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
