@@ -5,36 +5,22 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[Abedi et al. 2014]{Abedi2014}
-\abntrefinfo{Abedi et al.}{ABEDI et al.}{2014}
-{ABEDI, Z. et al. {A}cute, sublethal, and combination effects of azadirachtin
-  and {B}acillus thuringiensis on the cotton bollworm, {H}elicoverpa armigera.
-\textbf{J. Insect Sci.}, v.~14, p. 30--37, 2014.}
+\bibitem[Borodin, Cashman e Magen 2011]{borodin2011}
+\abntrefinfo{Borodin, Cashman e Magen}{BORODIN; CASHMAN; MAGEN}{2011}
+{BORODIN, A.; CASHMAN, D.; MAGEN, A. How well can primal-dual and local-ratio
+  algorithms perform?
+\textbf{ACM Trans. Algorithms}, Association for Computing Machinery, New York,
+  NY, USA, v.~7, n.~3, jul. 2011.
+ISSN 1549-6325.
+Dispon{\'\i}vel em:
+  \url{https://doi-org.ez338.periodicos.capes.gov.br/10.1145/1978782.1978784}.}
 
-\bibitem[Agaisse e Lereclus 1995]{Agaisse1995}
-\abntrefinfo{Agaisse e Lereclus}{AGAISSE; LERECLUS}{1995}
-{AGAISSE, H.; LERECLUS, D. {H}ow does {B}acillus thuringiensis produce so much
-  insecticidal crystal protein?
-\textbf{J. Bacteriol.}, v.~177, n.~21, p. 6027--6032, 1995.}
-
-\bibitem[Agapito-Tenfen et al. 2014]{AgapitoTenfen2014}
-\abntrefinfo{Agapito-Tenfen et al.}{AGAPITO-TENFEN et al.}{2014}
-{AGAPITO-TENFEN, S.~Z. et al. {E}ffect of stacking insecticidal cry and
-  herbicide tolerance epsps transgenes on transgenic maize proteome.
-\textbf{BMC Plant Biol}, v.~14, p.~346, 2014.}
-
-\bibitem[Braga 2008]{braga2008algoritmos}
-\abntrefinfo{Braga}{BRAGA}{2008}
-{BRAGA, D. F. M. M. d.~S. Algoritmos de processamento da linguagem natural para
-  sistemas de conversao texto-fala em portugu{\^e}s.
-2008.}
-
-\bibitem[Crickmore et al. 2016]{BtNomenclature2016}
-\abntrefinfo{Crickmore et al.}{CRICKMORE et al.}{2016}
-{CRICKMORE, N. et al. \textbf{{B}acillus thuringiensis toxin nomenclature}.
-  2016.
-Dispon{\'\i}vel em: \url{http://www.btnomenclature.info}. Acesso em: 04 de out.
-  de 2016.}
+\bibitem[Cormen et al. 2001]{cormen01}
+\abntrefinfo{Cormen et al.}{CORMEN et al.}{2001}
+{CORMEN, T.~H. et al. \textbf{Introduction to Algorithms}. 2nd. ed. The MIT
+  Press, 2001.
+ISBN 0262032937. Dispon{\'\i}vel em:
+  \url{http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262032937\%3FSubscriptionId\%3D13CT5CVB80YFWJEPWS02\%26tag\%3Dws\%26linkCode\%3Dxm2\%26camp\%3D2025\%26creative\%3D165953\%26creativeASIN\%3D0262032937}.}
 
 \bibitem[Kumar 1992]{Kumar_1992}
 \abntrefinfo{Kumar}{KUMAR}{1992}
@@ -43,7 +29,7 @@ Dispon{\'\i}vel em: \url{http://www.btnomenclature.info}. Acesso em: 04 de out.
 Dispon{\'\i}vel em:
   \url{https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/976}.}
 
-\bibitem[Mackworth 1977]{MACKWORTH1977}
+\bibitem[Mackworth 1977]{mackworth1977}
 \abntrefinfo{Mackworth}{MACKWORTH}{1977}
 {MACKWORTH, A.~K. Consistency in networks of relations.
 \textbf{Artificial Intelligence}, v.~8, n.~1, p. 99--118, 1977.
@@ -51,10 +37,15 @@ ISSN 0004-3702.
 Dispon{\'\i}vel em:
   \url{https://www.sciencedirect.com/science/article/pii/0004370277900078}.}
 
-\bibitem[Nelson e Cox 2014]{Nelson2014}
-\abntrefinfo{Nelson e Cox}{NELSON; COX}{2014}
-{NELSON, D.~L.; COX, M.~M. \textbf{{P}rincípios de {B}ioquímica de
-  {L}ehninger}. 6. ed. Porto Alegre: Artmed, 2014. 1328~p.}
+\bibitem[Papadimitriou e Yannakakis 1996]{PAPADIMITRIOU1996161}
+\abntrefinfo{Papadimitriou e Yannakakis}{PAPADIMITRIOU; YANNAKAKIS}{1996}
+{PAPADIMITRIOU, C.~H.; YANNAKAKIS, M. On limited nondeterminism and the
+  complexity of the v-c dimension.
+\textbf{Journal of Computer and System Sciences}, v.~53, n.~2, p. 161--170,
+  1996.
+ISSN 0022-0000.
+Dispon{\'\i}vel em:
+  \url{https://www.sciencedirect.com/science/article/pii/S0022000096900586}.}
 
 \bibitem[Russell e Norvig 2010]{russel2010}
 \abntrefinfo{Russell e Norvig}{RUSSELL; NORVIG}{2010}

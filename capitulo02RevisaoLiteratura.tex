@@ -2,34 +2,77 @@
 \label{cap:02}
 
 \section{Problemas de Satisfação de Restrições (CSP)}
-Um Problema de Satisfação de Restrições (CSP) é definido por três componentes fundamentais: 
-um conjunto de variáveis $X = \{X_1, \ldots, X_n\}$, um conjunto de domínios $D = \{D_1, \ldots, D_n\}$, 
-onde cada $D_i$ contém os valores permitidos para a variável $X_i$, e um conjunto de restrições $C$ 
-que especifica as combinações válidas entre esses valores \cite{russel2010}. A resolução do 
-problema é alcançada quando se encontra uma atribuição completa e consistente, na qual todas as 
-variáveis recebem valores de seus domínios sem violar nenhuma restrição. 
-No domínio de compatibilidade de hardware, as categorias de componentes (processador, placa-mãe, memória RAM, GPU e fonte 
-de alimentação), constituem o conjunto $X$; os modelos disponíveis em cada categoria formam os domínios $D$; 
-e as regras físicas e elétricas de compatibilidade definem as restrições $C$.
 
-Um Problema de Satisfação de Restrições (CSP) é definido formalmente por um conjunto de variáveis,
-seus respectivos domínios de valores e um conjunto de restrições que limitam as combinações permitidas
-entre esses valores \cite{russel2010}. Diferente de busca em espaço de estados atômicos, onde o estado é uma "caixa preta"
-infivisível, o CSP utiliza uma representação fatorada. Essa estrutura permite que o problema seja visualizado como um
-grafo de restrições, facilitando a aplicação de métodos de busca que utilizam a estrutura do problema para guiar a solução \cite{Kumar_1992}
+Um Problema de Satisfação de Restrições (CSP) é definido por três 
+componentes fundamentais: um conjunto de variáveis 
+$X = \{X_1, \ldots, X_n\}$, um conjunto de domínios 
+$D = \{D_1, \ldots, D_n\}$, onde cada $D_i$ contém os valores 
+permitidos para a variável $X_i$, e um conjunto de restrições $C$ 
+que especifica as combinações válidas entre esses valores 
+\cite{russel2010}. A resolução do problema é alcançada quando se 
+encontra uma atribuição completa e consistente, na qual todas as 
+variáveis recebem valores de seus domínios sem violar nenhuma 
+restrição. Diferentemente de abordagens de busca em espaço de estados 
+atômicos, onde o estado é tratado como uma ''caixa preta'' indivisível, 
+o CSP adota uma representação fatorada que expõe a estrutura interna 
+do problema. Essa característica permite modelá-lo como um grafo de 
+restrições, no qual os nós representam variáveis e as arestas 
+representam restrições binárias entre elas, viabilizando métodos de 
+busca que exploram essa estrutura para guiar a solução de forma mais 
+eficiente \cite{Kumar_1992}. No domínio de compatibilidade de hardware, 
+as categorias de componentes --- processador, placa-mãe, memória RAM, 
+GPU e fonte de alimentação --- constituem o conjunto $X$; os modelos 
+disponíveis em cada categoria formam os domínios $D$; e as regras 
+físicas e elétricas de compatibilidade definem as restrições $C$.
 
-A resolução de um CSP, em sua forma geral, pertence à classe de problemas NP-completos \cite{sipser2012}. Isso implica que,
-embora uma solução canditada possa ser verificada em tempo polinomial, o tempo necessário para encontrar essa solução cresce
-exponencialmente com o número de variáveis na pior hipótese. Devido a essa complexidade, algoritmos de busca puramente baseados
-em \textit{backtracking} podem ser ineficientes para problemas de larga escala, exigindo o uso de técnicas de poda e simplificação de
-domínio para tornar o processo computacionalmente viável \cite{russel2010}.
+A resolução de um CSP, em sua forma geral, pertence à classe de 
+problemas NP-completos \cite{sipser2012}. Isso implica que, embora uma 
+solução candidata possa ser verificada em tempo polinomial, o tempo 
+necessário para encontrá-la cresce exponencialmente com o número de 
+variáveis na pior hipótese. Devido a essa complexidade, algoritmos de 
+busca puramente baseados em \textit{backtracking} tornam-se ineficientes 
+para problemas de larga escala, exigindo técnicas de poda e 
+simplificação de domínio para tornar o processo computacionalmente 
+viável \cite{russel2010}.
 
-Para reduzir o espaço de busca antes ou durante a execução do \textit{backtracking}, utilizam-se algoritmos de consistência.
-O algoritmo AC-3 (\textit{Arc Consistency Algorithm 3}), proposto por Mackworth \cite{MACKWORTH1977}, é um dos métodos mais difundidos
-para garantir a consistência de arco em redes de restrições binárias. Ele opera removendo valores dos domínios das variáveis
-que não possuem suporte em váriaveis vizinhas, propagando essas mudanças através de uma fila de arcos \cite{russel2010}. Essa
-técnica de pré-processamento é fundamental para identificar inconsistências locais que, se não resolvidas, causariam falhas
-repetitivas durante a busca global.
+Para reduzir o espaço de busca antes ou durante a execução do 
+\textit{backtracking}, utilizam-se algoritmos de consistência. O 
+algoritmo AC-3 (\textit{Arc Consistency Algorithm 3}), proposto por 
+\citeauthorandyear{mackworth1977}, é amplamente adotado na literatura 
+de CSP para garantir a consistência de arco em redes de restrições 
+binárias \cite{Kumar_1992}. Ele opera removendo valores dos domínios 
+das variáveis que não possuem suporte em variáveis vizinhas, propagando 
+essas mudanças por meio de uma fila de arcos até que nenhuma redução 
+adicional seja possível \cite{russel2010}. Essa técnica de 
+pré-processamento é fundamental para identificar inconsistências locais 
+que, caso não resolvidas antecipadamente, causariam falhas repetitivas 
+durante a busca global.
+
+\section{Complexidade computacional}
+O estudo da complexidade computacional fundamenta-se na classificação de problemas de decisão com base nos recursos algorítmicos
+necessários para sua resolução, sendo os mais comuns o tempo de execução e o espaço de memória, sendo classificados em classes
+P e NP. A classe P inclui problemas que podem ser resolvidos de forma determinística em tempo polinomial, contendo algoritmos
+considerados eficientes e tratáveis para entradas de grande escala. De outro modo, a classe NP contém problemas cujas soluções
+propostas podem ser verificadas quanto à sua precisão em tempo polinomial, ainda que não se conheça, até o presente momento,
+um algoritmo eficiente para encontrá-las de forma direta \cite{cormen01}. A questão fundamental sobre a equivalência entre essas classes,
+isto é, se todo problema cuja solução é rapidamente verificável também possui uma solução rapidamente computável (P = NP), permanece
+não apenas como  o problema em aberto mais significativo da ciência da computação teórica, mas também como um dos sete Problemas
+do Milênio enelcados pelo \textit{Clay Mathematics Institute}, cuja resolução é tida como um dos maiores desafios da
+matemática contemporânea \cite{sipser2012}.
+
+Dentro do conjunto da classe NP, a literatura demonstra que existe um espectro complexo de dificuldade, incluindo classes intermediárias
+baseadas em não-determinismo limitado que podem ser resolvidas em tempo subexponencial \cite{PAPADIMITRIOU1996161}. O Problema de
+Satisfação de Restrições (CSP), contudo, não pertence a essas classes mais brandas, enquadrando-se rigorosamente no topo dessa 
+hierarquia como um problema NP-completo \cite{sipser2012}. A complexidade do CSP pode ser demonstrada através de uma relação
+direta com problemas canônicos como o Problema da Satisfabilidade Booleana (SAT). Consequentemente, a demonstração teórica de que
+CSP é NP-completo atesta que o problema possui complexidade inerente máxima dentro de NP, implicando a inexistência de uma algoritmo
+de tempo polinomial para solucioná-lo de forma ótima, a menos que P seja igual a NP \cite{cormen01,sipser2012}.
+
+A natureza NP-completa do modelo CSP impôe duas limitações severas à arquitetura do sistema de verificaões de compatibilidade de hardware.
+Primeiramente, a avaliação de combinações interdependentes de componentes torna a abordagem de força bruta temporalmente inviável
+devido à explosão combinatória \cite{borodin2011}. Em segundo lugar, tentativas de mitigar esse custo processual através do mapeamento
+exaustivo de regras lógicas estáticas (estruturas condicionais de hardware) sofrem de grave ineficiência espacial. Conforme demonstrado por
+
 
 Texto da revisão da literatura, dividido em seções e subseções.
 

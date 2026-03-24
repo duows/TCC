@@ -1,29 +1,37 @@
 \backcite {russel2010}{{19}{2.1}{section.2.1}}
-\backcite {russel2010}{{19}{2.1}{section.2.1}}
 \backcite {Kumar_1992}{{19}{2.1}{section.2.1}}
 \backcite {sipser2012}{{19}{2.1}{section.2.1}}
 \backcite {russel2010}{{19}{2.1}{section.2.1}}
-\backcite {MACKWORTH1977}{{19}{2.1}{section.2.1}}
+\backcite {mackworth1977}{{19}{2.1}{section.2.1}}
+\backcite {mackworth1977}{{19}{2.1}{section.2.1}}
+\backcite {Kumar_1992}{{19}{2.1}{section.2.1}}
 \backcite {russel2010}{{19}{2.1}{section.2.1}}
-\backcite {Agaisse1995}{{22}{2.1}{Item.7}}
-\backcite {Abedi2014}{{22}{2.1}{Item.7}}
-\backcite {BtNomenclature2016}{{22}{2.1}{Item.7}}
-\backcite {Abedi2014, Agaisse1995}{{22}{2.1}{Item.7}}
-\backcite {Abedi2014, Agaisse1995}{{22}{2.1}{Item.7}}
-\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{22}{2.1}{Item.7}}
-\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{22}{2.1}{Item.7}}
-\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{22}{2.1}{Item.7}}
-\backcite {Agaisse1995}{{23}{2.1}{Item.7}}
-\backcite {Agaisse1995}{{23}{2.1}{Item.7}}
-\backcite {Abedi2014}{{23}{2.1}{Item.7}}
-\backcite {Abedi2014}{{23}{2.1}{Item.7}}
-\backcite {BtNomenclature2016}{{23}{2.1}{Item.7}}
-\backcite {BtNomenclature2016}{{23}{2.1}{Item.7}}
-\backcite {Nelson2014}{{23}{2.1}{Item.7}}
-\backcite {Agaisse1995}{{23}{2.1}{Item.7}}
-\backcite {braga2008algoritmos}{{25}{4}{chapter.4}}
-\backcite {braga2008algoritmos}{{25}{4}{chapter.4}}
-\backcite {braga2008algoritmos}{{26}{5.2.1}{subsection.5.2.1}}
-\backcite {braga2008algoritmos}{{26}{5.2.1}{subsection.5.2.1}}
-\backcite {braga2008algoritmos}{{29}{5.4}{section.5.4}}
-\backcite {braga2008algoritmos}{{29}{5.4}{section.5.4}}
+\backcite {cormen01}{{20}{2.2}{section.2.2}}
+\backcite {sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {PAPADIMITRIOU1996161}{{20}{2.2}{section.2.2}}
+\backcite {sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {cormen01,sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {cormen01,sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {borodin2011}{{20}{2.2}{section.2.2}}
+\backcite {Agaisse1995}{{23}{2.2}{Item.7}}
+\backcite {Abedi2014}{{23}{2.2}{Item.7}}
+\backcite {BtNomenclature2016}{{23}{2.2}{Item.7}}
+\backcite {Abedi2014, Agaisse1995}{{23}{2.2}{Item.7}}
+\backcite {Abedi2014, Agaisse1995}{{23}{2.2}{Item.7}}
+\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{23}{2.2}{Item.7}}
+\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{23}{2.2}{Item.7}}
+\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{23}{2.2}{Item.7}}
+\backcite {Agaisse1995}{{23}{2.2}{Item.7}}
+\backcite {Agaisse1995}{{23}{2.2}{Item.7}}
+\backcite {Abedi2014}{{23}{2.2}{Item.7}}
+\backcite {Abedi2014}{{23}{2.2}{Item.7}}
+\backcite {BtNomenclature2016}{{23}{2.2}{Item.7}}
+\backcite {BtNomenclature2016}{{23}{2.2}{Item.7}}
+\backcite {Nelson2014}{{24}{2.2}{Item.7}}
+\backcite {Agaisse1995}{{24}{2.2}{Item.7}}
+\backcite {braga2008algoritmos}{{26}{4}{chapter.4}}
+\backcite {braga2008algoritmos}{{26}{4}{chapter.4}}
+\backcite {braga2008algoritmos}{{27}{5.2.1}{subsection.5.2.1}}
+\backcite {braga2008algoritmos}{{27}{5.2.1}{subsection.5.2.1}}
+\backcite {braga2008algoritmos}{{30}{5.4}{section.5.4}}
+\backcite {braga2008algoritmos}{{30}{5.4}{section.5.4}}

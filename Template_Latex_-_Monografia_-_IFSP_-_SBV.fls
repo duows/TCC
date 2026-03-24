@@ -586,6 +586,7 @@ INPUT .\imagens\LogoIF_BRI10.jpg
 INPUT .\imagens\LogoIF_BRI10.jpg
 INPUT .\imagens\LogoIF_BRI10.jpg
 INPUT .\imagens\LogoIF_BRI10.jpg
+INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT .\imagens\exemploQuadro.png
 INPUT .\imagens\exemploQuadro.png
 INPUT .\imagens\exemploQuadro.png
@@ -603,7 +604,6 @@ INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
 INPUT fontes\ClasseExemplo.java
-INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
@@ -622,6 +622,7 @@ INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr7.tfm
 INPUT .\capitulo03Metodologia.tex
 INPUT .\capitulo03Metodologia.tex
@@ -759,6 +760,8 @@ OUTPUT Template_Latex_-_Monografia_-_IFSP_-_SBV.toc
 INPUT Template_Latex_-_Monografia_-_IFSP_-_SBV.aux
 INPUT .\Template_Latex_-_Monografia_-_IFSP_-_SBV.brf
 INPUT .\Template_Latex_-_Monografia_-_IFSP_-_SBV.brf
+INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Henrique\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
