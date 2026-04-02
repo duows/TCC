@@ -1,79 +1,181 @@
 \chapter{Revisão da Literatura}
 \label{cap:02}
-
+ 
+% ============================================================
 \section{Problemas de Satisfação de Restrições (CSP)}
-
-Um Problema de Satisfação de Restrições (CSP) é definido por três 
-componentes fundamentais: um conjunto de variáveis 
-$X = \{X_1, \ldots, X_n\}$, um conjunto de domínios 
-$D = \{D_1, \ldots, D_n\}$, onde cada $D_i$ contém os valores 
-permitidos para a variável $X_i$, e um conjunto de restrições $C$ 
-que especifica as combinações válidas entre esses valores 
-\cite{russel2010}. A resolução do problema é alcançada quando se 
-encontra uma atribuição completa e consistente, na qual todas as 
-variáveis recebem valores de seus domínios sem violar nenhuma 
-restrição. Diferentemente de abordagens de busca em espaço de estados 
-atômicos, onde o estado é tratado como uma ''caixa preta'' indivisível, 
-o CSP adota uma representação fatorada que expõe a estrutura interna 
-do problema. Essa característica permite modelá-lo como um grafo de 
-restrições, no qual os nós representam variáveis e as arestas 
-representam restrições binárias entre elas, viabilizando métodos de 
-busca que exploram essa estrutura para guiar a solução de forma mais 
-eficiente \cite{Kumar_1992}. No domínio de compatibilidade de hardware, 
-as categorias de componentes --- processador, placa-mãe, memória RAM, 
-GPU e fonte de alimentação --- constituem o conjunto $X$; os modelos 
-disponíveis em cada categoria formam os domínios $D$; e as regras 
-físicas e elétricas de compatibilidade definem as restrições $C$.
-
-A resolução de um CSP, em sua forma geral, pertence à classe de 
-problemas NP-completos \cite{sipser2012}. Isso implica que, embora uma 
-solução candidata possa ser verificada em tempo polinomial, o tempo 
-necessário para encontrá-la cresce exponencialmente com o número de 
-variáveis na pior hipótese. Devido a essa complexidade, algoritmos de 
-busca puramente baseados em \textit{backtracking} tornam-se ineficientes 
-para problemas de larga escala, exigindo técnicas de poda e 
-simplificação de domínio para tornar o processo computacionalmente 
-viável \cite{russel2010}.
-
-Para reduzir o espaço de busca antes ou durante a execução do 
-\textit{backtracking}, utilizam-se algoritmos de consistência. O 
-algoritmo AC-3 (\textit{Arc Consistency Algorithm 3}), proposto por 
-\citeauthorandyear{mackworth1977}, é amplamente adotado na literatura 
-de CSP para garantir a consistência de arco em redes de restrições 
-binárias \cite{Kumar_1992}. Ele opera removendo valores dos domínios 
-das variáveis que não possuem suporte em variáveis vizinhas, propagando 
-essas mudanças por meio de uma fila de arcos até que nenhuma redução 
-adicional seja possível \cite{russel2010}. Essa técnica de 
-pré-processamento é fundamental para identificar inconsistências locais 
-que, caso não resolvidas antecipadamente, causariam falhas repetitivas 
-durante a busca global.
-
-\section{Complexidade computacional}
-O estudo da complexidade computacional fundamenta-se na classificação de problemas de decisão com base nos recursos algorítmicos
-necessários para sua resolução, sendo os mais comuns o tempo de execução e o espaço de memória, sendo classificados em classes
-P e NP. A classe P inclui problemas que podem ser resolvidos de forma determinística em tempo polinomial, contendo algoritmos
-considerados eficientes e tratáveis para entradas de grande escala. De outro modo, a classe NP contém problemas cujas soluções
-propostas podem ser verificadas quanto à sua precisão em tempo polinomial, ainda que não se conheça, até o presente momento,
-um algoritmo eficiente para encontrá-las de forma direta \cite{cormen01}. A questão fundamental sobre a equivalência entre essas classes,
-isto é, se todo problema cuja solução é rapidamente verificável também possui uma solução rapidamente computável (P = NP), permanece
-não apenas como  o problema em aberto mais significativo da ciência da computação teórica, mas também como um dos sete Problemas
-do Milênio enelcados pelo \textit{Clay Mathematics Institute}, cuja resolução é tida como um dos maiores desafios da
-matemática contemporânea \cite{sipser2012}.
-
-Dentro do conjunto da classe NP, a literatura demonstra que existe um espectro complexo de dificuldade, incluindo classes intermediárias
-baseadas em não-determinismo limitado que podem ser resolvidas em tempo subexponencial \cite{PAPADIMITRIOU1996161}. O Problema de
-Satisfação de Restrições (CSP), contudo, não pertence a essas classes mais brandas, enquadrando-se rigorosamente no topo dessa 
-hierarquia como um problema NP-completo \cite{sipser2012}. A complexidade do CSP pode ser demonstrada através de uma relação
-direta com problemas canônicos como o Problema da Satisfabilidade Booleana (SAT). Consequentemente, a demonstração teórica de que
-CSP é NP-completo atesta que o problema possui complexidade inerente máxima dentro de NP, implicando a inexistência de uma algoritmo
-de tempo polinomial para solucioná-lo de forma ótima, a menos que P seja igual a NP \cite{cormen01,sipser2012}.
-
-A natureza NP-completa do modelo CSP impôe duas limitações severas à arquitetura do sistema de verificaões de compatibilidade de hardware.
-Primeiramente, a avaliação de combinações interdependentes de componentes torna a abordagem de força bruta temporalmente inviável
-devido à explosão combinatória \cite{borodin2011}. Em segundo lugar, tentativas de mitigar esse custo processual através do mapeamento
-exaustivo de regras lógicas estáticas (estruturas condicionais de hardware) sofrem de grave ineficiência espacial. Conforme demonstrado por
-
-
+\label{sec:csp}
+% ============================================================
+ 
+Um Problema de Satisfação de Restrições (CSP) é formalmente caracterizado
+por uma tripla $\langle X, D, C \rangle$, na qual $X = \{X_1, \ldots, X_n\}$
+denota um conjunto finito de variáveis, $D = \{D_1, \ldots, D_n\}$ representa
+os respectivos domínios, de modo que cada $D_i$ delimita os valores admissíveis
+para $X_i$, e $C$ reúne as restrições que impõem condições sobre as combinações
+válidas de valores \cite{russel2010}. Cada restrição $C_j$ é expressa como um
+par $\langle \textit{scope}, \textit{rel} \rangle$, em que $\textit{scope}$ é
+uma tupla de variáveis participantes e $\textit{rel}$ define os valores que
+essas variáveis podem assumir conjuntamente \cite{russel2010}. Diz-se que o
+problema está resolvido quando se obtém uma atribuição completa e consistente:
+uma função que associa a cada variável um valor de seu domínio sem infringir
+nenhuma restrição de $C$.
+ 
+A aplicação dessa formalização ao domínio de compatibilidade de hardware é
+direta e natural. As categorias de componentes, como processador, placa-mãe,
+memória RAM, GPU e fonte de alimentação, constituem o conjunto de variáveis $X$;
+os modelos comercialmente disponíveis em cada categoria formam os respectivos
+domínios $D$; e o conjunto de restrições $C$ encapsula as regras físicas e
+elétricas que governam a compatibilidade entre esses componentes, tais como a
+conformidade de soquete entre processador e placa-mãe, o padrão de memória
+suportado e a capacidade energética exigida. Essa correspondência torna o CSP
+não apenas uma metáfora conveniente, mas o arcabouço formal mais adequado para
+modelar o problema de montagem e validação de configurações de hardware.
+ 
+A principal distinção entre o CSP e as abordagens clássicas de busca em espaço
+de estados reside na representação fatorada que aquele adota: em vez de tratar
+o estado como uma entidade atômica e indivisível, o CSP expõe a estrutura
+interna do problema por meio de variáveis e restrições explícitas, permitindo
+modelá-lo como um grafo de restrições no qual os vértices correspondem às
+variáveis e as arestas codificam restrições binárias entre pares de variáveis
+\cite{russel2010, Kumar_1992}. A resolução por força bruta implica enumerar
+todas as combinações possíveis de valores para as variáveis, o que, em
+instâncias com $n$ variáveis e domínios de tamanho $d$, gera um espaço de
+$d^n$ atribuições candidatas \cite{russel2010}. Esse crescimento exponencial
+torna o algoritmo de \textit{backtracking} puro inviável à medida que o
+problema escala, demandando técnicas complementares de poda e simplificação
+de domínio, uma vez que a resolução de um CSP genérico pertence à classe
+NP-completo \cite{sipser2012}.
+ 
+A principal técnica para contornar a explosão combinatória é a propagação de
+restrições, realizada por algoritmos de consistência. O mais consolidado na
+literatura é o AC-3 (\textit{Arc Consistency Algorithm 3}), proposto por
+\citeauthorandyear{mackworth1977}, cujo objetivo é garantir a consistência de
+arco em redes de restrições binárias \cite{Kumar_1992}. O algoritmo mantém
+uma fila de arcos a examinar e, para cada par de variáveis relacionadas,
+remove do domínio da variável os valores que não encontram suporte em nenhum
+valor do domínio da variável vizinha; cada remoção dispara a reinserção dos
+arcos afetados na fila, propagando a mudança pela rede até o ponto de
+estabilidade, em que nenhuma redução adicional é possível \cite{russel2010}.
+Assumindo um CSP com $n$ variáveis, domínios de tamanho no máximo $d$ e $c$
+restrições binárias, a complexidade de pior caso do AC-3 é $O(cd^3)$
+\cite{russel2010}. Aplicado como pré-processamento ou intercalado ao
+\textit{backtracking}, o AC-3 identifica antecipadamente inconsistências
+locais que, não tratadas, provocariam falhas reiteradas durante a busca
+global, reduzindo de forma expressiva o espaço efetivo de soluções a explorar.
+ 
+ 
+% ============================================================
+\section{Complexidade Computacional}
+\label{sec:complexidade}
+% ============================================================
+ 
+A teoria da complexidade computacional ocupa-se da classificação de problemas
+de decisão segundo os recursos algorítmicos, principalmente tempo de execução
+e espaço de memória, exigidos para sua resolução \cite{cormen01}. Dentro
+desse arcabouço, a classe P reúne os problemas para os quais existem
+algoritmos determinísticos de tempo polinomial, considerados eficientes e
+tratáveis mesmo para entradas de grande escala. A classe NP, por sua vez,
+abrange os problemas cujas soluções propostas podem ser \textit{verificadas}
+em tempo polinomial por uma máquina determinística, ainda que não se disponha,
+até o presente, de algoritmos igualmente eficientes para
+\textit{encontrá-las} \cite{sipser2012}. A questão sobre a relação entre
+essas duas classes, isto é, se $\text{P} = \text{NP}$, permanece em aberto
+e constitui o problema não resolvido de maior relevância para a ciência da
+computação teórica, razão pela qual o \textit{Clay Mathematics Institute} o
+incluiu entre os sete Problemas do Milênio \cite{sipser2012}.
+ 
+O interior da classe NP não é uniforme. A literatura demonstra a existência de
+subclasses com diferentes graus de dificuldade, incluindo problemas resolúveis
+em tempo subexponencial por meio de não-determinismo limitado
+\cite{PAPADIMITRIOU1996161}. O CSP, contudo, não se enquadra nessas classes
+intermediárias: situa-se no topo da hierarquia como um problema NP-completo
+\cite{sipser2012}. Um problema é classificado como NP-completo quando pertence
+a NP e todo problema de NP se reduz a ele em tempo polinomial; essa
+classificação pode ser estabelecida por redução polinomial a partir do Problema
+da Satisfabilidade Booleana (SAT), um dos problemas canônicos de NP-completude
+\cite{cormen01, sipser2012}. Consequentemente, se qualquer problema NP-completo
+admitisse solução em tempo polinomial, toda a classe NP colapsaria em P
+\cite{sipser2012}.
+ 
+Essa natureza NP-completa impõe restrições severas à arquitetura de qualquer
+sistema de verificação de compatibilidade de hardware fundamentado em CSP.
+A primeira limitação é de ordem temporal: a avaliação exaustiva de todas as
+combinações interdependentes de componentes é inviável na prática em razão da
+explosão combinatória intrínseca à classe \cite{borodin2011}. A segunda
+limitação é de ordem espacial: estratégias alternativas baseadas no mapeamento
+estático e exaustivo de regras lógicas condicionais, codificando explicitamente
+cada restrição de hardware por meio de estruturas \textit{if-else} ou tabelas
+de decisão, não contornam o problema, pois a representação de funções lógicas
+complexas por árvores de decisão pode exigir espaço de tamanho exponencial,
+conforme demonstrado por \cite{Jukna1999PvsNP}. Diante dessas limitações, a
+modelagem do problema de montagem e validação de computadores exige a adoção
+de um motor de inferência baseado em CSP que aplique técnicas de propagação de
+restrições: em vez de enumerar cegamente o espaço de soluções ou armazenar um
+volume impraticável de regras estáticas, o motor poda dinamicamente os domínios
+das variáveis a cada interação do usuário, reduzindo o espaço de busca de
+forma incremental e viabilizando respostas em tempo real.
+ 
+ 
+% ============================================================
+\section{Sistemas Especialistas}
+\label{sec:sistemas-especialistas}
+% ============================================================
+ 
+Um Sistema Especialista (SE) é um programa de computador projetado para
+simular o raciocínio de um especialista humano em um domínio restrito e bem
+definido \cite{russel2010}. Sua arquitetura é composta por três elementos
+centrais: a base de conhecimento, que armazena fatos e regras sobre o
+domínio; o motor de inferência, que aplica essas regras aos fatos disponíveis
+para derivar conclusões; e a interface de explicação, que permite ao sistema
+justificar suas respostas ao usuário \cite{russel2010}. O motor de inferência
+pode operar segundo encadeamento progressivo (\textit{forward chaining}),
+partindo dos fatos conhecidos em direção a conclusões, ou encadeamento
+regressivo (\textit{backward chaining}), partindo de uma hipótese e verificando
+se os fatos disponíveis a sustentam \cite{russel2010}.
+ 
+O sistema proposto neste trabalho se enquadra na categoria de sistemas
+especialistas baseados em restrições. A base de conhecimento é constituída
+pelas especificações técnicas dos componentes de hardware e pelas regras de
+compatibilidade que os relacionam; o motor de inferência é implementado por
+um algoritmo de propagação de restrições que opera sobre o grafo de CSP; e a
+interface apresenta ao usuário não apenas os componentes compatíveis, mas
+também as razões pelas quais determinadas combinações são inviáveis. Essa
+capacidade de explicação é uma característica fundamental dos sistemas
+especialistas que os distingue de simples mecanismos de filtragem: enquanto
+um filtro se limita a apresentar resultados, um SE fundamentado em CSP é capaz
+de indicar qual restrição foi violada e por que, tornando o processo de
+montagem educativo e transparente.
+ 
+ 
+% ============================================================
+\section{Sistemas Tutores Inteligentes}
+\label{sec:sti}
+% ============================================================
+ 
+Um Sistema Tutor Inteligente (STI) é um ambiente computacional que oferece
+instrução personalizada e adaptada ao perfil do aprendiz, sem a necessidade
+de intervenção humana direta \cite{russel2010}. Diferentemente de sistemas de
+\textit{e-learning} tradicionais, que apresentam o mesmo conteúdo a todos os
+usuários, um STI mantém modelos do estudante, do domínio e da estratégia
+pedagógica, ajustando dinamicamente o nível de dificuldade, o tipo de
+\textit{feedback} e a sequência de conteúdos conforme o desempenho observado
+\cite{russel2010}. Essa personalização é o que confere ao STI sua
+característica de inteligência: a capacidade de diagnosticar lacunas de
+conhecimento e de intervir de forma contextualmente adequada.
+ 
+A distinção fundamental entre um sistema de filtragem e um sistema tutor reside
+precisamente na natureza do \textit{feedback} fornecido. Um mecanismo de
+filtragem tradicional responde à pergunta ``quais componentes são
+compatíveis?'', apresentando uma lista de resultados sem qualquer elaboração.
+Um STI, por sua vez, responde à pergunta ``por que esses componentes são ou
+não compatíveis?'', articulando as razões subjacentes à compatibilidade ou
+incompatibilidade em linguagem acessível ao aprendiz \cite{russel2010}. No
+contexto deste trabalho, o motor CSP cumpre o papel do modelo de domínio do
+STI: ao propagar restrições e podar domínios de forma incremental, ele não
+apenas determina quais configurações são válidas, mas também fundamenta as
+explicações que serão apresentadas ao usuário, tornando cada interação uma
+oportunidade de aprendizagem sobre os princípios técnicos que regem a montagem
+de computadores.
+ 
 Texto da revisão da literatura, dividido em seções e subseções.
 
 

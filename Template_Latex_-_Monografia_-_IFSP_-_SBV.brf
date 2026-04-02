@@ -1,37 +1,49 @@
 \backcite {russel2010}{{19}{2.1}{section.2.1}}
-\backcite {Kumar_1992}{{19}{2.1}{section.2.1}}
+\backcite {russel2010}{{19}{2.1}{section.2.1}}
+\backcite {russel2010, Kumar_1992}{{19}{2.1}{section.2.1}}
+\backcite {russel2010, Kumar_1992}{{19}{2.1}{section.2.1}}
+\backcite {russel2010}{{19}{2.1}{section.2.1}}
 \backcite {sipser2012}{{19}{2.1}{section.2.1}}
-\backcite {russel2010}{{19}{2.1}{section.2.1}}
-\backcite {mackworth1977}{{19}{2.1}{section.2.1}}
-\backcite {mackworth1977}{{19}{2.1}{section.2.1}}
-\backcite {Kumar_1992}{{19}{2.1}{section.2.1}}
-\backcite {russel2010}{{19}{2.1}{section.2.1}}
+\backcite {mackworth1977}{{20}{2.1}{section.2.1}}
+\backcite {mackworth1977}{{20}{2.1}{section.2.1}}
+\backcite {Kumar_1992}{{20}{2.1}{section.2.1}}
+\backcite {russel2010}{{20}{2.1}{section.2.1}}
+\backcite {russel2010}{{20}{2.1}{section.2.1}}
 \backcite {cormen01}{{20}{2.2}{section.2.2}}
+\backcite {sipser2012}{{20}{2.2}{section.2.2}}
 \backcite {sipser2012}{{20}{2.2}{section.2.2}}
 \backcite {PAPADIMITRIOU1996161}{{20}{2.2}{section.2.2}}
 \backcite {sipser2012}{{20}{2.2}{section.2.2}}
-\backcite {cormen01,sipser2012}{{20}{2.2}{section.2.2}}
-\backcite {cormen01,sipser2012}{{20}{2.2}{section.2.2}}
-\backcite {borodin2011}{{20}{2.2}{section.2.2}}
-\backcite {Agaisse1995}{{23}{2.2}{Item.7}}
-\backcite {Abedi2014}{{23}{2.2}{Item.7}}
-\backcite {BtNomenclature2016}{{23}{2.2}{Item.7}}
-\backcite {Abedi2014, Agaisse1995}{{23}{2.2}{Item.7}}
-\backcite {Abedi2014, Agaisse1995}{{23}{2.2}{Item.7}}
-\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{23}{2.2}{Item.7}}
-\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{23}{2.2}{Item.7}}
-\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{23}{2.2}{Item.7}}
-\backcite {Agaisse1995}{{23}{2.2}{Item.7}}
-\backcite {Agaisse1995}{{23}{2.2}{Item.7}}
-\backcite {Abedi2014}{{23}{2.2}{Item.7}}
-\backcite {Abedi2014}{{23}{2.2}{Item.7}}
-\backcite {BtNomenclature2016}{{23}{2.2}{Item.7}}
-\backcite {BtNomenclature2016}{{23}{2.2}{Item.7}}
-\backcite {Nelson2014}{{24}{2.2}{Item.7}}
-\backcite {Agaisse1995}{{24}{2.2}{Item.7}}
-\backcite {braga2008algoritmos}{{26}{4}{chapter.4}}
-\backcite {braga2008algoritmos}{{26}{4}{chapter.4}}
-\backcite {braga2008algoritmos}{{27}{5.2.1}{subsection.5.2.1}}
-\backcite {braga2008algoritmos}{{27}{5.2.1}{subsection.5.2.1}}
-\backcite {braga2008algoritmos}{{30}{5.4}{section.5.4}}
-\backcite {braga2008algoritmos}{{30}{5.4}{section.5.4}}
+\backcite {cormen01, sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {cormen01, sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {sipser2012}{{20}{2.2}{section.2.2}}
+\backcite {borodin2011}{{21}{2.2}{section.2.2}}
+\backcite {Jukna1999PvsNP}{{21}{2.2}{section.2.2}}
+\backcite {russel2010}{{21}{2.3}{section.2.3}}
+\backcite {russel2010}{{21}{2.3}{section.2.3}}
+\backcite {russel2010}{{21}{2.3}{section.2.3}}
+\backcite {russel2010}{{22}{2.4}{section.2.4}}
+\backcite {russel2010}{{22}{2.4}{section.2.4}}
+\backcite {russel2010}{{22}{2.4}{section.2.4}}
+\backcite {Agaisse1995}{{25}{2.4}{Item.7}}
+\backcite {Abedi2014}{{25}{2.4}{Item.7}}
+\backcite {BtNomenclature2016}{{25}{2.4}{Item.7}}
+\backcite {Abedi2014, Agaisse1995}{{25}{2.4}{Item.7}}
+\backcite {Abedi2014, Agaisse1995}{{25}{2.4}{Item.7}}
+\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{25}{2.4}{Item.7}}
+\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{25}{2.4}{Item.7}}
+\backcite {AgapitoTenfen2014, BtNomenclature2016, Nelson2014}{{25}{2.4}{Item.7}}
+\backcite {Agaisse1995}{{25}{2.4}{Item.7}}
+\backcite {Agaisse1995}{{25}{2.4}{Item.7}}
+\backcite {Abedi2014}{{25}{2.4}{Item.7}}
+\backcite {Abedi2014}{{25}{2.4}{Item.7}}
+\backcite {BtNomenclature2016}{{25}{2.4}{Item.7}}
+\backcite {BtNomenclature2016}{{25}{2.4}{Item.7}}
+\backcite {Nelson2014}{{25}{2.4}{Item.7}}
+\backcite {Agaisse1995}{{26}{2.4}{Item.7}}
+\backcite {braga2008algoritmos}{{28}{4}{chapter.4}}
+\backcite {braga2008algoritmos}{{28}{4}{chapter.4}}
+\backcite {braga2008algoritmos}{{29}{5.2.1}{subsection.5.2.1}}
+\backcite {braga2008algoritmos}{{29}{5.2.1}{subsection.5.2.1}}
+\backcite {braga2008algoritmos}{{32}{5.4}{section.5.4}}
+\backcite {braga2008algoritmos}{{32}{5.4}{section.5.4}}

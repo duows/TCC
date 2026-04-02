@@ -22,6 +22,12 @@ Dispon{\'\i}vel em:
 ISBN 0262032937. Dispon{\'\i}vel em:
   \url{http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262032937\%3FSubscriptionId\%3D13CT5CVB80YFWJEPWS02\%26tag\%3Dws\%26linkCode\%3Dxm2\%26camp\%3D2025\%26creative\%3D165953\%26creativeASIN\%3D0262032937}.}
 
+\bibitem[Jukna et al. 1999]{Jukna1999PvsNP}
+\abntrefinfo{Jukna et al.}{JUKNA et al.}{1999}
+{JUKNA, S. et al. On p versus np $\cap$ co-np for decision trees and read-once
+  branching programs.
+\textbf{Computational Complexity}, Springer, v.~8, n.~4, p. 357--370, 1999.}
+
 \bibitem[Kumar 1992]{Kumar_1992}
 \abntrefinfo{Kumar}{KUMAR}{1992}
 {KUMAR, V. Algorithms for constraint-satisfaction problems: A survey.
