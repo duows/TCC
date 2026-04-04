@@ -19,38 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{AMD2022}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=fae7c9ebca8ba50b2be1187b90ba62ef}{%
-           family={{Advanced Micro Devices}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{fullhash}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{fullhashraw}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{bibnamehash}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{authorbibnamehash}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{authornamehash}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{authorfullhash}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \strng{authorfullhashraw}{fae7c9ebca8ba50b2be1187b90ba62ef}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{AMD Partner Insights}
-      \field{note}{Acesso em: abr. 2026}
-      \field{title}{Meet the New {AMD} Socket {AM5} Platform}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://www.amd.com/en/partner/articles/socket-am5-change-game.html
-      \endverb
-      \verb{url}
-      \verb https://www.amd.com/en/partner/articles/socket-am5-change-game.html
-      \endverb
-    \endentry
-    \entry{Borodin2011}{article}{}{}
+    \entry{borodin2011}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=4cd699312978978f4c0f7532d25549ee}{%
            family={Borodin},
@@ -71,6 +40,12 @@
            giveni={A\bibinitperiod},
            givenun=0}}%
       }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
       \strng{namehash}{1ebe8d208bb3c9d991f0baeb2eb8d3f4}
       \strng{fullhash}{1ebe8d208bb3c9d991f0baeb2eb8d3f4}
       \strng{fullhashraw}{1ebe8d208bb3c9d991f0baeb2eb8d3f4}
@@ -85,17 +60,26 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{abstract}{We define an algorithmic paradigm, the stack model, that captures many primal-dual and local-ratio algorithms for approximating covering and packing problems. The stack model is defined syntactically and without any complexity limitations and hence our approximation bounds are independent of the P versus NP question. Using the stack model, we bound the performance of a broad class of primal-dual and local-ratio algorithms and supply a (log n+1)/2 inapproximability result for set cover, a 4/3 inapproximability for min Steiner tree, and a 0.913 inapproximability for interval scheduling on two machines.}
       \field{issn}{1549-6325}
-      \field{journaltitle}{ACM Transactions on Algorithms}
+      \field{journaltitle}{ACM Trans. Algorithms}
+      \field{month}{7}
       \field{number}{3}
-      \field{title}{How Well Can Primal-Dual and Local-Ratio Algorithms Perform?}
+      \field{title}{How well can primal-dual and local-ratio algorithms perform?}
       \field{volume}{7}
       \field{year}{2011}
       \verb{doi}
       \verb 10.1145/1978782.1978784
       \endverb
+      \verb{urlraw}
+      \verb https://doi-org.ez338.periodicos.capes.gov.br/10.1145/1978782.1978784
+      \endverb
+      \verb{url}
+      \verb https://doi-org.ez338.periodicos.capes.gov.br/10.1145/1978782.1978784
+      \endverb
+      \keyw{set cover,primal dual,interval scheduling,greedy algorithms,bandwidth allocation,approximation algorithms,algorithmic limitations,Steiner tree,Local ratio}
     \endentry
-    \entry{Cormen2001}{book}{}{}
+    \entry{cormen01}{book}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=835b8c52757d98c15859b416316d9820}{%
            family={Cormen},
@@ -122,9 +106,6 @@
            giveni={C\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {Cambridge, MA}%
-      }
       \list{publisher}{1}{%
         {The MIT Press}%
       }
@@ -142,188 +123,19 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{2}
-      \field{isbn}{9780262032937}
+      \field{edition}{2nd}
+      \field{isbn}{0262032937}
       \field{title}{Introduction to Algorithms}
       \field{year}{2001}
-    \endentry
-    \entry{Dechter2003}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=78938a198b4931e837a6994d729d36f1}{%
-           family={Dechter},
-           familyi={D\bibinitperiod},
-           given={Rina},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {San Francisco, CA}%
-      }
-      \list{publisher}{1}{%
-        {Morgan Kaufmann}%
-      }
-      \strng{namehash}{78938a198b4931e837a6994d729d36f1}
-      \strng{fullhash}{78938a198b4931e837a6994d729d36f1}
-      \strng{fullhashraw}{78938a198b4931e837a6994d729d36f1}
-      \strng{bibnamehash}{78938a198b4931e837a6994d729d36f1}
-      \strng{authorbibnamehash}{78938a198b4931e837a6994d729d36f1}
-      \strng{authornamehash}{78938a198b4931e837a6994d729d36f1}
-      \strng{authorfullhash}{78938a198b4931e837a6994d729d36f1}
-      \strng{authorfullhashraw}{78938a198b4931e837a6994d729d36f1}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781558608900}
-      \field{title}{Constraint Processing}
-      \field{year}{2003}
-    \endentry
-    \entry{Diestel2017}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d7750765c1eb004bdcdce07ed2272ba7}{%
-           family={Diestel},
-           familyi={D\bibinitperiod},
-           given={Reinhard},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Berlin}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{fullhash}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{fullhashraw}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{bibnamehash}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{authorbibnamehash}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{authornamehash}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{authorfullhash}{d7750765c1eb004bdcdce07ed2272ba7}
-      \strng{authorfullhashraw}{d7750765c1eb004bdcdce07ed2272ba7}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{5}
-      \field{isbn}{9783662575604}
-      \field{title}{Graph Theory}
-      \field{year}{2017}
       \verb{urlraw}
-      \verb https://diestel-graph-theory.com
+      \verb http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262032937%3FSubscriptionId%3D13CT5CVB80YFWJEPWS02%26tag%3Dws%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0262032937
       \endverb
       \verb{url}
-      \verb https://diestel-graph-theory.com
+      \verb http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262032937%3FSubscriptionId%3D13CT5CVB80YFWJEPWS02%26tag%3Dws%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0262032937
       \endverb
+      \keyw{algorithm algorithms computer data design paper-cpm programming science structures}
     \endentry
-    \entry{ATXSPEC2022}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b7f0fb90e404efb48f8a85a517dec3c9}{%
-           family={{Intel Corporation}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Intel Corporation}%
-      }
-      \strng{namehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{fullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{fullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{bibnamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorbibnamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authornamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorfullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorfullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{ATX} Specification Version 3.0}
-      \field{type}{Technical Specification}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://edc.intel.com
-      \endverb
-      \verb{url}
-      \verb https://edc.intel.com
-      \endverb
-    \endentry
-    \entry{INTEL2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b7f0fb90e404efb48f8a85a517dec3c9}{%
-           family={{Intel Corporation}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{fullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{fullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{bibnamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorbibnamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authornamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorfullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorfullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \field{extraname}{2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Intel Support Knowledge Base, Article ID: 000099723}
-      \field{note}{Acesso em: abr. 2026}
-      \field{title}{{LGA1851} and {LGA1700} Socket Incompatibility}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://www.intel.com/content/www/us/en/support/articles/000099723/processors.html
-      \endverb
-      \verb{url}
-      \verb https://www.intel.com/content/www/us/en/support/articles/000099723/processors.html
-      \endverb
-    \endentry
-    \entry{JEDEC2020}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e38d9a5c68b6c83fee5f26c49595802b}{%
-           family={{JEDEC Solid State Technology Association}},
-           familyi={J\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {JEDEC Solid State Technology Association}%
-      }
-      \list{location}{1}{%
-        {Arlington, VA}%
-      }
-      \strng{namehash}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{fullhash}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{fullhashraw}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{bibnamehash}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{authorbibnamehash}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{authornamehash}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{authorfullhash}{e38d9a5c68b6c83fee5f26c49595802b}
-      \strng{authorfullhashraw}{e38d9a5c68b6c83fee5f26c49595802b}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{JESD79-5B}
-      \field{title}{{JESD79-5B}: {DDR5} {SDRAM} Standard}
-      \field{type}{Standard}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://www.jedec.org
-      \endverb
-      \verb{url}
-      \verb https://www.jedec.org
-      \endverb
-    \endentry
-    \entry{Jukna1999}{article}{}{}
+    \entry{Jukna1999PvsNP}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=c64d25c43f82e2f018d8da6ab23ac058}{%
            family={Jukna},
@@ -331,11 +143,11 @@
            given={Stasys},
            giveni={S\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=21a38f96471b36127d735dfaec068a7a}{%
+        {{un=0,uniquepart=base,hash=4550d4a99de50813fcf0569ccadc4923}{%
            family={Razborov},
            familyi={R\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod},
+           given={Alexander\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=018892327831fb83228dcf1ac76ef8a2}{%
            family={Savický},
@@ -350,14 +162,17 @@
            giveni={I\bibinitperiod},
            givenun=0}}%
       }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
       \strng{namehash}{6559de36ae81e4df061c17c943d783a8}
-      \strng{fullhash}{142518387e61e7b6dfe27422a53a0e39}
-      \strng{fullhashraw}{142518387e61e7b6dfe27422a53a0e39}
+      \strng{fullhash}{779362229c34601592e0b50362c2c80e}
+      \strng{fullhashraw}{779362229c34601592e0b50362c2c80e}
       \strng{bibnamehash}{6559de36ae81e4df061c17c943d783a8}
       \strng{authorbibnamehash}{6559de36ae81e4df061c17c943d783a8}
       \strng{authornamehash}{6559de36ae81e4df061c17c943d783a8}
-      \strng{authorfullhash}{142518387e61e7b6dfe27422a53a0e39}
-      \strng{authorfullhashraw}{142518387e61e7b6dfe27422a53a0e39}
+      \strng{authorfullhash}{779362229c34601592e0b50362c2c80e}
+      \strng{authorfullhashraw}{779362229c34601592e0b50362c2c80e}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
@@ -366,7 +181,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computational Complexity}
       \field{number}{4}
-      \field{title}{On {P} versus {NP} $\cap$ co-{NP} for Decision Trees and Read-Once Branching Programs}
+      \field{title}{On P versus NP $\cap$ co-NP for decision trees and read-once branching programs}
       \field{volume}{8}
       \field{year}{1999}
       \field{pages}{357\bibrangedash 370}
@@ -375,7 +190,7 @@
       \verb 10.1007/s000370050005
       \endverb
     \endentry
-    \entry{Kumar1992}{article}{}{}
+    \entry{Kumar_1992}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=efb90d78e35ff61d3bc639f5c6f3d822}{%
            family={Kumar},
@@ -399,12 +214,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{AI Magazine}
+      \field{month}{3}
       \field{number}{1}
       \field{title}{Algorithms for Constraint-Satisfaction Problems: A Survey}
       \field{volume}{13}
       \field{year}{1992}
-      \field{pages}{32\bibrangedash 44}
-      \range{pages}{13}
+      \field{pages}{32}
+      \range{pages}{1}
       \verb{doi}
       \verb 10.1609/aimag.v13i1.976
       \endverb
@@ -415,42 +231,7 @@
       \verb https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/976
       \endverb
     \endentry
-    \entry{Mackworth1977}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=350f48b82a8f1edb46d9d200435480f9}{%
-           family={Mackworth},
-           familyi={M\bibinitperiod},
-           given={Alan\bibnamedelima K.},
-           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{fullhash}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{fullhashraw}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{bibnamehash}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{authorbibnamehash}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{authornamehash}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{authorfullhash}{350f48b82a8f1edb46d9d200435480f9}
-      \strng{authorfullhashraw}{350f48b82a8f1edb46d9d200435480f9}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0004-3702}
-      \field{journaltitle}{Artificial Intelligence}
-      \field{number}{1}
-      \field{title}{Consistency in Networks of Relations}
-      \field{volume}{8}
-      \field{year}{1977}
-      \field{pages}{99\bibrangedash 118}
-      \range{pages}{20}
-      \verb{doi}
-      \verb 10.1016/0004-3702(77)90007-8
-      \endverb
-    \endentry
-    \entry{Papadimitriou1996}{article}{}{}
+    \entry{PAPADIMITRIOU1996161}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b3b407bb63367a850366076095ee1970}{%
            family={Papadimitriou},
@@ -479,16 +260,17 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{abstract}{We characterize precisely the complexity of several natural computational problems in NP, which have been proposed but not categorized satisfactorily in the literature: Computing the Vapnik–Chervonenkis dimension of a 0–1 matrix; finding the minimum dominating set of a tournament; satisfying a Boolean expression by perturbing the default truth assignment; and several others. These problems can be solved innO(logn)time, and thus, they are probably not NP-complete. We define two new complexity classes between P and NP, very much in the spirit of MAXNP and MAXSNP. We show that computing the V–C dimension is complete for the more general class, while the other two problems are complete for the weaker class.}
       \field{issn}{0022-0000}
       \field{journaltitle}{Journal of Computer and System Sciences}
       \field{number}{2}
-      \field{title}{On Limited Nondeterminism and the Complexity of the {V-C} Dimension}
+      \field{title}{On Limited Nondeterminism and the Complexity of the V-C Dimension}
       \field{volume}{53}
       \field{year}{1996}
       \field{pages}{161\bibrangedash 170}
       \range{pages}{10}
       \verb{doi}
-      \verb 10.1006/jcss.1996.0058
+      \verb https://doi.org/10.1006/jcss.1996.0058
       \endverb
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/pii/S0022000096900586
@@ -497,7 +279,7 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0022000096900586
       \endverb
     \endentry
-    \entry{Russell2010}{book}{}{}
+    \entry{russel2010}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=143fa183327d9fcd9de18eec99d6ca97}{%
            family={Russell},
@@ -511,9 +293,6 @@
            given={Peter},
            giveni={P\bibinitperiod},
            givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Upper Saddle River, NJ}%
       }
       \list{publisher}{1}{%
         {Prentice Hall}%
@@ -533,11 +312,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
-      \field{isbn}{9780136042594}
       \field{title}{Artificial Intelligence: A Modern Approach}
       \field{year}{2010}
+      \keyw{ties4530}
     \endentry
-    \entry{Sipser2012}{book}{}{}
+    \entry{sipser2012}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%
            family={Sipser},
@@ -545,9 +324,6 @@
            given={Michael},
            giveni={M\bibinitperiod},
            givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Stamford, CT}%
       }
       \list{publisher}{1}{%
         {Cengage Learning}%
@@ -567,7 +343,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
-      \field{isbn}{9781133187790}
       \field{title}{Introduction to the Theory of Computation}
       \field{year}{2012}
     \endentry
@@ -577,6 +352,8 @@
   \missing{AgapitoTenfen2014}
   \missing{BtNomenclature2016}
   \missing{Nelson2014}
+  \missing{braga2008algoritmos}
+  \missing{mackworth1977}
 \endrefsection
 \endinput
 

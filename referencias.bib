@@ -1,110 +1,256 @@
-@COMMENT{
-	tipos de entradas mais comuns = {},
-	article = {artigo em periódico},
-	book = {livro},
-	online = {recurso online ou página web}
+% ============================================================
+% REFERÊNCIAS DO REFERENCIAL TEÓRICO
+% TCC - Henrique José de Souza
+% IFSP - Campus Birigui
+% Sistema Especialista Educacional para Validação de
+% Compatibilidade de Hardware baseado em CSP
+% ============================================================
+
+% ----------------------------
+% SEÇÃO 2.1 - HARDWARE
+% ----------------------------
+
+@misc{AMD2022,
+  author       = {{Advanced Micro Devices}},
+  title        = {Meet the New {AMD} Socket {AM5} Platform},
+  year         = {2022},
+  howpublished = {AMD Partner Insights},
+  url          = {https://www.amd.com/en/partner/articles/socket-am5-change-game.html},
+  note         = {Acesso em: abr. 2026}
 }
 
-@book{russel2010,
-  added-at = {2020-02-01T18:23:11.000+0100},
-  author = {Russell, Stuart and Norvig, Peter},
-  biburl = {https://www.bibsonomy.org/bibtex/20533b732950d1c5ab4ac12d4f32fe637/mialhoma},
-  edition = 3,
-  interhash = {53908a52dd4c6c8e39f93f4ffc8341be},
-  intrahash = {0533b732950d1c5ab4ac12d4f32fe637},
-  keywords = {ties4530},
+@misc{INTEL2023,
+  author       = {{Intel Corporation}},
+  title        = {{LGA1851} and {LGA1700} Socket Incompatibility},
+  year         = {2023},
+  howpublished = {Intel Support Knowledge Base, Article ID: 000099723},
+  url          = {https://www.intel.com/content/www/us/en/support/articles/000099723/processors.html},
+  note         = {Acesso em: abr. 2026}
+}
+
+@techreport{JEDEC2020,
+  author      = {{JEDEC Solid State Technology Association}},
+  title       = {{JESD79-5B}: {DDR5} {SDRAM} Standard},
+  institution = {JEDEC Solid State Technology Association},
+  year        = {2020},
+  type        = {Standard},
+  number      = {JESD79-5B},
+  address     = {Arlington, VA},
+  url         = {https://www.jedec.org}
+}
+
+@techreport{ATXSPEC2022,
+  author      = {{Intel Corporation}},
+  title       = {{ATX} Specification Version 3.0},
+  institution = {Intel Corporation},
+  year        = {2022},
+  type        = {Technical Specification},
+  url         = {https://edc.intel.com}
+}
+
+% ----------------------------
+% SEÇÃO 2.2 - CSP
+% ----------------------------
+
+@book{Russell2010,
+  author    = {Russell, Stuart and Norvig, Peter},
+  title     = {Artificial Intelligence: A Modern Approach},
+  edition   = {3},
   publisher = {Prentice Hall},
-  timestamp = {2020-02-01T18:23:11.000+0100},
-  title = {Artificial Intelligence: A Modern Approach},
-  year = 2010
+  address   = {Upper Saddle River, NJ},
+  year      = {2010},
+  isbn      = {9780136042594}
 }
 
-@article{MACKWORTH1977,
-title = {Consistency in networks of relations},
-journal = {Artificial Intelligence},
-volume = {8},
-number = {1},
-pages = {99-118},
-year = {1977},
-issn = {0004-3702},
-doi = {https://doi.org/10.1016/0004-3702(77)90007-8},
-url = {https://www.sciencedirect.com/science/article/pii/0004370277900078},
-author = {Alan K. Mackworth},
-abstract = {Artificial intelligence tasks which can be formulated as constraint satisfaction problems, with which this paper is for the most part concerned, are usually by solved backtracking the examining the thrashing behavior that nearly always accompanies backtracking, identifying three of its causes and proposing remedies for them we are led to a class of algorithms whoch can profitably be used to eliminate local (node, arc and path) inconsistencies before any attempt is made to construct a complete solution. A more general paradigm for attacking these tasks is the altenation of constraint manipulation and case analysis producing an OR problem graph which may be searched in any of the usual ways. Many authors, particularly Montanari and Waltz, have contributed to the development of these ideas; a secondary aim of this paper is to trace that history. The primary aim is to provide an accessible, unified framework, within which to present the algorithms including a new path consistency algorithm, to discuss their relationships and the may applications, both realized and potential of network consistency algorithms.}
+@article{Kumar1992,
+  author  = {Kumar, Vipin},
+  title   = {Algorithms for Constraint-Satisfaction Problems: A Survey},
+  journal = {AI Magazine},
+  volume  = {13},
+  number  = {1},
+  pages   = {32--44},
+  year    = {1992},
+  doi     = {10.1609/aimag.v13i1.976},
+  url     = {https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/976}
 }
 
-@article{Kumar_1992, title={Algorithms for Constraint-Satisfaction Problems: A Survey}, volume={13}, url={https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/976}, DOI={10.1609/aimag.v13i1.976}, abstractNote={A large number of problems in AI and other areas of computer science can be viewed as special cases of the constraint-satisfaction problem. Some examples are machine vision, belief maintenance, scheduling, temporal reasoning, graph problems, floor plan design, the planning of genetic experiments, and the satisfiability problem. A number of different approaches have been developed for solving these problems. Some of them use constraint propagation to simplify the original problem. Others use backtracking to directly search for possible solutions. Some are a combination of these two techniques. This article overviews many of these approaches in a tutorial fashion.}, number={1}, journal={AI Magazine}, author={Kumar, Vipin}, year={1992}, month={Mar.}, pages={32} }
+@book{Dechter2003,
+  author    = {Dechter, Rina},
+  title     = {Constraint Processing},
+  publisher = {Morgan Kaufmann},
+  address   = {San Francisco, CA},
+  year      = {2003},
+  isbn      = {9781558608900}
+}
 
-@book{sipser2012,
-  author    = {Michael Sipser},
+% ----------------------------
+% SEÇÃO 2.3 - GRAFOS
+% ----------------------------
+
+@book{Diestel2017,
+  author    = {Diestel, Reinhard},
+  title     = {Graph Theory},
+  edition   = {5},
+  publisher = {Springer},
+  address   = {Berlin},
+  year      = {2017},
+  isbn      = {9783662575604},
+  url       = {https://diestel-graph-theory.com}
+}
+
+@book{Cormen2001,
+  author    = {Cormen, Thomas H. and Leiserson, Charles E. and Rivest, Ronald L. and Stein, Clifford},
+  title     = {Introduction to Algorithms},
+  edition   = {2},
+  publisher = {The MIT Press},
+  address   = {Cambridge, MA},
+  year      = {2001},
+  isbn      = {9780262032937}
+}
+
+% ----------------------------
+% SEÇÃO 2.4 - COMPLEXIDADE COMPUTACIONAL
+% ----------------------------
+
+@book{Sipser2012,
+  author    = {Sipser, Michael},
   title     = {Introduction to the Theory of Computation},
   edition   = {3},
   publisher = {Cengage Learning},
-  year      = {2012}
+  address   = {Stamford, CT},
+  year      = {2012},
+  isbn      = {9781133187790}
 }
 
-@book{cormen01,
-  added-at = {2009-02-18T15:27:17.000+0100},
-  asin = {0262032937},
-  author = {Cormen, Thomas H. and Leiserson, Charles E. and Rivest, Ronald L. and Stein, Clifford},
-  biburl = {https://www.bibsonomy.org/bibtex/2225d42638921bee01b4ac8ff991b0a6a/rekstorm},
-  description = {Amazon.com: Introduction to Algorithms: Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein: Books},
-  dewey = {005.1},
-  ean = {9780262032933},
-  edition = {2nd},
-  interhash = {dcdeb0ec50a6798abf1724056982b543},
-  intrahash = {225d42638921bee01b4ac8ff991b0a6a},
-  isbn = {0262032937},
-  keywords = {algorithm algorithms computer data design paper-cpm programming science structures},
-  publisher = {The MIT Press},
-  timestamp = {2009-02-18T15:27:17.000+0100},
-  title = {Introduction to Algorithms},
-  url = {http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262032937%3FSubscriptionId%3D13CT5CVB80YFWJEPWS02%26tag%3Dws%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0262032937},
-  year = 2001
+@article{Papadimitriou1996,
+  author  = {Papadimitriou, Christos H. and Yannakakis, Mihalis},
+  title   = {On Limited Nondeterminism and the Complexity of the {V-C} Dimension},
+  journal = {Journal of Computer and System Sciences},
+  volume  = {53},
+  number  = {2},
+  pages   = {161--170},
+  year    = {1996},
+  issn    = {0022-0000},
+  doi     = {10.1006/jcss.1996.0058},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0022000096900586}
 }
 
-@article{PAPADIMITRIOU1996161,
-title = {On Limited Nondeterminism and the Complexity of the V-C Dimension},
-journal = {Journal of Computer and System Sciences},
-volume = {53},
-number = {2},
-pages = {161-170},
-year = {1996},
-issn = {0022-0000},
-doi = {https://doi.org/10.1006/jcss.1996.0058},
-url = {https://www.sciencedirect.com/science/article/pii/S0022000096900586},
-author = {Christos H. Papadimitriou and Mihalis Yannakakis},
-abstract = {We characterize precisely the complexity of several natural computational problems in NP, which have been proposed but not categorized satisfactorily in the literature: Computing the Vapnik–Chervonenkis dimension of a 0–1 matrix; finding the minimum dominating set of a tournament; satisfying a Boolean expression by perturbing the default truth assignment; and several others. These problems can be solved innO(logn)time, and thus, they are probably not NP-complete. We define two new complexity classes between P and NP, very much in the spirit of MAXNP and MAXSNP. We show that computing the V–C dimension is complete for the more general class, while the other two problems are complete for the weaker class.}
+@article{Borodin2011,
+  author  = {Borodin, Allan and Cashman, David and Magen, Avner},
+  title   = {How Well Can Primal-Dual and Local-Ratio Algorithms Perform?},
+  journal = {ACM Transactions on Algorithms},
+  volume  = {7},
+  number  = {3},
+  year    = {2011},
+  issn    = {1549-6325},
+  doi     = {10.1145/1978782.1978784}
 }
 
-@article{borodin2011,
-author = {Borodin, Allan and Cashman, David and Magen, Avner},
-title = {How well can primal-dual and local-ratio algorithms perform?},
-year = {2011},
-issue_date = {July 2011},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {7},
-number = {3},
-issn = {1549-6325},
-url = {https://doi-org.ez338.periodicos.capes.gov.br/10.1145/1978782.1978784},
-doi = {10.1145/1978782.1978784},
-abstract = {We define an algorithmic paradigm, the stack model, that captures many primal-dual and local-ratio algorithms for approximating covering and packing problems. The stack model is defined syntactically and without any complexity limitations and hence our approximation bounds are independent of the P versus NP question. Using the stack model, we bound the performance of a broad class of primal-dual and local-ratio algorithms and supply a (log n+1)/2 inapproximability result for set cover, a 4/3 inapproximability for min Steiner tree, and a 0.913 inapproximability for interval scheduling on two machines.},
-journal = {ACM Trans. Algorithms},
-month = jul,
-articleno = {29},
-numpages = {26},
-keywords = {set cover, primal dual, interval scheduling, greedy algorithms, bandwidth allocation, approximation algorithms, algorithmic limitations, Steiner tree, Local ratio}
+@article{Jukna1999,
+  author  = {Jukna, Stasys and Razborov, Alexander and Savický, Petr and Wegener, Ingo},
+  title   = {On {P} versus {NP} $\cap$ co-{NP} for Decision Trees and Read-Once Branching Programs},
+  journal = {Computational Complexity},
+  volume  = {8},
+  number  = {4},
+  pages   = {357--370},
+  year    = {1999},
+  doi     = {10.1007/s000370050005}
 }
 
-@article{Jukna1999PvsNP,
-  author    = {Stasys Jukna and Alexander A. Razborov and Petr Savick{\'y} and Ingo Wegener},
-  title     = {On P versus NP $\cap$ co-NP for decision trees and read-once branching programs},
-  journal   = {Computational Complexity},
-  volume    = {8},
-  number    = {4},
-  pages     = {357--370},
-  year      = {1999},
-  doi       = {10.1007/s000370050005},
-  publisher = {Springer}
+% ----------------------------
+% SEÇÃO 2.6 - AC-3
+% ----------------------------
+
+@article{Mackworth1977,
+  author  = {Mackworth, Alan K.},
+  title   = {Consistency in Networks of Relations},
+  journal = {Artificial Intelligence},
+  volume  = {8},
+  number  = {1},
+  pages   = {99--118},
+  year    = {1977},
+  issn    = {0004-3702},
+  doi     = {10.1016/0004-3702(77)90007-8}
+}
+
+% ----------------------------
+% SEÇÃO 2.7 - SISTEMAS ESPECIALISTAS
+% ----------------------------
+
+@article{Clancey1983,
+  author  = {Clancey, William J.},
+  title   = {The Epistemology of a Rule-Based Expert System: A Framework for Explanation},
+  journal = {Artificial Intelligence},
+  volume  = {20},
+  number  = {3},
+  pages   = {215--251},
+  year    = {1983},
+  issn    = {0004-3702},
+  doi     = {10.1016/0004-3702(83)90008-5}
+}
+
+@book{Jackson1998,
+  author    = {Jackson, Peter},
+  title     = {Introduction to Expert Systems},
+  edition   = {3},
+  publisher = {Addison-Wesley},
+  address   = {Boston, MA},
+  year      = {1998},
+  isbn      = {9780201876864}
+}
+
+% ----------------------------
+% SEÇÃO 2.8 - STI
+% ----------------------------
+
+@book{Woolf2008,
+  author    = {Woolf, Beverly Park},
+  title     = {Building Intelligent Interactive Tutors: Student-Centered Strategies for Revolutionizing E-Learning},
+  publisher = {Morgan Kaufmann},
+  address   = {San Francisco, CA},
+  year      = {2008},
+  isbn      = {9780123735836}
+}
+
+@article{Anderson1995,
+  author  = {Anderson, John R. and Corbett, Albert T. and Koedinger, Kenneth R. and Pelletier, Ray},
+  title   = {Cognitive Tutors: Lessons Learned},
+  journal = {The Journal of the Learning Sciences},
+  volume  = {4},
+  number  = {2},
+  pages   = {167--207},
+  year    = {1995},
+  issn    = {1050-8406},
+  doi     = {10.1207/s15327809jls0402_2}
+}
+
+% ----------------------------
+% SEÇÃO 2.9 - ARQUITETURA REST
+% ----------------------------
+
+@phdthesis{Fielding2000,
+  author  = {Fielding, Roy Thomas},
+  title   = {Architectural Styles and the Design of Network-based Software Architectures},
+  school  = {University of California},
+  address = {Irvine, CA},
+  year    = {2000},
+  url     = {https://ics.uci.edu/~fielding/pubs/dissertation/top.htm}
+}
+
+@book{Fowler2002,
+  author    = {Fowler, Martin},
+  title     = {Patterns of Enterprise Application Architecture},
+  publisher = {Addison-Wesley},
+  address   = {Boston, MA},
+  year      = {2002},
+  isbn      = {9780321127426}
+}
+
+@book{Richardson2007,
+  author    = {Richardson, Leonard and Ruby, Sam},
+  title     = {RESTful Web Services},
+  publisher = {O'Reilly Media},
+  address   = {Sebastopol, CA},
+  year      = {2007},
+  isbn      = {9780596529260}
 }

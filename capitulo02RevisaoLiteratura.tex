@@ -1,181 +1,315 @@
 \chapter{Revisão da Literatura}
 \label{cap:02}
- 
+
+% ============================================================
+\section{Compatibilidade de Hardware como Domínio do Problema}
+\label{sec:compatibilidade-hardware}
+% ============================================================
+A montagem de um computador \textit{desktop} exige o cruzamento de especificações técnicas entre componentes interdependentes.
+Diferentemente da aquisição de periféricos genéricos, a configuração de um sistema computacional envolve restrições físicas, elétricas
+e lógicas que, quando violadas, resultam em incompatibilidade absoluta: componentes adquiridos de forma incorreta não funcionam juntos,
+independentemente de ajustes de \textit{software} ou configuração. Esse cenário impõe ao usuário leigo um desafio técnico significativo,
+uma vez que plataformas comerciais tradicionais não oferecem mecanismos de validação preventiva capazes de explicar o motivo da incompatibilidade \cite{AMD2022,INTEL2023}.
+
+O presente trabalho concentra-se em cinco categorias de componentes que consitituem o núcleo de qualquer configuração \textit{desktop}:
+a Unidade Central de Processamento (CPU), a placa-mãe, os módulos de memória RAM, a Unidade de Processamento Gráfico (GPU) e a fonte de alimentação.
+Cada uma dessas categorias possui especificações técnicas que determinam sua compatibilidade com as demais, formando uma rede de dependências
+que não pode ser avaliada de forma isolada.
+
+\subsection{Compatibilidade de Soquete CPU-Placa-mãe}
+A restrição mais fundamental na montagem de um computador é a compatibilidade de soquete entre o processador e a placa-mãe.
+Cada geração de processadores é projetada para um soquete físico específico, definido pelo número, disposição e função de seus contatos elétricos.
+Essa restrição é bínaria e absoluta: um processador projetado para o soquete AM5 da AMD é fisicamente incompatível com uma placa-mãe
+equipada com soquete AM4, e vice-versa, sem qualquer possibilidade de adaptação ou ajuste \cite{AMD2022}. De forma análoga, processadores Intel para o soquete LGA1851
+não são compatíveis com plataformas LGA1700 \cite{INTEL2023}. A documentação técnica oficial dos fabricantes define formalmente quais
+combinações de processadores e \textit{chipsets} são suportadas, constituindo a principal fonte de restrições binárias do dóminio.
+
+\subsection{Padrão de Memória RAM}
+Os módulos de memória RAM seguem padrões técnicos definidos pela JEDEC (\textit{Joint Electron Device Engineering Council}), organização
+responsável pela padronização internacional de semicondutores. Os padrões DDR4 e DDR5, por exemplo, diferem em números de pinos, tensão de operação,
+frequência base e formato físico do enxaixe \cite{JEDEC2020}. Essa diferença torna os dois padrões eletricamente e fisicamente incompatíveis:
+uma placa-mãe projetada para DDR5 não aceita módulos DDR4, e o próprio conector possui geometria distinta que impede a inserção física incorreta.
+A seleção de memória compatível depende, portanto, da placa-mãe selecionada, que por sua vez depende do processador, criando uma cadeia de
+dependências transitivas no grafo de restrições.
+
+\subsection{Capacidade Energética e TDP}
+Cada componente de \textit{hardware} possui um indicador de consumo máximo de energia denominado TDP (\textit{Thermal Design Power}),
+expresso em watts. A fonte de alimentação deve ser dimensionada para suprir a soma dos TDPs de todos os componentes, com uma margem de seguraça
+recomendada de aproximadamente 20\% a 30\% acima do consumo estimado \cite{ATXSPEC2022}. Uma fonte subdimensionada provoca instabilidade do sistema,
+reinicializações inesperadas e, em casos extremos, danos permanentes aos componentes. Essa restrição difere das anteriores por ser de natureza
+quantitativa: não se trata de uma incompatibilidade binária, mas de uma relação de desigualdade entre a capacidade da fonte e a demanda
+agregada dos componentes.
+
+\subsection{Formalização como Problema de Restrições}
+As três categorias de restrições descritas, soquete, padrão de memória e capacidade energética, possuem uma estrutura comum: cada um
+envolve um par de componentes e define condições que os valores atribuídos a esse par devem satisfazer. Essa estrutura é precisamente o que
+a teoria dos Problemas de Satisfação de Restrições (CSP) formaliza: cada categoria de componente pode ser modelada como uma variável, o
+conjunto de modelos comercialmente disponíveis em cada categoria constitui o domínio dessa variáveis. Essa correspondência torna o CSP não apenas uma metáfora convenientem, mas a
+estrutura formal mais adequada para modelar o problema de validação de configurações de \textit{hardware}, conforme detalhado na seção seguinte.
+
 % ============================================================
 \section{Problemas de Satisfação de Restrições (CSP)}
 \label{sec:csp}
 % ============================================================
- 
+
 Um Problema de Satisfação de Restrições (CSP) é formalmente caracterizado
 por uma tripla $\langle X, D, C \rangle$, na qual $X = \{X_1, \ldots, X_n\}$
 denota um conjunto finito de variáveis, $D = \{D_1, \ldots, D_n\}$ representa
 os respectivos domínios, de modo que cada $D_i$ delimita os valores admissíveis
 para $X_i$, e $C$ reúne as restrições que impõem condições sobre as combinações
-válidas de valores \cite{russel2010}. Cada restrição $C_j$ é expressa como um
+válidas de valores \cite{Russell2010}. Cada restrição $C_j$ é expressa como um
 par $\langle \textit{scope}, \textit{rel} \rangle$, em que $\textit{scope}$ é
 uma tupla de variáveis participantes e $\textit{rel}$ define os valores que
-essas variáveis podem assumir conjuntamente \cite{russel2010}. Diz-se que o
+essas variáveis podem assumir conjuntamente \cite{Russell2010}. Diz-se que o
 problema está resolvido quando se obtém uma atribuição completa e consistente:
 uma função que associa a cada variável um valor de seu domínio sem infringir
 nenhuma restrição de $C$.
- 
-A aplicação dessa formalização ao domínio de compatibilidade de hardware é
-direta e natural. As categorias de componentes, como processador, placa-mãe,
-memória RAM, GPU e fonte de alimentação, constituem o conjunto de variáveis $X$;
-os modelos comercialmente disponíveis em cada categoria formam os respectivos
-domínios $D$; e o conjunto de restrições $C$ encapsula as regras físicas e
-elétricas que governam a compatibilidade entre esses componentes, tais como a
-conformidade de soquete entre processador e placa-mãe, o padrão de memória
-suportado e a capacidade energética exigida. Essa correspondência torna o CSP
-não apenas uma metáfora conveniente, mas o arcabouço formal mais adequado para
-modelar o problema de montagem e validação de configurações de hardware.
- 
+
+\subsection{Tipos de Restrições}
+As restrições em um CSP podem ser classificadas quanto ao número de variáveis
+que envolvem. Restrições unárias afetam uma única variável, limitando seu domínio
+independentemente das demais, por exemplo: a restrição de que a fonte de alimentação deve
+ter potência mínima de 500W. Restrições binárias envolvem duas variáveis e são as mais comuns
+em problemas de compatibilidade de \textit{hardware}, por exemplo: a restrição de que o soquete
+da CPU deve corresponder ao soquete suportado pela placa-mãe. Restrições de ordem superior envolvem
+três ou mais variáveis simultaneamente \cite{Dechter2003}. O sistema proposto neste trabalho
+opera predominantemente com restrições binárias, o que viabiliza a representação estrutural
+em grafo de restrições.
+
+\subsection{Aplicação ao Domínio de Hardware}
+A aplicação dessa formalização ao domínio de compatibilidade de \textit{hardware} é
+direta. Considerando os cinco componentes centrais do sistema (CPU, placa-mãe, RAM, GPU e fonte), a tripla ($X, D, C$) pode ser definida da seguinte forma:
+\begin{itemize}
+  \item $X = \{\text{CPU}, \text{Placa-mãe}, \text{RAM}, \text{GPU}, \text{Fonte}\}$;
+
+  \item $\begin{aligned}[t]
+            D = \{ & D_{\text{CPU}} = \text{modelos de processadores disponíveis},   \\
+                   & D_{\text{Placa}} = \text{modelos de placas-mãe disponíveis},    \\
+                   & D_{\text{RAM}} = \text{modelos de memória RAM disponíveis},     \\
+                   & D_{\text{GPU}} = \text{modelos de placas de vídeo disponíveis}, \\
+                   & D_{\text{Fonte}} = \text{modelos de fontes disponíveis} \}
+          \end{aligned}$
+
+  \item $\begin{aligned}[t]
+            C = \{ & \text{soquete}(\text{CPU}, \text{Placa-mãe}),         \\
+                   & \text{padrão\_memória}(\text{Placa-mãe}, \text{RAM}), \\
+                   & \text{tdp\_cpu}(\text{CPU}, \text{Fonte}),            \\
+                   & \text{tdp\_gpu}(\text{GPU}, \text{Fonte}) \}
+          \end{aligned}$
+\end{itemize}
+
+Para ilustrar concretamente, considere a atribuição parcial
+$\{\text{CPU} = \text{Ryzen 5 7600}, \allowbreak \text{Placa-mãe} = \text{B650}, \allowbreak \text{RAM} = \text{DDR5-5600}\}$.
+Essa atribuição é consistente: o Ryzen 5 7600 utiliza soquete AM5, a placa B650 suporta AM5,
+e o padrão DDR5 é compatível com a plataforma AM5. Contudo, a atribuição
+$\{\text{CPU} = \text{Ryzen 5 7600}, \allowbreak \text{Placa-mãe} = \text{B650}, \allowbreak \text{RAM} = \text{DDR4-3200}\}$
+viola a restrição padrão\_memória, pois placas-mãe com chipset B650 suportam exclusivamente DDR5 \cite{AMD2022,JEDEC2020}.
+A solução do CSP consiste em encontrar uma atribuição completa, cobrindo todas as cinco variáveis,
+que satisfaça simultaneamente todas as restrições de $C$.
+
+\subsection{Representação em Grafo}
 A principal distinção entre o CSP e as abordagens clássicas de busca em espaço
-de estados reside na representação fatorada que aquele adota: em vez de tratar
-o estado como uma entidade atômica e indivisível, o CSP expõe a estrutura
-interna do problema por meio de variáveis e restrições explícitas, permitindo
-modelá-lo como um grafo de restrições no qual os vértices correspondem às
-variáveis e as arestas codificam restrições binárias entre pares de variáveis
-\cite{russel2010, Kumar_1992}. A resolução por força bruta implica enumerar
-todas as combinações possíveis de valores para as variáveis, o que, em
-instâncias com $n$ variáveis e domínios de tamanho $d$, gera um espaço de
-$d^n$ atribuições candidatas \cite{russel2010}. Esse crescimento exponencial
-torna o algoritmo de \textit{backtracking} puro inviável à medida que o
-problema escala, demandando técnicas complementares de poda e simplificação
-de domínio, uma vez que a resolução de um CSP genérico pertence à classe
-NP-completo \cite{sipser2012}.
- 
-A principal técnica para contornar a explosão combinatória é a propagação de
-restrições, realizada por algoritmos de consistência. O mais consolidado na
-literatura é o AC-3 (\textit{Arc Consistency Algorithm 3}), proposto por
-\citeauthorandyear{mackworth1977}, cujo objetivo é garantir a consistência de
-arco em redes de restrições binárias \cite{Kumar_1992}. O algoritmo mantém
-uma fila de arcos a examinar e, para cada par de variáveis relacionadas,
-remove do domínio da variável os valores que não encontram suporte em nenhum
-valor do domínio da variável vizinha; cada remoção dispara a reinserção dos
-arcos afetados na fila, propagando a mudança pela rede até o ponto de
-estabilidade, em que nenhuma redução adicional é possível \cite{russel2010}.
-Assumindo um CSP com $n$ variáveis, domínios de tamanho no máximo $d$ e $c$
-restrições binárias, a complexidade de pior caso do AC-3 é $O(cd^3)$
-\cite{russel2010}. Aplicado como pré-processamento ou intercalado ao
-\textit{backtracking}, o AC-3 identifica antecipadamente inconsistências
-locais que, não tratadas, provocariam falhas reiteradas durante a busca
-global, reduzindo de forma expressiva o espaço efetivo de soluções a explorar.
- 
- 
+de estados reside na representação fatorada que aquele adota: em vez de tratar o
+estado como uma entidade atômica e indivisível, o CSP expõe a estrutura interna
+do problema por meio de variáveis e restrições explícitas \cite{Russell2010,Kumar1992}.
+Restrições binárias entre pares de variáveis admitem representação natural como grafo,
+no qual os vértices correspondem às variáveis e as arestas codificam as restrições.
+Essa estrutura de grafo de restrições é o objeto central sobre o qual os algoritmos de busca e propagração
+operam.
+
+% ============================================================
+\section{Teoria dos Grafos e Grafo de Restrições}
+\label{sec:grafo-restricoes}
+% ============================================================
+
+\subsection{Definições Fundamentais}
+Um grafo é formalmente definido como um par ordenado $G = (V, E)$,
+onde $V$ é um conjunto finito não vazio de vértices e $E \subseteq V \times V$
+é um conjunto de arestas \cite{Diestel2017}.
+Um grafo é dito simples quando não contém laços (arestas de um vértice para si mesmo)
+nem arestas paralelas (múltiplas arestas entre o mesmo par de vértices).
+Em um grafo não direcionado, as arestas não possuem orientação:
+a aresta $\{u, v\}$ é idêntica a $\{v, u\}$. Dois vértices $u$ e $v$ são ditos
+adjacentes se existe uma aresta $\{u, v\} \in E$ conectando-os \cite{Diestel2017}.
+
+\subsection{Representações Computacionais}
+Do ponto de vista computacional, um grafo pode ser representado de duas formas
+principais \cite{Cormen2001}. A matriz de adjacência é uma matriz $A$ de dimensão $|V| \times |V|$, na qual $A[i][j] = 1$
+se existe aresta entre os vértices $i$ e $j$, e $0$ caso contrário. Essa representação permite
+verificar a existência de uma aresta em tempo constante $O(1)$, mas exige espaço $O(|V|^2)$,
+independentemente do número de arestas. A lista de adjacência associa a cada
+vértice uma lista de seus vizinhos, exigindo espaço $O(|V| + |E|)$.
+Para grafos esparsos, onde o número de arestas é significativamente menor que
+$V^2$, a lista de adjacência é preferível em termos de eficiência de memória \cite{Cormen2001}.
+
+O grafo de restrições do sistema proposto é esparso por natureza: com cinco
+vértices (componentes), o número máximo de arestas seria 10, mas o sistema
+possui apenas quatro restrições binárias efetivas, soquete entre CPU e Placa-mãe,
+padrão de memória entre Placa-mãe e RAM, TDP da CPU e Fonte, e TDP da GPU e  Fonte.
+Pares como GPU e RAM ou CPU e GPU, não possuem restrições física direta e portanto
+não são conectados por arestas. A lista de adjacência é, portanto, a representação
+mais adequada para esse grafo.
+
+\subsection{Grafo de Restrições}
+Dado um CSP com variáveis $X$ e restrições $C$, o grafo de restrições $G_C = (X, E)$
+é construído de modo que existe uma aresta $\{X_i, X_j\} \in E$ se e somente se existe
+alguma restrição $C$ envolvendo simultaneamente as variáveis $X_i$ e $X_j$ \cite{Russell2010}.
+Essa representação explicita a estrutura topológica do problema, vertíces isolados correspondem
+a variáveis sem restrições com outras, e componentes fortemente conectados indicam
+grupos de variáveis com alta interdependência.
+
+Aplicando essa definição ao sistema proposto, o grafo de restrições possui a seguinte estrutura:
+
+\begin{itemize}
+  \item \textbf{Vértices:} $V = \{\text{CPU}, \text{Placa-mãe}, \text{RAM}, \text{GPU}, \text{Fonte}\}$
+  \item \textbf{Arestas:} $E$ compreende as seguintes relações:
+        \begin{itemize}
+          \item $\{\text{CPU}, \text{Placa-mãe}\}$, restrição de soquete;
+          \item $\{\text{Placa-mãe}, \text{RAM}\}$, restrição de padrão de memória;
+          \item $\{\text{CPU}, \text{Fonte}\}$, restrição de TDP do processador;
+          \item $\{\text{GPU}, \text{Fonte}\}$, restrição de TDP da placa de vídeo.
+        \end{itemize}
+\end{itemize}
+
+Essa estrutura revela que a Fonte é um vértice de alta centralidade no grafo, pois está conectada tanto
+à CPU quanto à GPU, de modo que qualquer alteração no domínio de um desses componentes pode propagar
+restrições para o domínio da Fonte. A Placa-mãe, por sua vez, é o vértice que medeia a compatibilidade entre CPU e RAM,
+funcionando como ponto de articulação da rede de restrições. Esse grafo é o objeto sobre o qual os algoritmos de busca
+e propagação operam, cuja complexidade computacional é analisada na seção seguinte.
+
 % ============================================================
 \section{Complexidade Computacional}
 \label{sec:complexidade}
 % ============================================================
- 
-A teoria da complexidade computacional ocupa-se da classificação de problemas
-de decisão segundo os recursos algorítmicos, principalmente tempo de execução
-e espaço de memória, exigidos para sua resolução \cite{cormen01}. Dentro
-desse arcabouço, a classe P reúne os problemas para os quais existem
-algoritmos determinísticos de tempo polinomial, considerados eficientes e
-tratáveis mesmo para entradas de grande escala. A classe NP, por sua vez,
-abrange os problemas cujas soluções propostas podem ser \textit{verificadas}
-em tempo polinomial por uma máquina determinística, ainda que não se disponha,
-até o presente, de algoritmos igualmente eficientes para
-\textit{encontrá-las} \cite{sipser2012}. A questão sobre a relação entre
-essas duas classes, isto é, se $\text{P} = \text{NP}$, permanece em aberto
-e constitui o problema não resolvido de maior relevância para a ciência da
-computação teórica, razão pela qual o \textit{Clay Mathematics Institute} o
-incluiu entre os sete Problemas do Milênio \cite{sipser2012}.
- 
-O interior da classe NP não é uniforme. A literatura demonstra a existência de
-subclasses com diferentes graus de dificuldade, incluindo problemas resolúveis
-em tempo subexponencial por meio de não-determinismo limitado
-\cite{PAPADIMITRIOU1996161}. O CSP, contudo, não se enquadra nessas classes
-intermediárias: situa-se no topo da hierarquia como um problema NP-completo
-\cite{sipser2012}. Um problema é classificado como NP-completo quando pertence
-a NP e todo problema de NP se reduz a ele em tempo polinomial; essa
-classificação pode ser estabelecida por redução polinomial a partir do Problema
-da Satisfabilidade Booleana (SAT), um dos problemas canônicos de NP-completude
-\cite{cormen01, sipser2012}. Consequentemente, se qualquer problema NP-completo
-admitisse solução em tempo polinomial, toda a classe NP colapsaria em P
-\cite{sipser2012}.
- 
-Essa natureza NP-completa impõe restrições severas à arquitetura de qualquer
-sistema de verificação de compatibilidade de hardware fundamentado em CSP.
-A primeira limitação é de ordem temporal: a avaliação exaustiva de todas as
-combinações interdependentes de componentes é inviável na prática em razão da
-explosão combinatória intrínseca à classe \cite{borodin2011}. A segunda
-limitação é de ordem espacial: estratégias alternativas baseadas no mapeamento
-estático e exaustivo de regras lógicas condicionais, codificando explicitamente
-cada restrição de hardware por meio de estruturas \textit{if-else} ou tabelas
-de decisão, não contornam o problema, pois a representação de funções lógicas
-complexas por árvores de decisão pode exigir espaço de tamanho exponencial,
-conforme demonstrado por \cite{Jukna1999PvsNP}. Diante dessas limitações, a
-modelagem do problema de montagem e validação de computadores exige a adoção
-de um motor de inferência baseado em CSP que aplique técnicas de propagação de
-restrições: em vez de enumerar cegamente o espaço de soluções ou armazenar um
-volume impraticável de regras estáticas, o motor poda dinamicamente os domínios
-das variáveis a cada interação do usuário, reduzindo o espaço de busca de
-forma incremental e viabilizando respostas em tempo real.
- 
- 
-% ============================================================
-\section{Sistemas Especialistas}
-\label{sec:sistemas-especialistas}
-% ============================================================
- 
-Um Sistema Especialista (SE) é um programa de computador projetado para
-simular o raciocínio de um especialista humano em um domínio restrito e bem
-definido \cite{russel2010}. Sua arquitetura é composta por três elementos
-centrais: a base de conhecimento, que armazena fatos e regras sobre o
-domínio; o motor de inferência, que aplica essas regras aos fatos disponíveis
-para derivar conclusões; e a interface de explicação, que permite ao sistema
-justificar suas respostas ao usuário \cite{russel2010}. O motor de inferência
-pode operar segundo encadeamento progressivo (\textit{forward chaining}),
-partindo dos fatos conhecidos em direção a conclusões, ou encadeamento
-regressivo (\textit{backward chaining}), partindo de uma hipótese e verificando
-se os fatos disponíveis a sustentam \cite{russel2010}.
- 
-O sistema proposto neste trabalho se enquadra na categoria de sistemas
-especialistas baseados em restrições. A base de conhecimento é constituída
-pelas especificações técnicas dos componentes de hardware e pelas regras de
-compatibilidade que os relacionam; o motor de inferência é implementado por
-um algoritmo de propagação de restrições que opera sobre o grafo de CSP; e a
-interface apresenta ao usuário não apenas os componentes compatíveis, mas
-também as razões pelas quais determinadas combinações são inviáveis. Essa
-capacidade de explicação é uma característica fundamental dos sistemas
-especialistas que os distingue de simples mecanismos de filtragem: enquanto
-um filtro se limita a apresentar resultados, um SE fundamentado em CSP é capaz
-de indicar qual restrição foi violada e por que, tornando o processo de
-montagem educativo e transparente.
- 
- 
-% ============================================================
-\section{Sistemas Tutores Inteligentes}
-\label{sec:sti}
-% ============================================================
- 
-Um Sistema Tutor Inteligente (STI) é um ambiente computacional que oferece
-instrução personalizada e adaptada ao perfil do aprendiz, sem a necessidade
-de intervenção humana direta \cite{russel2010}. Diferentemente de sistemas de
-\textit{e-learning} tradicionais, que apresentam o mesmo conteúdo a todos os
-usuários, um STI mantém modelos do estudante, do domínio e da estratégia
-pedagógica, ajustando dinamicamente o nível de dificuldade, o tipo de
-\textit{feedback} e a sequência de conteúdos conforme o desempenho observado
-\cite{russel2010}. Essa personalização é o que confere ao STI sua
-característica de inteligência: a capacidade de diagnosticar lacunas de
-conhecimento e de intervir de forma contextualmente adequada.
- 
-A distinção fundamental entre um sistema de filtragem e um sistema tutor reside
-precisamente na natureza do \textit{feedback} fornecido. Um mecanismo de
-filtragem tradicional responde à pergunta ``quais componentes são
-compatíveis?'', apresentando uma lista de resultados sem qualquer elaboração.
-Um STI, por sua vez, responde à pergunta ``por que esses componentes são ou
-não compatíveis?'', articulando as razões subjacentes à compatibilidade ou
-incompatibilidade em linguagem acessível ao aprendiz \cite{russel2010}. No
-contexto deste trabalho, o motor CSP cumpre o papel do modelo de domínio do
-STI: ao propagar restrições e podar domínios de forma incremental, ele não
-apenas determina quais configurações são válidas, mas também fundamenta as
-explicações que serão apresentadas ao usuário, tornando cada interação uma
-oportunidade de aprendizagem sobre os princípios técnicos que regem a montagem
-de computadores.
- 
+
+A teoria da complexidade computacional ocupa-se da classificação de problemas de decisão segundo
+os recursos algorítmicos, principalmente tempo de execução e espaço de memória, exigidos para sua resolução \cite{Cormen2001}.
+Dentro desse arcabouço, a classe P reúne os problemas para os quais existem algoritmos determinísticos
+de tempo polinomial, considerados eficientes e tratáveis mesmo para entradas de grande escala.
+A classe NP, por sua vez, abrange os problemas cuas soluções propostas podem ser verificados em tempo polinomial
+por uma máquina determinística, ainda que não se conheça, até o presente, algoritmo eficiente para encontrá-las \cite{Sipser2012}.
+A questão sobre a relação entre essas duas classes, se $P = NP$, permanece em aberto e constitui
+o problema não resolvido de maior relavância para a ciência da computação teórica, razão pela qual o
+\textit{Clay Mathematics Institute} o incluiu entre os sete Problemas do Milênio \cite{Sipser2012}.
+
+O interior da classe NP não é uniforme. A literatura demonstra a existência de subclasses com diferentes
+graus de dificuldade, incluindo problemas resolúveis em tempo subexponencial por meio de não-determinismo limitado \cite{Papadimitriou1996}.
+O CSP, contudo, não se enquadra nessas classes intermediárias, situando-se no topo da hierarquia como um problema NP-completo \cite{Sipser2012}.
+Um problema é classificado como NP-completo quando pertence a NP e todo problema NP se reduz
+a ele em tempo polinomial, essa classificação pode ser estabelecida por redução polinomial a partir
+do Problema da Satisfabilidade Booleana (SAT), um dos problemas canônicos de NP-completude \cite{Cormen2001,Sipser2012}.
+Consequentemente, se qualquer problema NP-completo admitisse solução em tempo polinomial,
+toda classe NP colapsaria em P \cite{Sipser2012}.
+
+\subsection{Implicações para o Domínio de Hardware}
+Em natureza NP-completa impõe restrições severas à arquitetura de qualquer sistema de verificação
+de compatibilidade de \textit{hardware} fundamentado em CSP. A primeira limitação é de ordem temporal,
+a avaliação exaustiva de todas as combinações interdependentes de componentes é inviável na prática em razão
+da explosão combinatória intrínseca à classe \cite{Borodin2011}. Para ilustrar concretamente, considere
+que cada categoria de componente possui em média 50 modelos disponíveis no catálogo do sistema. Com cinco
+categorias (CPU, Placa-mãe, RAM, GPU e Fonte), a avaliação por força bruta implicaria examinar $50^5 = 312.500.000$ atribuições
+candidatas antes de encontrar uma solução válida no pior caso. Esse número cesce exponencialmente à medida
+que o catálogo se expande, tornando a abordagem inviável em tempo hábil.
+
+A segunda limitação é de ordem espacial, estratégias alternativas baseadas no mapeamento
+estático e exaustivo de regras lógicas condicionais, codificando explicitamente cada restrição de \textit{hardware}
+por meio de estruturas if-else ou tabela de decisão, não contornam o problema, pois a representação de funções
+lógicas complexas por árvores de decisão pode exiger espaço de tamanho exponencial \cite{Jukna1999}. Diante
+dessas limitações, a abordagem padrão para tornar CSPs tratáveis na prática é a busca sistemática
+com retrocesso combinada com técnicas de propagração de restrições, que reduzem o espaço efetivo
+de busca de forma incremental.
+
+\section{Algoritmos de Busca e Backtracking}
+\label{sec:backtracking}
+
+\subsection{Busca em Espaço de Atribuições}
+Dado o grafo de restrições e a complexidade NP-completa do CSP, é necessário um algoritmo
+de busca sistemática que explore o espaço de atribuições de forma inteligente,
+sem enumerar cegamente todas as combinações possíveis. O ponto de partida é o conceito
+de atribuição parcial, uma função que associa valores a um subconjunto das variáveis,
+podendo ser progressivamente estendida até uma atribuição completa \cite{Russell2010}.
+A ideia central dos algoritmos de busca para CSP é construir a atribuição incrimentalmente,
+verificando consistência a cada passo e abandonando ramos da árvore de busca assim que
+uma inconsistência é detectada.
+
+\subsection{Backtracking}
+O algoritmo de \textit{backtracking} é o método fundamental de busca para CSPs \cite{Russell2010,Kumar1992}.
+Ele percorre recursivamente a árvore de atribuições, em cada nível da recursão, seleciona uma variável
+ainda não atribuida, tenta cada valor do seu domínio na ordem disponível, verifica se esse valor é consistente
+com as restrições envolvendo as variáveis já atribuidas e recua (\textit{backtrack}) ao encontrar uma inconsistência.
+O pseudocódigo do algorimto é apresentado a seguir:
+
+\begin{algorithm}[hbtp]
+  \caption{Algoritmo de Busca por Backtracking para CSP}\label{alg:backtracking}
+  \vspace{2mm} % Dá um respiro entre o título e a linha
+  \hrule % Desenha a linha superior
+  \vspace{2mm} % Dá um respiro entre a linha e o código
+
+  \begin{algorithmic}[1]
+    \Function{Backtracking-Search}{$csp$}
+    \State \Return \Call{Backtrack}{$\emptyset, csp$}
+    \EndFunction
+    \Statex
+    \Function{Backtrack}{$atribuicao, csp$}
+    \If{$atribuicao$ está completa}
+    \State \Return $atribuicao$
+    \EndIf
+    \State $var \gets$ \Call{Selecionar-Variavel-Nao-Atribuida}{$csp$}
+    \ForAll{$valor$ em \Call{Ordenar-Valores}{$var, atribuicao, csp$}}
+    \If{$valor$ é consistente com $atribuicao$ dado $csp$}
+    \State adicionar $\{var = valor\}$ à $atribuicao$
+    \State $resultado \gets$ \Call{Backtrack}{$atribuicao, csp$}
+    \If{$resultado \neq$ falha}
+    \State \Return $resultado$
+    \EndIf
+    \State remover $\{var = valor\}$ da $atribuicao$
+    \EndIf
+    \EndFor
+    \State \Return falha
+    \EndFunction
+  \end{algorithmic}
+
+  \vspace{2mm}
+  \hrule % Desenha a linha inferior
+  \vspace{2mm}
+  \fonte{O autor (2026).} % Adiciona a fonte padrão ABNT. Se o comando \fonte der erro no seu template, use apenas: Fonte: O autor (2026).
+\end{algorithm}
+
+A complexidade de pior caso do \textit{backtracking} puro é $O(d^n)$, na qual $d$ é o tamanho
+máximo dos domínios e $n$ é o número de variáveis, reiterando a inviabilidade para instâncias grandas
+sem otimizações complementares \cite{Russell2010}.
+
+\subsection{Forward Checking}
+Uma primeira melhoria ao backtracking puro é o \textit{forward checking} \cite{Dechter2003}.
+Ao atribuir um valor à variável $X_i$, o algoritmo imediatamente examina cada variável $X_j$, ainda
+não atribuida que compartilha uma restrição com $X_i$ e remove de $Dom(X_j)$ todos os valores que se tornam
+inconsistentes com a atribuição de $X_i$. Se algum domínio $X_j$ se torna vazio, o algoritmo detecta
+a falha antecipadamente e recua, sem precisar explorar o ramo até o fim.
+
+Aplicando ao domínio de \textit{hardware}, ao selecionar uma CPU com soquete AM5,
+o \textit{forward checking} percorre os vizinhos de CPU no grafo de restrições e remove do domínio
+de Placa-mãe todos os modelos com soquete incompatível com AM5, antes mesmo de tentar atribuir um valor
+a Placa-mãe. Essa poda antecipada reduz significativamente o número de atribuições exploradas.
+Contudo, o \textit{forward checking} verifica apenas os vizinhos diretos da variável recém-atribuida,
+sem propagar as consequências dessas remoções para variáveis mais distantes no grafo. A forma mais
+completa e eficiente de propagação, que garante consistência global na rede, é o Algoritmo AC-3.
+
+\section{Propagação de Restrições e Algoritmo AC-3}
+\label{sec:ac3}
+A principal técnica para contornar a explosão combinatória é a propagação de restrições,
+realizada por algoritmos de consistência. O mais consolidado na literatura é o AC-3
+(\textit{Arc Consistency Algorithm 3}), proposto por \cite{Mackworth1977}, cujo objetivo é garantir
+a consistência de arco em redes de restrições binárias \cite{Kumar1992}. Diz-se que um arco
+$(X_i, X_j)$ é consistente quando, para todo valor $v \in Dom(X_i)$, existe ao menos um valor
+$w \in Dom(X_j)$ tal que a atribuição ${X_i = v, X_j = w}$ satifaz a restrição entre as duas variáveis.
+
+O algoritmo mantém uma fila de arcos a examinar e, para cada par de variáveis relacionadas,
+remove do domínio da variável os valores que não encontram suporte em nenhum valor do domínio da
+vaariável vizinha. Cada remoção dispara a reinserção dos arcos afetados na fila, propagando
+a mudança pela rede até o ponto de estabilidade, em que nenhuma redução adicional é possível \cite{Russell2010}.
+Assumindo um CSP com $n$ variáveis, domínios de tamanho máximo $d$ e $c$ restrições binárias, a complexidade
+de píor caso do AC-3 é $O(cd^3)$ \cite{Russell2010}.
+
 Texto da revisão da literatura, dividido em seções e subseções.
 
 
@@ -183,15 +317,15 @@ Este é um exemplo de como usar figuras. Referência cruzada: Figura~\ref{fig:ex
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Exemplo de figura}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=0.3]{imagens/LogoIF_BRI10}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:exemplo}
+  \centering
+  \caption{Exemplo de figura}
+  %scale redimensiona a figura.
+  %1.5 = 150% do tamanho original
+  %1 = 100% do tamanho original
+  %0.20 = 20% do tamanho original
+  \includegraphics[scale=0.3]{imagens/LogoIF_BRI10}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:exemplo}
 \end{figure}
 \FloatBarrier
 
@@ -200,19 +334,19 @@ Este é um exemplo de como usar tabelas. Referência cruzada: Tabela~\ref{tab:ex
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{Exemplo de tabela de 2 colunas}
-	\begin{tabular}{ c | c }
-		\hline
-		\textbf{Coluna 1} & \textbf{Coluna 2} \\ \hline
-		Dado 1a           & Dado 2a           \\ \hline
-		Dado 1b           & Dado 2b           \\ \hline
-		Dado 1c           & Dado 2c           \\ \hline
-		Dado 1d           & Dado 2d           \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:exemplo}
+  \centering
+  \caption{Exemplo de tabela de 2 colunas}
+  \begin{tabular}{ c | c }
+    \hline
+    \textbf{Coluna 1} & \textbf{Coluna 2} \\ \hline
+    Dado 1a           & Dado 2a           \\ \hline
+    Dado 1b           & Dado 2b           \\ \hline
+    Dado 1c           & Dado 2c           \\ \hline
+    Dado 1d           & Dado 2d           \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:exemplo}
 \end{table}
 \FloatBarrier
 
@@ -221,11 +355,11 @@ Este é um exemplo de como usar quadros. Referência cruzada: Quadro~\ref{qua:ex
 
 \FloatBarrier
 \begin{quadro}[!htbp]
-	\centering
-	\caption{Exemplo de quadro}
-	\includegraphics[scale=.7]{imagens/exemploQuadro}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{qua:exemplo}
+  \centering
+  \caption{Exemplo de quadro}
+  \includegraphics[scale=.7]{imagens/exemploQuadro}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{qua:exemplo}
 \end{quadro}
 \FloatBarrier
 
@@ -233,14 +367,14 @@ Este é um exemplo de como usar quadros. Referência cruzada: Quadro~\ref{qua:ex
 Este é um exemplo de como usar equações. Referência cruzada: Equação~\ref{eq:exemplo}
 
 \begin{equation}
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-\label{eq:exemplo}
+  \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+  \label{eq:exemplo}
 \end{equation}
 
 
 Exemplo de inserção de lista de código fonte (\textbf{\textcolor{red}{não use acentos no código!}}):
 
-\lstinputlisting[language=Java]{fontes/ClasseExemplo.java} 
+\lstinputlisting[language=Java]{fontes/ClasseExemplo.java}
 
 
 
@@ -254,82 +388,82 @@ Este é um exemplo de como inserir texto sem formatação (ambiente verbatim):
 Exemplo de lista de itens:
 
 \begin{itemize}
-	\item \textbf{Item 1:} texto...;
-	\item \textbf{Item 2:} texto...;
-    \begin{itemize}
-            \item \textbf{Subitem:} texto...;
-            \item \textbf{Subitem:} texto...;
-            \item \textbf{Subitem:} texto...;
+  \item \textbf{Item 1:} texto...;
+  \item \textbf{Item 2:} texto...;
+        \begin{itemize}
+          \item \textbf{Subitem:} texto...;
+          \item \textbf{Subitem:} texto...;
+          \item \textbf{Subitem:} texto...;
         \end{itemize}
-	\item \textbf{Item 3:} texto...;
-	\item \textbf{Item n:} texto....
+  \item \textbf{Item 3:} texto...;
+  \item \textbf{Item n:} texto....
 \end{itemize}
 
 
 Exemplo de lista numerada:
 
 \begin{enumerate}
-	\item \textbf{Item:} texto...;
-	\item \textbf{Item:} texto...;
-    \begin{enumerate}
-        \item \textbf{Subitem:} texto...;
-        \item \textbf{Subitem:} texto...;
-        \item \textbf{Subitem:} texto...;
-    \end{enumerate}
-	\item \textbf{Item:} texto...;
-	\item \textbf{Item:} texto....
+  \item \textbf{Item:} texto...;
+  \item \textbf{Item:} texto...;
+        \begin{enumerate}
+          \item \textbf{Subitem:} texto...;
+          \item \textbf{Subitem:} texto...;
+          \item \textbf{Subitem:} texto...;
+        \end{enumerate}
+  \item \textbf{Item:} texto...;
+  \item \textbf{Item:} texto....
 \end{enumerate}
 
 
 Exemplos de comandos para texto e referências:
 
 \begin{itemize}
-	\item Para iniciar um novo parágrafo, basta deixar uma linha em branco no código fonte;
-	\item Não force o compilador a pular mais de uma linha, pois terá influência negativa na composição do documento;
-	\item Sempre deixe o \LaTeX\ realizar a formatação de parágrafos e posicionamento de elementos;
-	\item Utilização de aspas simples (abertura \verb|`|, fechamento \verb|'|): `Texto entre aspas simples';
-	\item Utilização de aspas duplas (abertura \verb|``|, fechamento \verb|''|): ``Texto entre aspas duplas'';
-	\item Negrito (comando \verb|\textbf|): \textbf{texto em negrito};
-	\item Itálico (comando \verb|\textit|): \textit{texto em itálico};
-	\item Sublinhado (comando \verb|\underline|): \underline{texto sublinhado};
-	\item Negrito e itálico (usar comandos juntos): \textbf{\textit{texto em negrito e itálico}};
-	\item Alterar cor do texto (comando \verb|\textcolor{cor}{texto}|):
-	\begin{itemize}
-		\item Exemplo \verb|\textcolor{red}{texto}|: \textcolor{red}{texto vermelho};
-		\item Exemplo \verb|\textcolor[RGB]{255, 102, 0}|: \textcolor[RGB]{255, 102, 0}{texto laranja};
-		\item Exemplo \verb|\textcolor[HTML]{006AD7}|: \textcolor[HTML]{006AD7}{texto azul};
-	\end{itemize}
-	\item Ambiente matemático inline (comando \verb|$ expressão $|): $s = x^2-2x +1$;
-	\item Referência normal (comando \verb|\cite|):
-	\begin{itemize}
-		\item \cite{Agaisse1995};
-		\item \cite{Abedi2014};
-		\item \cite{BtNomenclature2016};
-	\end{itemize}
-	\item Referência normal com mais de uma obra (comando \verb|\cite|):
-	\begin{itemize}
-		\item \cite{Abedi2014, Agaisse1995};
-		\item \cite{AgapitoTenfen2014, BtNomenclature2016, Nelson2014};
-	\end{itemize}
-	\item Referência nome e ano (comando \verb|\citeauthorandyear|):
-	\begin{itemize}
-		\item \citeauthorandyear{Agaisse1995};
-		\item \citeauthorandyear{Abedi2014};
-		\item \citeauthorandyear{BtNomenclature2016};
-	\end{itemize}
+  \item Para iniciar um novo parágrafo, basta deixar uma linha em branco no código fonte;
+  \item Não force o compilador a pular mais de uma linha, pois terá influência negativa na composição do documento;
+  \item Sempre deixe o \LaTeX\ realizar a formatação de parágrafos e posicionamento de elementos;
+  \item Utilização de aspas simples (abertura \verb|`|, fechamento \verb|'|): `Texto entre aspas simples';
+  \item Utilização de aspas duplas (abertura \verb|``|, fechamento \verb|''|): ``Texto entre aspas duplas'';
+  \item Negrito (comando \verb|\textbf|): \textbf{texto em negrito};
+  \item Itálico (comando \verb|\textit|): \textit{texto em itálico};
+  \item Sublinhado (comando \verb|\underline|): \underline{texto sublinhado};
+  \item Negrito e itálico (usar comandos juntos): \textbf{\textit{texto em negrito e itálico}};
+  \item Alterar cor do texto (comando \verb|\textcolor{cor}{texto}|):
+        \begin{itemize}
+          \item Exemplo \verb|\textcolor{red}{texto}|: \textcolor{red}{texto vermelho};
+          \item Exemplo \verb|\textcolor[RGB]{255, 102, 0}|: \textcolor[RGB]{255, 102, 0}{texto laranja};
+          \item Exemplo \verb|\textcolor[HTML]{006AD7}|: \textcolor[HTML]{006AD7}{texto azul};
+        \end{itemize}
+  \item Ambiente matemático inline (comando \verb|$ expressão $|): $s = x^2-2x +1$;
+  \item Referência normal (comando \verb|\cite|):
+        \begin{itemize}
+          \item \cite{Agaisse1995};
+          \item \cite{Abedi2014};
+          \item \cite{BtNomenclature2016};
+        \end{itemize}
+  \item Referência normal com mais de uma obra (comando \verb|\cite|):
+        \begin{itemize}
+          \item \cite{Abedi2014, Agaisse1995};
+          \item \cite{AgapitoTenfen2014, BtNomenclature2016, Nelson2014};
+        \end{itemize}
+  \item Referência nome e ano (comando \verb|\citeauthorandyear|):
+        \begin{itemize}
+          \item \textcite{Agaisse1995};
+          \item \textcite{Abedi2014};
+          \item \textcite{BtNomenclature2016};
+        \end{itemize}
 \end{itemize}
 
 
 Exemplo 1 de citação direta:
 
 \begin{citacao}
-	Os 20 aminoácidos usualmente encontrados como resíduos em proteínas contém um grupo $\alpha$-carboxil, um grupo $\alpha$-amino e um grupo R distinto substituído no átomo de carbono $\alpha$. O átomo de carbono $\alpha$ de todos os aminoácidos, com exceção da glicina, é assimétrico e, portanto, os aminoácidos podem existir em pelo menos duas formas estereoisoméricas. Somente os estereoisômeros L, com uma configuração relacionada à configuração absoluta da molécula de referência L-gliceraldeído, são encontrados em proteínas \cite[p. 81]{Nelson2014}.
+  Os 20 aminoácidos usualmente encontrados como resíduos em proteínas contém um grupo $\alpha$-carboxil, um grupo $\alpha$-amino e um grupo R distinto substituído no átomo de carbono $\alpha$. O átomo de carbono $\alpha$ de todos os aminoácidos, com exceção da glicina, é assimétrico e, portanto, os aminoácidos podem existir em pelo menos duas formas estereoisoméricas. Somente os estereoisômeros L, com uma configuração relacionada à configuração absoluta da molécula de referência L-gliceraldeído, são encontrados em proteínas \cite[p. 81]{Nelson2014}.
 \end{citacao}
 
 Exemplo 2 de citação direta:
 
 \begin{citacao}
-	\textit{These various insecticidal proteins are synthesized during the stationary phase and accumulate in the mother cell as a crystal inclusion which can account for up to 25\% of the dry weight of the sporulated cells. The amount of crystal protein produced by a B. thuringiensis culture in laboratory conditions (about 0.5 mg of protein per ml) and the size of the crystals (24) indicate that each cell has to synthesize $10^6$ to $2 \times 10^6$ $\delta$-endotoxin molecules during the stationary phase to form a crystal} \cite[p. 1]{Agaisse1995}.
+  \textit{These various insecticidal proteins are synthesized during the stationary phase and accumulate in the mother cell as a crystal inclusion which can account for up to 25\% of the dry weight of the sporulated cells. The amount of crystal protein produced by a B. thuringiensis culture in laboratory conditions (about 0.5 mg of protein per ml) and the size of the crystals (24) indicate that each cell has to synthesize $10^6$ to $2 \times 10^6$ $\delta$-endotoxin molecules during the stationary phase to form a crystal} \cite[p. 1]{Agaisse1995}.
 \end{citacao}
 
 Exemplo de nota de rodapé\footnote{Essa é uma nota de rodapé!}.

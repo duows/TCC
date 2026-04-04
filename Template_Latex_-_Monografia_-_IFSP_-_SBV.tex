@@ -69,7 +69,7 @@
 \usepackage[final]{pdfpages}
 \usepackage{bigstrut}
 \usepackage{longtable}
-
+\usepackage{algpseudocode}
 % ---
 
 % ---
@@ -81,40 +81,14 @@
 % ---
 % Pacotes de citações
 % ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf,abnt-emphasize=bf]{abntex2cite}  % Citações padrão ABNT
+\usepackage{csquotes}
+\usepackage[style=abnt, backref=true, backend=biber]{biblatex}
+\addbibresource{referencias.bib}
 
 
 % ---------------------------------------------------------------------------------
 %                          CONFIGURAÇÕES DOS PACOTES
 % ---------------------------------------------------------------------------------
-
-% ---
-% Configurações do pacote backref
-%
-% Para desativar, tire o comentário de \begin{comment} e \end{comment} 
-% das próximas linhas e comente a linha \usepackage[brazilian,hyperpageref]{backref}
-% acima.
-% ---
-
-%\begin{comment}
-% ---
-% Configurações do pacote backrefhttps://pt.overleaf.com/project/5fc07bbbe9cc069c0e55a0d1
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-	Nenhuma citação no texto.%
-	\or
-	Citado na página #2.%
-	\else
-	Citado #1 vezes nas páginas #2.%
-	\fi}%
-% --- das
-%\end{comment}
 
 
 % listagens
@@ -137,6 +111,19 @@
 	commentstyle=\color{corComentario},
 	keywordstyle=\color{corPalavraChave}
 }
+
+% ---
+% Tradução do Algpseudocode para PT-BR
+% ---
+\algrenewcommand\algorithmicfunction{\textbf{função}}
+\algrenewcommand\algorithmicend{\textbf{fim}}
+\algrenewcommand\algorithmicif{\textbf{se}}
+\algrenewcommand\algorithmicthen{\textbf{então}}
+\algrenewcommand\algorithmicelse{\textbf{senão}}
+\algrenewcommand\algorithmicfor{\textbf{para}}
+\algrenewcommand\algorithmicforall{\textbf{para cada}}
+\algrenewcommand\algorithmicdo{\textbf{faça}}
+\algrenewcommand\algorithmicreturn{\textbf{retornar}}
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
@@ -261,7 +248,22 @@
 % Configuração de posicionamento padrão:
 \setfloatlocations{quadro}{hbtp}
 
+% ---
+% Novo list of para Algoritmos
+% ---
+\newcommand{\algorithmname}{Algoritmo}
+\newcommand{\listofalgorithmsname}{Lista de Algoritmos}
 
+\newfloat[chapter]{algorithm}{loa}{\algorithmname}
+\newlistof{listofalgorithms}{loa}{\listofalgorithmsname}
+\newlistentry{algorithm}{loa}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{algorithm}{\centering}
+\counterwithout{algorithm}{chapter}
+\renewcommand{\cftalgorithmname}{\algorithmname\space} 
+\renewcommand*{\cftalgorithmaftersnum}{\hfill--\hfill}
+\setfloatlocations{algorithm}{hbtp}
 
 % --- 
 % Espaçamentos entre linhas e parágrafos 
@@ -286,13 +288,13 @@
 %                                   INÍCIO DO DOCUMENTO
 % ---------------------------------------------------------------------------------
 \begin{document}
-	
+
 % Seleciona o idioma do documento (conforme pacotes do babel)
 %\selectlanguage{english}
 \selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
-\frenchspacing 
+\frenchspacing
 
 
 % ---------------------------------------------------------------------------------
@@ -323,33 +325,33 @@
 % ---
 % Inserir a ERRATA
 % ---
-\input{pre12Errata}
+% \input{pre12Errata}
 
 % ---
 % Inserir folha de aprovação
 % ---
-\input{pre04FolhaDeAprovacao}
+% \input{pre04FolhaDeAprovacao}
 
 % ---
 % Dedicatória
 % ---
-\input{pre05Dedicatoria}
+% \input{pre05Dedicatoria}
 
 % ---
 % Agradecimentos
 % ---
-\input{pre06Agradecimentos}
+% \input{pre06Agradecimentos}
 
 % ---
 % Epígrafe
 % ---
-\input{pre07Epigrafe}
+% \input{pre07Epigrafe}
 
 % ---
 % Resumos
 % ---
-\input{pre08Resumo}
-\input{pre09Abstract}
+% \input{pre08Resumo}
+% \input{pre09Abstract}
 
 % ---
 % inserir lista de ilustrações
@@ -378,13 +380,13 @@
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-\input{pre10ListaSiglas}
+% \input{pre10ListaSiglas}
 % ---
 
 % ---
 % inserir lista de símbolos
 % ---
-\input{pre11ListaSimbolos}
+% \input{pre11ListaSimbolos}
 % ---
 
 % ---
@@ -405,19 +407,19 @@
 % ---------------------------------------------------------------------------------
 \textual
 
-\input{capitulo01Introducao}
+% \input{capitulo01Introducao}
 \input{capitulo02RevisaoLiteratura}
-\input{capitulo03Metodologia}
-\input{capitulo04DescricaoGeraldoProduto}
-\input{capitulo05ElicitacaodeRequisitosEAnalise}
-\input{capitulo06ProjetodeSoftware}
-\input{capitulo07Implementacao}
-\input{capitulo08Teste}
-\input{capitulo09Implantacao}
-\input{capitulo10ResultadosDiscussao}
-\input{capitulo11TrabalhosRelacionados}
-\input{capitulo12Conclusoes}
-\input{capitulo13Cronograma}
+% \input{capitulo03Metodologia}
+% \input{capitulo04DescricaoGeraldoProduto}
+% \input{capitulo05ElicitacaodeRequisitosEAnalise}
+% \input{capitulo06ProjetodeSoftware}
+% \input{capitulo07Implementacao}
+% \input{capitulo08Teste}
+% \input{capitulo09Implantacao}
+% \input{capitulo10ResultadosDiscussao}
+% \input{capitulo11TrabalhosRelacionados}
+% \input{capitulo12Conclusoes}
+% \input{capitulo13Cronograma}
 
 
 
@@ -433,7 +435,7 @@
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{referencias}
+\printbibliography
 
 
 % ----------------------------------------------------------
@@ -448,13 +450,13 @@
 % ----------------------------------------------------------
 % Apêndices
 % ----------------------------------------------------------
-\input{pos01Apendices}
+% \input{pos01Apendices}
 
 
 % ----------------------------------------------------------
 % Anexos
 % ----------------------------------------------------------
-\input{pos02Anexos}
+% \input{pos02Anexos}
 
 
 %---------------------------------------------------------------------

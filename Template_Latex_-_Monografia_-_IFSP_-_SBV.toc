@@ -5,114 +5,42 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{18}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Justificativa}{18}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objetivos}{18}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{18}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Objetivos Específicos}{18}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Problema (Hipótese ou Questão de Pesquisa)}{18}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Organização Deste Trabalho}{18}{section.1.4}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Revisão da Literatura}}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Problemas de Satisfação de Restrições (CSP)}{19}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Complexidade Computacional}{20}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Sistemas Especialistas}{21}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sistemas Tutores Inteligentes}{22}{section.2.4}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Materiais e métodos}}{27}{chapter.3}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Descrição Geral do Produto}}{28}{chapter.4}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Elicitação de Requisitos e Análise}}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Requisitos do Usuário}{29}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Requisitos do Sistema}{29}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Requisitos Funcionais}{29}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Requisitos Não-Funcionais}{30}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Restrições, Suposições e Dependências}{30}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Requisitos Adiados}{30}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Casos de Uso}{30}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Diagrama de Casos de Uso}{30}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Especificação dos Casos de Uso}{31}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Modelo de Domínio}{32}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Diagrama de Objetos}{35}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Diagrama de Classes de Análise}{35}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Diagrama de Atividades}{35}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Diagrama de Estados}{36}{section.5.8}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Projeto de Software}}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Projeto de Interface}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Projeto de Dados}{37}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Mapeamento Objeto-Relacional}{37}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Estrutura das Tabelas no Banco de Dados}{37}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Diagrama de Pacotes}{39}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Diagrama de Classes de Projeto}{39}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Projeto Procedimental}{39}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Diagrama de Sequência}{39}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Diagrama de Atividades}{40}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Diagrama de Estados}{40}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Projeto Arquitetural}{40}{section.6.4}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Implementação}}{42}{chapter.7}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Teste}}{43}{chapter.8}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase []{Implantação}}{46}{chapter.9}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {10}\MakeTextUppercase []{Resultados e Discussão}}{47}{chapter.10}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {11}\MakeTextUppercase []{Trabalhos Relacionados}}{48}{chapter.11}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {12}\MakeTextUppercase []{Conclusões/Conclusões Parciais}}{49}{chapter.12}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {13}\MakeTextUppercase []{Cronograma}}{50}{chapter.13}%
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Revisão da Literatura}}{8}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Compatibilidade de Hardware como Domínio do Problema}{8}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Compatibilidade de Soquete CPU-Placa-mãe}{8}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Padrão de Memória RAM}{8}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Capacidade Energética e TDP}{9}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Formalização como Problema de Restrições}{9}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Problemas de Satisfação de Restrições (CSP)}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Tipos de Restrições}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Aplicação ao Domínio de Hardware}{10}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Representação em Grafo}{11}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Teoria dos Grafos e Grafo de Restrições}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Definições Fundamentais}{11}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Representações Computacionais}{11}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Grafo de Restrições}{12}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Complexidade Computacional}{12}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Implicações para o Domínio de Hardware}{13}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Algoritmos de Busca e Backtracking}{14}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Busca em Espaço de Atribuições}{14}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Backtracking}{14}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Forward Checking}{14}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Propagação de Restrições e Algoritmo AC-3}{15}{section.1.6}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{51}{section*.45}%
-\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Título do Apêndice A}}{52}{appendix.A}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Título do Apêndice B}}{53}{appendix.B}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Título do Apêndice C}}{54}{appendix.C}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Título do Apêndice D}}{55}{appendix.D}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Título do Apêndice E}}{56}{appendix.E}%
-\cftinsert {AAA}
-\renewcommand *{\cftappendixname }{ANEXO \space }
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Título do Anexo A}}{57}{appendix.anexochapback.1}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Título do Anexo B}}{58}{appendix.anexochapback.2}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Título do Anexo C}}{59}{appendix.anexochapback.3}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Título do Anexo D}}{60}{appendix.anexochapback.4}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Título do Anexo E}}{61}{appendix.anexochapback.5}%
+\contentsline {chapter}{Refer\^encias}{20}{section*.12}%
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 

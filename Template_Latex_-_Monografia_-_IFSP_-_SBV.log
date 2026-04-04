@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  30 MAR 2026 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  4 APR 2026 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1124,89 +1124,340 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count438
 \c@LT@chunks=\count439
 \LT@p@ftn=\toks56
+) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count440
+\c@ALG@rem=\count441
+\c@ALG@nested=\count442
+\ALG@tlm=\skip276
+\ALG@thistlm=\skip277
+\c@ALG@Lnr=\count443
+\c@ALG@blocknr=\count444
+\c@ALG@storecount=\count445
+\c@ALG@tmpcounter=\count446
+\ALG@tmplength=\skip278
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count440
-\l__lipsum_a_int=\count441
-\l__lipsum_b_int=\count442
- (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
-Package: backref 2025-06-21 v1.45 Bibliographical back referencing
-) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2cite.sty
-Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
- (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2abrev.sty)
-\minimumbiblabelwidth=\skip276
-\ABCIauxlen=\skip277
-\c@ABCIaux=\count443
-\c@ABCImax=\count444
- (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
-Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
-Package: relsize 2013/03/29 ver 4.1
+\g__lipsum_par_int=\count447
+\l__lipsum_a_int=\count448
+\l__lipsum_b_int=\count449
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count450
+\csq@gtype=\count451
+\csq@glevel=\count452
+\csq@qlevel=\count453
+\csq@maxlvl=\count454
+\csq@tshold=\count455
+\csq@ltx@everypar=\toks57
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
-\biblabelsep=\skip278
-LaTeX Info: Redefining \newblock on input line 591.
-LaTeX Info: Redefining \cite on input line 618.
-\ABCItoken=\toks57
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count456
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count457
+\c@listtotal=\count458
+\c@listcount=\count459
+\c@liststart=\count460
+\c@liststop=\count461
+\c@citecount=\count462
+\c@citetotal=\count463
+\c@multicitecount=\count464
+\c@multicitetotal=\count465
+\c@instcount=\count466
+\c@maxnames=\count467
+\c@minnames=\count468
+\c@maxitems=\count469
+\c@minitems=\count470
+\c@citecounter=\count471
+\c@maxcitecounter=\count472
+\c@savedcitecounter=\count473
+\c@uniquelist=\count474
+\c@uniquename=\count475
+\c@refsection=\count476
+\c@refsegment=\count477
+\c@maxextratitle=\count478
+\c@maxextratitleyear=\count479
+\c@maxextraname=\count480
+\c@maxextradate=\count481
+\c@maxextraalpha=\count482
+\c@abbrvpenalty=\count483
+\c@highnamepenalty=\count484
+\c@lownamepenalty=\count485
+\c@maxparens=\count486
+\c@parenlevel=\count487
+\blx@tempcnta=\count488
+\blx@tempcntb=\count489
+\blx@tempcntc=\count490
+\c@blx@maxsection=\count491
+\blx@maxsegment@0=\count492
+\blx@notetype=\count493
+\blx@parenlevel@text=\count494
+\blx@parenlevel@foot=\count495
+\blx@sectionciteorder@0=\count496
+\blx@sectionciteorderinternal@0=\count497
+\blx@entrysetcounter=\count498
+\blx@biblioinstance=\count499
+\labelnumberwidth=\skip279
+\labelalphawidth=\skip280
+\biblabelsep=\skip281
+\bibnamesep=\skip282
+\bibinitsep=\skip283
+\bibparsep=\skip284
+\bibhang=\skip285
+\blx@bcfin=\read5
+\blx@bcfout=\write5
+\blx@langwohyphens=\language80
+\c@mincomprange=\count500
+\c@maxcomprange=\count501
+\c@mincompwidth=\count502
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 231.
-\c@quadro=\count445
-\c@loqdepth=\count446
-\cftbeforequadroskip=\skip279
-\cftquadroindent=\skip280
-\cftquadronumwidth=\skip281
-\Template_Latex_-_Monografia_-_IFSP_-_SBV@idxfile=\write5
-\openout5 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.idx'.
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'abnt.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count503
+\c@savedafterword=\count504
+\c@annotator=\count505
+\c@savedannotator=\count506
+\c@author=\count507
+\c@savedauthor=\count508
+\c@bookauthor=\count509
+\c@savedbookauthor=\count510
+\c@commentator=\count511
+\c@savedcommentator=\count512
+\c@editor=\count513
+\c@savededitor=\count514
+\c@editora=\count515
+\c@savededitora=\count516
+\c@editorb=\count517
+\c@savededitorb=\count518
+\c@editorc=\count519
+\c@savededitorc=\count520
+\c@foreword=\count521
+\c@savedforeword=\count522
+\c@holder=\count523
+\c@savedholder=\count524
+\c@introduction=\count525
+\c@savedintroduction=\count526
+\c@namea=\count527
+\c@savednamea=\count528
+\c@nameb=\count529
+\c@savednameb=\count530
+\c@namec=\count531
+\c@savednamec=\count532
+\c@translator=\count533
+\c@savedtranslator=\count534
+\c@shortauthor=\count535
+\c@savedshortauthor=\count536
+\c@shorteditor=\count537
+\c@savedshorteditor=\count538
+\c@labelname=\count539
+\c@savedlabelname=\count540
+\c@institution=\count541
+\c@savedinstitution=\count542
+\c@lista=\count543
+\c@savedlista=\count544
+\c@listb=\count545
+\c@savedlistb=\count546
+\c@listc=\count547
+\c@savedlistc=\count548
+\c@listd=\count549
+\c@savedlistd=\count550
+\c@liste=\count551
+\c@savedliste=\count552
+\c@listf=\count553
+\c@savedlistf=\count554
+\c@location=\count555
+\c@savedlocation=\count556
+\c@organization=\count557
+\c@savedorganization=\count558
+\c@origlocation=\count559
+\c@savedoriglocation=\count560
+\c@origpublisher=\count561
+\c@savedorigpublisher=\count562
+\c@publisher=\count563
+\c@savedpublisher=\count564
+\c@language=\count565
+\c@savedlanguage=\count566
+\c@origlanguage=\count567
+\c@savedoriglanguage=\count568
+\c@pageref=\count569
+\c@savedpageref=\count570
+\shorthandwidth=\skip286
+\shortjournalwidth=\skip287
+\shortserieswidth=\skip288
+\shorttitlewidth=\skip289
+\shortauthorwidth=\skip290
+\shorteditorwidth=\skip291
+\locallabelnumberwidth=\skip292
+\locallabelalphawidth=\skip293
+\localshorthandwidth=\skip294
+\localshortjournalwidth=\skip295
+\localshortserieswidth=\skip296
+\localshorttitlewidth=\skip297
+\localshortauthorwidth=\skip298
+\localshorteditorwidth=\skip299
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count571
+\c@textcitetotal=\count572
+\c@textcitemaxnames=\count573
+\c@biburlbigbreakpenalty=\count574
+\c@biburlbreakpenalty=\count575
+\c@biburlnumpenalty=\count576
+\c@biburlucpenalty=\count577
+\c@biburllcpenalty=\count578
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count579
+)
+Package biblatex Info: Trying to load bibliography style 'abnt'...
+Package biblatex Info: ... file 'abnt.bbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/bbx\abnt.bbx
+File: abnt.bbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count580
+\c@bbx:relatedtotal=\count581
+))
+Package biblatex Info: Trying to load citation style 'abnt'...
+Package biblatex Info: ... file 'abnt.cbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/cbx\abnt.cbx
+File: abnt.cbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load citation style 'authoryear-comp'...
+Package biblatex Info: ... file 'authoryear-comp.cbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\authoryear-comp.cbx
+File: authoryear-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\citetitle'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2026-01-19 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 218.
+\c@quadro=\count582
+\c@loqdepth=\count583
+\cftbeforequadroskip=\skip300
+\cftquadroindent=\skip301
+\cftquadronumwidth=\skip302
+\c@algorithm=\count584
+\c@loadepth=\count585
+\cftbeforealgorithmskip=\skip303
+\cftalgorithmindent=\skip304
+\cftalgorithmnumwidth=\skip305
+\Template_Latex_-_Monografia_-_IFSP_-_SBV@idxfile=\write6
+\openout6 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.idx'.
 
 
 Writing index file Template_Latex_-_Monografia_-_IFSP_-_SBV.idx 
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'brazil'.
 (Template_Latex_-_Monografia_-_IFSP_-_SBV.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 20.
-
-
-LaTeX Warning: Label `tab:reqNaoFuncionais' multiply defined.
-
+(babel)             Reported on input line 19.
 )
 \openout1 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-Package hyperref Info: Link coloring ON on input line 288.
-LaTeX Info: Redefining \degres on input line 288.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 290.
+LaTeX Font Info:    ... okay on input line 290.
+Package hyperref Info: Link coloring ON on input line 290.
+LaTeX Info: Redefining \degres on input line 290.
 \myptabbox=\box89
-\myptabboxwidth=\skip282
+\myptabboxwidth=\skip306
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count447
+\scratchcounter=\count586
 \scratchdimen=\dimen358
 \scratchbox=\box90
-\nofMPsegments=\count448
-\nofMParguments=\count449
+\nofMPsegments=\count587
+\nofMParguments=\count588
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count450
+\MPscratchCnt=\count589
 \MPscratchDim=\dimen359
-\MPnumerator=\count451
-\makeMPintoPDFobject=\count452
+\MPnumerator=\count590
+\makeMPintoPDFobject=\count591
 \everyMPtoPDFconversion=\toks59
 ) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1214,13 +1465,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 288.
-Package microtype Info: Applying patch `item' on input line 288.
-Package microtype Info: Applying patch `toc' on input line 288.
-Package microtype Info: Applying patch `eqnum' on input line 288.
-Package microtype Info: Applying patch `footnote' on input line 288.
-Package microtype Info: Applying patch `verbatim' on input line 288.
-LaTeX Info: Redefining \microtypesetup on input line 288.
+LaTeX Info: Redefining \microtypecontext on input line 290.
+Package microtype Info: Applying patch `item' on input line 290.
+Package microtype Info: Applying patch `toc' on input line 290.
+Package microtype Info: Applying patch `eqnum' on input line 290.
+Package microtype Info: Applying patch `footnote' on input line 290.
+Package microtype Info: Applying patch `verbatim' on input line 290.
+LaTeX Info: Redefining \microtypesetup on input line 290.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1243,7 +1494,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count453
+\c@lstlisting=\count592
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
@@ -1252,7 +1503,158 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)) (pre01Capa.tex
+))
+Package biblatex Info: Trying to load language 'brazil' -> 'brazil-abnt'...
+Package biblatex Info: ... file 'brazil-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazil-abnt.lbx
+File: brazil-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazilian.lbx
+File: brazilian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)))
+Package biblatex Info: Trying to load language 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazilian.lbx
+File: brazilian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'brazil'...
+Package biblatex Info: ... file 'brazil.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazil.lbx
+File: brazil.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazilian.lbx
+File: brazilian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)))
+Package biblatex Info: Trying to load language 'brazil'...
+Package biblatex Info: ... file 'brazil.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazil.lbx
+File: brazil.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazilian.lbx
+File: brazilian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'brazil'...
+Package biblatex Info: ... file 'brazil.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazil.lbx
+File: brazil.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\brazilian.lbx
+File: brazilian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))))))
+Package biblatex Info: Trying to load language 'spanish' -> 'spanish-abnt'...
+Package biblatex Info: ... file 'spanish-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\spanish-abnt.lbx
+File: spanish-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: Trying to load language 'french'...
+Package biblatex Info: ... file 'french.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\french.lbx
+File: french.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english' -> 'english-abnt'...
+Package biblatex Info: ... file 'english-abnt.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\english-abnt.lbx
+File: english-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' found.
+ (Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Abedi2014
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Agaisse1995
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                AgapitoTenfen2014
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                BtNomenclature2016
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Nelson2014
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 290.
+Package biblatex Info: Reference segment=0 on input line 290.
+ (pre01Capa.tex
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 6.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1363,110 +1765,49 @@ Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf , page1
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
  [3
 
- <./fichaCatalografica/FichaCatalograficaTCCBRI.pdf>]) (pre12Errata.tex [4
-
-]) (pre04FolhaDeAprovacao.tex
-<folhaAprovacao/FolhaAprovaTCCBRI.pdf, id=66, 597.55246pt x 845.07718pt>
-File: folhaAprovacao/FolhaAprovaTCCBRI.pdf Graphic file (type pdf)
-<use folhaAprovacao/FolhaAprovaTCCBRI.pdf>
-Package pdftex.def Info: folhaAprovacao/FolhaAprovaTCCBRI.pdf  used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<folhaAprovacao/FolhaAprovaTCCBRI.pdf, id=68, page=1, 597.55246pt x 845.07718pt>
-File: folhaAprovacao/FolhaAprovaTCCBRI.pdf Graphic file (type pdf)
-<use folhaAprovacao/FolhaAprovaTCCBRI.pdf, page 1>
-Package pdftex.def Info: folhaAprovacao/FolhaAprovaTCCBRI.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-File: folhaAprovacao/FolhaAprovaTCCBRI.pdf Graphic file (type pdf)
-<use folhaAprovacao/FolhaAprovaTCCBRI.pdf, page 1>
-Package pdftex.def Info: folhaAprovacao/FolhaAprovaTCCBRI.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: folhaAprovacao/FolhaAprovaTCCBRI.pdf Graphic file (type pdf)
-<use folhaAprovacao/FolhaAprovaTCCBRI.pdf, page 1>
-Package pdftex.def Info: folhaAprovacao/FolhaAprovaTCCBRI.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: folhaAprovacao/FolhaAprovaTCCBRI.pdf Graphic file (type pdf)
-<use folhaAprovacao/FolhaAprovaTCCBRI.pdf, page 1>
-Package pdftex.def Info: folhaAprovacao/FolhaAprovaTCCBRI.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: folhaAprovacao/FolhaAprovaTCCBRI.pdf Graphic file (type pdf)
-<use folhaAprovacao/FolhaAprovaTCCBRI.pdf, page 1>
-Package pdftex.def Info: folhaAprovacao/FolhaAprovaTCCBRI.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [5
-
-
-
- <./folhaAprovacao/FolhaAprovaTCCBRI.pdf>]) (pre05Dedicatoria.tex [6
-
-]) (pre06Agradecimentos.tex [7
-
-
-]) (pre07Epigrafe.tex
+ <./fichaCatalografica/FichaCatalograficaTCCBRI.pdf>]) (Template_Latex_-_Monografia_-_IFSP_-_SBV.lof
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
- [8
+(Font)              <6> on input line 3.
+) [4] (Template_Latex_-_Monografia_-_IFSP_-_SBV.loq) [5
 
-]) (pre08Resumo.tex [9
+] (Template_Latex_-_Monografia_-_IFSP_-_SBV.lot) [6
 
-]) (pre09Abstract.tex
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 14.
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 24.
- [10
+] (Template_Latex_-_Monografia_-_IFSP_-_SBV.toc) [7
 
-]) (Template_Latex_-_Monografia_-_IFSP_-_SBV.lof) [11
-
-] (Template_Latex_-_Monografia_-_IFSP_-_SBV.loq) [12
-
-] (Template_Latex_-_Monografia_-_IFSP_-_SBV.lot) [13
-
-] (pre10ListaSiglas.tex [14
-
-
-]) (pre11ListaSimbolos.tex [15
-
-
-{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) (Template_Latex_-_Monografia_-_IFSP_-_SBV.toc [16
-
-]) [17] (capitulo01Introducao.tex
+] (capitulo02RevisaoLiteratura.tex
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 19.
-(C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (capitulo02RevisaoLiteratura.tex [18
+[8
 
 
-{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-Cap\'{\i }tulo 2.
-[19
-
-{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+]
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 116.
- [20] [21]
-<imagens/LogoIF_BRI10.jpg, id=408, 964.35281pt x 225.09094pt>
+(babel)             Reported on input line 67.
+ [9{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 83.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [10{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [11] [12] [13]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+ [14] [15]
+<imagens/LogoIF_BRI10.jpg, id=273, 964.35281pt x 225.09094pt>
 File: imagens/LogoIF_BRI10.jpg Graphic file (type jpg)
 <use imagens/LogoIF_BRI10.jpg>
-Package pdftex.def Info: imagens/LogoIF_BRI10.jpg  used on input line 192.
+Package pdftex.def Info: imagens/LogoIF_BRI10.jpg  used on input line 326.
 (pdftex.def)             Requested size: 289.30807pt x 67.52779pt.
- [22 <./imagens/LogoIF_BRI10.jpg>]
-<imagens/exemploQuadro.png, id=416, 465.74pt x 243.91125pt>
+<imagens/exemploQuadro.png, id=276, 465.74pt x 243.91125pt>
 File: imagens/exemploQuadro.png Graphic file (type png)
 <use imagens/exemploQuadro.png>
-Package pdftex.def Info: imagens/exemploQuadro.png  used on input line 226.
+Package pdftex.def Info: imagens/exemploQuadro.png  used on input line 360.
 (pdftex.def)             Requested size: 326.01578pt x 170.7367pt.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 243.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 243.
+) [16{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./imagens/LogoIF_BRI10.jpg> <./imagens/exemploQuadro.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 377.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 377.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1474,254 +1815,57 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (fontes/ClasseExemplo.java) [23{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./imagens/exemploQuadro.png>] [24]
+ (fontes/ClasseExemplo.java) [17]
 
-LaTeX Warning: Citation `Agaisse1995' on page 25 undefined on input line 305.
-
-
-LaTeX Warning: Citation `Abedi2014' on page 25 undefined on input line 306.
+LaTeX Warning: Citation 'Agaisse1995' on page 18 undefined on input line 439.
 
 
-LaTeX Warning: Citation `BtNomenclature2016' on page 25 undefined on input line 307.
+LaTeX Warning: Citation 'Abedi2014' on page 18 undefined on input line 440.
 
 
-LaTeX Warning: Citation `Abedi2014' on page 25 undefined on input line 311.
+LaTeX Warning: Citation 'BtNomenclature2016' on page 18 undefined on input line 441.
 
 
-LaTeX Warning: Citation `Agaisse1995' on page 25 undefined on input line 311.
+LaTeX Warning: Citation 'Abedi2014' on page 18 undefined on input line 445.
 
 
-LaTeX Warning: Citation `AgapitoTenfen2014' on page 25 undefined on input line 312.
+LaTeX Warning: Citation 'Agaisse1995' on page 18 undefined on input line 445.
 
 
-LaTeX Warning: Citation `BtNomenclature2016' on page 25 undefined on input line 312.
+LaTeX Warning: Citation 'AgapitoTenfen2014' on page 18 undefined on input line 446.
 
 
-LaTeX Warning: Citation `Nelson2014' on page 25 undefined on input line 312.
+LaTeX Warning: Citation 'BtNomenclature2016' on page 18 undefined on input line 446.
 
 
-LaTeX Warning: Citation `Agaisse1995' on page 25 undefined on input line 316.
+LaTeX Warning: Citation 'Nelson2014' on page 18 undefined on input line 446.
 
 
-LaTeX Warning: Citation `Agaisse1995' on page 25 undefined on input line 316.
+LaTeX Warning: Citation 'Agaisse1995' on page 18 undefined on input line 450.
 
 
-LaTeX Warning: Citation `Abedi2014' on page 25 undefined on input line 317.
+LaTeX Warning: Citation 'Abedi2014' on page 18 undefined on input line 451.
 
 
-LaTeX Warning: Citation `Abedi2014' on page 25 undefined on input line 317.
+LaTeX Warning: Citation 'BtNomenclature2016' on page 18 undefined on input line 452.
 
-
-LaTeX Warning: Citation `BtNomenclature2016' on page 25 undefined on input line 318.
-
-
-LaTeX Warning: Citation `BtNomenclature2016' on page 25 undefined on input line 318.
-
+[18]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 326.
+(Font)              <10> on input line 460.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 326.
+(Font)              <7> on input line 460.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 326.
-
-LaTeX Warning: Citation `Nelson2014' on page 25 undefined on input line 326.
+(Font)              <5> on input line 460.
 
 
-LaTeX Warning: Citation `Agaisse1995' on page 25 undefined on input line 332.
-
-[25]) (capitulo03Metodologia.tex [26]
-Cap\'{\i }tulo 3.
-) (capitulo04DescricaoGeraldoProduto.tex [27
-
-]
-Cap\'{\i }tulo 4.
-
-LaTeX Warning: Citation `braga2008algoritmos' on page 28 undefined on input line 6.
+LaTeX Warning: Citation 'Nelson2014' on page 19 undefined on input line 460.
 
 
-LaTeX Warning: Citation `braga2008algoritmos' on page 28 undefined on input line 6.
+LaTeX Warning: Citation 'Agaisse1995' on page 19 undefined on input line 466.
 
-) (capitulo05ElicitacaodeRequisitosEAnalise.tex [28
+) [19] [20
 
-]
-Cap\'{\i }tulo 5.
-
-LaTeX Warning: Citation `braga2008algoritmos' on page 29 undefined on input line 19.
-
-
-LaTeX Warning: Citation `braga2008algoritmos' on page 29 undefined on input line 19.
-
-
-LaTeX Warning: Reference `tab:reqFuncionais' on page 29 undefined on input line 20.
-
-[29
-
-]
-<imagens/DiagramadeCasosdeUso.png, id=489, 407.27156pt x 204.01219pt>
-File: imagens/DiagramadeCasosdeUso.png Graphic file (type png)
-<use imagens/DiagramadeCasosdeUso.png>
-Package pdftex.def Info: imagens/DiagramadeCasosdeUso.png  used on input line 97.
-(pdftex.def)             Requested size: 407.27055pt x 204.01169pt.
- [30]
-Overfull \hbox (10.31131pt too wide) in paragraph at lines 110--124
- [][] 
- []
-
-[31 <./imagens/DiagramadeCasosdeUso.png>]
-
-LaTeX Warning: Citation `braga2008algoritmos' on page 32 undefined on input line 184.
-
-
-LaTeX Warning: Citation `braga2008algoritmos' on page 32 undefined on input line 184.
-
-[32]
-<imagens/ModelodeDominio.png, id=508, 232.61906pt x 396.7322pt>
-File: imagens/ModelodeDominio.png Graphic file (type png)
-<use imagens/ModelodeDominio.png>
-Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 194.
-(pdftex.def)             Requested size: 232.61848pt x 396.73122pt.
- [33] [34 <./imagens/ModelodeDominio.png>]
-<imagens/DiagramadeAtividades.png, id=528, 355.3275pt x 235.63031pt>
-File: imagens/DiagramadeAtividades.png Graphic file (type png)
-<use imagens/DiagramadeAtividades.png>
-Package pdftex.def Info: imagens/DiagramadeAtividades.png  used on input line 227.
-(pdftex.def)             Requested size: 355.32661pt x 235.62973pt.
- [35
-
-]
-<imagens/DiagramadeEstados.png, id=534, 386.19281pt x 204.765pt>
-File: imagens/DiagramadeEstados.png Graphic file (type png)
-<use imagens/DiagramadeEstados.png>
-Package pdftex.def Info: imagens/DiagramadeEstados.png  used on input line 247.
-(pdftex.def)             Requested size: 386.19185pt x 204.76448pt.
-) (capitulo06ProjetodeSoftware.tex [36 <./imagens/DiagramadeAtividades.png> <./imagens/DiagramadeEstados.png>]
-Cap\'{\i }tulo 6.
-[37
-
-]
-Overfull \hbox (54.58464pt too wide) in paragraph at lines 52--59
- [][] 
- []
-
-
-Overfull \hbox (104.26302pt too wide) in paragraph at lines 72--91
- [][] 
- []
-
-
-Overfull \hbox (117.79713pt too wide) in paragraph at lines 106--133
- [][] 
- []
-
-[38]
-Overfull \hbox (101.99954pt too wide) in paragraph at lines 144--163
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--179
-\T1/lmr/m/n/12 (-9) usp . br / plugin^^\le . php / 383727 / mod _ resource / content / 2 / Aula07 _ DiagramaDeClasse . pdf>[]$[][]
- []
-
-[39]
-<imagens/DiagramadeSequencia.png, id=563, 322.20375pt x 223.58531pt>
-File: imagens/DiagramadeSequencia.png Graphic file (type png)
-<use imagens/DiagramadeSequencia.png>
-Package pdftex.def Info: imagens/DiagramadeSequencia.png  used on input line 200.
-(pdftex.def)             Requested size: 322.20296pt x 223.58475pt.
-<imagens/ProjetoArquitetural.png, id=565, 426.84468pt x 294.34969pt>
-File: imagens/ProjetoArquitetural.png Graphic file (type png)
-<use imagens/ProjetoArquitetural.png>
-Package pdftex.def Info: imagens/ProjetoArquitetural.png  used on input line 229.
-(pdftex.def)             Requested size: 426.84364pt x 294.34895pt.
- [40 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [41 <./imagens/ProjetoArquitetural.png>]
-Cap\'{\i }tulo 7.
-) (capitulo08Teste.tex [42
-
-]
-Cap\'{\i }tulo 8.
-[43
-
-]
-<imagens/ExcemplodeCasodeTeste.png, id=584, 417.81094pt x 328.22626pt>
-File: imagens/ExcemplodeCasodeTeste.png Graphic file (type png)
-<use imagens/ExcemplodeCasodeTeste.png>
-Package pdftex.def Info: imagens/ExcemplodeCasodeTeste.png  used on input line 73.
-(pdftex.def)             Requested size: 417.80992pt x 328.22545pt.
- [44]) (capitulo09Implantacao.tex [45 <./imagens/ExcemplodeCasodeTeste.png>]
-Cap\'{\i }tulo 9.
-) (capitulo10ResultadosDiscussao.tex [46
-
-]
-Cap\'{\i }tulo 10.
-) (capitulo11TrabalhosRelacionados.tex [47
-
-]
-Cap\'{\i }tulo 11.
-) (capitulo12Conclusoes.tex [48
-
-]
-Cap\'{\i }tulo 12.
-) (capitulo13Cronograma.tex [49
-
-]
-Cap\'{\i }tulo 13.
-<imagens/cronograma.png, id=610, 423.83344pt x 100.87688pt>
-File: imagens/cronograma.png Graphic file (type png)
-<use imagens/cronograma.png>
-Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
-(pdftex.def)             Requested size: 423.83238pt x 100.87662pt.
-) (Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl (Template_Latex_-_Monografia_-_IFSP_-_SBV.brf)
-\tf@brf=\write6
-\openout6 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.brf'.
-
- [50
-
- <./imagens/cronograma.png>]
-bibitemlist
-) (pos01Apendices.tex [51
-
-]
-AP\^ENDICE A.
-[52
-
-]
-AP\^ENDICE B.
-[53
-
-]
-AP\^ENDICE C.
-[54
-
-]
-AP\^ENDICE D.
-[55
-
-]
-AP\^ENDICE E.
-) (pos02Anexos.tex [56
-
-]
-ANEXO A.
-[57
-
-]
-ANEXO B.
-[58
-
-]
-ANEXO C.
-[59
-
-]
-ANEXO D.
-[60
-
-]
-ANEXO E.
-) [61
-
-]
+] [21]
 \tf@lof=\write7
 \openout7 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.lof'.
 
@@ -1743,26 +1887,25 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
+Package logreq Info: Writing requests to 'Template_Latex_-_Monografia_-_IFSP_-_SBV.run.xml'.
+\openout1 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.run.xml'.
 
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `Template_Latex_-_Monografia_-_IFSP_-_SBV.brf' has not changed.
-(rerunfilecheck)             Checksum: 3A718FE51E79152A36535B98E5E70091;2512.
  ) 
 Here is how much of TeX's memory you used:
- 37714 strings out of 467867
- 687746 string characters out of 5416882
- 1433383 words of memory out of 5000000
- 65378 multiletter control sequences out of 15000+600000
- 749865 words of font info for 238 fonts, out of 8000000 for 9000
+ 45333 strings out of 467867
+ 843644 string characters out of 5416882
+ 1944262 words of memory out of 5000000
+ 73108 multiletter control sequences out of 15000+600000
+ 741118 words of font info for 228 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,1048b,1343s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,1244b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (61 pages, 1493703 bytes).
+Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (21 pages, 834605 bytes).
 PDF statistics:
- 1059 PDF objects out of 1200 (max. 8388607)
- 225 named destinations out of 1000 (max. 500000)
- 67229 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 578 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
+ 62710 words of extra memory for PDF output out of 74296 (max. 10000000)
 
