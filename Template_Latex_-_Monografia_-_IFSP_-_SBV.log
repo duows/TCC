@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  4 APR 2026 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  23 APR 2026 09:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1398,7 +1398,7 @@ Package biblatex Info: ... and expl3
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 218.
+Package hyperref Info: Option `colorlinks' set `true' on input line 221.
 \c@quadro=\count582
 \c@loqdepth=\count583
 \cftbeforequadroskip=\skip300
@@ -1424,26 +1424,26 @@ Package babel Info: 'brazil' activates 'portuges' shorthands.
 )
 \openout1 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-Package hyperref Info: Link coloring ON on input line 290.
-LaTeX Info: Redefining \degres on input line 290.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+Package hyperref Info: Link coloring ON on input line 293.
+LaTeX Info: Redefining \degres on input line 293.
 \myptabbox=\box89
 \myptabboxwidth=\skip306
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
@@ -1465,13 +1465,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 290.
-Package microtype Info: Applying patch `item' on input line 290.
-Package microtype Info: Applying patch `toc' on input line 290.
-Package microtype Info: Applying patch `eqnum' on input line 290.
-Package microtype Info: Applying patch `footnote' on input line 290.
-Package microtype Info: Applying patch `verbatim' on input line 290.
-LaTeX Info: Redefining \microtypesetup on input line 290.
+LaTeX Info: Redefining \microtypecontext on input line 293.
+Package microtype Info: Applying patch `item' on input line 293.
+Package microtype Info: Applying patch `toc' on input line 293.
+Package microtype Info: Applying patch `eqnum' on input line 293.
+Package microtype Info: Applying patch `footnote' on input line 293.
+Package microtype Info: Applying patch `verbatim' on input line 293.
+LaTeX Info: Redefining \microtypesetup on input line 293.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1617,43 +1617,62 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' found.
  (Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
 
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'AMD2022':
+(biblatex)                - misc entry 'AMD2022' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Diestel2017':
+(biblatex)                - book entry 'Diestel2017' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Fielding2000':
+(biblatex)                - thesis entry 'Fielding2000' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'ATXSPEC2022':
+(biblatex)                - report entry 'ATXSPEC2022' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'INTEL2023':
+(biblatex)                - misc entry 'INTEL2023' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'JEDEC2020':
+(biblatex)                - report entry 'JEDEC2020' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'MEUPC2024':
+(biblatex)                - misc entry 'MEUPC2024' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'PCPARTPICKER2024':
+(biblatex)                - misc entry 'PCPARTPICKER2024' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring.
+
+
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Abedi2014
+(biblatex)                BarredoArrieta2020
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Agaisse1995
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                AgapitoTenfen2014
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                BtNomenclature2016
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Nelson2014
+(biblatex)                braga2008algoritmos
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 290.
-Package biblatex Info: Reference segment=0 on input line 290.
+Package biblatex Info: Reference section=0 on input line 293.
+Package biblatex Info: Reference segment=0 on input line 293.
  (pre01Capa.tex
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 6.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
@@ -1733,81 +1752,108 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)) (pre03FichaCatalografica.tex
-<fichaCatalografica/FichaCatalograficaTCCBRI.pdf, id=12, 597.55246pt x 845.07718pt>
-File: fichaCatalografica/FichaCatalograficaTCCBRI.pdf Graphic file (type pdf)
-<use fichaCatalografica/FichaCatalograficaTCCBRI.pdf>
-Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf  used on input line 9.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<fichaCatalografica/FichaCatalograficaTCCBRI.pdf, id=14, page=1, 597.55246pt x 845.07718pt>
-File: fichaCatalografica/FichaCatalograficaTCCBRI.pdf Graphic file (type pdf)
-<use fichaCatalografica/FichaCatalograficaTCCBRI.pdf, page 1>
-Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf , page1 used on input line 9.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-File: fichaCatalografica/FichaCatalograficaTCCBRI.pdf Graphic file (type pdf)
-<use fichaCatalografica/FichaCatalograficaTCCBRI.pdf, page 1>
-Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf , page1 used on input line 9.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [2
+)) (pre05Dedicatoria.tex [2
 
-]
-File: fichaCatalografica/FichaCatalograficaTCCBRI.pdf Graphic file (type pdf)
-<use fichaCatalografica/FichaCatalograficaTCCBRI.pdf, page 1>
-Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf , page1 used on input line 9.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: fichaCatalografica/FichaCatalograficaTCCBRI.pdf Graphic file (type pdf)
-<use fichaCatalografica/FichaCatalograficaTCCBRI.pdf, page 1>
-Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf , page1 used on input line 9.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: fichaCatalografica/FichaCatalograficaTCCBRI.pdf Graphic file (type pdf)
-<use fichaCatalografica/FichaCatalograficaTCCBRI.pdf, page 1>
-Package pdftex.def Info: fichaCatalografica/FichaCatalograficaTCCBRI.pdf , page1 used on input line 9.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [3
+]) (pre06Agradecimentos.tex [3
 
- <./fichaCatalografica/FichaCatalograficaTCCBRI.pdf>]) (Template_Latex_-_Monografia_-_IFSP_-_SBV.lof
+
+]) (pre07Epigrafe.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <10.95> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-) [4] (Template_Latex_-_Monografia_-_IFSP_-_SBV.loq) [5
+(Font)              <8> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 6.
+ [4
 
-] (Template_Latex_-_Monografia_-_IFSP_-_SBV.lot) [6
+]) (pre08Resumo.tex [5
 
-] (Template_Latex_-_Monografia_-_IFSP_-_SBV.toc) [7
+]) (pre09Abstract.tex
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 14.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 24.
+ [6
 
-] (capitulo02RevisaoLiteratura.tex
+]) (Template_Latex_-_Monografia_-_IFSP_-_SBV.lof) [7
+
+] (Template_Latex_-_Monografia_-_IFSP_-_SBV.loq) [8
+
+] (Template_Latex_-_Monografia_-_IFSP_-_SBV.lot) [9
+
+] (pre10ListaSiglas.tex [10
+
+
+]) (pre11ListaSimbolos.tex [11
+
+
+{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) (Template_Latex_-_Monografia_-_IFSP_-_SBV.toc [12
+
+] [13]) [14] (capitulo01Introducao.tex
 Cap\'{\i }tulo 1.
-[8
+[15
 
 
 ]
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 67.
- [9{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 83.
+(babel)             Reported on input line 63.
+ [16]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 71.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [11] [12] [13]
+)) (capitulo02RevisaoLiteratura.tex [17{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+Cap\'{\i }tulo 2.
+[18
+
+] [19{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] [20] [21]
+<imagens/grafo-restricoes.png, id=524, 332.24126pt x 296.10625pt>
+File: imagens/grafo-restricoes.png Graphic file (type png)
+<use imagens/grafo-restricoes.png>
+Package pdftex.def Info: imagens/grafo-restricoes.png  used on input line 178.
+(pdftex.def)             Requested size: 227.5pt x 202.75926pt.
+ [22] [23 <./imagens/grafo-restricoes.png>] [24]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [14] [15]
-<imagens/LogoIF_BRI10.jpg, id=273, 964.35281pt x 225.09094pt>
-File: imagens/LogoIF_BRI10.jpg Graphic file (type jpg)
-<use imagens/LogoIF_BRI10.jpg>
-Package pdftex.def Info: imagens/LogoIF_BRI10.jpg  used on input line 326.
-(pdftex.def)             Requested size: 289.30807pt x 67.52779pt.
-<imagens/exemploQuadro.png, id=276, 465.74pt x 243.91125pt>
-File: imagens/exemploQuadro.png Graphic file (type png)
-<use imagens/exemploQuadro.png>
-Package pdftex.def Info: imagens/exemploQuadro.png  used on input line 360.
-(pdftex.def)             Requested size: 326.01578pt x 170.7367pt.
- (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [16{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./imagens/LogoIF_BRI10.jpg> <./imagens/exemploQuadro.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 377.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 377.
+ [25]
+
+LaTeX Warning: Reference `fig:ac3_execucao' on page 26 undefined on input line 340.
+
+<imagens/execucao-passo-a-passo-ac-3 (2).png, id=592, 1075.01625pt x 392.46625pt>
+File: imagens/execucao-passo-a-passo-ac-3 (2).png Graphic file (type png)
+<use imagens/execucao-passo-a-passo-ac-3 (2).png>
+Package pdftex.def Info: imagens/execucao-passo-a-passo-ac-3 (2).png  used on input line 348.
+(pdftex.def)             Requested size: 455.0pt x 166.11024pt.
+[26] [27 <./imagens/execucao-passo-a-passo-ac-3 (2).png>] [28] [29] [30] [31]
+
+LaTeX Warning: Reference `fig:arquitetura_rest' on page 32 undefined on input line 538.
+
+<imagens/DIAGRAMA REST.png, id=671, 1105.12875pt x 433.62pt>
+File: imagens/DIAGRAMA REST.png Graphic file (type png)
+<use imagens/DIAGRAMA REST.png>
+Package pdftex.def Info: imagens/DIAGRAMA REST.png  used on input line 544.
+(pdftex.def)             Requested size: 455.0pt x 178.5264pt.
+[32] [33 <./imagens/DIAGRAMA REST.png>] [34] [35]) (capitulo03Metodologia.tex [36]
+Cap\'{\i }tulo 3.
+[37
+
+] [38] [39] [40] [41] [42]) (capitulo04DescricaoGeraldoProduto.tex [43]
+Cap\'{\i }tulo 4.
+) (capitulo05ElicitacaodeRequisitosEAnalise.tex [44
+
+]
+Cap\'{\i }tulo 5.
+
+LaTeX Warning: Citation 'braga2008algoritmos' on page 45 undefined on input line 14.
+
+[45
+
+] [46] [47] [48] [49
+
+] [50] [51] [52] [53] [54] [55] [56] [57] [58]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 837.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1815,57 +1861,128 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (fontes/ClasseExemplo.java) [17]
+ [59]
 
-LaTeX Warning: Citation 'Agaisse1995' on page 18 undefined on input line 439.
+LaTeX Warning: Citation 'BarredoArrieta2020' on page 60 undefined on input line 859.
+
+[60]
+<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=942, 1482.53876pt x 1013.7875pt>
+File: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg Graphic file (type jpg)
+<use imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>
+Package pdftex.def Info: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg  used on input line 930.
+(pdftex.def)             Requested size: 455.0pt x 311.13065pt.
+ [61]
+Overfull \hbox (10.31131pt too wide) in paragraph at lines 943--957
+ [][] 
+ []
+
+[62 <./imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>]
+
+LaTeX Warning: Citation 'braga2008algoritmos' on page 63 undefined on input line 1017.
+
+[63]
+<imagens/ModelodeDominio.png, id=963, 232.61906pt x 396.7322pt>
+File: imagens/ModelodeDominio.png Graphic file (type png)
+<use imagens/ModelodeDominio.png>
+Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 1027.
+(pdftex.def)             Requested size: 232.61848pt x 396.73122pt.
+ [64] [65 <./imagens/ModelodeDominio.png>]
+<imagens/DiagramadeAtividades.png, id=983, 355.3275pt x 235.63031pt>
+File: imagens/DiagramadeAtividades.png Graphic file (type png)
+<use imagens/DiagramadeAtividades.png>
+Package pdftex.def Info: imagens/DiagramadeAtividades.png  used on input line 1060.
+(pdftex.def)             Requested size: 355.32661pt x 235.62973pt.
+ [66
+
+]
+<imagens/DiagramadeEstados.png, id=989, 386.19281pt x 204.765pt>
+File: imagens/DiagramadeEstados.png Graphic file (type png)
+<use imagens/DiagramadeEstados.png>
+Package pdftex.def Info: imagens/DiagramadeEstados.png  used on input line 1080.
+(pdftex.def)             Requested size: 386.19185pt x 204.76448pt.
+) (capitulo06ProjetodeSoftware.tex [67 <./imagens/DiagramadeAtividades.png> <./imagens/DiagramadeEstados.png>]
+Cap\'{\i }tulo 6.
+[68
+
+]
+Overfull \hbox (54.58464pt too wide) in paragraph at lines 52--59
+ [][] 
+ []
 
 
-LaTeX Warning: Citation 'Abedi2014' on page 18 undefined on input line 440.
+Overfull \hbox (104.26302pt too wide) in paragraph at lines 72--91
+ [][] 
+ []
 
 
-LaTeX Warning: Citation 'BtNomenclature2016' on page 18 undefined on input line 441.
+Overfull \hbox (117.79713pt too wide) in paragraph at lines 106--133
+ [][] 
+ []
+
+[69]
+Overfull \hbox (101.99954pt too wide) in paragraph at lines 144--163
+ [][] 
+ []
 
 
-LaTeX Warning: Citation 'Abedi2014' on page 18 undefined on input line 445.
+Overfull \hbox (43.9638pt too wide) in paragraph at lines 175--179
+\T1/lmtt/m/n/12 ProjSoft / apresentacoes / Projeto % 20detalhado % 20-[] % 20Classes . pdf$[][] [][]$https : / / edisciplinas .
+ []
 
 
-LaTeX Warning: Citation 'Agaisse1995' on page 18 undefined on input line 445.
+Overfull \hbox (9.97772pt too wide) in paragraph at lines 175--179
+\T1/lmtt/m/n/12 usp . br / pluginfile . php / 383727 / mod _ resource / content / 2 / Aula07 _ DiagramaDeClasse .
+ []
 
+[70]
+<imagens/DiagramadeSequencia.png, id=1019, 322.20375pt x 223.58531pt>
+File: imagens/DiagramadeSequencia.png Graphic file (type png)
+<use imagens/DiagramadeSequencia.png>
+Package pdftex.def Info: imagens/DiagramadeSequencia.png  used on input line 200.
+(pdftex.def)             Requested size: 322.20296pt x 223.58475pt.
+<imagens/ProjetoArquitetural.png, id=1021, 426.84468pt x 294.34969pt>
+File: imagens/ProjetoArquitetural.png Graphic file (type png)
+<use imagens/ProjetoArquitetural.png>
+Package pdftex.def Info: imagens/ProjetoArquitetural.png  used on input line 229.
+(pdftex.def)             Requested size: 426.84364pt x 294.34895pt.
+ [71 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [72 <./imagens/ProjetoArquitetural.png>]
+Cap\'{\i }tulo 7.
+) (capitulo08Teste.tex [73
 
-LaTeX Warning: Citation 'AgapitoTenfen2014' on page 18 undefined on input line 446.
+]
+Cap\'{\i }tulo 8.
+[74
 
+]
+<imagens/ExcemplodeCasodeTeste.png, id=1040, 417.81094pt x 328.22626pt>
+File: imagens/ExcemplodeCasodeTeste.png Graphic file (type png)
+<use imagens/ExcemplodeCasodeTeste.png>
+Package pdftex.def Info: imagens/ExcemplodeCasodeTeste.png  used on input line 73.
+(pdftex.def)             Requested size: 417.80992pt x 328.22545pt.
+ [75]) (capitulo09Implantacao.tex [76 <./imagens/ExcemplodeCasodeTeste.png>]
+Cap\'{\i }tulo 9.
+) (capitulo10ResultadosDiscussao.tex [77
 
-LaTeX Warning: Citation 'BtNomenclature2016' on page 18 undefined on input line 446.
+]
+Cap\'{\i }tulo 10.
+) (capitulo12Conclusoes.tex [78
 
+]
+Cap\'{\i }tulo 11.
+) (capitulo13Cronograma.tex [79
 
-LaTeX Warning: Citation 'Nelson2014' on page 18 undefined on input line 446.
+]
+Cap\'{\i }tulo 12.
+<imagens/cronograma.png, id=1062, 423.83344pt x 100.87688pt>
+File: imagens/cronograma.png Graphic file (type png)
+<use imagens/cronograma.png>
+Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
+(pdftex.def)             Requested size: 423.83238pt x 100.87662pt.
+) [80
 
+ <./imagens/cronograma.png>] [81
 
-LaTeX Warning: Citation 'Agaisse1995' on page 18 undefined on input line 450.
-
-
-LaTeX Warning: Citation 'Abedi2014' on page 18 undefined on input line 451.
-
-
-LaTeX Warning: Citation 'BtNomenclature2016' on page 18 undefined on input line 452.
-
-[18]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 460.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 460.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 460.
-
-
-LaTeX Warning: Citation 'Nelson2014' on page 19 undefined on input line 460.
-
-
-LaTeX Warning: Citation 'Agaisse1995' on page 19 undefined on input line 466.
-
-) [19] [20
-
-] [21]
+] [82] [83]
 \tf@lof=\write7
 \openout7 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.lof'.
 
@@ -1887,25 +2004,24 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
+LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'Template_Latex_-_Monografia_-_IFSP_-_SBV.run.xml'.
 \openout1 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45333 strings out of 467867
- 843644 string characters out of 5416882
- 1944262 words of memory out of 5000000
- 73108 multiletter control sequences out of 15000+600000
- 741118 words of font info for 228 fonts, out of 8000000 for 9000
+ 45873 strings out of 467867
+ 856228 string characters out of 5416882
+ 1915989 words of memory out of 5000000
+ 73270 multiletter control sequences out of 15000+600000
+ 733266 words of font info for 245 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,1244b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (21 pages, 834605 bytes).
+ 99i,15n,108p,1244b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (83 pages, 1291286 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
- 62710 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1681 PDF objects out of 1728 (max. 8388607)
+ 389 named destinations out of 1000 (max. 500000)
+ 56780 words of extra memory for PDF output out of 61914 (max. 10000000)
 

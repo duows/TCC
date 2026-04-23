@@ -5,31 +5,129 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Revisão da Literatura}}{8}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Compatibilidade de Hardware como Domínio do Problema}{8}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Compatibilidade de Soquete CPU-Placa-mãe}{8}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Padrão de Memória RAM}{8}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Capacidade Energética e TDP}{9}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Formalização como Problema de Restrições}{9}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Problemas de Satisfação de Restrições (CSP)}{9}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Tipos de Restrições}{10}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Aplicação ao Domínio de Hardware}{10}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Representação em Grafo}{11}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Teoria dos Grafos e Grafo de Restrições}{11}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Definições Fundamentais}{11}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Representações Computacionais}{11}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Grafo de Restrições}{12}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Complexidade Computacional}{12}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Implicações para o Domínio de Hardware}{13}{subsection.1.4.1}%
-\contentsline {section}{\numberline {1.5}Algoritmos de Busca e Backtracking}{14}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Busca em Espaço de Atribuições}{14}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Backtracking}{14}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}Forward Checking}{14}{subsection.1.5.3}%
-\contentsline {section}{\numberline {1.6}Propagação de Restrições e Algoritmo AC-3}{15}{section.1.6}%
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{15}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Justificativa}{16}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos}{17}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{17}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Objetivos Específicos}{17}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Problema (Hipótese ou Questão de Pesquisa)}{17}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Organização Deste Trabalho}{17}{section.1.4}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Revisão da Literatura}}{18}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Compatibilidade de Hardware como Domínio do Problema}{18}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Compatibilidade de Soquete CPU-Placa-mãe}{18}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Padrão de Memória RAM}{18}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Capacidade Energética e TDP}{19}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Formalização como Problema de Restrições}{19}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Problemas de Satisfação de Restrições (CSP)}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Tipos de Restrições}{20}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Aplicação ao Domínio de Hardware}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Representação em Grafo}{21}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Teoria dos Grafos e Grafo de Restrições}{21}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definições Fundamentais}{21}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Representações Computacionais}{21}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Grafo de Restrições}{22}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Complexidade Computacional}{23}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Implicações para o Domínio de Hardware}{24}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Algoritmos de Busca e Backtracking}{24}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Busca em Espaço de Atribuições}{24}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Backtracking}{25}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Forward Checking}{26}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Propagação de Restrições e Algoritmo AC-3}{26}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Aplicação ao Domínio de Hardware}{26}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Sistema Especialista}{28}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Explanation Facilities}{28}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Inteligência Artificial Explicável (XAI)}{29}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Mapeamento ao Sistema Proposto}{29}{subsection.2.7.3}%
+\contentsline {section}{\numberline {2.8}Dimensão Educativa em Sistemas Especialistas}{30}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Mecanismo de Filtragem versus Sistema com Explicação}{30}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Sistemas Tutores Inteligentes}{30}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Sistema Especialista Educacional}{31}{subsection.2.8.3}%
+\contentsline {section}{\numberline {2.9}Arquitetura de Software Orientada a Serviços}{31}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Arquitetura em Camadas}{31}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}REST como Estilo Arquitetural}{32}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Mapeamento ao Sistema Proposto}{33}{subsection.2.9.3}%
+\contentsline {section}{\numberline {2.10}Trabalhos Relacionados}{34}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Plataformas Comerciais de Compatibilidade de Hardware}{34}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Trabalhos Acadêmicos Relacionados}{34}{subsection.2.10.2}%
+\contentsline {subsection}{\numberline {2.10.3}Posicionamento do Trabalho Proposto}{35}{subsection.2.10.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Materiais e métodos}}{37}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Bibliográfica}{37}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}Aplicada}{38}{subsection.3.0.2}%
+\contentsline {section}{\numberline {3.1}Materiais}{38}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Equipamentos}{38}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Softwares}{38}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Ferramentas Utilizadas}{39}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Visual Studio Code}{39}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Node.js e NestJS}{39}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}PostgreSQL e Docker}{39}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}DBeaver}{40}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Next.js}{40}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Figma}{40}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Astah Community}{41}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Teste?}{41}{subsection.3.2.8}%
+\contentsline {section}{\numberline {3.3}Métodos de Desenvolvimento}{41}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Modelagem do Problema como CSP}{41}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Implementação do Algoritmo AC-3}{41}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Implementação das Justificativas Educativas}{42}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Processo de Desenvolvimento de Software}{42}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Estratégia de Testes}{43}{subsection.3.3.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Descrição Geral do Produto}}{44}{chapter.4}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Elicitação de Requisitos e Análise}}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Requisitos do Usuário}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Requisitos do Sistema}{45}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Requisitos Funcionais}{45}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Requisitos Não Funcionais}{53}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Restrições, Suposições e Dependências}{60}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Requisitos Adiados}{61}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Casos de Uso}{61}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Casos de Uso}{61}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Diagrama de Casos de Uso}{61}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Especificação dos Casos de Uso}{62}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Modelo de Domínio}{63}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Diagrama de Objetos}{66}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Diagrama de Classes de Análise}{66}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Diagrama de Atividades}{66}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Diagrama de Estados}{67}{section.5.9}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Projeto de Software}}{68}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Projeto de Interface}{68}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Projeto de Dados}{68}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Mapeamento Objeto-Relacional}{68}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Estrutura das Tabelas no Banco de Dados}{68}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Diagrama de Pacotes}{70}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Diagrama de Classes de Projeto}{70}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Projeto Procedimental}{70}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Diagrama de Sequência}{70}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Diagrama de Atividades}{71}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Diagrama de Estados}{71}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Projeto Arquitetural}{71}{section.6.4}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Implementação}}{73}{chapter.7}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Teste}}{74}{chapter.8}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase []{Implantação}}{77}{chapter.9}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {10}\MakeTextUppercase []{Resultados e Discussão}}{78}{chapter.10}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {11}\MakeTextUppercase []{Conclusões/Conclusões Parciais}}{79}{chapter.11}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {12}\MakeTextUppercase []{Cronograma}}{80}{chapter.12}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{20}{section*.12}%
+\contentsline {chapter}{Refer\^encias}{81}{section*.72}%
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 

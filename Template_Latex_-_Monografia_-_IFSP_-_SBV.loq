@@ -1,1 +1,32 @@
-\contentsline {quadro}{\numberline {1}{\ignorespaces Exemplo de quadro}}{16}{quadro.caption.8}%
+\contentsline {quadro}{\numberline {1}{\ignorespaces RF-01 -- Listar componentes por categoria}}{45}{quadro.caption.22}%
+\contentsline {quadro}{\numberline {2}{\ignorespaces RF-02 -- Navegar pela interface \textit {wizard}}}{46}{quadro.caption.23}%
+\contentsline {quadro}{\numberline {3}{\ignorespaces RF-03 -- Exibir componentes incompatíveis com sinalização visual}}{46}{quadro.caption.24}%
+\contentsline {quadro}{\numberline {4}{\ignorespaces RF-04 -- Exibir especificações técnicas dos componentes}}{47}{quadro.caption.25}%
+\contentsline {quadro}{\numberline {5}{\ignorespaces RF-05 -- Executar propagação de restrições via algoritmo AC-3}}{47}{quadro.caption.26}%
+\contentsline {quadro}{\numberline {6}{\ignorespaces RF-06 -- Validar compatibilidade de soquete CPU--Placa-mãe}}{48}{quadro.caption.27}%
+\contentsline {quadro}{\numberline {7}{\ignorespaces RF-07 -- Validar padrão de memória RAM--Placa-mãe}}{48}{quadro.caption.28}%
+\contentsline {quadro}{\numberline {8}{\ignorespaces RF-08 -- Validar capacidade energética da fonte (TDP)}}{49}{quadro.caption.29}%
+\contentsline {quadro}{\numberline {9}{\ignorespaces RF-09 -- Propagar restrições incrementalmente a cada seleção}}{49}{quadro.caption.30}%
+\contentsline {quadro}{\numberline {10}{\ignorespaces RF-10 -- Exibir justificativa técnica para cada incompatibilidade}}{50}{quadro.caption.31}%
+\contentsline {quadro}{\numberline {11}{\ignorespaces RF-11 -- Exibir alerta de incompatibilidade de soquete}}{50}{quadro.caption.32}%
+\contentsline {quadro}{\numberline {12}{\ignorespaces RF-12 -- Exibir alerta de incompatibilidade de padrão de memória}}{51}{quadro.caption.33}%
+\contentsline {quadro}{\numberline {13}{\ignorespaces RF-13 -- Exibir alerta de fonte de alimentação subdimensionada}}{51}{quadro.caption.34}%
+\contentsline {quadro}{\numberline {14}{\ignorespaces RF-14 -- Reinicializar a configuração}}{52}{quadro.caption.35}%
+\contentsline {quadro}{\numberline {15}{\ignorespaces RF-15 -- Substituir componente selecionado em etapa anterior}}{52}{quadro.caption.36}%
+\contentsline {quadro}{\numberline {16}{\ignorespaces RF-16 -- Exibir resumo da configuração finalizada}}{53}{quadro.caption.37}%
+\contentsline {quadro}{\numberline {17}{\ignorespaces RF-17 -- Armazenar e consultar base de conhecimento do CSP}}{53}{quadro.caption.38}%
+\contentsline {quadro}{\numberline {18}{\ignorespaces RF-18 -- Popular base de conhecimento via \textit {Database Seeding}}}{54}{quadro.caption.39}%
+\contentsline {quadro}{\numberline {19}{\ignorespaces RNF-01 -- Tempo de resposta da validação}}{54}{quadro.caption.40}%
+\contentsline {quadro}{\numberline {20}{\ignorespaces RNF-02 -- Ausência de avaliação por força bruta}}{55}{quadro.caption.41}%
+\contentsline {quadro}{\numberline {21}{\ignorespaces RNF-03 -- Linguagem natural nas explicações de incompatibilidade}}{55}{quadro.caption.42}%
+\contentsline {quadro}{\numberline {22}{\ignorespaces RNF-04 -- Interface responsiva}}{56}{quadro.caption.43}%
+\contentsline {quadro}{\numberline {23}{\ignorespaces RNF-05 -- Acesso sem cadastro ou autenticação}}{56}{quadro.caption.44}%
+\contentsline {quadro}{\numberline {24}{\ignorespaces RNF-06 -- Separação estrita entre as três camadas arquiteturais}}{57}{quadro.caption.45}%
+\contentsline {quadro}{\numberline {25}{\ignorespaces RNF-07 -- Motor de inferência expansível para novas restrições}}{57}{quadro.caption.46}%
+\contentsline {quadro}{\numberline {26}{\ignorespaces RNF-08 -- Base de conhecimento expansível para novas categorias}}{58}{quadro.caption.47}%
+\contentsline {quadro}{\numberline {27}{\ignorespaces RNF-09 -- Restrições derivadas de documentação oficial dos fabricantes}}{58}{quadro.caption.48}%
+\contentsline {quadro}{\numberline {28}{\ignorespaces RNF-10 -- Determinismo do motor de inferência}}{59}{quadro.caption.49}%
+\contentsline {quadro}{\numberline {29}{\ignorespaces RNF-11 -- API \textit {stateless} (sem estado de sessão no servidor)}}{59}{quadro.caption.50}%
+\contentsline {quadro}{\numberline {30}{\ignorespaces RNF-12 -- Ambiente de banco de dados reproduzível via Docker}}{60}{quadro.caption.51}%
+\contentsline {quadro}{\numberline {31}{\ignorespaces RNF-13 -- Rastreabilidade de cada bloqueio até a restrição violada}}{60}{quadro.caption.52}%
+\contentsline {quadro}{\numberline {32}{\ignorespaces RNF-14 -- Ausência de bloqueios silenciosos}}{61}{quadro.caption.53}%

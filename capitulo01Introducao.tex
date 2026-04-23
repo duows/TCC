@@ -1,32 +1,81 @@
 \chapter{Introdução}
 \label{cap:01}
+A montagem de um computador \textit{desktop} exige o cruzamento simultâneo de especificações
+técnicas entre componentes interdependentes. Diferentemente da aquisição de periféricos genéticos,
+a configuração de um sistema computacional envolve restrições físicas, elétricas e lógicas que,
+quando violadas, resultam em incompatibilidade absoluta, os componentes adquiridos de forma incorreta
+simplesmente não funcionam junots, independentemente de ajustes de \textit{software} ou configuração.
+A compatibilidade de soquete entre processador e placa-mãe, o padrão de memória suportado pela plataforma
+e o dimensionamento energético da fonte de alimentação são exemplos de restrições binárias e determinísticas
+que não admitem adaptações \cite{AMD2022,INTEL2023,JEDEC2020}. Esse cenário impõe ao usuário um desafio
+técnico considerável, uma vez que a violão de qualquer dessas restrições representa prejuízo financeiro
+imediato e frustrante.
 
-Aqui deve-se introduzir o trabalho. Trata-se da parte inicial do texto, onde devem constar: a delimitação do assunto tratado, os objetivos da pesquisa e outros elementos necessários para situar o tema do trabalho.
- 
+Diante dessa realidade, plataformas como o PC Part Picker e o Meupc.net se estabeleceram como referências
+globais e nacionais para a verificação de compatibilidade entre componentes. Ambas detectam automaticamente
+conflitos entre os itens selecionaos e alertam o usuário quando uma incompatibilidade é identificada \cite{PCPARTPICKER2024,MEUPC2024}.
+No entanto, quando o conflito é detectado, a resposta do sistema se limita a sinalizar que os componentes não são compatíveis entre si,
+sem indicar a regra física que foi violada. O usuário aprende o que não pode fazer, mas não aprende o motibo,
+e portanto, não está em condições de generalizar esse conhecimento para outras situações, como a escolha de
+um processador diferente ou a adição de um módulo de memória RAM.
+
+Essa limitação não é acidental, ela decorre da arquitetura dessas plataformas que operam como mecanismos
+de filtragem e não como sistemas especialistas com capacidade de explicação. Segundo \textcite{Clancey1983},
+a capacidade de justificar o próprio raciocínio é o que distingue fundamentalmente um sistema especialista
+de um mecanismo de filtragem simples. Um filtro responde apenas à pergunta \textit{"quais opções são válidas?"},
+enquanto um sistema especialista dotado de \textit{explanation facility} responde também à pergunta \textit{"por que as
+  demais são inválidas?"}, articulando a cadeia de regras e restrições que levou aquela conclusão. Nesse sentido,
+cada bloqueio silencioso de um mecanismo de filtragem é uma oportunidade de aprendizagem perdida ao usuário.
+
+Do ponto de vista da ciência da computação, o problema de configuração de \textit{hardware} recai formalmente
+sobre a classe dos Problemas de Satisfação de Restrições (CSP). Nessa formalização, cada categoria de componente
+corresponde a uma variável, o conjunto de modelos comercialmente disponíveis constitui o domínio dessa variável
+e as regras físicas de compatibilidade entre pares de componentes definem as restrições do problema \cite{Russell2010}.
+O CSP é classificado como NP-completo \cite{Sipser2012}, o que torna a avaliação exaustiva de todas as combinções
+inviável para catálogos de tamanho realista. Técnicas de propagação de restrições, como o algoritmo AC-3 proposto
+por \textcite{Mackworth1977}, contornam essa explosão combinatória reduzindo o espaço de busca de forma incremental
+a cada interação do usuário, tornando a validação viável em milissegundos.
+
+Neste contexto, este Trabalho de Conclusão de Curso tem como objetivo central abordar a lacuna identificada, desenvolvendo
+um sistema especialista educacional para validação de compatibilidade de \textit{hardware} fundamentado em CSP.
+O sistema proposto é uma aplicação \textit{web full-stack} capaz de validar a compatibilidade entre componentes de computador
+\textit{desktop} e, para cada incompatibilidade detectada, comunicar ao usuário a regra técnica violada em
+linguagem natural. Ao transformar cada bloqueio em uma oportunidade de aprendizagem, o sistema busca não apenas
+restringir escolhas incorretas, mas educar o usuário sobre as restrições físicas que regem a montagem de computadores.
+
 \section{Justificativa}
+A montagem de um computador \textit{desktop} exige do usuário o domínio de um conjunto especificações técnicas que, na prática,
+está além do conhecimento da maioria dos consumidores. As restrições que regem a compatibilidade entre componentes são objetivos e
+documentadas pelos próprios fabricantes \cite{AMD2022,INTEL2023,JEDEC2020}, mas sua compreensão pressupõe familiaridade com
+conceitos cmo soquetes de processador, pradrões de memória e dimensionamento energético. Para o usuário leigo, essa barreira técnica
+se manifesta de forma concreta, erros de seleção, como a combinação de um processador AM5 com uma placa-mãe AM5 ou de módulo DDR4 com
+uma plataforma que suporta exclusivamente DDR5, resultam em incompatibilidade absoluta e em prejuízo financeiro.
 
-Texto da justificativa. Conte como se chegou ao "questionamento", como se identificou o problema, por que e de onde ele surgiu. É a explicação do porquê a inquietação em questão existe.
+As plataformas comerciais disponíveis atualmente buscam mitigar esse problema, mas como uma abordagem limitada. O PC Part Picker e o Meupc.net
+realizam verificações de compatibilidade e alertam o usuário quando um conflito é detectado \cite{PCPARTPICKER2024,MEUPC2024}. No entanto,
+como demonstrado por \textcite{Clancey1983}, a limitação pedagógica desse modelo é nítida, um sistema que apenas filtra não transfere conhecimento,
+apenas restringe escolhas. Um usuário que utiliza essas plataformas repetidamente aprende quais componentes são compatíveis entre si,
+mas não aprende \textit{"por que"} são compatíveis, o que o impede de generalizar o conhecimento adquirido para novas situações de compra.
+
+Essa lacuna motivou o questionamento central deste trabalho: seria possível desenvolver um sistema que realizasse a validação de compatibilidade
+de \textit{hardware} com um motor de inferência formal, baseado no formalista de CSP, q que comunicasse ao usuário cada incompatibilidade
+detectada por meio de uma justificativa técnica em linguagem natural? A resposta a essa pergunta,
 
 \section{Objetivos}
-Descrever o que se pretende alcançar ao final do projeto.
 
 \subsection{Objetivo Geral}
 
-Qual seu objetivo geral.
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-	\item Objetivo específico 1;
-	\item Objetivo específico 2;
-	\item Objetivo específico n.
+  \item Objetivo específico 1;
+  \item Objetivo específico 2;
+  \item Objetivo específico n.
 \end{itemize}
 
 
 \section{Problema (Hipótese ou Questão de Pesquisa)}
 
-Escolha uma dentre as 3 formas de escrever: 1) o problema que o trabalho propõe resolver; ou 2) as hipóteses que se deseja comprovar (ou não) com o estudo; ou 3) as questões de pesquisa levantadas para serem investigadas.
 
 
 \section{Organização Deste Trabalho}
-
-Como seu trabalho está organizado (capítulos) após a introdução.

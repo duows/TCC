@@ -1,22 +1,26 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'Template_Latex_-_Monografia_-_IFSP_-_SBV.blg'
-[86] biber-MSWIN64:342> INFO - === 
-[119] Biber.pm:421> INFO - Reading 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'
-[228] Biber.pm:1002> INFO - Found 19 citekeys in bib section 0
-[240] Biber.pm:4487> INFO - Processing section 0
-[249] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[288] bibtex.pm:1713> INFO - LaTeX decoding ...
-[307] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[406] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[406] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[406] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
-[406] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
-[421] bbl.pm:676> INFO - Writing 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' with encoding 'UTF-8'
-[427] bbl.pm:779> INFO - Output to Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
-[427] Biber.pm:132> WARN - ISBN '9780262032937' in entry 'Cormen2001' is invalid - run biber with '--validate_datamodel' for details.
-[427] Biber.pm:132> WARN - I didn't find a database entry for 'Agaisse1995' (section 0)
-[427] Biber.pm:132> WARN - I didn't find a database entry for 'Abedi2014' (section 0)
-[427] Biber.pm:132> WARN - I didn't find a database entry for 'BtNomenclature2016' (section 0)
-[427] Biber.pm:132> WARN - I didn't find a database entry for 'AgapitoTenfen2014' (section 0)
-[427] Biber.pm:132> WARN - I didn't find a database entry for 'Nelson2014' (section 0)
-[427] Biber.pm:134> INFO - WARNINGS: 6
+[85] biber-MSWIN64:342> INFO - === 
+[113] Biber.pm:421> INFO - Reading 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'
+[211] Biber.pm:1002> INFO - Found 31 citekeys in bib section 0
+[222] Biber.pm:4487> INFO - Processing section 0
+[231] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[266] bibtex.pm:1713> INFO - LaTeX decoding ...
+[292] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[442] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[442] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[442] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[442] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[467] bbl.pm:676> INFO - Writing 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' with encoding 'UTF-8'
+[480] bbl.pm:779> INFO - Output to Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
+[481] Biber.pm:132> WARN - misc entry 'AMD2022' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - misc entry 'INTEL2023' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - report entry 'JEDEC2020' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - misc entry 'PCPARTPICKER2024' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - misc entry 'MEUPC2024' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - report entry 'ATXSPEC2022' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - book entry 'Diestel2017' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - thesis entry 'Fielding2000' (referencias.bib): Invalid format '04 abr. 2026' of date field 'urldate' - ignoring
+[481] Biber.pm:132> WARN - I didn't find a database entry for 'braga2008algoritmos' (section 0)
+[481] Biber.pm:132> WARN - I didn't find a database entry for 'BarredoArrieta2020' (section 0)
+[481] Biber.pm:134> INFO - WARNINGS: 10

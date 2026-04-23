@@ -1,84 +1,921 @@
 \chapter{Elicitação de Requisitos e Análise}
 \label{cap:05}
 
-Parte principal do texto, que contém a exposição ordenada e pormenorizada do assunto. Divide-se em seções e subseções, que variam em função da abordagem do tema e do método.
-
-
- 
 \section{Requisitos do Usuário}
 
 Texto da justificativa
 
 \section{Requisitos do Sistema}
-Fazer uma pequena definição de requisitos do sistema para introduzir a seção (informar a fonte). Assim, esta seção apresenta os requisitos identificados nesse trabalho. 
 
+Fazer uma pequena definição de requisitos do sistema para introduzir a seção (informar a fonte). Assim, esta seção apresenta os requisitos identificados nesse trabalho.
 
 \subsection{Requisitos Funcionais}
-Fazer uma pequena definição de requisitos funcionais para introduzir essa seção. Informar quais os atores identificados nessa etapa do desenvolvimento, como o parágrafo a seguir. Terminar o parágrafo informando em qual tabela  os requisitos funcionais identificados estão apresentados, mas ou menos como no parágrafo a seguir. 
 
-De acordo com \textcite{braga2008algoritmos}, Requisitos Funcionais são .....  
-Os atores que interagem com o sistema são: administrador, cliente e fornecedor. Os requisitos funcionais identificados para este sistema estão apresentados na Tabela~\ref{tab:reqFuncionais}
+De acordo com \textcite{braga2008algoritmos}, Requisitos Funcionais são \ldots
 
+Os atores que interagem com o sistema são: usuário e sistema. Os requisitos funcionais
+identificados para este sistema estão apresentados nos Quadros~\ref{quad:rf01}
+a~\ref{quad:rf18}.
+
+Os requisitos estão classificados quanto à prioridade
+(\textit{Essencial}, \textit{Importante} ou \textit{Desejável}) e
+quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída}).
+
+% ----------------------------------------------------------
+%  RF-01
+% ----------------------------------------------------------
 \FloatBarrier
-\begin{table}[!htbp]
-\centering
-\caption{Requisitos Funcionais}
-	\begin{tabular}{ c | p{11.5cm} | c}
-		\hline
-		\textbf{Código} & \textbf{Descrição} & \textbf{Ator}\\ \hline
-	RF01 & 
-	O sistema deve permitir a inclusão, alteração e remoção de \textbf{estado do país }\textbf com os atributos nome e sigla. Todos os atributos são obrigatórios. Não é permitido incluir 2 ou mais estados com o mesmo nome nem com a mesma sigla.
-	& 
-	AtorA \\ \hline
-	RF02 & O sistema deve permitir ...  & AtorB \\ \hline
-	RF03 & O sistema deve permitir ...  & AtorC \\ \hline
-	RF04 & O sistema deve permitir ...  & AtorD \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:reqNaoFuncionais}
-\end{table}
+\begin{quadro}[htb]
+  \caption{RF-01 -- Listar componentes por categoria}
+  \label{quad:rf01}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-01                                                                   \\ \hline
+    \textbf{Grupo}      & Catálogo de Componentes                                                 \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Listar.
+    \textbf{Objeto:} Componentes de hardware.
+    \textbf{Atributos:} categoria (CPU, Placa-mãe, RAM, GPU, Fonte), nome do modelo, especificações técnicas (soquete, padrão DDR, TDP, potência).
+    \textbf{Exemplos:} Usuário acessa o sistema e visualiza a lista de CPUs disponíveis; usuário avança para a etapa seguinte e visualiza a lista de placas-mãe.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O catálogo deve ser exibido separado por categoria.
+      \item As categorias obrigatórias são: CPU, Placa-mãe, RAM, GPU e Fonte.
+      \item Cada componente deve exibir suas especificações técnicas relevantes à compatibilidade.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                               \\ \hline
+    \textbf{Operação}   & Saída                                                                   \\ \hline
+    \textbf{Ator}       & Usuário                                                                 \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-02
+% ----------------------------------------------------------
 \FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-02 -- Navegar pela interface \textit{wizard}}
+  \label{quad:rf02}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-02                                                              \\ \hline
+    \textbf{Grupo}      & Catálogo de Componentes                                            \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Navegar.
+    \textbf{Objeto:} Interface \textit{wizard} de configuração passo a passo.
+    \textbf{Atributos:} etapa atual, categoria de componente em seleção.
+    \textbf{Exemplos:} Usuário conclui a seleção da CPU e avança para a etapa de Placa-mãe; usuário retorna à etapa anterior para revisar a seleção.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A interface deve guiar o usuário sequencialmente por cada categoria de hardware.
+      \item O usuário deve poder avançar e retroceder entre etapas.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                          \\ \hline
+    \textbf{Operação}   & Entrada                                                            \\ \hline
+    \textbf{Ator}       & Usuário                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
 
-
-\subsection{Requisitos Não-Funcionais}
-Fazer uma pequena definição de requisitos não-funcionais para introduzir a seção (informar a fonte). Assim, esta seção apresenta os requisitos não-funcionais identificados nesse trabalho, consolidados na Tabela~\ref{tab:reqNaoFuncionais}
-
-
+% ----------------------------------------------------------
+%  RF-03
+% ----------------------------------------------------------
 \FloatBarrier
-\begin{table}[!htbp]
-\centering
-\caption{Requisitos Não-Funcionais}
-	\begin{tabular}{ c | p{11.5cm} }
-		\hline
-		\textbf{Código} & \textbf{Descrição} \\ \hline
-		RNF01 & 
-		Os suários deverão operar o sistema após um determinado tempo de treinamento. \\ \hline
-		RNF02 & O sistema deverá ter alta disponibilidade, p.exemplo, 99\% do tempo   \\ \hline
-		RNF03 & O sistema deverá ser desenvolvido na linguagem NodeJS.  \\ \hline
-		RNF04 & O sistema deverá se comunicar com o banco MySQL .  \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:reqNaoFuncionais}
-\end{table}
-\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-03 -- Exibir componentes incompatíveis com sinalização visual}
+  \label{quad:rf03}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-03                                                                \\ \hline
+    \textbf{Grupo}      & Catálogo de Componentes                                              \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir com sinalização visual de bloqueio.
+    \textbf{Objeto:} Componentes incompatíveis com a seleção atual.
+    \textbf{Atributos:} status de compatibilidade, indicador visual de bloqueio.
+    \textbf{Exemplos:} Após seleção de CPU com soquete AM5, todas as placas-mãe com soquete AM4 permanecem visíveis na lista, porém exibidas com indicador de bloqueio.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Componentes incompatíveis \textbf{não} devem ser ocultados da listagem.
+      \item Devem ser mantidos visíveis com indicador visual de bloqueio.
+      \item O usuário deve poder visualizar o motivo do bloqueio ao interagir com o componente.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                            \\ \hline
+    \textbf{Operação}   & Saída                                                                \\ \hline
+    \textbf{Ator}       & Usuário                                                              \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
 
+% ----------------------------------------------------------
+%  RF-04
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-04 -- Exibir especificações técnicas dos componentes}
+  \label{quad:rf04}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-04                                                              \\ \hline
+    \textbf{Grupo}      & Catálogo de Componentes                                            \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir.
+    \textbf{Objeto:} Especificações técnicas do componente.
+    \textbf{Atributos:} soquete, padrão de memória, TDP (W), potência máxima (W) -- variáveis conforme a categoria.
+    \textbf{Exemplos:} \{Ryzen 5 7600, soquete: AM5, TDP: 65\,W\}; \{Kingston DDR5-5600, padrão: DDR5, capacidade: 16\,GB\}.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item As especificações devem ser exibidas para cada componente do catálogo.
+      \item Os atributos exibidos devem variar conforme a categoria do componente.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                         \\ \hline
+    \textbf{Operação}   & Saída                                                              \\ \hline
+    \textbf{Ator}       & Usuário                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-05
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-05 -- Executar propagação de restrições via algoritmo AC-3}
+  \label{quad:rf05}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-05                                                                                        \\ \hline
+    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                               \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Executar propagação de restrições.
+    \textbf{Objeto:} Algoritmo AC-3 sobre o grafo de restrições do CSP.
+    \textbf{Atributos:} estado atual das seleções do usuário, domínios das variáveis (CPU, Placa-mãe, RAM, GPU, Fonte), fila de arcos.
+    \textbf{Exemplos:} Usuário seleciona CPU com soquete AM5; o AC-3 é invocado e remove do domínio de Placa-mãe todos os modelos cujo soquete seja diferente de AM5.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O AC-3 deve ser invocado a cada seleção de componente realizada pelo usuário.
+      \item O estado completo das seleções deve ser enviado à API REST a cada chamada (arquitetura \textit{stateless}).
+      \item O resultado deve retornar os domínios atualizados em tempo real, sem atraso perceptível.
+      \item A complexidade de pior caso deve ser $O(cd^{3})$, conforme definido por \textcite{Mackworth1977}.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                    \\ \hline
+    \textbf{Operação}   & Processamento                                                                                \\ \hline
+    \textbf{Ator}       & Sistema                                                                                      \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-06
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-06 -- Validar compatibilidade de soquete CPU--Placa-mãe}
+  \label{quad:rf06}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-06                                                                             \\ \hline
+    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                    \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Validar.
+    \textbf{Objeto:} Compatibilidade de soquete entre CPU e Placa-mãe.
+    \textbf{Atributos:} soquete da CPU, soquete suportado pela placa-mãe.
+    \textbf{Exemplos:} \{CPU: AM5, Placa-mãe: AM4\} $\rightarrow$ incompatível -- bloqueio acionado; \{CPU: AM5, Placa-mãe: AM5\} $\rightarrow$ compatível.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A restrição é binária e absoluta -- não admite adaptação de \textit{software} ou configuração.
+      \item O soquete da CPU deve ser idêntico ao soquete suportado pela placa-mãe.
+      \item Incompatibilidade detectada deve bloquear o componente e acionar o módulo de explicação (RF-11).
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                         \\ \hline
+    \textbf{Operação}   & Processamento                                                                     \\ \hline
+    \textbf{Ator}       & Sistema                                                                           \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-07
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-07 -- Validar padrão de memória RAM--Placa-mãe}
+  \label{quad:rf07}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-07                                                                             \\ \hline
+    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                    \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Validar.
+    \textbf{Objeto:} Padrão de memória entre módulo RAM e Placa-mãe.
+    \textbf{Atributos:} padrão DDR do módulo RAM (DDR4 ou DDR5), padrão DDR suportado pela placa-mãe.
+    \textbf{Exemplos:} \{RAM: DDR4-3200, Placa-mãe: B650 (somente DDR5)\} $\rightarrow$ incompatível; \{RAM: DDR5-5600, Placa-mãe: B650\} $\rightarrow$ compatível.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Os padrões DDR4 e DDR5 são física e eletricamente incompatíveis.
+      \item O padrão do módulo deve corresponder exatamente ao suportado pela placa-mãe.
+      \item A restrição é transitiva: depende da placa-mãe, que por sua vez depende da CPU selecionada.
+      \item Incompatibilidade detectada deve bloquear o componente e acionar o módulo de explicação (RF-12).
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                         \\ \hline
+    \textbf{Operação}   & Processamento                                                                     \\ \hline
+    \textbf{Ator}       & Sistema                                                                           \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-08
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-08 -- Validar capacidade energética da fonte (TDP)}
+  \label{quad:rf08}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-08                                                                                         \\ \hline
+    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                                \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Validar.
+    \textbf{Objeto:} Capacidade energética da fonte de alimentação em relação ao consumo dos componentes.
+    \textbf{Atributos:} TDP da CPU (W), TDP da GPU (W), potência da fonte (W), margem de segurança recomendada (20--30\%).
+    \textbf{Exemplos:} \{CPU TDP: 65\,W, GPU TDP: 170\,W, Fonte: 250\,W\} $\rightarrow$ bloqueado (235\,W $\times$ 1,25 = 294\,W $>$ 250\,W); \{Fonte: 550\,W\} $\rightarrow$ válido.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A fonte deve suprir a soma dos TDPs de CPU e GPU acrescida de margem de segurança de 20--30\%.
+      \item A restrição é quantitativa (desigualdade), diferentemente das restrições binárias de soquete e memória.
+      \item Fonte subdimensionada deve ser bloqueada e acionar o módulo de explicação com os valores calculados (RF-13).
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                     \\ \hline
+    \textbf{Operação}   & Processamento                                                                                 \\ \hline
+    \textbf{Ator}       & Sistema                                                                                       \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-09
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-09 -- Propagar restrições incrementalmente a cada seleção}
+  \label{quad:rf09}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-09                                                                                      \\ \hline
+    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                             \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Propagar restrições e atualizar domínios.
+    \textbf{Objeto:} Domínios das variáveis do CSP após cada interação do usuário.
+    \textbf{Atributos:} variáveis afetadas, valores removidos dos domínios, arcos reinseridos na fila do AC-3.
+    \textbf{Exemplos:} Remoção de valor AM5 do domínio de CPU provoca reinserção do arco (Placa-mãe, CPU) na fila para reverificação dos modelos de placa-mãe ainda disponíveis.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A propagação deve ser incremental a cada interação, nunca por avaliação exaustiva (\textit{brute force}).
+      \item O motor deve operar até o ponto de estabilidade -- quando nenhuma remoção adicional for possível.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                  \\ \hline
+    \textbf{Operação}   & Processamento                                                                              \\ \hline
+    \textbf{Ator}       & Sistema                                                                                    \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-10
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-10 -- Exibir justificativa técnica para cada incompatibilidade}
+  \label{quad:rf10}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-10                                                               \\ \hline
+    \textbf{Grupo}      & Explicações Educativas (\textit{Explanation Facility})              \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir justificativa técnica em linguagem natural.
+    \textbf{Objeto:} Incompatibilidade detectada pelo AC-3.
+    \textbf{Atributos:} restrição violada, componentes envolvidos, princípio técnico subjacente.
+    \textbf{Exemplos:} ``Este módulo de memória é incompatível: a placa-mãe compatível com o processador selecionado suporta exclusivamente DDR5, e este módulo utiliza o padrão DDR4.''
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Cada componente bloqueado deve ter uma justificativa exibida ao usuário.
+      \item A justificativa deve identificar explicitamente qual restrição do CSP foi violada.
+      \item A linguagem deve ser acessível ao usuário leigo.
+      \item Nenhum bloqueio pode ocorrer de forma silenciosa (sem explicação ao usuário).
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                           \\ \hline
+    \textbf{Operação}   & Saída                                                               \\ \hline
+    \textbf{Ator}       & Sistema                                                             \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-11
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-11 -- Exibir alerta de incompatibilidade de soquete}
+  \label{quad:rf11}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-11                                                                     \\ \hline
+    \textbf{Grupo}      & Explicações Educativas (\textit{Explanation Facility})                    \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir alerta com explicação.
+    \textbf{Objeto:} Incompatibilidade de soquete entre CPU e Placa-mãe.
+    \textbf{Atributos:} soquete exigido pela CPU selecionada, soquete oferecido pela placa-mãe bloqueada.
+    \textbf{Exemplos:} ``Esta placa-mãe utiliza soquete AM4, incompatível com o processador selecionado, que exige soquete AM5.''
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O alerta deve nomear explicitamente os dois soquetes envolvidos (ex.: AM4 e AM5).
+      \item Deve ser exibido no momento em que o usuário tenta selecionar o componente incompatível.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                 \\ \hline
+    \textbf{Operação}   & Saída                                                                     \\ \hline
+    \textbf{Ator}       & Sistema                                                                   \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-12
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-12 -- Exibir alerta de incompatibilidade de padrão de memória}
+  \label{quad:rf12}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-12                                                              \\ \hline
+    \textbf{Grupo}      & Explicações Educativas (\textit{Explanation Facility})             \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir alerta com explicação.
+    \textbf{Objeto:} Incompatibilidade de padrão de memória entre módulo RAM e Placa-mãe.
+    \textbf{Atributos:} padrão DDR suportado pela placa-mãe, padrão DDR do módulo bloqueado.
+    \textbf{Exemplos:} ``Este módulo utiliza o padrão DDR4. A placa-mãe selecionada suporta exclusivamente DDR5. Os dois padrões são física e eletricamente incompatíveis e não podem ser utilizados juntos.''
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O alerta deve informar ambos os padrões DDR envolvidos.
+      \item Deve mencionar a natureza física da incompatibilidade, não apenas a lógica.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                          \\ \hline
+    \textbf{Operação}   & Saída                                                              \\ \hline
+    \textbf{Ator}       & Sistema                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-13
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-13 -- Exibir alerta de fonte de alimentação subdimensionada}
+  \label{quad:rf13}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-13                                                              \\ \hline
+    \textbf{Grupo}      & Explicações Educativas (\textit{Explanation Facility})             \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir alerta com explicação e valores calculados.
+    \textbf{Objeto:} Fonte de alimentação com potência insuficiente.
+    \textbf{Atributos:} consumo estimado (W), potência mínima recomendada com margem (W), potência da fonte bloqueada (W).
+    \textbf{Exemplos:} ``Esta fonte possui 250\,W. O consumo estimado dos componentes selecionados é de 235\,W, exigindo no mínimo 294\,W com a margem de segurança de 25\%.''
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O alerta deve exibir o consumo calculado e a potência mínima recomendada.
+      \item A margem de segurança utilizada no cálculo deve ser informada ao usuário.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                          \\ \hline
+    \textbf{Operação}   & Saída                                                              \\ \hline
+    \textbf{Ator}       & Sistema                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-14
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-14 -- Reinicializar a configuração}
+  \label{quad:rf14}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-14                                                              \\ \hline
+    \textbf{Grupo}      & Gerenciamento da Configuração                                      \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Reinicializar.
+    \textbf{Objeto:} Configuração de hardware em andamento.
+    \textbf{Atributos:} seleções realizadas, estado do \textit{wizard}.
+    \textbf{Exemplos:} Usuário clica em ``Reiniciar'' na etapa 3; todas as seleções são apagadas e o \textit{wizard} retorna à Etapa 1 (CPU).
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A reinicialização deve apagar todas as seleções realizadas.
+      \item O \textit{wizard} deve retornar ao estado inicial (Etapa 1: CPU).
+      \item A operação deve estar disponível em qualquer etapa do \textit{wizard}.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                         \\ \hline
+    \textbf{Operação}   & Entrada                                                            \\ \hline
+    \textbf{Ator}       & Usuário                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-15
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-15 -- Substituir componente selecionado em etapa anterior}
+  \label{quad:rf15}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-15                                                                                  \\ \hline
+    \textbf{Grupo}      & Gerenciamento da Configuração                                                          \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Substituir.
+    \textbf{Objeto:} Componente já selecionado em etapa anterior do \textit{wizard}.
+    \textbf{Atributos:} etapa do \textit{wizard}, componente anteriormente selecionado, novo componente escolhido.
+    \textbf{Exemplos:} Usuário retorna à Etapa 1 e troca a CPU por um modelo diferente; o sistema reexecuta o AC-3 com a nova CPU e atualiza a disponibilidade dos componentes nas etapas seguintes.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O usuário deve poder retroceder a qualquer etapa anterior do \textit{wizard}.
+      \item Ao substituir um componente, o sistema deve reexecutar o AC-3 sobre o novo estado completo.
+      \item Componentes das etapas subsequentes afetados pela substituição devem ser reavaliados automaticamente.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                                             \\ \hline
+    \textbf{Operação}   & Entrada                                                                                \\ \hline
+    \textbf{Ator}       & Usuário                                                                                \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-16
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-16 -- Exibir resumo da configuração finalizada}
+  \label{quad:rf16}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-16                                                              \\ \hline
+    \textbf{Grupo}      & Gerenciamento da Configuração                                      \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Exibir.
+    \textbf{Objeto:} Resumo da configuração de hardware finalizada.
+    \textbf{Atributos:} lista dos cinco componentes selecionados, status geral de compatibilidade, consumo total estimado (W).
+    \textbf{Exemplos:} Ao concluir a Etapa 5, o sistema exibe: \{CPU: Ryzen 5 7600, Placa-mãe: ASUS B650, RAM: Kingston DDR5-5600, GPU: RX 7600, Fonte: 550\,W -- Status: Configuração compatível\}.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O resumo deve ser exibido ao término da seleção de todos os cinco componentes.
+      \item Deve incluir o status geral de compatibilidade da configuração montada.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                         \\ \hline
+    \textbf{Operação}   & Saída                                                              \\ \hline
+    \textbf{Ator}       & Usuário                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-17
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-17 -- Armazenar e consultar base de conhecimento do CSP}
+  \label{quad:rf17}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-17                                                                                 \\ \hline
+    \textbf{Grupo}      & Base de Conhecimento                                                                  \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Armazenar e consultar.
+    \textbf{Objeto:} Especificações técnicas dos componentes e regras de compatibilidade (conjunto $C$ do CSP).
+    \textbf{Atributos:} modelo do componente, categoria, soquete, padrão DDR, TDP (W), restrições binárias entre pares de componentes.
+    \textbf{Exemplos:} \{CPU: Ryzen 5 7600, soquete: AM5, TDP: 65\,W\}; restrição: $soquete(CPU, Placa\text{-}m\tilde{a}e)$.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Os dados devem ser persistidos em banco de dados PostgreSQL.
+      \item As restrições de compatibilidade devem ser extraídas da documentação oficial de AMD, Intel e JEDEC.
+      \item A base de conhecimento deve ser consultada pela camada de lógica de negócio a cada execução do AC-3.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                             \\ \hline
+    \textbf{Operação}   & Processamento                                                                         \\ \hline
+    \textbf{Ator}       & Sistema                                                                               \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RF-18
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RF-18 -- Popular base de conhecimento via \textit{Database Seeding}}
+  \label{quad:rf18}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RF-18                                                                              \\ \hline
+    \textbf{Grupo}      & Base de Conhecimento                                                               \\ \hline
+    \textbf{Descrição}  &
+    \textbf{Ação:} Popular (\textit{Database Seeding}).
+    \textbf{Objeto:} Base de conhecimento inicial da prova de conceito.
+    \textbf{Atributos:} conjunto inicial de componentes e restrições para os cenários de validação.
+    \textbf{Exemplos:} \textit{Seed} com CPUs AM4 e AM5, placas-mãe B450/B550 (AM4, DDR4) e B650 (AM5, DDR5), módulos DDR4 e DDR5, GPUs e fontes com diferentes potências.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A inserção inicial deve ser realizada via \textit{Database Seeding} no Prisma ORM.
+      \item O processo de \textit{seeding} deve ser isolado do desenvolvimento de interface administrativa.
+      \item Os dados devem cobrir ao menos duas plataformas (AM4 e AM5) para viabilizar os cenários de teste.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Desejável                                                                          \\ \hline
+    \textbf{Operação}   & Entrada                                                                            \\ \hline
+    \textbf{Ator}       & Sistema                                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ============================================================
+\subsection{Requisitos Não Funcionais}
+
+Fazer uma pequena definição de requisitos não funcionais para introduzir a seção (informar a fonte). Assim, esta seção apresenta os requisitos não funcionais identificados nesse trabalho, apresentados nos Quadros~\ref{quad:rnf01} a~\ref{quad:rnf14}.
+
+% ----------------------------------------------------------
+%  RNF-01
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-01 -- Tempo de resposta da validação}
+  \label{quad:rnf01}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-01                                                                                     \\ \hline
+    \textbf{Grupo}      & Desempenho                                                                                 \\ \hline
+    \textbf{Descrição}  &
+    A execução do algoritmo AC-3 e o retorno dos domínios atualizados via API REST devem ocorrer em milissegundos, garantindo validação em tempo real sem degradação perceptível da interface.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O tempo de resposta da API de validação deve ser inferior a 500\,ms para o catálogo da prova de conceito.
+      \item A resposta deve ser percebida como instantânea pelo usuário durante a interação com o \textit{wizard}.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                  \\ \hline
+    \textbf{Operação}   & Processamento                                                                              \\ \hline
+    \textbf{Ator}       & --                                                                                         \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-02
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-02 -- Ausência de avaliação por força bruta}
+  \label{quad:rnf02}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-02                                                             \\ \hline
+    \textbf{Grupo}      & Desempenho                                                         \\ \hline
+    \textbf{Descrição}  &
+    O motor de inferência deve operar exclusivamente por propagação de restrições (AC-3), nunca por enumeração exaustiva de combinações, garantindo viabilidade sobre catálogos de tamanho realista.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A complexidade de pior caso do motor deve ser $O(cd^{3})$ -- nunca $O(d^{n})$.
+      \item A abordagem por força bruta é proibida como estratégia de validação.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                          \\ \hline
+    \textbf{Operação}   & Processamento                                                      \\ \hline
+    \textbf{Ator}       & --                                                                 \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-03
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-03 -- Linguagem natural nas explicações de incompatibilidade}
+  \label{quad:rnf03}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-03                                                                                      \\ \hline
+    \textbf{Grupo}      & Usabilidade                                                                                 \\ \hline
+    \textbf{Descrição}  &
+    Todas as justificativas de bloqueio exibidas ao usuário devem ser redigidas em linguagem natural e acessível, sem exigir conhecimento técnico prévio de hardware para sua compreensão.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Termos técnicos utilizados nas explicações devem ser acompanhados de contexto suficiente para compreensão.
+      \item A explicação deve responder claramente à pergunta ``por que este componente está bloqueado?''.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                   \\ \hline
+    \textbf{Operação}   & Saída                                                                                       \\ \hline
+    \textbf{Ator}       & Usuário                                                                                     \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-04
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-04 -- Interface responsiva}
+  \label{quad:rnf04}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-04                                                                      \\ \hline
+    \textbf{Grupo}      & Usabilidade                                                                 \\ \hline
+    \textbf{Descrição}  &
+    A camada de apresentação desenvolvida em Next.js deve ser responsiva, funcionando corretamente em navegadores \textit{desktop} e dispositivos móveis modernos sem perda de funcionalidade.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O \textit{layout} deve adaptar-se a diferentes resoluções de tela.
+      \item Todas as funcionalidades do \textit{wizard} devem estar acessíveis em dispositivos móveis.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                                  \\ \hline
+    \textbf{Operação}   & Saída                                                                       \\ \hline
+    \textbf{Ator}       & Usuário                                                                     \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-05
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-05 -- Acesso sem cadastro ou autenticação}
+  \label{quad:rnf05}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-05                                                                       \\ \hline
+    \textbf{Grupo}      & Usabilidade                                                                  \\ \hline
+    \textbf{Descrição}  &
+    O sistema deve ser acessível sem criação de conta, \textit{login} ou qualquer forma de identificação prévia, eliminando barreiras de entrada para o usuário leigo.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Não deve existir tela de \textit{login} ou cadastro para o fluxo principal de configuração.
+      \item Nenhuma sessão persistente de usuário deve ser exigida para utilização do sistema.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                                   \\ \hline
+    \textbf{Operação}   & Entrada                                                                      \\ \hline
+    \textbf{Ator}       & Usuário                                                                      \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-06
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-06 -- Separação estrita entre as três camadas arquiteturais}
+  \label{quad:rnf06}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-06                                                                        \\ \hline
+    \textbf{Grupo}      & Manutenibilidade                                                              \\ \hline
+    \textbf{Descrição}  &
+    O sistema deve respeitar a separação estrita entre camada de dados (PostgreSQL), camada de lógica de negócio (NestJS/AC-3) e camada de apresentação (Next.js), de modo que cada camada possa ser modificada de forma independente das demais.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Alterações na interface não devem requerer modificação do motor de inferência, e vice-versa.
+      \item A comunicação entre camadas deve ocorrer exclusivamente via API REST.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                     \\ \hline
+    \textbf{Operação}   & Processamento                                                                 \\ \hline
+    \textbf{Ator}       & --                                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-07
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-07 -- Motor de inferência expansível para novas restrições}
+  \label{quad:rnf07}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-07                                                                            \\ \hline
+    \textbf{Grupo}      & Manutenibilidade                                                                  \\ \hline
+    \textbf{Descrição}  &
+    A implementação do AC-3 deve permitir a adição de novas restrições binárias ao grafo de restrições sem necessidade de refatoração da lógica existente do motor.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Novas restrições devem poder ser cadastradas na base de conhecimento sem alteração de código.
+      \item O grafo de restrições deve ser construído dinamicamente a partir dos dados persistidos no banco.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                                        \\ \hline
+    \textbf{Operação}   & Processamento                                                                     \\ \hline
+    \textbf{Ator}       & --                                                                                \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-08
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-08 -- Base de conhecimento expansível para novas categorias}
+  \label{quad:rnf08}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-08                                                                                 \\ \hline
+    \textbf{Grupo}      & Manutenibilidade                                                                       \\ \hline
+    \textbf{Descrição}  &
+    O modelo de dados deve permitir a inclusão futura de novas categorias de componentes além das cinco iniciais (CPU, Placa-mãe, RAM, GPU e Fonte) sem quebra do esquema existente.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A estrutura da base de conhecimento não deve ser \textit{hardcoded} para exatamente cinco categorias.
+      \item O motor de inferência deve operar genericamente sobre qualquer grafo de restrições fornecido.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Desejável                                                                              \\ \hline
+    \textbf{Operação}   & Processamento                                                                          \\ \hline
+    \textbf{Ator}       & --                                                                                     \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-09
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-09 -- Restrições derivadas de documentação oficial dos fabricantes}
+  \label{quad:rnf09}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-09                                                                                      \\ \hline
+    \textbf{Grupo}      & Confiabilidade                                                                              \\ \hline
+    \textbf{Descrição}  &
+    Todas as restrições de compatibilidade cadastradas na base de conhecimento devem ser extraídas e referenciadas à documentação técnica oficial de AMD, Intel e JEDEC, garantindo a fidelidade técnica das regras do motor de inferência.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Cada regra de compatibilidade deve ter sua fonte documental identificável.
+      \item Regras sem respaldo em documentação oficial de fabricante não devem ser incluídas na base de conhecimento.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                   \\ \hline
+    \textbf{Operação}   & Processamento                                                                               \\ \hline
+    \textbf{Ator}       & --                                                                                          \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-10
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-10 -- Determinismo do motor de inferência}
+  \label{quad:rnf10}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-10                                                                           \\ \hline
+    \textbf{Grupo}      & Confiabilidade                                                                   \\ \hline
+    \textbf{Descrição}  &
+    Para o mesmo estado de seleções de entrada, o sistema deve sempre produzir o mesmo conjunto de componentes válidos e as mesmas justificativas de bloqueio, sem qualquer variação não determinística.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O motor de inferência deve ser estritamente determinístico: mesma entrada produz mesma saída.
+      \item Não deve haver comportamento aleatório, probabilístico ou dependente de estado externo volátil.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                        \\ \hline
+    \textbf{Operação}   & Processamento                                                                    \\ \hline
+    \textbf{Ator}       & --                                                                               \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-11
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-11 -- API \textit{stateless} (sem estado de sessão no servidor)}
+  \label{quad:rnf11}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-11                                                                              \\ \hline
+    \textbf{Grupo}      & Escalabilidade e Operação                                                           \\ \hline
+    \textbf{Descrição}  &
+    A API REST deve operar sem manter estado de sessão entre requisições, recebendo o estado completo das seleções do usuário a cada chamada, em conformidade com o princípio \textit{stateless} definido por \textcite{Fielding2000}.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Nenhum dado de sessão de usuário deve ser armazenado no servidor entre requisições.
+      \item Cada requisição deve ser autossuficiente e conter todo o contexto necessário para o processamento.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                           \\ \hline
+    \textbf{Operação}   & Processamento                                                                       \\ \hline
+    \textbf{Ator}       & --                                                                                  \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-12
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-12 -- Ambiente de banco de dados reproduzível via Docker}
+  \label{quad:rnf12}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-12                                                                                        \\ \hline
+    \textbf{Grupo}      & Escalabilidade e Operação                                                                     \\ \hline
+    \textbf{Descrição}  &
+    O provisionamento do PostgreSQL deve ser realizado via Docker, garantindo consistência entre os ambientes de desenvolvimento e produção de forma declarativa e reproduzível.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item O ambiente do banco de dados deve ser definido por arquivo de configuração Docker (\texttt{docker-compose}).
+      \item A instalação direta do PostgreSQL no sistema operacional do desenvolvedor não deve ser necessária.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Importante                                                                                    \\ \hline
+    \textbf{Operação}   & Processamento                                                                                 \\ \hline
+    \textbf{Ator}       & --                                                                                            \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-13
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-13 -- Rastreabilidade de cada bloqueio até a restrição violada}
+  \label{quad:rnf13}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-13                                                                                       \\ \hline
+    \textbf{Grupo}      & Transparência (XAI)                                                                          \\ \hline
+    \textbf{Descrição}  &
+    O sistema deve ser capaz de identificar e comunicar, para cada componente bloqueado, qual restrição específica do CSP foi violada, alinhando-se ao princípio de transparência da Inteligência Artificial Explicável \cite{BarredoArrieta2020}.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item Cada bloqueio deve ser rastreável até a aresta do grafo de restrições que o originou.
+      \item O sistema deve ser auditável: o raciocínio do motor de inferência deve poder ser inspecionado e verificado.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                    \\ \hline
+    \textbf{Operação}   & Saída                                                                                        \\ \hline
+    \textbf{Ator}       & Sistema                                                                                      \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
+
+% ----------------------------------------------------------
+%  RNF-14
+% ----------------------------------------------------------
+\FloatBarrier
+\begin{quadro}[htb]
+  \caption{RNF-14 -- Ausência de bloqueios silenciosos}
+  \label{quad:rnf14}
+  \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+    \hline
+    \textbf{Código}     & RNF-14                                                                                                       \\ \hline
+    \textbf{Grupo}      & Transparência (XAI)                                                                                          \\ \hline
+    \textbf{Descrição}  &
+    Nenhum bloqueio de componente deve ocorrer sem exibição de justificativa ao usuário. O sistema não deve implementar filtragem silenciosa, diferenciando-se explicitamente de plataformas como PC Part Picker e Meupc.net, que sinalizam incompatibilidades sem explicá-las \cite{Clancey1983}.
+    \textbf{Restrições:}
+    \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
+      \item A ausência de justificativa para qualquer bloqueio constitui falha de requisito.
+      \item A \textit{explanation facility} deve ser tratada como característica nuclear do sistema, não como funcionalidade acessória.
+    \end{enumerate} \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                                    \\ \hline
+    \textbf{Operação}   & Saída                                                                                                        \\ \hline
+    \textbf{Ator}       & Sistema                                                                                                      \\ \hline
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{quadro}
 
 \subsection{Restrições, Suposições e Dependências}
-Forneça uma descrição geral de qualquer item que limitará a decisão do desenvolvedor e uma lista de fatores que afetam os requisitos expressos.
+
+O sistema possui as seguintes dependências e restrições de desenvolvimento:
 
 \begin{itemize}
-	\item Item 1;
-	\item Item 2;
-	\item Item n.
+  \item As regras de compatibilidade devem ser extraídas exclusivamente da documentação técnica oficial dos fabricantes AMD, Intel e JEDEC;
+  \item O banco de dados PostgreSQL deve estar provisionado via Docker antes da execução do sistema;
+  \item O catálogo inicial de componentes deve ser populado via \textit{Database Seeding} no Prisma ORM antes dos testes de validação.
 \end{itemize}
 
-
 \subsection{Requisitos Adiados}
-Forneça uma descrição dos requisitos identificados pelo usuário ou pelo desenvolvedor, mas que não serão desenvolvidos nessa primeira iteração, ou seja, serão analisados e desenvolvidos posteriormente.
 
+Os seguintes requisitos foram identificados, mas serão desenvolvidos em momento posterior:
 
+\begin{itemize}
+  \item Interface administrativa para cadastro e edição de componentes via \textit{front-end} (CRUD completo);
+  \item Ampliação do catálogo para além das cinco categorias iniciais (ex.: cooler, SSD, gabinete);
+  \item Geração de link compartilhável com a configuração de hardware finalizada;
+  \item Estratégia de testes automatizados (unitários do AC-3 e de integração da API REST).
+\end{itemize}
+
+\section{Casos de Uso}
 \section{Casos de Uso}
 Forneça uma breve definição de casos de uso (com referência da fonte) e informe que os casos de uso identificados neste trabalho estão aqui apresentados.
 
@@ -88,15 +925,11 @@ Forneça uma breve definição de diagrama de casos de uso (referência da fonte
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Diagrama de Casos de Uso}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=1.0]{imagens/DiagramadeCasosdeUso.png}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:diagCasosDeUso}
+  \centering
+  \caption{Diagrama de Casos de Uso}
+  \includegraphics[width=1\textwidth]{imagens/DCU - Sistema de Compatibilidade de Hardware.jpg}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:diagCasosDeUso}
 \end{figure}
 \FloatBarrier
 
@@ -105,25 +938,25 @@ Uma especificação de caso de uso fornece detalhe textual para um caso de uso. 
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{Modelo para Especificação de Casos de Uso}
-	\begin{tabular}{ c | p{11.5cm} }
-		\hline
-		\textbf{Item} & \textbf{Descrição} \\ \hline
-		Nome do Caso de Uso & 
-		Declara o nome do caso de uso. Geralmente, o nome expressa o objetivo ou resultado observável do caso de uso, como "Sacar Dinheiro" no caso de um caixa eletrônico. \\ \hline
-		Descrição Resumida & Descreve a função e o objetivo do caso de uso.   \\ \hline
-		Fluxo de Eventos & Apresenta o fluxo básico e os fluxos alternativos. O fluxo de eventos descreve o comportamento do sistema; ele não descreve como o sistema funciona, os detalhes da apresentação ou os detalhes da interface com o usuário. Se forem trocadas informações, o caso de uso deverá ser específico sobre o que será transmitido de um lado para outro. Por exemplo, em vez de descrever uma ação como "o agente insere informações do cliente", indique que "o agente insere o nome e o endereço do cliente".  \\ \hline
-		Fluxo Básico & Descreve o comportamento principal ideal do sistema.  \\ \hline
-		Fluxos Alternativos & Descreve exceções ou desvios do fluxo básico, como o comportamento do sistema quando o agente insere um ID de usuário incorreto e a autenticação do usuário falha.  \\ \hline
-		Requisitos Especiais & Requisitos não-funcionais que são específicos para um caso de uso mas que não são especificados no texto do fluxo do caso de uso de eventos. Exemplos de requisitos especiais incluem estes fatores: requisitos legais e regulamentares; padrões de aplicativo; atributos de qualidade do sistema, incluindo usabilidade, confiabilidade, desempenho e capacidade de suporte; sistemas operacionais e ambientes; requisitos de compatibilidade e restrições de design.  \\ \hline
-		Condições Prévias & Um estado do sistema que deve estar presente antes de um caso de uso ser iniciado.  \\ \hline
-		Pós-Condições & Uma lista de estados possíveis para o sistema imediatamente após a conclusão de um caso de uso.  \\ \hline
-		Pontos de Extensão & Um ponto no fluxo de eventos do caso de uso em que outro caso de uso é referenciado.  \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Extraído de \href{https://www.ibm.com/docs/pt-br/elm/6.0?topic=cases-use-case-specification-outline}{IBM-Especificação de Casos de Uso}
-	\label{tab:especCasosDeUso}
+  \centering
+  \caption{Modelo para Especificação de Casos de Uso}
+  \begin{tabular}{ c | p{11.5cm} }
+    \hline
+    \textbf{Item}        & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
+    Nome do Caso de Uso  &
+    Declara o nome do caso de uso. Geralmente, o nome expressa o objetivo ou resultado observável do caso de uso, como "Sacar Dinheiro" no caso de um caixa eletrônico.                                                                                                                                                                                                                                                                                                                                                              \\ \hline
+    Descrição Resumida   & Descreve a função e o objetivo do caso de uso.                                                                                                                                                                                                                                                                                                                                                                                                                                                            \\ \hline
+    Fluxo de Eventos     & Apresenta o fluxo básico e os fluxos alternativos. O fluxo de eventos descreve o comportamento do sistema; ele não descreve como o sistema funciona, os detalhes da apresentação ou os detalhes da interface com o usuário. Se forem trocadas informações, o caso de uso deverá ser específico sobre o que será transmitido de um lado para outro. Por exemplo, em vez de descrever uma ação como "o agente insere informações do cliente", indique que "o agente insere o nome e o endereço do cliente". \\ \hline
+    Fluxo Básico         & Descreve o comportamento principal ideal do sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                      \\ \hline
+    Fluxos Alternativos  & Descreve exceções ou desvios do fluxo básico, como o comportamento do sistema quando o agente insere um ID de usuário incorreto e a autenticação do usuário falha.                                                                                                                                                                                                                                                                                                                                        \\ \hline
+    Requisitos Especiais & Requisitos não-funcionais que são específicos para um caso de uso mas que não são especificados no texto do fluxo do caso de uso de eventos. Exemplos de requisitos especiais incluem estes fatores: requisitos legais e regulamentares; padrões de aplicativo; atributos de qualidade do sistema, incluindo usabilidade, confiabilidade, desempenho e capacidade de suporte; sistemas operacionais e ambientes; requisitos de compatibilidade e restrições de design.                                    \\ \hline
+    Condições Prévias    & Um estado do sistema que deve estar presente antes de um caso de uso ser iniciado.                                                                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
+    Pós-Condições        & Uma lista de estados possíveis para o sistema imediatamente após a conclusão de um caso de uso.                                                                                                                                                                                                                                                                                                                                                                                                           \\ \hline
+    Pontos de Extensão   & Um ponto no fluxo de eventos do caso de uso em que outro caso de uso é referenciado.                                                                                                                                                                                                                                                                                                                                                                                                                      \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Extraído de \href{https://www.ibm.com/docs/pt-br/elm/6.0?topic=cases-use-case-specification-outline}{IBM-Especificação de Casos de Uso}
+  \label{tab:especCasosDeUso}
 \end{table}
 \FloatBarrier
 
@@ -132,48 +965,48 @@ Elaborar as especificações para cada caso de uso, quando for necessário, como
 
 
 \begin{table}
-\begin{tabular}{ | p{15cm} | }
-	\hline
-	\textbf{Caso de Uso}            \\
-	Finalizar Comprar 	            \\	\hline
-	\textbf{Referências}            \\
-	RF02             	            \\	\hline
-	\textbf{Descrição Geral}        \\
-	O caso de uso inicia-se quando o cliente deseja efetuar compra dos produtos que estão inseridos no carrinho de compras.   \\	\hline
-	\textbf{Atores}                 \\
-	Cliente                         \\	\hline
-	\textbf{Pré-Condições}          \\
-	Cliente logado no sistema, produtos já inseridos no carrinho de compras.
-		                            \\	\hline
-	\textbf{Garantia de Sucesso (Pós-Condições}             \\
-	Pedido fechado, compra efetuada, sistema aguardando confirmação de pagamento.
-		                            \\	\hline
-	\textbf{Requisitos Especiais}   \\
-		                            \\	\hline
-	\textbf{Fluxo Básico}           
+  \begin{tabular}{ | p{15cm} | }
+    \hline
+    \textbf{Caso de Uso}                                                                                                    \\
+    Finalizar Comprar                                                                                                       \\	\hline
+    \textbf{Referências}                                                                                                    \\
+    RF02                                                                                                                    \\	\hline
+    \textbf{Descrição Geral}                                                                                                \\
+    O caso de uso inicia-se quando o cliente deseja efetuar compra dos produtos que estão inseridos no carrinho de compras. \\	\hline
+    \textbf{Atores}                                                                                                         \\
+    Cliente                                                                                                                 \\	\hline
+    \textbf{Pré-Condições}                                                                                                  \\
+    Cliente logado no sistema, produtos já inseridos no carrinho de compras.
+    \\	\hline
+    \textbf{Garantia de Sucesso (Pós-Condições}                                                                             \\
+    Pedido fechado, compra efetuada, sistema aguardando confirmação de pagamento.
+    \\	\hline
+    \textbf{Requisitos Especiais}                                                                                           \\
+    \\	\hline
+    \textbf{Fluxo Básico}
     \begin{enumerate}
-        \item Cliente deseja finalizar compra, sistema solicita que informe a forma de pagamento e de entrega;
-        \item Cliente deseja efetuar pagamento em forma de cartão de crédito/débito;
-        \item Sistema solicita informações do cartão do cliente;
-        \item Sistema faz validação das informações;
-        \item Sistema gera o número do pedido;
-        \item Compra finalizada com sucesso.
+      \item Cliente deseja finalizar compra, sistema solicita que informe a forma de pagamento e de entrega;
+      \item Cliente deseja efetuar pagamento em forma de cartão de crédito/débito;
+      \item Sistema solicita informações do cartão do cliente;
+      \item Sistema faz validação das informações;
+      \item Sistema gera o número do pedido;
+      \item Compra finalizada com sucesso.
     \end{enumerate}
-		                          \\	\hline
-	\textbf{Fluxo Alternativo}      
+    \\	\hline
+    \textbf{Fluxo Alternativo}
     \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
     \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
     \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
 
     \begin{enumerate}
-        \item Cliente deseja efetuar pagamento através de boleto bancário
-        \begin{enumerate}
-            \item Sistema gera boleto para o cliente;
-            \item Retorne ao passo 5.
-        \end{enumerate}
-    \end{enumerate}		
-	\\	\hline
-\end{tabular}
+      \item Cliente deseja efetuar pagamento através de boleto bancário
+            \begin{enumerate}
+              \item Sistema gera boleto para o cliente;
+              \item Retorne ao passo 5.
+            \end{enumerate}
+    \end{enumerate}
+    \\	\hline
+  \end{tabular}
 \end{table}
 
 
@@ -185,15 +1018,15 @@ De acordo com \textcite{braga2008algoritmos}, o modelo de domínio é .....  . A
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Modelo de Domínio}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=1.0]{imagens/ModelodeDominio.png}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:modeloDeDominio}
+  \centering
+  \caption{Modelo de Domínio}
+  %scale redimensiona a figura.
+  %1.5 = 150% do tamanho original
+  %1 = 100% do tamanho original
+  %0.20 = 20% do tamanho original
+  \includegraphics[scale=1.0]{imagens/ModelodeDominio.png}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:modeloDeDominio}
 \end{figure}
 \FloatBarrier
 
@@ -218,15 +1051,15 @@ Um diagrama de atividades é normalmente composto pelos seguintes elementos: ati
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Diagrama de Atividades}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=1.0]{imagens/DiagramadeAtividades.png}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:diagramaDeAtividades}
+  \centering
+  \caption{Diagrama de Atividades}
+  %scale redimensiona a figura.
+  %1.5 = 150% do tamanho original
+  %1 = 100% do tamanho original
+  %0.20 = 20% do tamanho original
+  \includegraphics[scale=1.0]{imagens/DiagramadeAtividades.png}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:diagramaDeAtividades}
 \end{figure}
 \FloatBarrier
 
@@ -238,14 +1071,14 @@ Um diagrama de estados mostra os possíveis estados de um objeto e as transaçõ
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Diagrama de Estados}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=1.0]{imagens/DiagramadeEstados.png}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:diagramaDeEstados}
+  \centering
+  \caption{Diagrama de Estados}
+  %scale redimensiona a figura.
+  %1.5 = 150% do tamanho original
+  %1 = 100% do tamanho original
+  %0.20 = 20% do tamanho original
+  \includegraphics[scale=1.0]{imagens/DiagramadeEstados.png}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:diagramaDeEstados}
 \end{figure}
 \FloatBarrier

@@ -2,7 +2,7 @@
 \label{cap:06}
 
 Parte principal do texto, que contém a exposição ordenada e pormenorizada do assunto. Divide-se em seções e subseções, que variam em função da abordagem do tema e do método.
- 
+
 \section{Projeto de Interface}
 Apresentar o protótipo das interfaces do sistema. Podem ser construídas utilizando qualquer ferramenta. Apresente os padrões utilizados.
 
@@ -15,9 +15,9 @@ Uma vez que foi elaborada uma modelagem orientada a objetos, utilizando o diagra
 Regras para realizar o mapeamento: (Helen, colocar as regras aqui para que os alunos escrevam)
 
 \begin{itemize}
-	\item Item 1;
-	\item Item 2;
-	\item Item n.
+  \item Item 1;
+  \item Item 2;
+  \item Item n.
 \end{itemize}
 
 
@@ -27,19 +27,19 @@ Explicar qual o padrão adotado para o nome dos objetos de banco de dados, como 
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{Convenção para Nome dos Objetos no Banco de Dados}
-	\begin{tabular}{ c | p{11.5cm} }
-		\hline
-		\textbf{Objeto} & \textbf{Padrão Adotado} \\ \hline
-		Chave Primária & NomeDaTabela\_PK \\ \hline
-		Chave Estrangeira & NomeDaTabela\_NomeDaTabelaEstrangeira\_FK\_nn, onde nn é a sequência de ocorrência do par NomeDaTabela e NomeDaTabelaEstrangeira   \\ \hline
-		Check & NomeDaTabela\_CK\_nn, onde nn é a sequência de checks da tabela  \\ \hline
-		Chave Única & NomeDaTabela\_UK\_nn, onde nn é a sequência de chave única da tabela  \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:convencaoObjBD}
+  \centering
+  \caption{Convenção para Nome dos Objetos no Banco de Dados}
+  \begin{tabular}{ c | p{11.5cm} }
+    \hline
+    \textbf{Objeto}   & \textbf{Padrão Adotado}                                                                                                          \\ \hline
+    Chave Primária    & NomeDaTabela\_PK                                                                                                                 \\ \hline
+    Chave Estrangeira & NomeDaTabela\_NomeDaTabelaEstrangeira\_FK\_nn, onde nn é a sequência de ocorrência do par NomeDaTabela e NomeDaTabelaEstrangeira \\ \hline
+    Check             & NomeDaTabela\_CK\_nn, onde nn é a sequência de checks da tabela                                                                  \\ \hline
+    Chave Única       & NomeDaTabela\_UK\_nn, onde nn é a sequência de chave única da tabela                                                             \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:convencaoObjBD}
 \end{table}
 \FloatBarrier
 
@@ -47,18 +47,18 @@ Para melhor compreensão, as tabelas do banco de dados propostas neste trabalho 
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{Tabelas Identificadas neste Trabalho}
-	\begin{tabular}{ c | p{11.5cm} }
-		\hline
-		\textbf{Tabela do Banco de Dados} & \textbf{Tabela no Documento} \\ \hline
-		Estado & Tabela~\ref{tab:tabelaEstado} \\ \hline
-		Cidade & Tabela~\ref{tab:tabelaCidade} \\ \hline
-		NomeDaTabelann & Tabela~\ref{tab:tabelaNN} \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:tabelasIdentificadas}
+  \centering
+  \caption{Tabelas Identificadas neste Trabalho}
+  \begin{tabular}{ c | p{11.5cm} }
+    \hline
+    \textbf{Tabela do Banco de Dados} & \textbf{Tabela no Documento}  \\ \hline
+    Estado                            & Tabela~\ref{tab:tabelaEstado} \\ \hline
+    Cidade                            & Tabela~\ref{tab:tabelaCidade} \\ \hline
+    NomeDaTabelann                    & Tabela~\ref{tab:tabelaNN}     \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelasIdentificadas}
 \end{table}
 \FloatBarrier
 
@@ -67,102 +67,102 @@ Preencher o quadro a seguir para cada uma das relações identificadas no item M
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{Estado}
-	\begin{tabular}{ c | c | c | c | c | c | c | c }
-		\hline
-		\textbf{Campo}          & \textbf{Tipo de Dado}     & 
-		\textbf{Obrigatório?}   & \textbf{Chave Primária?}  &
-		\textbf{Tabela}         & \textbf{Campo}            & 
-		\textbf{Grupo}          & \textbf{Ordem}\\ \hline
-		\textbf{id}             & \textbf{Number}           & 
-		\textbf{X}              & \textbf{X}                &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{} \\ \hline
-		\textbf{nome}           & \textbf{Varchar2(100)}    & 
-		\textbf{X}              & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{1}              & \textbf{1} \\ \hline
-		\textbf{sigla}          & \textbf{Varchar2(2)}      & 
-		\textbf{X}              & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{2}              & \textbf{1} \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:tabelaEstado}
+  \centering
+  \caption{Estado}
+  \begin{tabular}{ c | c | c | c | c | c | c | c }
+    \hline
+    \textbf{Campo}        & \textbf{Tipo de Dado}    &
+    \textbf{Obrigatório?} & \textbf{Chave Primária?} &
+    \textbf{Tabela}       & \textbf{Campo}           &
+    \textbf{Grupo}        & \textbf{Ordem}             \\ \hline
+    \textbf{id}           & \textbf{Number}          &
+    \textbf{X}            & \textbf{X}               &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                  \\ \hline
+    \textbf{nome}         & \textbf{Varchar2(100)}   &
+    \textbf{X}            & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{1}            & \textbf{1}                 \\ \hline
+    \textbf{sigla}        & \textbf{Varchar2(2)}     &
+    \textbf{X}            & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{2}            & \textbf{1}                 \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaEstado}
 \end{table}
 \FloatBarrier
 
 \textcolor{red}{INSTRUÇÃO:
-Grupo é a chave única que você deseja criar (UK\_01, UK\_02)
-Ordem é a sequência dos campos que devem compor a chave única, quando existir mais de um campo na sua chave única}
+  Grupo é a chave única que você deseja criar (UK\_01, UK\_02)
+  Ordem é a sequência dos campos que devem compor a chave única, quando existir mais de um campo na sua chave única}
 
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{Cidade}
-	\begin{tabular}{ c | c | c | c | c | c | c | c }
-		\hline
-		\textbf{Campo}          & \textbf{Tipo de Dado}     & 
-		\textbf{Obrigatório?}   & \textbf{Chave Primária?}  &
-		\textbf{Tabela}         & \textbf{Campo}            & 
-		\textbf{Grupo}          & \textbf{Ordem}\\ \hline
-		\textbf{id}             & \textbf{Number}           & 
-		\textbf{X}              & \textbf{X}                &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{} \\ \hline
-		\textbf{nome}           & \textbf{Varchar2(200)}    & 
-		\textbf{X}              & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{1}              & \textbf{1} \\ \hline
-		\textbf{idEstado}       & \textbf{Number}           & 
-		\textbf{X}              & \textbf{}                 &
-		\textbf{Estado}         & \textbf{id}               & 
-		\textbf{1}              & \textbf{1} \\ \hline
-		\textbf{latitude}       & \textbf{Number}           & 
-		\textbf{X}              & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{2}              & \textbf{1} \\ \hline
-		\textbf{longitude}      & \textbf{Number}           & 
-		\textbf{X}              & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{2}              & \textbf{2} \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:tabelaCidade}
+  \centering
+  \caption{Cidade}
+  \begin{tabular}{ c | c | c | c | c | c | c | c }
+    \hline
+    \textbf{Campo}        & \textbf{Tipo de Dado}    &
+    \textbf{Obrigatório?} & \textbf{Chave Primária?} &
+    \textbf{Tabela}       & \textbf{Campo}           &
+    \textbf{Grupo}        & \textbf{Ordem}             \\ \hline
+    \textbf{id}           & \textbf{Number}          &
+    \textbf{X}            & \textbf{X}               &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                  \\ \hline
+    \textbf{nome}         & \textbf{Varchar2(200)}   &
+    \textbf{X}            & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{1}            & \textbf{1}                 \\ \hline
+    \textbf{idEstado}     & \textbf{Number}          &
+    \textbf{X}            & \textbf{}                &
+    \textbf{Estado}       & \textbf{id}              &
+    \textbf{1}            & \textbf{1}                 \\ \hline
+    \textbf{latitude}     & \textbf{Number}          &
+    \textbf{X}            & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{2}            & \textbf{1}                 \\ \hline
+    \textbf{longitude}    & \textbf{Number}          &
+    \textbf{X}            & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{2}            & \textbf{2}                 \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaCidade}
 \end{table}
 \FloatBarrier
 
 
 \FloatBarrier
 \begin{table}[!htbp]
-\centering
-\caption{NomeDaTabelaNN}
-	\begin{tabular}{ c | c | c | c | c | c | c | c }
-		\hline
-		\textbf{Campo}          & \textbf{Tipo de Dado}     & 
-		\textbf{Obrigatório?}   & \textbf{Chave Primária?}  &
-		\textbf{Tabela}         & \textbf{Campo}            & 
-		\textbf{Grupo}          & \textbf{Ordem}\\ \hline
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{} \\ \hline
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{} \\ \hline
-		\textbf{}               & \textbf{}                 &
-		\textbf{}               & \textbf{}                 &
-		\textbf{}               & \textbf{}                 & 
-		\textbf{}               & \textbf{} \\ \hline
-	\end{tabular}
-	\\ \vspace{0.2cm}
-	\textbf{Fonte:} Elaborada pelo autor
-	\label{tab:tabelaNN}
+  \centering
+  \caption{NomeDaTabelaNN}
+  \begin{tabular}{ c | c | c | c | c | c | c | c }
+    \hline
+    \textbf{Campo}        & \textbf{Tipo de Dado}    &
+    \textbf{Obrigatório?} & \textbf{Chave Primária?} &
+    \textbf{Tabela}       & \textbf{Campo}           &
+    \textbf{Grupo}        & \textbf{Ordem}             \\ \hline
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                  \\ \hline
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                  \\ \hline
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                &
+    \textbf{}             & \textbf{}                  \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaNN}
 \end{table}
 \FloatBarrier
 
@@ -180,7 +180,7 @@ Apresentar as classes de projeto identificadas. Alguns materiais para leitura ex
 
 
 \section{Projeto Procedimental}
-Projetar Software é o processo de aplicar várias técnicas e princípios com o propósito de se definir um dispositivo, processo ou sistema, com detalhes suficientes para permitir sua realização física (Taylor-59). 
+Projetar Software é o processo de aplicar várias técnicas e princípios com o propósito de se definir um dispositivo, processo ou sistema, com detalhes suficientes para permitir sua realização física (Taylor-59).
 
 O Projeto de software é o núcleo técnico da Engenharia de Software. É a única maneira de se traduzir "com precisão", os requisitos do usuário para um produto ou sistema acabado. Meta: Traduzir requisitos numa representação de software (Portella).
 
@@ -191,15 +191,15 @@ Os diagramas de sequência modelam as interações entre objetos em um único ca
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Diagrama de Sequência}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=1.0]{imagens/DiagramadeSequencia.png}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:diagramaDeSequencia}
+  \centering
+  \caption{Diagrama de Sequência}
+  %scale redimensiona a figura.
+  %1.5 = 150% do tamanho original
+  %1 = 100% do tamanho original
+  %0.20 = 20% do tamanho original
+  \includegraphics[scale=1.0]{imagens/DiagramadeSequencia.png}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:diagramaDeSequencia}
 \end{figure}
 \FloatBarrier
 
@@ -220,14 +220,14 @@ Ver algumas definições em (Silva), sendo que um exemplo está apresentado na F
 
 \FloatBarrier
 \begin{figure}[!htbp]
-	\centering
-	\caption{Diferentes Detalhamentos dos Serviços Relacionados ao Cliente}
-	%scale redimensiona a figura.
-	%1.5 = 150% do tamanho original
-	%1 = 100% do tamanho original
-	%0.20 = 20% do tamanho original
-	\includegraphics[scale=1.0]{imagens/ProjetoArquitetural.png}
-	\\\textbf{Fonte:} Elaborada pelo autor
-	\label{fig:projetoArquitetural}
+  \centering
+  \caption{Diferentes Detalhamentos dos Serviços Relacionados ao Cliente}
+  %scale redimensiona a figura.
+  %1.5 = 150% do tamanho original
+  %1 = 100% do tamanho original
+  %0.20 = 20% do tamanho original
+  \includegraphics[scale=1.0]{imagens/ProjetoArquitetural.png}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:projetoArquitetural}
 \end{figure}
 \FloatBarrier
