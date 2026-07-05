@@ -1,21 +1,21 @@
 \chapter{Introdução}
 \label{cap:01}
 A montagem de um computador \textit{desktop} exige o cruzamento simultâneo de especificações
-técnicas entre componentes interdependentes. Diferentemente da aquisição de periféricos genéticos,
+técnicas entre componentes interdependentes. Diferentemente da aquisição de periféricos genéricos,
 a configuração de um sistema computacional envolve restrições físicas, elétricas e lógicas que,
 quando violadas, resultam em incompatibilidade absoluta, os componentes adquiridos de forma incorreta
-simplesmente não funcionam junots, independentemente de ajustes de \textit{software} ou configuração.
+simplesmente não funcionam juntos, independentemente de ajustes de \textit{software} ou configuração.
 A compatibilidade de soquete entre processador e placa-mãe, o padrão de memória suportado pela plataforma
 e o dimensionamento energético da fonte de alimentação são exemplos de restrições binárias e determinísticas
-que não admitem adaptações \cite{AMD2022,INTEL2023,JEDEC2020}. Esse cenário impõe ao usuário um desafio
-técnico considerável, uma vez que a violão de qualquer dessas restrições representa prejuízo financeiro
+que não admitem adaptações. Esse cenário impõe ao usuário um desafio
+técnico considerável, uma vez que a violação de qualquer dessas restrições representa prejuízo financeiro
 imediato e frustrante.
 
 Diante dessa realidade, plataformas como o PC Part Picker e o Meupc.net se estabeleceram como referências
 globais e nacionais para a verificação de compatibilidade entre componentes. Ambas detectam automaticamente
-conflitos entre os itens selecionaos e alertam o usuário quando uma incompatibilidade é identificada \cite{PCPARTPICKER2024,MEUPC2024}.
+conflitos entre os itens selecionados e alertam o usuário quando uma incompatibilidade é identificada \cite{PCPARTPICKER2024,MEUPC2024}.
 No entanto, quando o conflito é detectado, a resposta do sistema se limita a sinalizar que os componentes não são compatíveis entre si,
-sem indicar a regra física que foi violada. O usuário aprende o que não pode fazer, mas não aprende o motibo,
+sem indicar a regra física que foi violada. O usuário aprende o que não pode fazer, mas não aprende o motivo,
 e portanto, não está em condições de generalizar esse conhecimento para outras situações, como a escolha de
 um processador diferente ou a adição de um módulo de memória RAM.
 
@@ -31,7 +31,7 @@ Do ponto de vista da ciência da computação, o problema de configuração de \
 sobre a classe dos Problemas de Satisfação de Restrições (CSP). Nessa formalização, cada categoria de componente
 corresponde a uma variável, o conjunto de modelos comercialmente disponíveis constitui o domínio dessa variável
 e as regras físicas de compatibilidade entre pares de componentes definem as restrições do problema \cite{Russell2010}.
-O CSP é classificado como NP-completo \cite{Sipser2012}, o que torna a avaliação exaustiva de todas as combinções
+O CSP é classificado como NP-completo \cite{Sipser2012}, o que torna a avaliação exaustiva de todas as combinações
 inviável para catálogos de tamanho realista. Técnicas de propagação de restrições, como o algoritmo AC-3 proposto
 por \textcite{Mackworth1977}, contornam essa explosão combinatória reduzindo o espaço de busca de forma incremental
 a cada interação do usuário, tornando a validação viável em milissegundos.
@@ -44,38 +44,77 @@ linguagem natural. Ao transformar cada bloqueio em uma oportunidade de aprendiza
 restringir escolhas incorretas, mas educar o usuário sobre as restrições físicas que regem a montagem de computadores.
 
 \section{Justificativa}
-A montagem de um computador \textit{desktop} exige do usuário o domínio de um conjunto especificações técnicas que, na prática,
-está além do conhecimento da maioria dos consumidores. As restrições que regem a compatibilidade entre componentes são objetivos e
-documentadas pelos próprios fabricantes \cite{AMD2022,INTEL2023,JEDEC2020}, mas sua compreensão pressupõe familiaridade com
-conceitos cmo soquetes de processador, pradrões de memória e dimensionamento energético. Para o usuário leigo, essa barreira técnica
-se manifesta de forma concreta, erros de seleção, como a combinação de um processador AM5 com uma placa-mãe AM5 ou de módulo DDR4 com
+A montagem de um computador \textit{desktop} exige do usuário o domínio de um conjunto de especificações técnicas que, na prática,
+está além do conhecimento da maioria dos consumidores. As restrições que regem a compatibilidade entre componentes são objetivas e
+documentadas pelos próprios fabricantes \textcite{AMD2022,INTEL2023,JEDEC2020}, mas sua compreensão pressupõe familiaridade com
+conceitos como soquetes de processador, padrões de memória e dimensionamento energético. Para o usuário leigo, essa barreira técnica
+se manifesta de forma concreta, erros de seleção, como a combinação de um processador AM5 com uma placa-mãe AM4 ou de módulo DDR4 com
 uma plataforma que suporta exclusivamente DDR5, resultam em incompatibilidade absoluta e em prejuízo financeiro.
 
-As plataformas comerciais disponíveis atualmente buscam mitigar esse problema, mas como uma abordagem limitada. O PC Part Picker e o Meupc.net
+As plataformas comerciais disponíveis atualmente buscam mitigar esse problema, mas com uma abordagem limitada. O PC Part Picker e o Meupc.net
 realizam verificações de compatibilidade e alertam o usuário quando um conflito é detectado \cite{PCPARTPICKER2024,MEUPC2024}. No entanto,
 como demonstrado por \textcite{Clancey1983}, a limitação pedagógica desse modelo é nítida, um sistema que apenas filtra não transfere conhecimento,
 apenas restringe escolhas. Um usuário que utiliza essas plataformas repetidamente aprende quais componentes são compatíveis entre si,
 mas não aprende \textit{"por que"} são compatíveis, o que o impede de generalizar o conhecimento adquirido para novas situações de compra.
 
 Essa lacuna motivou o questionamento central deste trabalho: seria possível desenvolver um sistema que realizasse a validação de compatibilidade
-de \textit{hardware} com um motor de inferência formal, baseado no formalista de CSP, q que comunicasse ao usuário cada incompatibilidade
-detectada por meio de uma justificativa técnica em linguagem natural? A resposta a essa pergunta,
+de \textit{hardware} com um motor de inferência formal, baseado no formalismo de CSP, e que comunicasse ao usuário cada incompatibilidade
+detectada por meio de uma justificativa técnica em linguagem natural? A resposta a essa pergunta orienta todo o desenvolvimento deste trabalho,
+que propõe não apenas um verificador de compatibilidade, mas um sistema especialista educacional cuja finalidade é transformar cada bloqueio
+em uma oportunidade concreta de aprendizagem sobre os princípios que regem a montagem de computadores.
+
+Além da relevância prática imediata para o usuário leigo, o trabalho justifica-se do ponto de vista acadêmico por articular, em uma única
+solução, dois campos consolidados da ciência da computação: o formalismo dos Problemas de Satisfação de Restrições, com o algoritmo AC-3 como
+motor de propagação, e a teoria dos sistemas especialistas, com sua capacidade de explicação. O domínio de compatibilidade de \textit{hardware}
+é adotado como estudo de caso por ser concreto, verificável a partir da documentação oficial dos fabricantes e de imediata utilidade,
+servindo de veículo para materializar uma arquitetura genérica que, por decisão de projeto, não fica restrita a esse domínio.
 
 \section{Objetivos}
 
 \subsection{Objetivo Geral}
-
+Desenvolver um sistema especialista educacional para validação de compatibilidade de \textit{hardware} de computadores \textit{desktop},
+fundamentado no formalismo de Problemas de Satisfação de Restrições (CSP) e no algoritmo de propagação AC-3, capaz não apenas de detectar
+incompatibilidades entre componentes, mas de comunicar ao usuário leigo, em linguagem natural e acessível, a razão técnica de cada
+incompatibilidade, transformando cada bloqueio em uma oportunidade de aprendizagem.
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-  \item Objetivo específico 1;
-  \item Objetivo específico 2;
-  \item Objetivo específico n.
+  \item modelar o problema de compatibilidade de \textit{hardware} como um Problema de Satisfação de Restrições, adotando uma representação
+        de conhecimento genérica e dirigida a dados que dissocie o motor de inferência do domínio específico de aplicação;
+  \item implementar o algoritmo AC-3 como motor de inferência para a propagação incremental de restrições, operando de forma agnóstica ao
+        domínio sobre um grafo de restrições construído dinamicamente a partir da base de conhecimento;
+  \item dotar o sistema de uma \textit{explanation facility} que gere, para cada restrição violada, uma justificativa técnica em linguagem
+        natural, alinhada aos princípios da Inteligência Artificial Explicável (XAI);
+  \item aplicar e validar o motor de inferência no domínio de compatibilidade de \textit{hardware} \textit{desktop} como estudo de caso,
+        modelando suas restrições de soquete, padrão de memória e capacidade energética como instâncias do CSP;
+  \item desenvolver uma interface \textit{web} no formato \textit{wizard} que evidencie o caráter educativo da solução, mantendo os
+        componentes incompatíveis visíveis e acompanhados da respectiva justificativa, em vez de simplesmente ocultá-los.
 \end{itemize}
 
-
 \section{Problema (Hipótese ou Questão de Pesquisa)}
+Este trabalho parte da seguinte questão de pesquisa: é possível construir um sistema especialista, fundamentado no formalismo de CSP e no
+algoritmo AC-3, que não apenas valide a compatibilidade entre componentes de \textit{hardware} de forma correta e eficiente, mas que também
+ensine o usuário leigo, comunicando em linguagem natural a razão técnica de cada incompatibilidade detectada?
 
-
+Da questão central derivam-se dois questionamentos complementares. O primeiro, de natureza técnica, indaga se um motor de inferência baseado
+em propagação de restrições, com o conhecimento do domínio representado como dados e não como regras codificadas, é capaz de validar
+configurações de \textit{hardware} sem recorrer à avaliação exaustiva por força bruta, inviável dada a natureza NP-completa do CSP. O segundo,
+de natureza pedagógica, indaga se a substituição do bloqueio silencioso, característico dos mecanismos de filtragem, por uma justificativa
+técnica explícita é suficiente para transformar a interação de validação em uma experiência educativa, sem exigir do usuário qualquer
+cadastro, histórico ou conhecimento técnico prévio.
 
 \section{Organização Deste Trabalho}
+Além desta introdução, este trabalho está organizado em mais onze capítulos. O Capítulo~\ref{cap:02} apresenta a revisão da literatura,
+abordando o domínio de compatibilidade de \textit{hardware}, o formalismo dos Problemas de Satisfação de Restrições, a teoria dos grafos, a
+complexidade computacional, os algoritmos de busca e propagação de restrições, os sistemas especialistas e sua dimensão educativa, a
+arquitetura de \textit{software} orientada a serviços e os trabalhos relacionados. O Capítulo~\ref{cap:03} descreve os materiais e métodos
+empregados, detalhando as metodologias de pesquisa, as ferramentas utilizadas e os métodos de desenvolvimento adotados.
+
+O Capítulo~\ref{cap:04} apresenta a descrição geral do produto desenvolvido. O Capítulo~\ref{cap:05} detalha a elicitação e a análise dos
+requisitos, incluindo os requisitos funcionais e não funcionais, os casos de uso e os modelos de análise. O Capítulo~\ref{cap:06} apresenta o
+projeto de \textit{software}, contemplando os projetos de interface, de dados, procedimental e arquitetural.
+
+Os capítulos seguintes tratam da concretização e da avaliação do sistema: o Capítulo~\ref{cap:07} descreve a implementação; o
+Capítulo~\ref{cap:08}, os testes realizados; e o Capítulo~\ref{cap:09}, a implantação. O Capítulo~\ref{cap:10} apresenta os resultados e a
+discussão, e o Capítulo~\ref{cap:12} expõe as conclusões parciais obtidas até a etapa de Validação de Projeto. Por fim, o
+Capítulo~\ref{cap:13} apresenta o cronograma das atividades previstas até a Avaliação Final.

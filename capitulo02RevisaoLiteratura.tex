@@ -208,7 +208,7 @@ e propagação operam, cuja complexidade computacional é analisada na seção s
 
 A teoria da complexidade computacional ocupa-se da classificação de problemas de decisão segundo
 os recursos algorítmicos, principalmente tempo de execução e espaço de memória, exigidos para sua resolução \cite{Cormen2001}.
-Dentro desse arcabouço, a classe P reúne os problemas para os quais existem algoritmos determinísticos
+Dentro dessa estrutura, a classe P reúne os problemas para os quais existem algoritmos determinísticos
 de tempo polinomial, considerados eficientes e tratáveis mesmo para entradas de grande escala.
 A classe NP, por sua vez, abrange os problemas cuas soluções propostas podem ser verificados em tempo polinomial
 por uma máquina determinística, ainda que não se conheça, até o presente, algoritmo eficiente para encontrá-las \cite{Sipser2012}.
@@ -317,7 +317,7 @@ de Placa-mãe todos os modelos com soquete incompatível com AM5, antes mesmo de
 a Placa-mãe. Essa poda antecipada reduz significativamente o número de atribuições exploradas.
 Contudo, o \textit{forward checking} verifica apenas os vizinhos diretos da variável recém-atribuída,
 sem propagar as consequências dessas remoções para variáveis mais distantes no grafo. A forma mais
-completa e eficiente de propagação, que garante consistência global na rede, é o Algoritmo AC-3.
+completa e eficiente de propagação, que garante consistência global na rede, é o Algoritmo AC-3 \cite{Mackworth1977,Russell2010}.
 
 \section{Propagação de Restrições e Algoritmo AC-3}
 \label{sec:ac3}
@@ -337,7 +337,7 @@ de pior caso do AC-3 é $O(cd^3)$ \cite{Russell2010}.
 
 \subsection{Aplicação ao Domínio de Hardware}
 Para ilustrar a execução do AC-3 no sistema proposto, considera-se o cenário
-em que o usuário seleciona um processador com soquete AM5. A Figura~\ref{fig:ac3_execucao}
+em que o usuário seleciona um processador com soquete AM5. A Figura\ref{fig:execucao_ac3}
 apresenta os quatro passos da execução do algoritmo sobre o grafo de restrições
 formado pelas variáveis Processador e Placa-mãe.
 
@@ -360,7 +360,7 @@ No \textbf{Passo 2}, o arco (CPU, MB) é retirado da fila para verificação.
 O algoritmo examina cada valor do domínio do Processador e verifica se existe,
 no domínio da Placa-mãe, ao menos um valor que satisfaça a restrição de soquete.
 Para o valor AM4, existe suporte no domínio da Placa-mãe. Para o valor AM5,
-não existe suporte, pois a placa disponível suporta apenas AM4 --- a incompatibilidade
+não existe suporte, pois a placa disponível suporta apenas AM4, a incompatibilidade
 é identificada.
 
 No \textbf{Passo 3}, o valor AM5 é removido do domínio do Processador por não
@@ -547,7 +547,7 @@ Figura~\ref{fig:arquitetura_rest}.
 \end{figure}
 \FloatBarrier
 
-A \textbf{camada de dados}, representada no painel esquerdo da figura, armazena
+A camada de dados, representada no painel esquerdo da figura, armazena
 a base de conhecimento do sistema especialista: os modelos de componentes de
 \textit{hardware}, as especificações técnicas que constituem as variáveis do CSP,
 as restrições de compatibilidade que compõem o conjunto $C$, e as regras de
@@ -555,7 +555,7 @@ compatibilidade que fundamentam as decisões do motor de inferência. O acesso
 a essa camada é realizado por meio de consultas SQL disparadas pela camada
 de lógica de negócio.
 
-A \textbf{camada de lógica de negócio}, representada no painel central, é o
+A camada de lógica de negócio, representada no painel central, é o
 núcleo inteligente do sistema. Após receber uma requisição via \textit{REST API}
 contendo o estado atual das seleções do usuário, essa camada executa o
 Algoritmo AC-3 sobre o grafo de restrições: identifica os arcos inconsistentes,
@@ -565,7 +565,7 @@ formula a justificativa técnica a ser apresentada ao usuário. O resultado
 do processamento é retornado à camada de apresentação como resposta à
 requisição REST.
 
-A \textbf{camada de apresentação}, representada no painel direito, é a interface
+A camada de apresentação, representada no painel direito, é a interface
 \textit{wizard} com a qual o usuário interage diretamente. Ela é responsável
 por exibir o catálogo de componentes disponíveis para seleção, apresentar os
 alertas de incompatibilidade gerados pelo motor de inferência e comunicar as

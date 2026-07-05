@@ -1,29 +1,95 @@
 \chapter{Projeto de Software}
 \label{cap:06}
 
-Parte principal do texto, que contém a exposição ordenada e pormenorizada do assunto. Divide-se em seções e subseções, que variam em função da abordagem do tema e do método.
+Este capítulo apresenta as decisões de projeto que traduzem os requisitos e os modelos de análise em uma representação concreta do sistema, abrangendo o projeto de interface, o projeto de dados, o projeto procedimental e o projeto arquitetural.
 
 \section{Projeto de Interface}
-Apresentar o protótipo das interfaces do sistema. Podem ser construídas utilizando qualquer ferramenta. Apresente os padrões utilizados.
+\label{sec:projetoInterface}
+A camada de apresentação foi projetada como uma interface no formato \textit{wizard}, que conduz o usuário sequencialmente pela seleção das cinco categorias de componentes (CPU, Placa-mãe, RAM, GPU e Fonte). Os protótipos foram elaborados na ferramenta Figma antes da implementação, o que permitiu validar o \textit{layout} e o fluxo de navegação ainda na fase de projeto.
+
+A construção visual partiu de um \textit{layout} estruturado sobre um grid de oito colunas na resolução base de 1440$\times$1024, com margens laterais de 128px e espaçamento interno de 32px entre colunas. Sobre essa base, adotou-se a biblioteca \textit{shadcn/ui} apoiada no Tailwind CSS, com \textit{design tokens} centralizados para cores, tipografia e raios de borda, de modo a manter a consistência visual entre todas as telas. % TODO: ajustar a métrica do grid se for diferente
+
+Uma decisão central de interface diz respeito ao tratamento dos componentes incompatíveis. Em vez de ocultá-los da listagem, o sistema os mantém visíveis acompanhados de um indicador de bloqueio, revelando a justificativa técnica no momento em que o usuário interage com eles. Essa escolha é coerente com o caráter educativo do trabalho, pois transforma cada bloqueio em uma oportunidade de aprendizado em vez de uma simples ausência.
+
+As Figuras~\ref{fig:homeDesktop} a~\ref{fig:resultadoDesktop} apresentam os protótipos das três principais telas do sistema em sua versão para \textit{desktop}. A primeira é a tela inicial, que recebe o usuário e dá início ao fluxo de configuração. A segunda é a tela de seleção de componentes, na qual o usuário escolhe cada categoria de \textit{hardware} e visualiza, em tempo real, a sinalização das incompatibilidades detectadas. A terceira é a tela de resultado, que consolida a configuração montada e apresenta o seu status geral de compatibilidade.
+
+\FloatBarrier
+\begin{figure}[!htbp]
+  \centering
+  \caption{Tela inicial do sistema}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}\fcolorbox{black!25}{white}{\includegraphics[width=0.99\textwidth]{imagens/Home/Desktop.png}}}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:homeDesktop}
+\end{figure}
+\FloatBarrier
+
+\FloatBarrier
+\begin{figure}[!htbp]
+  \centering
+  \caption{Tela de seleção de componentes com sinalização de incompatibilidade}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}\fcolorbox{black!25}{white}{\includegraphics[width=0.99\textwidth]{imagens/Configuração/Desktop.png}}}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:configuracaoDesktop}
+\end{figure}
+\FloatBarrier
+
+\FloatBarrier
+\begin{figure}[!htbp]
+  \centering
+  \caption{Tela de resumo da configuração finalizada}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}\fcolorbox{black!25}{white}{\includegraphics[width=0.99\textwidth]{imagens/Resultado/Desktop.png}}}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:resultadoDesktop}
+\end{figure}
+\FloatBarrier
+
+Em conformidade com o requisito de responsividade, a interface foi desenvolvida para adaptar-se a diferentes resoluções de tela, preservando todas as funcionalidades em dispositivos móveis. As Figuras~\ref{fig:homeMobile} a~\ref{fig:resultadoMobile} apresentam as mesmas três telas em sua versão para dispositivo móvel, na qual os elementos são reorganizados verticalmente para acomodar a largura reduzida sem prejuízo da navegação pelo \textit{wizard}.
+
+\FloatBarrier
+\begin{figure}[!htbp]
+  \centering
+  \caption{Tela inicial em dispositivo móvel}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}\fcolorbox{black!25}{white}{\includegraphics[width=0.4\textwidth]{imagens/Home/Mobile.png}}}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:homeMobile}
+\end{figure}
+\FloatBarrier
+
+\FloatBarrier
+\begin{figure}[!htbp]
+  \centering
+  \caption{Tela de seleção de componentes em dispositivo móvel}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}\fcolorbox{black!25}{white}{\includegraphics[width=0.4\textwidth]{imagens/Configuração/Mobile.png}}}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:configuracaoMobile}
+\end{figure}
+\FloatBarrier
+
+\FloatBarrier
+\begin{figure}[!htbp]
+  \centering
+  \caption{Tela de resumo da configuração em dispositivo móvel}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}\fcolorbox{black!25}{white}{\includegraphics[height=0.85\textheight,keepaspectratio]{imagens/Resultado/Mobile.png}}}
+  \\\textbf{Fonte:} Elaborada pelo autor
+  \label{fig:resultadoMobile}
+\end{figure}
+\FloatBarrier
 
 \section{Projeto de Dados}
-Informar nesta seção qual o Banco de Dados a ser utilizado, qual a IDE utilizada para manipulação do Banco de Dados, assim como descrever quais os tipos de dados aceitos no Banco de Dados.
+\label{sec:projetoDados}
+O sistema utiliza o banco de dados relacional PostgreSQL, versão 16, executado em \textit{container} Docker, o que garante um ambiente reproduzível e consistente entre desenvolvimento e produção. Durante o desenvolvimento, a manipulação e a inspeção dos dados foram feitas com a ferramenta DBeaver, em sua \textit{Community Edition}. O acesso ao banco, a partir da camada de lógica de negócio, é intermediado pelo Prisma ORM, responsável por mapear os objetos da aplicação para as tabelas relacionais.
 
 \subsection{Mapeamento Objeto-Relacional}
-Uma vez que foi elaborada uma modelagem orientada a objetos, utilizando o diagrama de classes UML, e o banco de dados a ser utilizado é relacional, deve-se identificar as relações. Assim, a partir dos requisitos e do modelo de domínio enumerar as relações que devem formar o banco de dados.
+\label{sub:mapeamentoOR}
+Uma vez que a modelagem foi elaborada de forma orientada a objetos, por meio do diagrama de classes UML, e o banco de dados adotado é relacional, foi necessário identificar as relações que compõem o esquema. O mapeamento partiu do modelo de domínio e seguiu um conjunto de regras simples. Cada classe concreta deu origem a uma tabela, e cada atributo simples tornou-se uma coluna com o tipo de dado relacional equivalente, enquanto o identificador único de cada classe foi adotado como chave primária. As associações do tipo um-para-muitos foram representadas por uma chave estrangeira na tabela do lado de multiplicidade muitos, e as associações muitos-para-muitos deram origem a tabelas associativas que reúnem as chaves estrangeiras das duas entidades envolvidas.
 
-Regras para realizar o mapeamento: (Helen, colocar as regras aqui para que os alunos escrevam)
+A decisão de projeto mais relevante nesse mapeamento foi a forma de representar as especificações técnicas, que variam de uma categoria de componente para outra. Em vez de criar uma tabela específica para cada categoria, com colunas fixas, optou-se pelo padrão Entidade-Atributo-Valor (EAV), no qual as características técnicas são armazenadas como dados e não como estrutura. Essa abordagem permite incluir novas categorias e novas características apenas inserindo registros, sem qualquer alteração no esquema do banco, o que sustenta diretamente a expansibilidade pretendida para a base de conhecimento.
 
-\begin{itemize}
-  \item Item 1;
-  \item Item 2;
-  \item Item n.
-\end{itemize}
-
+A partir dessas regras, foram identificadas as relações apresentadas na Tabela~\ref{tab:tabelasIdentificadas}.
 
 \subsection{Estrutura das Tabelas no Banco de Dados}
-Explicar qual o padrão adotado para o nome dos objetos de banco de dados, como por nome da chave primária, chave estrangeira, das constraints e das chaves únicas. Por exemplo: foi convencionado que o nome dos objetos devem obedecer o que está definido na Tabela~\ref{tab:convencaoObjBD}.
-
+\label{sub:estruturaTabelas}
+Para padronizar a nomenclatura dos objetos do banco de dados, foi adotada a convenção definida na Tabela~\ref{tab:convencaoObjBD}, que cobre as chaves primárias e estrangeiras, as \textit{constraints} de verificação e as chaves únicas.
 
 \FloatBarrier
 \begin{table}[!htbp]
@@ -43,18 +109,21 @@ Explicar qual o padrão adotado para o nome dos objetos de banco de dados, como 
 \end{table}
 \FloatBarrier
 
-Para melhor compreensão, as tabelas do banco de dados propostas neste trabalho estão consolidadas na Tabela~\ref{tab:tabelasIdentificadas}, as quais estão individualmente detalhadas.
+As tabelas que compõem a base de conhecimento do sistema especialista estão consolidadas na Tabela~\ref{tab:tabelasIdentificadas} e detalhadas individualmente nas tabelas seguintes.
 
 \FloatBarrier
 \begin{table}[!htbp]
   \centering
   \caption{Tabelas Identificadas neste Trabalho}
-  \begin{tabular}{ c | p{11.5cm} }
+  \begin{tabular}{ c | p{8cm} }
     \hline
-    \textbf{Tabela do Banco de Dados} & \textbf{Tabela no Documento}  \\ \hline
-    Estado                            & Tabela~\ref{tab:tabelaEstado} \\ \hline
-    Cidade                            & Tabela~\ref{tab:tabelaCidade} \\ \hline
-    NomeDaTabelann                    & Tabela~\ref{tab:tabelaNN}     \\ \hline
+    \textbf{Tabela do Banco de Dados} & \textbf{Tabela no Documento}          \\ \hline
+    Marca                             & Tabela~\ref{tab:tabelaMarca}          \\ \hline
+    Categoria                         & Tabela~\ref{tab:tabelaCategoria}      \\ \hline
+    Caracteristica                    & Tabela~\ref{tab:tabelaCaracteristica} \\ \hline
+    Componente                        & Tabela~\ref{tab:tabelaComponente}     \\ \hline
+    ComponenteCaracteristica          & Tabela~\ref{tab:tabelaCompCarac}      \\ \hline
+    Restricao                         & Tabela~\ref{tab:tabelaRestricao}      \\ \hline
   \end{tabular}
   \\ \vspace{0.2cm}
   \textbf{Fonte:} Elaborada pelo autor
@@ -62,172 +131,191 @@ Para melhor compreensão, as tabelas do banco de dados propostas neste trabalho 
 \end{table}
 \FloatBarrier
 
-Preencher o quadro a seguir para cada uma das relações identificadas no item Mapeamento OO-Relacional, que deve refletir as características das tabelas a serem criadas no banco de dados. Para melhor compreensão sobre qual a estrutura física das tabelas, seguem dois exemplos: a Tabela 6 é um exemplo da estrutura de dados Estado e a Tabela 6 é um exemplo da estrutura de dados Cidade.
-
-
-\FloatBarrier
-\begin{table}[!htbp]
-  \centering
-  \caption{Estado}
-  \begin{tabular}{ c | c | c | c | c | c | c | c }
-    \hline
-    \textbf{Campo}        & \textbf{Tipo de Dado}    &
-    \textbf{Obrigatório?} & \textbf{Chave Primária?} &
-    \textbf{Tabela}       & \textbf{Campo}           &
-    \textbf{Grupo}        & \textbf{Ordem}             \\ \hline
-    \textbf{id}           & \textbf{Number}          &
-    \textbf{X}            & \textbf{X}               &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                  \\ \hline
-    \textbf{nome}         & \textbf{Varchar2(100)}   &
-    \textbf{X}            & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{1}            & \textbf{1}                 \\ \hline
-    \textbf{sigla}        & \textbf{Varchar2(2)}     &
-    \textbf{X}            & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{2}            & \textbf{1}                 \\ \hline
-  \end{tabular}
-  \\ \vspace{0.2cm}
-  \textbf{Fonte:} Elaborada pelo autor
-  \label{tab:tabelaEstado}
-\end{table}
-\FloatBarrier
-
-\textcolor{red}{INSTRUÇÃO:
-  Grupo é a chave única que você deseja criar (UK\_01, UK\_02)
-  Ordem é a sequência dos campos que devem compor a chave única, quando existir mais de um campo na sua chave única}
-
+A modelagem emprega dois tipos enumerados, descritos na Tabela~\ref{tab:enums}, utilizados como domínio fechado para os campos \texttt{tipo} (em \textit{Caracteristica}) e \texttt{operador} (em \textit{Restricao}).
 
 \FloatBarrier
 \begin{table}[!htbp]
   \centering
-  \caption{Cidade}
-  \begin{tabular}{ c | c | c | c | c | c | c | c }
+  \caption{Tipos Enumerados do Modelo de Dados}
+  \begin{tabular}{ c | c | p{7.5cm} }
     \hline
-    \textbf{Campo}        & \textbf{Tipo de Dado}    &
-    \textbf{Obrigatório?} & \textbf{Chave Primária?} &
-    \textbf{Tabela}       & \textbf{Campo}           &
-    \textbf{Grupo}        & \textbf{Ordem}             \\ \hline
-    \textbf{id}           & \textbf{Number}          &
-    \textbf{X}            & \textbf{X}               &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                  \\ \hline
-    \textbf{nome}         & \textbf{Varchar2(200)}   &
-    \textbf{X}            & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{1}            & \textbf{1}                 \\ \hline
-    \textbf{idEstado}     & \textbf{Number}          &
-    \textbf{X}            & \textbf{}                &
-    \textbf{Estado}       & \textbf{id}              &
-    \textbf{1}            & \textbf{1}                 \\ \hline
-    \textbf{latitude}     & \textbf{Number}          &
-    \textbf{X}            & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{2}            & \textbf{1}                 \\ \hline
-    \textbf{longitude}    & \textbf{Number}          &
-    \textbf{X}            & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{2}            & \textbf{2}                 \\ \hline
+    \textbf{Enumerado}                  & \textbf{Valor}   & \textbf{Significado}                                                                     \\ \hline
+    \multirow{2}{*}{TipoCaracteristica} & TEXTO            & Valor comparado como texto (ex.: \textit{socket}, padrão DDR).                           \\ \cline{2-3}
+                                        & INTEIRO          & Valor convertido para número antes da comparação (ex.: \textit{tdp}, potência).          \\ \hline
+    \multirow{2}{*}{OperadorRestricao}  & IGUAL            & Satisfeita quando os dois valores são idênticos (restrição binária absoluta).            \\ \cline{2-3}
+                                        & MAIOR\_OU\_IGUAL & Satisfeita quando capacidade $\geq$ demanda $\times$ parâmetro (restrição quantitativa). \\ \hline
   \end{tabular}
   \\ \vspace{0.2cm}
   \textbf{Fonte:} Elaborada pelo autor
-  \label{tab:tabelaCidade}
+  \label{tab:enums}
 \end{table}
 \FloatBarrier
-
 
 \FloatBarrier
 \begin{table}[!htbp]
   \centering
-  \caption{NomeDaTabelaNN}
-  \begin{tabular}{ c | c | c | c | c | c | c | c }
-    \hline
-    \textbf{Campo}        & \textbf{Tipo de Dado}    &
-    \textbf{Obrigatório?} & \textbf{Chave Primária?} &
-    \textbf{Tabela}       & \textbf{Campo}           &
-    \textbf{Grupo}        & \textbf{Ordem}             \\ \hline
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                  \\ \hline
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                  \\ \hline
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                &
-    \textbf{}             & \textbf{}                  \\ \hline
-  \end{tabular}
+  \caption{Marca}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ c | c | c | c | c | c | c | c }
+      \hline
+      \textbf{Campo} & \textbf{Tipo de Dado} & \textbf{Obrigatório?} & \textbf{Chave Primária?} & \textbf{Tabela} & \textbf{Campo} & \textbf{Grupo} & \textbf{Ordem} \\ \hline
+      id             & UUID                  & X                     & X                        &                 &                &                &                \\ \hline
+      nome           & Varchar               & X                     &                          &                 &                & UK\_01         & 1              \\ \hline
+    \end{tabular}%
+  }
   \\ \vspace{0.2cm}
   \textbf{Fonte:} Elaborada pelo autor
-  \label{tab:tabelaNN}
+  \label{tab:tabelaMarca}
 \end{table}
 \FloatBarrier
 
+\FloatBarrier
+\begin{table}[!htbp]
+  \centering
+  \caption{Categoria}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ c | c | c | c | c | c | c | c }
+      \hline
+      \textbf{Campo} & \textbf{Tipo de Dado} & \textbf{Obrigatório?} & \textbf{Chave Primária?} & \textbf{Tabela} & \textbf{Campo} & \textbf{Grupo} & \textbf{Ordem} \\ \hline
+      id             & UUID                  & X                     & X                        &                 &                &                &                \\ \hline
+      nome           & Varchar               & X                     &                          &                 &                & UK\_01         & 1              \\ \hline
+      ordem          & Integer               & X                     &                          &                 &                &                &                \\ \hline
+    \end{tabular}%
+  }
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaCategoria}
+\end{table}
+\FloatBarrier
+
+\FloatBarrier
+\begin{table}[!htbp]
+  \centering
+  \caption{Caracteristica}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ c | c | c | c | c | c | c | c }
+      \hline
+      \textbf{Campo} & \textbf{Tipo de Dado} & \textbf{Obrigatório?} & \textbf{Chave Primária?} & \textbf{Tabela} & \textbf{Campo} & \textbf{Grupo} & \textbf{Ordem} \\ \hline
+      id             & UUID                  & X                     & X                        &                 &                &                &                \\ \hline
+      idCategoria    & UUID                  & X                     &                          & Categoria       & id             & UK\_01         & 1              \\ \hline
+      nome           & Varchar               & X                     &                          &                 &                & UK\_01         & 2              \\ \hline
+      tipo           & TipoCaracteristica    & X                     &                          &                 &                &                &                \\ \hline
+    \end{tabular}%
+  }
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaCaracteristica}
+\end{table}
+\FloatBarrier
+
+\FloatBarrier
+\begin{table}[!htbp]
+  \centering
+  \caption{Componente}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ c | c | c | c | c | c | c | c }
+      \hline
+      \textbf{Campo} & \textbf{Tipo de Dado} & \textbf{Obrigatório?} & \textbf{Chave Primária?} & \textbf{Tabela} & \textbf{Campo} & \textbf{Grupo} & \textbf{Ordem} \\ \hline
+      id             & UUID                  & X                     & X                        &                 &                &                &                \\ \hline
+      idCategoria    & UUID                  & X                     &                          & Categoria       & id             &                &                \\ \hline
+      idMarca        & UUID                  & X                     &                          & Marca           & id             &                &                \\ \hline
+      nome           & Varchar               & X                     &                          &                 &                &                &                \\ \hline
+    \end{tabular}%
+  }
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaComponente}
+\end{table}
+\FloatBarrier
+
+\FloatBarrier
+\begin{table}[!htbp]
+  \centering
+  \caption{ComponenteCaracteristica}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ c | c | c | c | c | c | c | c }
+      \hline
+      \textbf{Campo}   & \textbf{Tipo de Dado} & \textbf{Obrigatório?} & \textbf{Chave Primária?} & \textbf{Tabela} & \textbf{Campo} & \textbf{Grupo} & \textbf{Ordem} \\ \hline
+      id               & UUID                  & X                     & X                        &                 &                &                &                \\ \hline
+      idComponente     & UUID                  & X                     &                          & Componente      & id             & UK\_01         & 1              \\ \hline
+      idCaracteristica & UUID                  & X                     &                          & Caracteristica  & id             & UK\_01         & 2              \\ \hline
+      valor            & Varchar               & X                     &                          &                 &                &                &                \\ \hline
+    \end{tabular}%
+  }
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaCompCarac}
+\end{table}
+\FloatBarrier
+
+\FloatBarrier
+\begin{table}[!htbp]
+  \centering
+  \caption{Restricao}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ c | c | c | c | c | c | c | c }
+      \hline
+      \textbf{Campo}        & \textbf{Tipo de Dado} & \textbf{Obrigatório?} & \textbf{Chave Primária?} & \textbf{Tabela} & \textbf{Campo} & \textbf{Grupo} & \textbf{Ordem} \\ \hline
+      id                    & UUID                  & X                     & X                        &                 &                &                &                \\ \hline
+      idCaracteristica1     & UUID                  & X                     &                          & Caracteristica  & id             &                &                \\ \hline
+      idCaracteristica2     & UUID                  & X                     &                          & Caracteristica  & id             &                &                \\ \hline
+      operador              & OperadorRestricao     & X                     &                          &                 &                &                &                \\ \hline
+      parametro             & Varchar               &                       &                          &                 &                &                &                \\ \hline
+      templateJustificativa & Text                  & X                     &                          &                 &                &                &                \\ \hline
+    \end{tabular}%
+  }
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{tab:tabelaRestricao}
+\end{table}
+\FloatBarrier
+
+A tabela \textit{Restricao} é o elemento central desse modelo, pois cada um de seus registros corresponde a uma aresta do grafo de restrições, ou seja, ao conjunto $C$ do CSP. Os campos \texttt{idCaracteristica1} e \texttt{idCaracteristica2} referenciam, respectivamente, a característica do lado da demanda e a do lado da capacidade, o que permite ao motor AC-3 montar o grafo de forma dinâmica a partir dos próprios dados, sem precisar de regras condicionais escritas no código para cada tipo de restrição. O campo \texttt{parametro} é opcional e aplica-se apenas às restrições quantitativas do tipo \texttt{MAIOR\_OU\_IGUAL}, guardando o fator multiplicador da margem de segurança, como o valor \texttt{"1.25"} usado para os 25\% recomendados no dimensionamento da fonte. Já o campo \texttt{templateJustificativa} guarda o texto da explicação educativa em linguagem natural, com marcadores que são substituídos em tempo de execução pelos valores dos componentes envolvidos. Dessa forma, nenhum termo técnico do domínio fica embutido no código, e toda a explicação nasce do próprio dado cadastrado.
 
 \subsection{Diagrama de Pacotes}
-Escreva aqui.
-
+\label{sub:diagramaPacotes}
+% TODO: incluir o diagrama de pacotes do monorepo (apps/api, apps/web, packages compartilhados) ou remover esta subseção em acordo com a orientadora.
+A organização do código em pacotes reflete a separação arquitetural em camadas, com módulos distintos para a apresentação, a lógica de negócio e o acesso a dados.
 
 \subsection{Diagrama de Classes de Projeto}
-Apresentar as classes de projeto identificadas. Alguns materiais para leitura extra sobre classes de projeto podem ser lidos em:
-\url{http://www.ic.uff.br/~anselmo/cursos/ProjSoft/apresentacoes/Projeto%20detalhado%20-%20Classes.pdf}
-\url{https://edisciplinas.usp.br/pluginfile.php/383727/mod_resource/content/2/Aula07_DiagramaDeClasse.pdf}
-\url{http://www.dsc.ufcg.edu.br/~jacques/cursos/apoo/html/proj1/proj8.htm}
-
-
+\label{sub:classesProjeto}
+% TODO: inserir o diagrama de classes de projeto (com atributos, métodos, visibilidade e tipos concretos da implementação).
+O diagrama de classes de projeto detalha as classes da implementação, incluindo atributos, métodos e tipos concretos, evoluindo o diagrama de classes de análise apresentado no Capítulo~\ref{cap:05}.
 
 \section{Projeto Procedimental}
-Projetar Software é o processo de aplicar várias técnicas e princípios com o propósito de se definir um dispositivo, processo ou sistema, com detalhes suficientes para permitir sua realização física (Taylor-59).
-
-O Projeto de software é o núcleo técnico da Engenharia de Software. É a única maneira de se traduzir "com precisão", os requisitos do usuário para um produto ou sistema acabado. Meta: Traduzir requisitos numa representação de software (Portella).
-
+\label{sec:projetoProcedimental}
+O projeto procedimental detalha o comportamento interno do sistema, traduzindo os requisitos e os modelos de análise em representações que descrevem o fluxo de controle e a interação entre as partes do software \cite{pressman2016}. Nesta seção, esse detalhamento é apresentado por meio do diagrama de sequência, que descreve a interação entre as camadas durante uma requisição de validação.
 
 \subsection{Diagrama de Sequência}
-Os diagramas de sequência modelam as interações entre objetos em um único caso de uso e ilustram como as diferentes partes de um sistema interagem entre si para realizar uma função e a ordem em que as interações ocorrem quando um caso de uso é executado  (Creately, s.d.), conforme apresentado na Figura~\ref{fig:diagramaDeSequencia}.
+\label{sub:diagramaSequencia}
+Os diagramas de sequência modelam as interações entre objetos em um caso de uso, ilustrando como as diferentes partes do sistema interagem para realizar uma função e a ordem em que essas interações ocorrem \cite{creately}. A Figura~\ref{fig:diagramaDeSequencia} apresenta o diagrama de sequência para o caso de uso \textit{Propagar restrições via AC-3}.
 
+Ao selecionar um componente, a camada de apresentação (Next.js) envia o estado completo das seleções à API REST (NestJS). A camada de lógica de negócio executa o algoritmo AC-3 sobre o grafo de restrições, consultando a base de conhecimento (PostgreSQL) para obter os domínios e as restrições aplicáveis. Em seguida, poda os valores inconsistentes e, para cada bloqueio detectado, aciona o módulo de geração de justificativas. O resultado — domínios atualizados e justificativas técnicas — é retornado à camada de apresentação, que atualiza a exibição em tempo real.
 
 \FloatBarrier
 \begin{figure}[!htbp]
   \centering
   \caption{Diagrama de Sequência}
-  %scale redimensiona a figura.
-  %1.5 = 150% do tamanho original
-  %1 = 100% do tamanho original
-  %0.20 = 20% do tamanho original
-  \includegraphics[scale=1.0]{imagens/DiagramadeSequencia.png}
+  \includegraphics[width=1\textwidth]{imagens/DiagramadeSequencia.png}
   \\\textbf{Fonte:} Elaborada pelo autor
   \label{fig:diagramaDeSequencia}
 \end{figure}
 \FloatBarrier
-
-
-\subsection{Diagrama de Atividades}
-Havendo necessidade de detalhamento de algum procedimento, este pode ser apresentado na forma de um diagrama de atividades o qual deve ser inserido nessa seção. Podem ser elaborados quantos diagramas de atividades se fizerem necessários.
-
-
-\subsection{Diagrama de Estados}
-Sendo necessária a elaboração do diagrama de estados na fase de projeto, os novos diagramas devem ser apresentados nessa seção.
-
+% TODO: substituir a imagem DiagramadeSequencia.png (atualmente o exemplo CNPJ/lote piloto do template) pelo diagrama real do fluxo de validação.
 
 \section{Projeto Arquitetural}
-O projeto arquitetural precede a etapa de construção da obra. O projeto arquitetural determina as partes de uma construção e como estas devem interagir. A arquitetura garante a unidade da obra, ou seja, a consistência entre as suas partes (Vergilio).
+\label{sec:projetoArquitetural}
+O sistema adota o padrão arquitetural de três camadas \cite{Fowler2002}, mantendo uma separação clara entre apresentação, lógica de negócio e dados. A camada de apresentação, construída em Next.js, é responsável pela interface \textit{wizard} com a qual o usuário interage diretamente. A camada de lógica de negócio, implementada em NestJS, abriga o motor de inferência AC-3 e o módulo de justificativas educativas, sendo o núcleo de processamento do sistema. Por fim, a camada de dados, em PostgreSQL provisionado via Docker, armazena toda a base de conhecimento do sistema especialista.
 
-Ver algumas definições em (Silva), sendo que um exemplo está apresentado na Figura~\ref{fig:projetoArquitetural}.
-
+A comunicação entre as camadas é deliberadamente delimitada. A interface conversa com a lógica de negócio exclusivamente por meio de uma API REST \cite{Fielding2000}, enquanto a lógica de negócio acessa os dados por intermédio do Prisma ORM. Essa separação garante que o motor de inferência possa ser mantido e expandido de forma independente da interface, preservando a modularidade ao longo de todo o ciclo de desenvolvimento. A organização e a comunicação entre as camadas estão ilustradas na Figura~\ref{fig:projetoArquitetural}.
 
 \FloatBarrier
 \begin{figure}[!htbp]
   \centering
-  \caption{Diferentes Detalhamentos dos Serviços Relacionados ao Cliente}
-  %scale redimensiona a figura.
-  %1.5 = 150% do tamanho original
-  %1 = 100% do tamanho original
-  %0.20 = 20% do tamanho original
-  \includegraphics[scale=1.0]{imagens/ProjetoArquitetural.png}
+  \caption{Arquitetura em Três Camadas do Sistema}
+  \includegraphics[width=1\textwidth]{imagens/ProjetoArquitetural.png}
   \\\textbf{Fonte:} Elaborada pelo autor
   \label{fig:projetoArquitetural}
 \end{figure}
 \FloatBarrier
+% TODO: substituir ProjetoArquitetural.png (atualmente o exemplo CustomerController do template) por um diagrama de componentes/implantação real, ou reaproveitar a Figura 3 do Capítulo 2.

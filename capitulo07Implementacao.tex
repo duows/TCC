@@ -1,4 +1,325 @@
 \chapter{Implementação}
 \label{cap:07}
 
-Descrever nesse capítulo as características do ambiente de desenvolvimento, servidor de aplicação, servidor de dados, pacotes utilizados etc etc etc.
+Este capítulo descreve a concretização do sistema especialista educacional cujos requisitos e projeto foram apresentados nos Capítulos~\ref{cap:05} e~\ref{cap:06}. Mais do que relatar quais tecnologias foram empregadas, busca-se justificar as decisões de implementação que sustentam as propriedades centrais do trabalho: a generalidade do motor de inferência, seu determinismo e sua capacidade de explicação. São detalhados o ambiente e as ferramentas de desenvolvimento, a organização do repositório e a implementação de cada uma das três camadas arquiteturais, bem como a interface de comunicação entre elas. Dá-se ênfase à camada de lógica de negócio, que abriga o motor de inferência AC-3 e a \textit{explanation facility}, por constituírem o núcleo da contribuição deste trabalho. Ao final, registram-se as limitações conhecidas da implementação em seu estado atual.
+
+% ============================================================
+\section{Ambiente e Ferramentas de Desenvolvimento}
+\label{sec:ambiente-implementacao}
+% ============================================================
+
+A escolha das tecnologias foi orientada por um princípio unificador: adotar um único ecossistema de linguagem em todas as camadas, de modo a permitir o compartilhamento de definições de tipos entre o servidor e o cliente. Por essa razão, o sistema foi desenvolvido integralmente em \textit{TypeScript}~\cite{TypeScript}, cuja tipagem estática permite que os contratos de dados trafegados entre as camadas sejam verificados em tempo de compilação, reduzindo a classe de erros que só se manifestaria em execução. O ambiente de execução do lado do servidor é o \textit{Node.js}~\cite{NodeJS}, escolhido justamente por executar TypeScript no servidor e, assim, viabilizar esse ecossistema unificado.
+
+A camada de dados é provida pelo \textit{PostgreSQL}~\cite{PostgreSQL} em sua versão 16, selecionado por sua robustez, conformidade com o padrão SQL e adequação ao modelo relacional exigido pela base de conhecimento. Sua execução em contêiner por meio do \textit{Docker}~\cite{Docker} foi uma decisão deliberada para garantir um ambiente de banco de dados reprodutível e idêntico entre as máquinas de desenvolvimento, atendendo diretamente ao requisito RNF-12 e dispensando a instalação manual do banco no sistema operacional. Durante o desenvolvimento, a inspeção e a manipulação manual dos dados foram realizadas com o \textit{DBeaver}~\cite{DBeaver}, e a codificação foi conduzida no \textit{Visual Studio Code}~\cite{VSCode}. O Quadro~\ref{qua:versoes} consolida as versões das principais tecnologias empregadas.
+
+\FloatBarrier
+\begin{quadro}[!htbp]
+  \centering
+  \caption{Versões das principais tecnologias utilizadas}
+  \begin{tabular}{l l}
+    \hline
+    \textbf{Tecnologia} & \textbf{Versão} \\ \hline
+    Node.js             & $\geq$ 20.0.0   \\ \hline
+    TypeScript          & 5.6.3           \\ \hline
+    NestJS              & 10.4.15         \\ \hline
+    Next.js             & 15.1.3          \\ \hline
+    React               & 19.0.0          \\ \hline
+    Prisma ORM          & 5.22.0          \\ \hline
+    PostgreSQL          & 16              \\ \hline
+    pnpm                & 9.15.0          \\ \hline
+    Turborepo           & 2.3.3           \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{qua:versoes}
+\end{quadro}
+\FloatBarrier
+
+% ============================================================
+\section{Organização do Repositório}
+\label{sec:monorepo}
+% ============================================================
+
+O código-fonte foi organizado como um \textit{monorepo}, isto é, um único repositório que abriga múltiplos projetos relacionados, gerenciado pelo \textit{pnpm}~\cite{Pnpm} como gerenciador de pacotes e pelo \textit{Turborepo}~\cite{Turborepo} como orquestrador das tarefas de \textit{build} e execução. A opção pelo monorepo, em vez de repositórios separados para servidor e cliente, decorre diretamente da estratégia de ecossistema unificado: mantendo ambos no mesmo repositório, torna-se possível extrair as definições de tipos compartilhadas para um pacote interno, consumido tanto pelo servidor quanto pelo cliente. Assim, o contrato de comunicação entre as camadas existe em um único lugar, e qualquer alteração é verificada em tempo de compilação em ambos os lados, eliminando a duplicação e a divergência silenciosa de tipos que ocorreria com repositórios independentes.
+
+O repositório organiza-se em dois diretórios principais. O diretório \texttt{apps} contém as aplicações executáveis: \texttt{api}, que implementa as camadas de lógica de negócio e de dados em NestJS~\cite{NestJS}, e \texttt{web}, que implementa a camada de apresentação em Next.js~\cite{NextJS}. O diretório \texttt{packages} contém os módulos compartilhados, com destaque para \texttt{shared-types}, que centraliza as interfaces trafegadas entre cliente e servidor, como \texttt{EstadoConfiguracao}, \texttt{RespostaValidacao} e \texttt{JustificativaEducativa}. A estrutura simplificada do repositório é apresentada no Código~\ref{lst:monorepo}.
+
+\begin{lstlisting}[caption={Estrutura simplificada do monorepo},label={lst:monorepo},basicstyle=\ttfamily\small]
+apps/
+  api/
+    prisma/        (schema.prisma, migrations/, seed.ts)
+    src/
+      app.module.ts, main.ts
+      categorias/   components/   configurations/
+      csp/          explanations/  prisma/
+  web/
+    src/
+      app/          (layout.tsx, page.tsx, wizard/page.tsx)
+      components/   (ui/)
+      lib/          (api.ts, utils.ts)
+packages/
+  shared-types/     (src/index.ts)
+  tsconfig/         (base.json, nestjs.json, nextjs.json)
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+Essa organização não é meramente estética: ela materializa fisicamente a separação estrita entre as três camadas exigida pelo requisito RNF-06. A camada de dados reside nos módulos \texttt{prisma} e \texttt{csp} do lado do servidor, a lógica de negócio nos módulos \texttt{csp}, \texttt{configurations} e \texttt{explanations}, e a apresentação integralmente no aplicativo \texttt{web}. O pacote \texttt{shared-types} não contém lógica de execução, apenas contratos, funcionando como uma fronteira tipada explícita entre as camadas distribuídas de modo que a comunicação entre elas é obrigada a passar por um contrato conhecido, e não por acoplamento direto.
+
+% ============================================================
+\section{Camada de Dados}
+\label{sec:impl-dados}
+% ============================================================
+
+A persistência foi implementada sobre o PostgreSQL, acessado a partir da camada de lógica de negócio por intermédio do \textit{Prisma ORM}~\cite{Prisma}, responsável por mapear os registros relacionais em objetos da aplicação. A adoção de um ORM justifica-se por manter a camada de lógica de negócio trabalhando com objetos tipados, sem consultas SQL escritas manualmente, o que preserva a coerência com o ecossistema TypeScript e reduz a superfície de erro no acesso a dados. O esquema do banco reproduz fielmente o modelo genérico baseado no padrão Entidade-Atributo-Valor (EAV) apresentado na Seção~\ref{sec:projetoDados} do Capítulo~\ref{cap:06}, materializando as seis relações \texttt{Marca}, \texttt{Categoria}, \texttt{Caracteristica}, \texttt{Componente}, \texttt{ComponenteCaracteristica} e \texttt{Restricao}, além dos dois tipos enumerados \texttt{TipoCaracteristica} (\texttt{TEXTO}, \texttt{INTEIRO}) e \texttt{OperadorRestricao} (\texttt{IGUAL}, \texttt{MAIOR\_OU\_IGUAL}).
+
+A decisão de projeto mais consequente desta camada é a representação das restrições como dados, e não como código. O Código~\ref{lst:schema-restricao} apresenta a definição da entidade \texttt{Restricao} no \textit{schema} do Prisma, elemento central do modelo por representar cada aresta do grafo de restrições, ou seja, cada elemento do conjunto $C$ do CSP.
+
+\begin{lstlisting}[caption={Definição da entidade Restricao no schema do Prisma},label={lst:schema-restricao},basicstyle=\ttfamily\small]
+model Restricao {
+  id                    String            @id @default(uuid())
+  idCaracteristica1     String
+  idCaracteristica2     String
+  operador              OperadorRestricao
+  parametro             String?
+  templateJustificativa String
+
+  caracteristica1 Caracteristica @relation("origem",  ...)
+  caracteristica2 Caracteristica @relation("destino", ...)
+}
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+Ao guardar em cada registro as duas características relacionadas, o operador e o texto da justificativa, uma restrição passa a ser inteiramente descrita por uma linha da tabela. Essa escolha é o que sustenta a expansibilidade exigida pelos requisitos RNF-07 e RNF-08: incluir uma nova restrição, ou mesmo uma nova categoria de componente, reduz-se a inserir registros, sem qualquer alteração no motor de inferência. É essa decisão que concretiza, no nível da persistência, a ambição de um motor genérico e reutilizável.
+
+A gestão do esquema é feita por meio das \textit{migrations} do Prisma, aplicadas com o comando \texttt{prisma migrate dev}, o que mantém a evolução do banco versionada e reproduzível. Duas \textit{migrations} compõem o histórico do projeto: a criação inicial do esquema e a subsequente adoção do modelo EAV genérico, transição que reflete, no próprio versionamento, a decisão de abandonar tabelas específicas por categoria em favor da estrutura genérica. A carga inicial da base de conhecimento é realizada por um procedimento de \textit{Database Seeding} (\texttt{seed.ts}), em conformidade com o requisito RF-18. O Quadro~\ref{qua:seed} apresenta a contagem de registros inseridos pela carga inicial, dimensionada para cobrir as plataformas AMD AM4 e AM5 e, com isso, viabilizar os cenários de validação previstos.
+
+\FloatBarrier
+\begin{quadro}[!htbp]
+  \centering
+  \caption{Registros criados pela carga inicial da base de conhecimento}
+  \begin{tabular}{l c}
+    \hline
+    \textbf{Entidade}        & \textbf{Registros} \\ \hline
+    Marca                    & 5                  \\ \hline
+    Categoria                & 5                  \\ \hline
+    Caracteristica           & 19                 \\ \hline
+    Componente               & 11                 \\ \hline
+    ComponenteCaracteristica & 40                 \\ \hline
+    Restricao                & 4                  \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{qua:seed}
+\end{quadro}
+\FloatBarrier
+
+As quatro restrições cadastradas correspondem exatamente às arestas do grafo definido no Capítulo~\ref{cap:02}: soquete entre CPU e placa-mãe, padrão de memória entre placa-mãe e RAM, e capacidade energética da fonte em relação ao TDP da CPU e ao TDP da GPU, respectivamente.
+
+% ============================================================
+\section{Camada de Lógica de Negócio}
+\label{sec:impl-logica}
+% ============================================================
+
+A camada de lógica de negócio é o núcleo inteligente do sistema e concentra a contribuição técnica deste trabalho. Foi implementada em NestJS, \textit{framework} escolhido por organizar a aplicação em módulos, \textit{controllers} e \textit{services}, estrutura que favorece a separação de responsabilidades e alinha-se diretamente aos princípios da arquitetura em camadas discutidos no Capítulo~\ref{cap:02}. Esta seção detalha, de dentro para fora, o isolamento do motor, a montagem do grafo de restrições, o algoritmo AC-3, o avaliador genérico de restrições e a geração das justificativas educativas.
+
+\subsection{Isolamento do Motor de Inferência}
+\label{sub:isolamento-motor}
+A decisão de projeto mais importante desta camada foi manter o motor de inferência inteiramente independente do \textit{framework} e do mecanismo de persistência. Os arquivos que implementam o algoritmo AC-3 (\texttt{ac3.ts}) e a avaliação de restrições (\texttt{constraint-evaluator.ts}) não importam qualquer artefato do NestJS ou do Prisma, não contêm decoradores nem efeitos colaterais de entrada e saída, operando como funções puras sobre estruturas de dados recebidas por parâmetro.
+
+Esse isolamento não é um detalhe de organização, mas o que garante três propriedades fundamentais do trabalho. Primeiro, o determinismo (RNF-10): sem qualquer dependência de estado externo ou de operações de entrada e saída, a mesma entrada produz invariavelmente a mesma saída. Segundo, a testabilidade: por não depender do \textit{framework}, o motor pode ser exercitado por testes unitários que não exigem servidor nem banco de dados em execução. Terceiro, e mais importante para a tese central deste trabalho, a agnosticidade ao domínio: o motor não conhece o conceito de \textit{hardware}, de soquete ou de TDP, opera exclusivamente sobre variáveis, domínios e restrições. Todo o conhecimento específico do domínio reside nos dados, e não no algoritmo, o que torna o motor, em princípio, aplicável a qualquer problema de configuração modelável como CSP.
+
+\subsection{Carregamento e Montagem do Grafo}
+\label{sub:montagem-grafo}
+A validação inicia-se no \texttt{CspService}, que, a cada requisição, carrega as restrições persistidas e as converte em uma representação interna independente do banco. Essa reconstrução a cada chamada é uma consequência direta da decisão de projeto pela ausência de estado no servidor: em conformidade com o princípio \textit{stateless} (RNF-11), nenhuma informação de sessão é mantida entre requisições, e o grafo é montado a partir da base de conhecimento sempre que uma validação é solicitada. O Código~\ref{lst:carregar-restricoes} apresenta esse carregamento, no qual cada linha da tabela \texttt{Restricao} é mapeada para a estrutura interna \texttt{RestricaoInterna}, resolvendo, por meio das características associadas, quais categorias, as variáveis do CSP, a restrição conecta.
+
+\begin{lstlisting}[caption={Carregamento das restrições a partir da base de conhecimento},label={lst:carregar-restricoes},basicstyle=\ttfamily\small]
+private async carregarRestricoes(): Promise<RestricaoInterna[]> {
+  const linhas = await this.prisma.restricao.findMany({
+    include: {
+      caracteristica1: { select: { categoriaId: true } },
+      caracteristica2: { select: { categoriaId: true } },
+    },
+  });
+
+  return linhas.map((linha) => ({
+    id:                linha.id,
+    variavelDemanda:   linha.caracteristica1.categoriaId,
+    variavelCapacidade:linha.caracteristica2.categoriaId,
+    caracteristica1Id: linha.caracteristica1Id,
+    caracteristica2Id: linha.caracteristica2Id,
+    operador:          linha.operador,
+    parametro:         linha.parametro ?? undefined,
+    templateJustificativa: linha.templateJustificativa,
+  }));
+}
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+Cada variável do CSP é representada por uma estrutura que associa a categoria ao seu domínio, mantido em um \texttt{Map} de componentes. A escolha do \texttt{Map} deve-se à necessidade de remover valores do domínio de forma eficiente durante a propagação, operação frequente no AC-3. Sobre o conjunto de restrições, o motor constrói uma \textbf{lista de adjacência}, conforme justificado teoricamente no Capítulo~\ref{cap:02} como a representação mais adequada para grafos esparsos. A lista é materializada uma única vez no início da execução, indexando, para cada variável, os arcos direcionados que a alcançam, como mostra o Código~\ref{lst:lista-adjacencia}.
+
+\begin{lstlisting}[caption={Construção da lista de adjacência do grafo de restrições},label={lst:lista-adjacencia},basicstyle=\ttfamily\small]
+function construirListaAdjacencia(
+  restricoes: RestricaoInterna[],
+): Map<string, Arco[]> {
+  const mapa = new Map<string, Arco[]>();
+  const adicionar = (chave: string, arco: Arco) => {
+    const lista = mapa.get(chave);
+    if (lista) lista.push(arco);
+    else mapa.set(chave, [arco]);
+  };
+
+  for (const r of restricoes) {
+    adicionar(r.variavelDemanda,
+      { origem: r.variavelCapacidade, destino: r.variavelDemanda, restricao: r });
+    if (r.variavelDemanda !== r.variavelCapacidade) {
+      adicionar(r.variavelCapacidade,
+        { origem: r.variavelDemanda, destino: r.variavelCapacidade, restricao: r });
+    }
+  }
+  return mapa;
+}
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+A opção pela lista de adjacência indexada, em vez de percorrer o conjunto completo de restrições a cada consulta, alinha a implementação à fundamentação teórica e assegura que a recuperação dos vizinhos de uma variável ocorra em tempo proporcional ao seu grau. Como cada restrição binária origina dois arcos direcionados, a lista preserva a orientação exigida pelo algoritmo, distinção necessária porque, no motor, a direção do arco determina qual característica é tratada como demanda e qual como capacidade.
+
+\subsection{O Algoritmo AC-3}
+\label{sub:impl-ac3}
+O motor implementa o algoritmo AC-3 conforme descrito por~\textcite{Mackworth1977} e~\textcite{Russell2010}, decisão fundamentada no Capítulo~\ref{cap:02}: por operar por propagação de restrições, e não por enumeração exaustiva, o AC-3 evita a explosão combinatória que inviabilizaria a validação por força bruta (RNF-02). Uma fila é inicializada com todos os arcos direcionados; a cada iteração, um arco é retirado e submetido ao procedimento de revisão, que remove do domínio da variável de origem os valores sem suporte na variável de destino. Sempre que ocorre uma remoção, os arcos que incidem sobre a variável afetada são reinseridos na fila, propagando a mudança pela rede até o ponto de estabilidade. O Código~\ref{lst:revisar} apresenta esse procedimento de revisão.
+
+\begin{lstlisting}[caption={Procedimento de revisão de arco do algoritmo AC-3},label={lst:revisar},basicstyle=\ttfamily\small]
+function revisar(arco: Arco, variaveis: VariavelCSP[]): ValorRemovido[] {
+  const removidos: ValorRemovido[] = [];
+  const varOrigem  = getVariavel(variaveis, arco.origem);
+  const varDestino = getVariavel(variaveis, arco.destino);
+  if (!varOrigem || !varDestino) return removidos;
+
+  const arcoReverso   = arco.origem === arco.restricao.variavelCapacidade;
+  const valoresDestino = Array.from(varDestino.dominio.values());
+  if (valoresDestino.length === 0) return removidos;
+
+  for (const v of Array.from(varOrigem.dominio.values())) {
+    const temSuporte = valoresDestino.some((w) =>
+      arcoReverso
+        ? avaliarRestricao(w, v, arco.restricao)
+        : avaliarRestricao(v, w, arco.restricao),
+    );
+    if (!temSuporte) {
+      varOrigem.dominio.delete(v.id);
+      removidos.push({
+        categoriaId:     varOrigem.categoriaId,
+        componenteId:    v.id,
+        componente:      v,
+        restricaoViolada: arco.restricao,
+        ancora:          valoresDestino[0],
+      });
+    }
+  }
+  return removidos;
+}
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+Um aspecto de projeto merece destaque: cada valor removido não é simplesmente descartado, mas registrado em uma estrutura \texttt{ValorRemovido} que retém a restrição violada e um componente-âncora, o valor da variável vizinha que fundamenta o bloqueio. Essa decisão é o que torna possível, mais adiante, rastrear cada bloqueio até a restrição que o originou (RNF-13) e produzir a justificativa educativa correspondente, assegurando que nenhum bloqueio ocorra silenciosamente (RNF-14). Em outras palavras, a \textit{explanation facility} não é um acréscimo posterior ao motor: a informação necessária para explicar é coletada no exato instante da poda.
+
+\subsection{Avaliação Genérica de Restrições}
+\label{sub:impl-avaliador}
+O suporte entre dois valores é decidido pela função \texttt{avaliarRestricao}, apresentada no Código~\ref{lst:avaliar}, que aplica o operador definido na própria restrição, sem qualquer ramificação por tipo de característica ou de componente.
+
+\begin{lstlisting}[caption={Avaliação genérica de uma restrição},label={lst:avaliar},basicstyle=\ttfamily\small]
+export function avaliarRestricao(
+  valorVar1: Componente,
+  valorVar2: Componente,
+  restricao: RestricaoInterna,
+): boolean {
+  const val1 = getValor(valorVar1, restricao.caracteristica1Id);
+  const val2 = getValor(valorVar2, restricao.caracteristica2Id);
+  if (val1 === undefined || val2 === undefined) return true;
+
+  if (restricao.operador === 'IGUAL') {
+    return val1 === val2;
+  }
+  const parametro = Number(restricao.parametro ?? '1');
+  return Number(val2) >= Number(val1) * parametro;
+}
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+A ausência deliberada de qualquer condicional específica por domínio é o que concretiza, no nível do algoritmo, os requisitos RNF-07 e RNF-08: o mesmo código avalia a compatibilidade de soquete, o padrão de memória ou a capacidade energética, distinguindo esses casos apenas pelo operador e pelas características cadastradas na base de conhecimento. O operador \texttt{IGUAL} implementa as restrições binárias absolutas de soquete e de padrão de memória; o operador \texttt{MAIOR\_OU\_IGUAL} implementa a restrição quantitativa de capacidade energética, na qual o parâmetro cadastrado, por exemplo, $1{,}25$, representa a margem de segurança aplicada sobre a demanda. Cada verificação de potência é realizada entre um par de variáveis, decisão que preserva a natureza estritamente binária do grafo de restrições; as implicações dessa modelagem são discutidas na Seção~\ref{sec:impl-limitacoes}.
+
+\subsection{Geração das Justificativas Educativas}
+\label{sub:impl-explicacoes}
+A \textit{explanation facility}, característica que distingue o sistema de um mero mecanismo de filtragem, é implementada no \texttt{ExplanationsService}. Para cada valor removido pelo AC-3, o serviço formula uma justificativa em linguagem natural a partir do \texttt{templateJustificativa} associado à restrição violada, substituindo marcadores por valores concretos dos componentes envolvidos. Os marcadores suportados são \texttt{\{comp1.nome\}}, \texttt{\{val1\}}, \texttt{\{comp2.nome\}}, \texttt{\{val2\}} e \texttt{\{val1\_com\_margem\}}, este último aplicável às restrições quantitativas, no qual o consumo é apresentado já acrescido da margem de segurança.
+
+A decisão de manter o texto de cada explicação inteiramente no dado cadastrado, e não no código, é coerente com toda a arquitetura genérica adotada: assim como nenhuma regra de compatibilidade está embutida no motor, nenhum termo técnico do domínio está embutido no serviço de explicações. Toda a dimensão educativa emerge da base de conhecimento. Como consequência, ao bloquear um módulo DDR4 diante de uma placa-mãe que suporta exclusivamente DDR5, o sistema não apenas remove a opção, mas comunica a regra física violada em linguagem acessível, transformando o bloqueio em oportunidade de aprendizagem (RF-10 a RF-13), que é precisamente o objetivo educacional do trabalho.
+
+% ============================================================
+\section{Camada de Apresentação}
+\label{sec:impl-apresentacao}
+% ============================================================
+
+A camada de apresentação foi implementada em Next.js, utilizando o \textit{App Router} e a biblioteca React~\cite{ReactJS} em sua versão 19. A interface adota o formato \textit{wizard}, conduzindo o usuário sequencialmente pelas cinco categorias de componentes, decisão de projeto que reduz a carga cognitiva do usuário leigo ao decompor a montagem em etapas discretas. O estado da configuração, etapa atual, seleções realizadas e resultado da última validação, é mantido no próprio cliente por meio do mecanismo de estado do React, sem persistência no servidor, opção coerente com o caráter \textit{stateless} da API e com o requisito RNF-05, que dispensa cadastro ou autenticação.
+
+A comunicação com a camada de lógica de negócio é encapsulada em um módulo cliente (\texttt{lib/api.ts}) que expõe as operações de listagem de categorias, listagem de componentes e validação da configuração. Esse encapsulamento concentra em um único ponto o conhecimento sobre como falar com o servidor, isolando o restante da interface dos detalhes de comunicação. A cada alteração de seleção, a interface envia o estado completo à API e recebe, em resposta, os domínios atualizados e as justificativas dos bloqueios, atualizando a exibição em tempo real.
+
+A decisão de interface mais alinhada ao objetivo educativo é a de não ocultar os componentes incompatíveis. Em vez de removê-los da listagem, comportamento típico dos mecanismos de filtragem, eles permanecem visíveis, com sinalização visual de bloqueio, e a justificativa técnica correspondente é revelada quando o usuário interage com o componente, atendendo aos requisitos RF-03 e RNF-14. Ao término da seleção de todas as categorias, a interface apresenta a tela de resumo, que consolida a configuração montada, exibe seu status geral de compatibilidade e o consumo energético estimado, e registra o tempo de execução da validação.
+
+Para tornar concreto o encadeamento entre as camadas, convém percorrer o fluxo completo de uma interação. Quando o usuário seleciona um componente, a interface registra a escolha no estado local e envia o estado completo das seleções à API. No servidor, o \texttt{CspService} carrega as restrições e os domínios da base de conhecimento, monta o grafo e executa o AC-3, que propaga as restrições e poda os valores sem suporte; para cada valor podado, o \texttt{ExplanationsService} formula a justificativa correspondente. A resposta, domínios atualizados, justificativas e tempo de execução, retorna à interface, que reatualiza a listagem, marcando os componentes recém-bloqueados e disponibilizando suas explicações. Todo esse ciclo ocorre a cada seleção, o que produz a validação incremental e em tempo real prevista nos requisitos.
+
+% ============================================================
+\section{A API REST}
+\label{sec:impl-api}
+% ============================================================
+
+A comunicação entre a camada de apresentação e a de lógica de negócio ocorre exclusivamente por meio de uma API REST~\cite{Fielding2000}, decisão que concretiza o princípio de separação cliente-servidor discutido no Capítulo~\ref{cap:02} e assegura que interface e motor possam evoluir de forma independente. A API é exposta sob o prefixo \texttt{/api} e protegida por validação de entrada, expondo os três recursos apresentados no Quadro~\ref{qua:endpoints}.
+
+\FloatBarrier
+\begin{quadro}[!htbp]
+  \centering
+  \caption{Recursos expostos pela API REST}
+  \begin{tabular}{l l l}
+    \hline
+    \textbf{Método} & \textbf{Rota}                         & \textbf{Descrição}                 \\ \hline
+    GET             & \texttt{/api/categorias}              & Lista as categorias ordenadas      \\ \hline
+    GET             & \texttt{/api/components/:categoriaId} & Lista componentes de uma categoria \\ \hline
+    POST            & \texttt{/api/configurations/validate} & Valida a configuração e retorna    \\
+                    &                                       & domínios e justificativas          \\ \hline
+  \end{tabular}
+  \\ \vspace{0.2cm}
+  \textbf{Fonte:} Elaborada pelo autor
+  \label{qua:endpoints}
+\end{quadro}
+\FloatBarrier
+
+O recurso de validação é o cerne da API. Recebe, no corpo da requisição, o estado completo das seleções do usuário, representado como um mapeamento entre categorias e componentes escolhidos, e retorna uma resposta que reúne o indicador de consistência, os domínios atualizados de cada variável, as justificativas dos bloqueios e o tempo de execução em milissegundos. A decisão de que cada requisição carregue todo o contexto necessário ao seu processamento é o que permite à API dispensar qualquer sessão persistente, satisfazendo o princípio \textit{stateless}~\cite{Fielding2000} e o requisito RNF-11, e conferindo ao servidor simplicidade operacional e escalabilidade horizontal.
+
+% ============================================================
+\section{Execução do Ambiente}
+\label{sec:impl-execucao}
+% ============================================================
+
+O ambiente completo é colocado em execução por uma sequência de comandos que provisiona o banco em contêiner, aplica as \textit{migrations}, popula a base de conhecimento e inicia, de forma orquestrada, o servidor e o cliente. O Turborepo coordena a execução simultânea das duas aplicações a partir da raiz do repositório, como mostra o Código~\ref{lst:execucao}.
+
+\begin{lstlisting}[caption={Comandos de inicialização do ambiente de desenvolvimento},label={lst:execucao},basicstyle=\ttfamily\small]
+pnpm install       # instala as dependencias do monorepo
+pnpm db:up         # sobe o PostgreSQL em conteiner (docker compose)
+pnpm db:migrate    # aplica as migrations (prisma migrate dev)
+pnpm db:seed       # popula a base de conhecimento (seed.ts)
+pnpm dev           # inicia API e cliente (turbo run dev)
+\end{lstlisting}
+\fonte{Elaborado pelo autor}
+
+Em execução, o cliente responde na porta 3000, a API na porta 3001 e o banco de dados na porta 5432. As configurações sensíveis ao ambiente, a URL de conexão com o banco, a porta e o prefixo da API, a origem autorizada para requisições e o endereço da API consumido pelo cliente, são fornecidas por variáveis de ambiente, e não figuram no código-fonte, prática que separa a configuração do código e evita o versionamento de dados sensíveis.
+
+% ============================================================
+\section{Limitações Conhecidas da Implementação}
+\label{sec:impl-limitacoes}
+% ============================================================
+
+Em conformidade com o rigor esperado de um trabalho de engenharia, registram-se as limitações conhecidas da implementação em seu estado atual, todas decorrentes de decisões conscientes de projeto e coerentes com o escopo definido para a etapa de Validação de Projeto.
+
+A primeira limitação decorre da própria generalidade do motor. Como a corretude das validações depende do cadastro correto das restrições na base de conhecimento, uma restrição quantitativa cadastrada com as características de demanda e de capacidade invertidas seria avaliada na ordem trocada, podendo produzir um falso-positivo. Trata-se de uma característica inerente aos sistemas especialistas dirigidos a dados, nos quais a qualidade da inferência é indissociável da qualidade da base de conhecimento\cite{Jackson1998}; a mitigação estrutural desse risco, por meio de validação de esquema no momento do cadastro, é identificada como trabalho futuro.
+
+A segunda limitação refere-se à modelagem da restrição de capacidade energética. Cada verificação de potência é realizada de forma binária, confrontando individualmente o TDP da CPU e o da GPU com a capacidade da fonte, o que preserva a natureza estritamente binária do grafo de restrições adotada em todo o trabalho. O consumo agregado da configuração é calculado e apresentado ao usuário na tela de resumo como informação, mas não é modelado como uma restrição do CSP, uma vez que uma restrição sobre a soma dos consumos seria de ordem superior à binária. Essa delimitação é intencional e mantém a coerência entre a fundamentação teórica e a implementação.
+
+Por fim, a estratégia de testes automatizados encontra-se parcialmente desenvolvida. O motor de inferência dispõe de testes unitários que asseguram seu determinismo e a corretude da propagação, mas os testes de integração da API e os testes da camada de apresentação estão previstos como atividade posterior, conforme registrado entre os requisitos adiados na Seção~\ref{sec:req-adiados} do Capítulo~\ref{cap:05}.
