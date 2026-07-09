@@ -1,3 +1,26 @@
 \chapter{Descrição Geral do Produto}
 \label{cap:04}
 
+Este capítulo apresenta uma visão geral do produto desenvolvido neste trabalho, descrevendo sua finalidade, seu público-alvo, suas principais funcionalidades e as características que o distinguem das soluções existentes. O detalhamento dos requisitos, da modelagem e da implementação é apresentado nos capítulos seguintes.
+
+O produto é um sistema especialista educacional para validação de compatibilidade de hardware, disponibilizado como uma aplicação web. Sua finalidade é auxiliar o usuário na montagem de um computador desktop, verificando em tempo real se os componentes selecionados são compatíveis entre si e, sempre que uma incompatibilidade é detectada, explicando em linguagem acessível a razão técnica do bloqueio. O sistema não se limita a apontar que dois componentes não funcionam juntos, mas comunica qual regra física foi violada, transformando cada verificação em uma oportunidade de aprendizagem sobre os princípios que regem a montagem de computadores.
+
+O público-alvo principal é o usuário leigo ou iniciante, aquele que deseja montar o próprio computador mas não domina as especificações técnicas que determinam a compatibilidade entre processador, placa-mãe, memória, placa de vídeo e fonte de alimentação. Para esse usuário, um erro de seleção representa prejuízo financeiro e frustração, uma vez que componentes incompatíveis simplesmente não operam em conjunto. O sistema atua de forma preventiva, evitando o erro antes da compra e, ao mesmo tempo, ensinando o usuário a compreender as restrições envolvidas.
+
+\section{Funcionalidades Principais}
+\label{sec:funcionalidades-principais}
+
+A interação com o sistema ocorre por meio de uma interface no formato \textit{wizard}, que conduz o usuário passo a passo pela seleção de cada categoria de componente. A cada escolha, o sistema valida automaticamente a configuração e atualiza a lista de opções disponíveis, sinalizando os componentes que se tornaram incompatíveis com as seleções já realizadas.
+
+Diferentemente das plataformas que ocultam as opções incompatíveis, o sistema mantém esses componentes visíveis e acompanhados de uma justificativa técnica. Assim, ao tentar combinar um processador de soquete AM5 com uma placa-mãe de soquete AM4, o usuário não apenas é impedido de prosseguir, mas recebe a explicação de que os dois soquetes são fisicamente incompatíveis. Essa abordagem preserva o caráter educativo da ferramenta, pois o motivo do bloqueio permanece disponível para consulta.
+
+Ao final do processo, o sistema apresenta um resumo da configuração montada, indicando seu estado geral de compatibilidade, o consumo energético estimado e o tempo de execução da validação. O usuário pode, a qualquer momento, retroceder para substituir um componente selecionado em etapa anterior ou reiniciar completamente a configuração, sendo a validação reexecutada a cada alteração.
+
+\section{Diferencial do Produto}
+\label{sec:diferencial-produto}
+
+O diferencial do produto está na articulação entre duas capacidades que, nas soluções tradicionais, costumam aparecer isoladas. A primeira é a validação formal, realizada por um motor de inferência baseado no formalismo de Problemas de Satisfação de Restrições e no algoritmo AC-3, que propaga as restrições entre os componentes de forma incremental e em tempo real. A segunda é a capacidade de explicação, herdada da teoria dos sistemas especialistas, que fundamenta cada bloqueio com uma justificativa compreensível ao usuário leigo.
+
+As plataformas comerciais de montagem de computadores realizam a validação, mas operam como mecanismos de filtragem, apenas sinalizando conflitos sem esclarecer suas causas. O produto desenvolvido neste trabalho preenche essa lacuna ao unir a verificação técnica à comunicação didática, posicionando-se menos como um filtro de compras e mais como um tutor que orienta o usuário durante a montagem.
+
+Cabe destacar ainda que, embora aplicado ao domínio de compatibilidade de hardware, o motor de inferência do sistema foi projetado de forma genérica, dissociado das regras específicas desse domínio. Todo o conhecimento sobre componentes e restrições reside em uma base de conhecimento configurável, e não no código, o que torna a arquitetura reaproveitável, em princípio, para outros problemas de configuração modeláveis como restrições. O domínio de hardware é, nesse sentido, o estudo de caso escolhido para materializar e validar uma solução de propósito mais amplo.

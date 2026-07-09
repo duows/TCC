@@ -677,39 +677,6 @@
       \verb https://www.intel.com/content/www/us/en/support/articles/000099723/processors.html
       \endverb
     \endentry
-    \entry{Jackson1998}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b19ad6263a7cd7135c582d3ee7f6d6d1}{%
-           family={Jackson},
-           familyi={J\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Boston}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley}%
-      }
-      \strng{namehash}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{fullhash}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{fullhashraw}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{bibnamehash}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{authorbibnamehash}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{authornamehash}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{authorfullhash}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \strng{authorfullhashraw}{b19ad6263a7cd7135c582d3ee7f6d6d1}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{3}
-      \field{title}{Introduction to Expert Systems}
-      \field{year}{1998}
-    \endentry
     \entry{JEDEC2020}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e38d9a5c68b6c83fee5f26c49595802b}{%
@@ -1584,6 +1551,40 @@
       \field{edition}{9}
       \field{title}{Engenharia de Software}
       \field{year}{2011}
+    \endentry
+    \entry{Todd1992}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e8cb4eddd640dc23b76dde340286575d}{%
+           family={Todd},
+           familyi={T\bibinitperiod},
+           given={Bryan\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Oxford University Computing Laboratory, Programming Research Group}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \strng{namehash}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{fullhash}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{fullhashraw}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{bibnamehash}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{authorbibnamehash}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{authornamehash}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{authorfullhash}{e8cb4eddd640dc23b76dde340286575d}
+      \strng{authorfullhashraw}{e8cb4eddd640dc23b76dde340286575d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{PRG-95}
+      \field{title}{An Introduction to Expert Systems}
+      \field{type}{techreport}
+      \field{year}{1992}
     \endentry
     \entry{NextJS}{misc}{}{}
       \name{author}{1}{}{%

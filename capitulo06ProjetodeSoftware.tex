@@ -272,6 +272,18 @@ A modelagem emprega dois tipos enumerados, descritos na Tabela~\ref{tab:enums}, 
 
 A tabela \textit{Restricao} é o elemento central desse modelo, pois cada um de seus registros corresponde a uma aresta do grafo de restrições, ou seja, ao conjunto $C$ do CSP. Os campos \texttt{idCaracteristica1} e \texttt{idCaracteristica2} referenciam, respectivamente, a característica do lado da demanda e a do lado da capacidade, o que permite ao motor AC-3 montar o grafo de forma dinâmica a partir dos próprios dados, sem precisar de regras condicionais escritas no código para cada tipo de restrição. O campo \texttt{parametro} é opcional e aplica-se apenas às restrições quantitativas do tipo \texttt{MAIOR\_OU\_IGUAL}, guardando o fator multiplicador da margem de segurança, como o valor \texttt{"1.25"} usado para os 25\% recomendados no dimensionamento da fonte. Já o campo \texttt{templateJustificativa} guarda o texto da explicação educativa em linguagem natural, com marcadores que são substituídos em tempo de execução pelos valores dos componentes envolvidos. Dessa forma, nenhum termo técnico do domínio fica embutido no código, e toda a explicação nasce do próprio dado cadastrado.
 
+Para complementar a descrição textual das tabelas, a Figura~\ref{fig:erd} apresenta o diagrama entidade-relacionamento da base de conhecimento, gerado a partir do esquema físico efetivamente implementado no PostgreSQL. O diagrama evidencia as seis relações do modelo e as chaves estrangeiras que as conectam, tornando visível a estrutura genérica baseada no padrão Entidade-Atributo-Valor adotada no trabalho.
+
+\begin{figure}[!htbp]
+  \centering
+  \caption{Diagrama Entidade-Relacionamento da base de conhecimento}
+  \includegraphics[width=1\textwidth]{imagens/bandoDados3.png}
+  \\ \textbf{Fonte:} Elaborada pelo autor
+  \label{fig:erd}
+\end{figure}
+
+A leitura do diagrama revela o papel central da entidade \texttt{Categoria}, que se relaciona tanto com \texttt{Componente} quanto com \texttt{Caracteristica}, refletindo sua função de representar as variáveis do CSP. A entidade \texttt{ComponenteCaracteristica} materializa a associação entre um componente e o valor de cada uma de suas características, concretizando o modelo Entidade-Atributo-Valor que permite atribuir características distintas a categorias distintas sem alteração do esquema. A entidade \texttt{Restricao}, por sua vez, conecta-se duas vezes à entidade \texttt{Caracteristica}, uma como característica de origem e outra como característica de destino, o que expressa cada aresta do grafo de restrições diretamente na estrutura do banco de dados.
+
 \subsection{Diagrama de Pacotes}
 \label{sub:diagramaPacotes}
 % TODO: incluir o diagrama de pacotes do monorepo (apps/api, apps/web, packages compartilhados) ou remover esta subseção em acordo com a orientadora.

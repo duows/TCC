@@ -255,7 +255,6 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
   \end{tabular}
   \fonte{Elaborada pelo autor}
 \end{quadro}
-
 % ----------------------------------------------------------
 %  RF-08
 % ----------------------------------------------------------
@@ -265,22 +264,23 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
   \label{quad:rf08}
   \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
     \hline
-    \textbf{Código}     & RF-08                                                                                         \\ \hline
-    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                                \\ \hline
+    \textbf{Código}     & RF-08                                                                                                                                                                                            \\ \hline
+    \textbf{Grupo}      & Motor de Inferência (CSP/AC-3)                                                                                                                                                                   \\ \hline
     \textbf{Descrição}  &
     \textbf{Ação:} Validar.
-    \textbf{Objeto:} Capacidade energética da fonte de alimentação em relação ao consumo dos componentes (instância de restrição quantitativa do conjunto $C$).
+    \textbf{Objeto:} Capacidade energética da fonte de alimentação em relação ao consumo de cada componente (instâncias de restrição quantitativa do conjunto $C$).
     \textbf{Atributos:} TDP da CPU (W), TDP da GPU (W), potência da fonte (W), margem de segurança recomendada (20--30\%).
-    \textbf{Exemplos:} \{CPU TDP: 65\,W, GPU TDP: 170\,W, Fonte: 250\,W\} $\rightarrow$ bloqueado (235\,W $\times$ 1,25 = 294\,W $>$ 250\,W); \{Fonte: 550\,W\} $\rightarrow$ válido.
+    \textbf{Exemplos:} \{GPU TDP: 170\,W, Fonte: 250\,W\} $\rightarrow$ bloqueado (170\,W $\times$ 1,25 = 212,5\,W, porém a fonte deve suportar cada demanda com margem e a configuração completa a excede); \{GPU TDP: 170\,W, Fonte: 550\,W\} $\rightarrow$ válido.
     \textbf{Restrições:}
     \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
-      \item A fonte deve suprir a soma dos TDPs de CPU e GPU acrescida de margem de segurança de 20--30\%.
+      \item A fonte deve suprir a demanda energética de cada componente de maior consumo (CPU e GPU) individualmente, acrescida de margem de segurança de 20--30\%, preservando a natureza binária das restrições do grafo.
       \item A restrição é quantitativa (desigualdade), diferentemente das restrições binárias de soquete e memória.
       \item Fonte subdimensionada deve ser bloqueada e acionar o módulo de explicação com os valores calculados (RF-13).
+      \item O consumo agregado da configuração é calculado e exibido ao usuário a título informativo, não constituindo restrição do CSP.
     \end{enumerate} \\ \hline
-    \textbf{Prioridade} & Essencial                                                                                     \\ \hline
-    \textbf{Operação}   & Processamento                                                                                 \\ \hline
-    \textbf{Ator}       & Sistema                                                                                       \\ \hline
+    \textbf{Prioridade} & Essencial                                                                                                                                                                                        \\ \hline
+    \textbf{Operação}   & Processamento                                                                                                                                                                                    \\ \hline
+    \textbf{Ator}       & Sistema                                                                                                                                                                                          \\ \hline
   \end{tabular}
   \fonte{Elaborada pelo autor}
 \end{quadro}
@@ -398,7 +398,6 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
   \end{tabular}
   \fonte{Elaborada pelo autor}
 \end{quadro}
-
 % ----------------------------------------------------------
 %  RF-13
 % ----------------------------------------------------------
@@ -408,21 +407,21 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
   \label{quad:rf13}
   \begin{tabular}{|p{3.2cm}|p{11.8cm}|}
     \hline
-    \textbf{Código}     & RF-13                                                              \\ \hline
-    \textbf{Grupo}      & Explicações Educativas (\textit{Explanation Facility})             \\ \hline
+    \textbf{Código}     & RF-13                                                                                \\ \hline
+    \textbf{Grupo}      & Explicações Educativas (\textit{Explanation Facility})                               \\ \hline
     \textbf{Descrição}  &
     \textbf{Ação:} Exibir alerta com explicação e valores calculados.
-    \textbf{Objeto:} Fonte de alimentação com potência insuficiente.
-    \textbf{Atributos:} consumo estimado (W), potência mínima recomendada com margem (W), potência da fonte bloqueada (W).
-    \textbf{Exemplos:} ``Esta fonte possui 250\,W. O consumo estimado dos componentes selecionados é de 235\,W, exigindo no mínimo 294\,W com a margem de segurança de 25\%.''
+    \textbf{Objeto:} Fonte de alimentação com potência insuficiente para um componente.
+    \textbf{Atributos:} consumo do componente (W), potência mínima recomendada com margem (W), potência da fonte bloqueada (W).
+    \textbf{Exemplos:} ``Esta fonte de 250\,W é insuficiente para a Radeon RX 7900 XT, que exige no mínimo 212,5\,W com a margem de segurança de 25\%.''
     \textbf{Restrições:}
     \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
-      \item O alerta deve exibir o consumo calculado e a potência mínima recomendada.
+      \item O alerta deve exibir o consumo do componente e a potência mínima recomendada com a margem aplicada.
       \item A margem de segurança utilizada no cálculo deve ser informada ao usuário.
     \end{enumerate} \\ \hline
-    \textbf{Prioridade} & Essencial                                                          \\ \hline
-    \textbf{Operação}   & Saída                                                              \\ \hline
-    \textbf{Ator}       & Sistema                                                            \\ \hline
+    \textbf{Prioridade} & Essencial                                                                            \\ \hline
+    \textbf{Operação}   & Saída                                                                                \\ \hline
+    \textbf{Ator}       & Sistema                                                                              \\ \hline
   \end{tabular}
   \fonte{Elaborada pelo autor}
 \end{quadro}

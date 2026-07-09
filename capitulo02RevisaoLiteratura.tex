@@ -383,7 +383,7 @@ domínios disponíveis de forma incremental e em tempo real \cite{Mackworth1977,
 Um Sistema Especialista (SE) é um programa de computador projetado para simular o raciocínio de um
 especialista humano em um domínio restrito e bem definido \cite{Russell2010}. Diferentemente de sistema
 de propósito geral, um SE concentra seu conhecimento em um domínio específico e é capaz de resolver
-problemas nesse domínio com nível de competência comparável ao de um especialista humano \cite{Jackson1998}.
+problemas nesse domínio com nível de competência comparável ao de um especialista humano \cite{Todd1992}.
 Sua arquitetura é composta por três elementos centrais: a base de conhecimento, que armazena fatos
 e regras sobre o domínio, o motor de inferência, que aplica essas regras aos fatos disponíveis
 para derivar conclusões e a interface de explicação, que permite ao sistema justificar
@@ -438,7 +438,7 @@ Os três componentes arquiteturais do SE mapeiam diretamente à implementação:
 como restrições do CSP; o motor de inferência corresponde ao algoritmo AC-3 implementado na camada de lógica da aplicação,
 responsável por propagar restrições e podar domínios a cada interação do usuário; e a interface de explicação corresponde
 aos alertas técnicos e educativos exibidos na camada de apresentação, que comunicam ao usuário não apenas quais componentes
-são bloqueados, mas as razões físicas e técnicas subjacentes a cada bloqueio \cite{Jackson1998}.
+são bloqueados, mas as razões físicas e técnicas subjacentes a cada bloqueio \cite{Todd1992}.
 
 \section{Dimensão Educativa em Sistemas Especialistas}
 \label{sec:dimensao-educativa}
@@ -478,7 +478,7 @@ de cada bloqueio como uma oportunidade de aprendizagem, sem a complexidade adici
 O sistema proposto se enquadra na categoria de Sistema Especialista Educacional, um SE dotado de \textit{explanation facility}
 cuja interface é projetado com objetivo pedagógico explícito. A distinção em relação a um SE convencional reside na forma como
 as conclusões são comunicadas. Enquanto um SE padrão pode simplesmente retornar um resultado binário (compatível ou incompatível),
-um SE educacional articula a cadeia de raciocínio que levou aquela conclusão em linguagem acessível ao usuário \cite{Clancey1983,Jackson1998}.
+um SE educacional articula a cadeia de raciocínio que levou aquela conclusão em linguagem acessível ao usuário \cite{Clancey1983}.
 
 No sistema proposto, essa dimensão educativa se manifesta de forma precisa e delimitada: ao detectar uma violação de restrição
 via propagação AC-3, o sistema não limita a bloquear o componente incompatível, ele apresenta ao usuário uma justificativa explícita
