@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  9 JUL 2026 15:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  9 JUL 2026 20:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/TCC/TCC/Template_Latex_-_Monografia_-_IFSP_-_SBV.tex
-(d:/TCC/TCC/Template_Latex_-_Monografia_-_IFSP_-_SBV.tex
+**"f:/Meu Drive/TCC/TCC/Template_Latex_-_Monografia_-_IFSP_-_SBV.tex"
+(f:/Meu Drive/TCC/TCC/Template_Latex_-_Monografia_-_IFSP_-_SBV.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2.cls
@@ -1812,15 +1812,12 @@ File: imagens/execucao-passo-a-passo-ac-3 (2).png Graphic file (type png)
 Package pdftex.def Info: imagens/execucao-passo-a-passo-ac-3 (2).png  used on input line 348.
 (pdftex.def)             Requested size: 455.0pt x 166.11024pt.
  [30 <./imagens/execucao-passo-a-passo-ac-3 (2).png>] [31] [32] [33] [34]
-
-LaTeX Warning: Reference `fig:arquitetura_rest' on page 35 undefined on input line 538.
-
-<imagens/DIAGRAMA REST.png, id=740, 1105.12875pt x 433.62pt>
+<imagens/DIAGRAMA REST.png, id=741, 1105.12875pt x 433.62pt>
 File: imagens/DIAGRAMA REST.png Graphic file (type png)
 <use imagens/DIAGRAMA REST.png>
 Package pdftex.def Info: imagens/DIAGRAMA REST.png  used on input line 544.
 (pdftex.def)             Requested size: 455.0pt x 178.5264pt.
-[35] [36 <./imagens/DIAGRAMA REST.png>] [37]) (capitulo03Metodologia.tex [38]
+ [35] [36 <./imagens/DIAGRAMA REST.png>] [37]) (capitulo03Metodologia.tex [38]
 Cap\'{\i }tulo 3.
 [39
 
@@ -1848,7 +1845,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [67] [68]
-<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=1060, 1482.53876pt x 1013.7875pt>
+<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=1061, 1482.53876pt x 1013.7875pt>
 File: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg Graphic file (type jpg)
 <use imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>
 Package pdftex.def Info: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg  used on input line 1007.
@@ -1859,20 +1856,20 @@ Overfull \hbox (10.31131pt too wide) in paragraph at lines 1024--1038
  []
 
 [70 <./imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>] [71] [72]
-<imagens/ModelodeDominio.png, id=1093, 1004.25188pt x 451.6875pt>
+<imagens/ModelodeDominio.png, id=1094, 1004.25188pt x 451.6875pt>
 File: imagens/ModelodeDominio.png Graphic file (type png)
 <use imagens/ModelodeDominio.png>
 Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 1124.
 (pdftex.def)             Requested size: 455.0pt x 204.6497pt.
  [73 <./imagens/ModelodeDominio.png>]
-<imagens/diagrama-classe-v2.png, id=1104, 999.735pt x 451.6875pt>
+<imagens/diagrama-classe-v2.png, id=1105, 999.735pt x 451.6875pt>
 File: imagens/diagrama-classe-v2.png Graphic file (type png)
 <use imagens/diagrama-classe-v2.png>
 Package pdftex.def Info: imagens/diagrama-classe-v2.png  used on input line 1161.
 (pdftex.def)             Requested size: 455.0pt x 205.57326pt.
 ) (capitulo06ProjetodeSoftware.tex [74 <./imagens/diagrama-classe-v2.png>]
 Cap\'{\i }tulo 6.
-<imagens/Home/Desktop.png, id=1112, 1445.4pt x 1027.84pt>
+<imagens/Home/Desktop.png, id=1113, 1445.4pt x 1027.84pt>
 File: imagens/Home/Desktop.png Graphic file (type png)
 <use imagens/Home/Desktop.png>
 Package pdftex.def Info: imagens/Home/Desktop.png  used on input line 20.
@@ -1880,18 +1877,18 @@ Package pdftex.def Info: imagens/Home/Desktop.png  used on input line 20.
 [75
 
 ]
-<imagens/Configuração/Desktop.png, id=1117, 1445.4pt x 1027.84pt>
+<imagens/Configuração/Desktop.png, id=1118, 1445.4pt x 1027.84pt>
 File: imagens/Configuração/Desktop.png Graphic file (type png)
 <use imagens/Configuração/Desktop.png>
 Package pdftex.def Info: imagens/Configuração/Desktop.png  used on input line 30.
 (pdftex.def)             Requested size: 450.4525pt x 320.32092pt.
  [76 <./imagens/Home/Desktop.png>] [77 <./imagens/Configuração/Desktop.png>]
-<imagens/Resultado/Desktop.png, id=1128, 1445.4pt x 1033.8625pt>
+<imagens/Resultado/Desktop.png, id=1129, 1445.4pt x 1033.8625pt>
 File: imagens/Resultado/Desktop.png Graphic file (type png)
 <use imagens/Resultado/Desktop.png>
 Package pdftex.def Info: imagens/Resultado/Desktop.png  used on input line 40.
 (pdftex.def)             Requested size: 450.4525pt x 322.19781pt.
-<imagens/Home/Mobile.png, id=1131, 391.4625pt x 878.28125pt>
+<imagens/Home/Mobile.png, id=1132, 391.4625pt x 878.28125pt>
 File: imagens/Home/Mobile.png Graphic file (type png)
 <use imagens/Home/Mobile.png>
 Package pdftex.def Info: imagens/Home/Mobile.png  used on input line 52.
@@ -1899,13 +1896,13 @@ Package pdftex.def Info: imagens/Home/Mobile.png  used on input line 52.
  [78
 
  <./imagens/Resultado/Desktop.png>]
-<imagens/Configuração/Mobile.png, id=1137, 391.4625pt x 1260.71pt>
+<imagens/Configuração/Mobile.png, id=1138, 391.4625pt x 1260.71pt>
 File: imagens/Configuração/Mobile.png Graphic file (type png)
 <use imagens/Configuração/Mobile.png>
 Package pdftex.def Info: imagens/Configuração/Mobile.png  used on input line 62.
 (pdftex.def)             Requested size: 181.99722pt x 586.12791pt.
  [79 <./imagens/Home/Mobile.png>] [80 <./imagens/Configuração/Mobile.png>]
-<imagens/Resultado/Mobile.png, id=1149, 391.4625pt x 1260.71pt>
+<imagens/Resultado/Mobile.png, id=1150, 391.4625pt x 1260.71pt>
 File: imagens/Resultado/Mobile.png Graphic file (type png)
 <use imagens/Resultado/Mobile.png>
 Package pdftex.def Info: imagens/Resultado/Mobile.png  used on input line 72.
@@ -1918,7 +1915,7 @@ Overfull \hbox (7.2844pt too wide) in paragraph at lines 140--148
  []
 
 [83] [84]
-<imagens/bandoDados3.png, id=1178, 1368.11125pt x 546.04pt>
+<imagens/bandoDados3.png, id=1179, 1368.11125pt x 546.04pt>
 File: imagens/bandoDados3.png Graphic file (type png)
 <use imagens/bandoDados3.png>
 Package pdftex.def Info: imagens/bandoDados3.png  used on input line 280.
@@ -1927,13 +1924,13 @@ Package pdftex.def Info: imagens/bandoDados3.png  used on input line 280.
 
 LaTeX Warning: Citation 'creately' on page 86 undefined on input line 303.
 
-<imagens/DiagramadeSequencia.png, id=1189, 322.20375pt x 223.58531pt>
+<imagens/DiagramadeSequencia.png, id=1190, 322.20375pt x 223.58531pt>
 File: imagens/DiagramadeSequencia.png Graphic file (type png)
 <use imagens/DiagramadeSequencia.png>
 Package pdftex.def Info: imagens/DiagramadeSequencia.png  used on input line 311.
 (pdftex.def)             Requested size: 455.0pt x 315.74998pt.
 [86]
-<imagens/ProjetoArquitetural.png, id=1200, 426.84468pt x 294.34969pt>
+<imagens/ProjetoArquitetural.png, id=1201, 426.84468pt x 294.34969pt>
 File: imagens/ProjetoArquitetural.png Graphic file (type png)
 <use imagens/ProjetoArquitetural.png>
 Package pdftex.def Info: imagens/ProjetoArquitetural.png  used on input line 328.
@@ -1953,7 +1950,7 @@ Cap\'{\i }tulo 8.
 [102
 
 ]
-<imagens/ExcemplodeCasodeTeste.png, id=1458, 417.81094pt x 328.22626pt>
+<imagens/ExcemplodeCasodeTeste.png, id=1459, 417.81094pt x 328.22626pt>
 File: imagens/ExcemplodeCasodeTeste.png Graphic file (type png)
 <use imagens/ExcemplodeCasodeTeste.png>
 Package pdftex.def Info: imagens/ExcemplodeCasodeTeste.png  used on input line 73.
@@ -1972,7 +1969,7 @@ Cap\'{\i }tulo 11.
 
 ]) (capitulo13Cronograma.tex [108]
 Cap\'{\i }tulo 12.
-<imagens/cronograma.png, id=1484, 423.83344pt x 100.87688pt>
+<imagens/cronograma.png, id=1485, 423.83344pt x 100.87688pt>
 File: imagens/cronograma.png Graphic file (type png)
 <use imagens/cronograma.png>
 Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
@@ -2010,17 +2007,17 @@ Package logreq Info: Writing requests to 'Template_Latex_-_Monografia_-_IFSP_-_S
 
  ) 
 Here is how much of TeX's memory you used:
- 46538 strings out of 467867
- 866168 string characters out of 5416882
- 2044186 words of memory out of 5000000
- 73732 multiletter control sequences out of 15000+600000
+ 46537 strings out of 467867
+ 866482 string characters out of 5416882
+ 2045186 words of memory out of 5000000
+ 73731 multiletter control sequences out of 15000+600000
  733617 words of font info for 246 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,108p,1249b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,108p,1261b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (113 pages, 1886355 bytes).
+Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (113 pages, 1886521 bytes).
 PDF statistics:
- 2214 PDF objects out of 2487 (max. 8388607)
+ 2215 PDF objects out of 2487 (max. 8388607)
  591 named destinations out of 1000 (max. 500000)
  57402 words of extra memory for PDF output out of 61914 (max. 10000000)
 

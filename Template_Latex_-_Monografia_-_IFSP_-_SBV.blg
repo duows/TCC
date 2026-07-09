@@ -1,17 +1,17 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'Template_Latex_-_Monografia_-_IFSP_-_SBV.blg'
-[146] biber-MSWIN64:342> INFO - === 
-[190] Biber.pm:421> INFO - Reading 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'
-[330] Biber.pm:1002> INFO - Found 45 citekeys in bib section 0
-[346] Biber.pm:4487> INFO - Processing section 0
-[361] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[406] bibtex.pm:1713> INFO - LaTeX decoding ...
-[457] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[749] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[749] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[749] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
-[749] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
-[799] bbl.pm:676> INFO - Writing 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' with encoding 'UTF-8'
-[826] bbl.pm:779> INFO - Output to Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
-[826] Biber.pm:132> WARN - I didn't find a database entry for 'creately' (section 0)
-[827] Biber.pm:134> INFO - WARNINGS: 1
+[1] Config.pm:331> INFO - Logfile is 'Template_Latex_-_Monografia_-_IFSP_-_SBV.blg'
+[93] biber-MSWIN64:342> INFO - === 
+[221] Biber.pm:421> INFO - Reading 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'
+[395] Biber.pm:1002> INFO - Found 45 citekeys in bib section 0
+[411] Biber.pm:4487> INFO - Processing section 0
+[421] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[509] bibtex.pm:1713> INFO - LaTeX decoding ...
+[548] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[750] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[751] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[751] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[751] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[792] bbl.pm:676> INFO - Writing 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' with encoding 'UTF-8'
+[823] bbl.pm:779> INFO - Output to Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
+[824] Biber.pm:132> WARN - I didn't find a database entry for 'creately' (section 0)
+[824] Biber.pm:134> INFO - WARNINGS: 1
