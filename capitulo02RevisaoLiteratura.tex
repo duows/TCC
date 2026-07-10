@@ -34,17 +34,20 @@ dependências transitivas no grafo de restrições.
 
 \subsection{Capacidade Energética e TDP}
 Cada componente de \textit{hardware} possui um indicador de consumo máximo de energia denominado TDP (\textit{Thermal Design Power}),
-expresso em watts. A fonte de alimentação deve ser dimensionada para suprir a soma dos TDPs de todos os componentes, com uma margem de segurança
-recomendada de aproximadamente 20\% a 30\% acima do consumo estimado \cite{ATXSPEC2022}. Uma fonte subdimensionada provoca instabilidade do sistema,
-reinicializações inesperadas e, em casos extremos, danos permanentes aos componentes. Essa restrição difere das anteriores por ser de natureza
-quantitativa: não se trata de uma incompatibilidade binária, mas de uma relação de desigualdade entre a capacidade da fonte e a demanda
-agregada dos componentes.
+expresso em watts. A fonte de alimentação deve fornecer capacidade suficiente para atender à demanda energética dos componentes, com uma margem de segurança
+recomendada de aproximadamente 20\% a 30\% acima do consumo \cite{ATXSPEC2022}. Embora o dimensionamento físico de uma fonte considere o
+consumo conjunto de todos os componentes, a verificação de compatibilidade adotada neste trabalho modela essa restrição de forma binária,
+confrontando individualmente a demanda dos componentes de maior consumo, o processador e a placa de vídeo, com a capacidade da fonte.
+Essa decisão de modelagem preserva a natureza binária do grafo de restrições e é detalhada no Capítulo~\ref{cap:05}. Uma fonte subdimensionada
+provoca instabilidade do sistema, reinicializações inesperadas e, em casos extremos, danos permanentes aos componentes. Essa restrição difere
+das anteriores por ser de natureza quantitativa: não se trata de uma incompatibilidade binária, mas de uma relação de desigualdade entre a
+capacidade da fonte e a demanda de cada componente de maior consumo.
 
 \subsection{Formalização como Problema de Restrições}
 As três categorias de restrições descritas, soquete, padrão de memória e capacidade energética, possuem uma estrutura comum: cada um
 envolve um par de componentes e define condições que os valores atribuídos a esse par devem satisfazer. Essa estrutura é precisamente o que
 a teoria dos Problemas de Satisfação de Restrições (CSP) formaliza: cada categoria de componente pode ser modelada como uma variável, o
-conjunto de modelos comercialmente disponíveis em cada categoria constitui o domínio dessa variáveis. Essa correspondência torna o CSP não apenas uma metáfora conveniente, mas a
+conjunto de modelos comercialmente disponíveis em cada categoria constitui o domínio dessas variáveis. Essa correspondência torna o CSP não apenas uma metáfora conveniente, mas a
 estrutura formal mais adequada para modelar o problema de validação de configurações de \textit{hardware}, conforme detalhado na seção seguinte.
 
 % ============================================================
@@ -114,7 +117,7 @@ estado como uma entidade atômica e indivisível, o CSP expõe a estrutura inter
 do problema por meio de variáveis e restrições explícitas \cite{Russell2010,Kumar1992}.
 Restrições binárias entre pares de variáveis admitem representação natural como grafo,
 no qual os vértices correspondem às variáveis e as arestas codificam as restrições.
-Essa estrutura de grafo de restrições é o objeto central sobre o qual os algoritmos de busca e propagração
+Essa estrutura de grafo de restrições é o objeto central sobre o qual os algoritmos de busca e propagação
 operam.
 
 % ============================================================
@@ -210,7 +213,7 @@ A teoria da complexidade computacional ocupa-se da classificação de problemas 
 os recursos algorítmicos, principalmente tempo de execução e espaço de memória, exigidos para sua resolução \cite{Cormen2001}.
 Dentro dessa estrutura, a classe P reúne os problemas para os quais existem algoritmos determinísticos
 de tempo polinomial, considerados eficientes e tratáveis mesmo para entradas de grande escala.
-A classe NP, por sua vez, abrange os problemas cuas soluções propostas podem ser verificados em tempo polinomial
+A classe NP, por sua vez, abrange os problemas cujas soluções propostas podem ser verificados em tempo polinomial
 por uma máquina determinística, ainda que não se conheça, até o presente, algoritmo eficiente para encontrá-las \cite{Sipser2012}.
 A questão sobre a relação entre essas duas classes, se $P = NP$, permanece em aberto e constitui
 o problema não resolvido de maior relevância para a ciência da computação teórica, razão pela qual o
@@ -238,7 +241,7 @@ que o catálogo se expande, tornando a abordagem inviável em tempo hábil.
 A segunda limitação é de ordem espacial, estratégias alternativas baseadas no mapeamento
 estático e exaustivo de regras lógicas condicionais, codificando explicitamente cada restrição de \textit{hardware}
 por meio de estruturas if-else ou tabela de decisão, não contornam o problema, pois a representação de funções
-lógicas complexas por árvores de decisão pode exiger espaço de tamanho exponencial \cite{Jukna1999}. Diante
+lógicas complexas por árvores de decisão pode exigir espaço de tamanho exponencial \cite{Jukna1999}. Diante
 dessas limitações, a abordagem padrão para tornar CSPs tratáveis na prática é a busca sistemática
 com retrocesso combinada com técnicas de propagação de restrições, que reduzem o espaço efetivo
 de busca de forma incremental.
@@ -404,9 +407,9 @@ mantenha não apenas as conclusões derivadas, mas também a cadeia de regras e 
 levou a cada conclusão, de modo que possa reconstruir e comunicar o raciocínio em linguagem
 acessível ao usuário. Um mecanismo de filtragem simples responde apenas à pergunta "quais opções são válidas?",
 apresentado resultados sem elaboração. Um SE com \textit{explanation facility} responde também à pergunta
-"por que as demais opçõs são inválidas?", articulando a regra específica que foi violada.
+"por que as demais opções são inválidas?", articulando a regra específica que foi violada.
 
-No contexto do sistema proposta, essa capacidade se manifesta da seguinte forma, ao bloquear a seleção de um módulo DDR4 após
+No contexto do sistema proposto, essa capacidade se manifesta da seguinte forma, ao bloquear a seleção de um módulo DDR4 após
 a escolha de uma CPU AM5, o sistema não se limita a remover o componente da lista de opções,
 ele apresenta ao usuário uma justificativa explícita como "Este módulo de memória é incompatível: a placa-mãe
 compatível com o processador selecionada suporta exclusivamente DDR5 e este módulo é DDR4". Essa explicação
@@ -483,7 +486,7 @@ um SE educacional articula a cadeia de raciocínio que levou aquela conclusão e
 No sistema proposto, essa dimensão educativa se manifesta de forma precisa e delimitada: ao detectar uma violação de restrição
 via propagação AC-3, o sistema não limita a bloquear o componente incompatível, ele apresenta ao usuário uma justificativa explícita
 que identifica qual restrição foi violada e por qual razão técnica. Por exemplo, ao tentar selecionar um módulo DDR4 após escolher
-umas CPU com plataforma AM5, o sistema exibe: "Este módulo de memória é incompatível: a placa-mãe compatível com o processador selecionado
+uma CPU com plataforma AM5, o sistema exibe: "Este módulo de memória é incompatível: a placa-mãe compatível com o processador selecionado
 suporta exclusivamente DDR5, e este módulo utiliza o padrão DDR4". Essa explicação transforma cada bloqueio em uma oportunidade de
 aprendizagem sobre os princípios físicos que regem a montagem de computadores, sem requerer qualquer cadastro, histórico ou personalização
 por parte do usuário.
@@ -519,7 +522,7 @@ Os princípios mais relevantes para o sistema proposto são:
 
 O princípio de cliente-servidor, que estabelece a separação entre a interface do usuário e o armazenamento e processamento de dados,
 permitindo que cada lado evolua de forma independente. No sistema proposto, o cliente e o servidor evoluem independentemente, a interface
-pode ser redesenhada sem alterar o motor CSP, e o motor CSP pode ser otimizado sem alterar a inteface.
+pode ser redesenhada sem alterar o motor CSP, e o motor CSP pode ser otimizado sem alterar a interface.
 
 O princípio \textit{stateless} (sem estado), que estabelece que cada requisição enviado pelo cliente ao servidor deve conter
 todas as informações necessárias para ser compreendida e processada, sem depender de contexto ou sessão armazenada no servidor
@@ -610,7 +613,7 @@ Na literatura acadêmica, a aplicação de CSPs a problemas de configuração de
 \textcite{Sabin1998} apresentam uma \textit{survey} abrangente sobre sistemas de configuração baseados em CSP,
 identificando a modelagem de dependências entre componentes como variáveis e restrições é a abordagem mais
 expressiva para domínios com regras de compatibilidade complexas. Os autores demonstram que sistemas de configuração
-baseada em CSP superam abordagem baseadas em regras estáticas tanto em expressividade quanto em eficiência de
+baseada em CSP superam abordagens baseadas em regras estáticas tanto em expressividade quanto em eficiência de
 manutenção de base de conhecimento, resultado diretamente aplicável ao domínio de \textit{hardware} proposto neste trabalho.
 
 \textcite{Mittal1989} introduzem o conceito de \textit{dynamic CSP}, no qual o conjunto de variáveis e restrições
