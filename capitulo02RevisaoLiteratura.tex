@@ -384,7 +384,7 @@ domínios disponíveis de forma incremental e em tempo real \cite{Mackworth1977,
 \section{Sistema Especialista}
 \label{sec:sistema-especialista}
 Um Sistema Especialista (SE) é um programa de computador projetado para simular o raciocínio de um
-especialista humano em um domínio restrito e bem definido \cite{Russell2010}. Diferentemente de sistema
+especialista humano em um domínio restrito e bem definido \cite{Russell2010}. Diferentemente de sistemas
 de propósito geral, um SE concentra seu conhecimento em um domínio específico e é capaz de resolver
 problemas nesse domínio com nível de competência comparável ao de um especialista humano \cite{Todd1992}.
 Sua arquitetura é composta por três elementos centrais: a base de conhecimento, que armazena fatos
@@ -401,23 +401,23 @@ permanecem válidas.
 
 \subsection{Explanation Facilities}
 A capacidade de justificar o próprio raciocínio, denominada na literatura como
-\textit{explanation facility}, é o que distingui fundamentalmente um SE de um mecanismo
+\textit{explanation facility}, é o que distingue fundamentalmente um SE de um mecanismo
 de filtragem comum \cite{Clancey1983}. Segundo \cite{Clancey1983}, essa capacidade exige que o sistema
 mantenha não apenas as conclusões derivadas, mas também a cadeia de regras e restrições que
 levou a cada conclusão, de modo que possa reconstruir e comunicar o raciocínio em linguagem
 acessível ao usuário. Um mecanismo de filtragem simples responde apenas à pergunta "quais opções são válidas?",
-apresentado resultados sem elaboração. Um SE com \textit{explanation facility} responde também à pergunta
+apresentando resultados sem elaboração. Um SE com \textit{explanation facility} responde também à pergunta
 "por que as demais opções são inválidas?", articulando a regra específica que foi violada.
 
 No contexto do sistema proposto, essa capacidade se manifesta da seguinte forma, ao bloquear a seleção de um módulo DDR4 após
 a escolha de uma CPU AM5, o sistema não se limita a remover o componente da lista de opções,
 ele apresenta ao usuário uma justificativa explícita como "Este módulo de memória é incompatível: a placa-mãe
-compatível com o processador selecionada suporta exclusivamente DDR5 e este módulo é DDR4". Essa explicação
+compatível com o processador selecionado suporta exclusivamente DDR5 e este módulo é DDR4". Essa explicação
 transforma cada bloqueio em uma oportunidade de aprendizado sobre as restrições físicas do \textit{hardware}.
 
 \subsection{Inteligência Artificial Explicável (XAI)}
 O problema identificado por \textcite{Clancey1983}, a necessidade de sistemas inteligentes justificarem seu
-raciocónio ao usuário, permaneceu latente por décadas e ressurgiu com força renovada no contexto da Inteligência Artificial (IA)
+raciocínio ao usuário, permaneceu latente por décadas e ressurgiu com força renovada no contexto da Inteligência Artificial (IA)
 moderna sob o nome de XAI (\textit{eXplainable Artificial Intelligence}), ou Inteligência Artificial Explicável. \textcite{Arrieta2020}
 definem XAI como o conjunto de processos e técnicas que permitem que modelos de inteligência artificial produzam
 resultados compreensíveis por seres humanos, especialmente por usuários finais sem formação técnica em IA.
@@ -479,19 +479,19 @@ de cada bloqueio como uma oportunidade de aprendizagem, sem a complexidade adici
 
 \subsection{Sistema Especialista Educacional}
 O sistema proposto se enquadra na categoria de Sistema Especialista Educacional, um SE dotado de \textit{explanation facility}
-cuja interface é projetado com objetivo pedagógico explícito. A distinção em relação a um SE convencional reside na forma como
+cuja interface é projetada com objetivo pedagógico explícito. A distinção em relação a um SE convencional reside na forma como
 as conclusões são comunicadas. Enquanto um SE padrão pode simplesmente retornar um resultado binário (compatível ou incompatível),
 um SE educacional articula a cadeia de raciocínio que levou aquela conclusão em linguagem acessível ao usuário \cite{Clancey1983}.
 
 No sistema proposto, essa dimensão educativa se manifesta de forma precisa e delimitada: ao detectar uma violação de restrição
-via propagação AC-3, o sistema não limita a bloquear o componente incompatível, ele apresenta ao usuário uma justificativa explícita
+via propagação AC-3, o sistema não se limita a bloquear o componente incompatível, ele apresenta ao usuário uma justificativa explícita
 que identifica qual restrição foi violada e por qual razão técnica. Por exemplo, ao tentar selecionar um módulo DDR4 após escolher
 uma CPU com plataforma AM5, o sistema exibe: "Este módulo de memória é incompatível: a placa-mãe compatível com o processador selecionado
 suporta exclusivamente DDR5, e este módulo utiliza o padrão DDR4". Essa explicação transforma cada bloqueio em uma oportunidade de
 aprendizagem sobre os princípios físicos que regem a montagem de computadores, sem requerer qualquer cadastro, histórico ou personalização
 por parte do usuário.
 
-Essa abordagem é pedagogicamente coerente com público-alvo do sistema, o usuário leigo que realiza uma única sessão de configuração,
+Essa abordagem é pedagogicamente coerente com o público-alvo do sistema, o usuário leigo que realiza uma única sessão de configuração,
 para quem a explicação contextualizada e imediata é mais eficaz do que qualquer mecanismo de adaptação baseado em histórico. O adjetivo
 "Educacional" no título do trabalho refere-se precisamente a essa capacidade de instruir o usuário sobre as restrições do domínio no exato
 momento em que elas se tornam relevantes para sua decisão.
@@ -524,7 +524,7 @@ O princípio de cliente-servidor, que estabelece a separação entre a interface
 permitindo que cada lado evolua de forma independente. No sistema proposto, o cliente e o servidor evoluem independentemente, a interface
 pode ser redesenhada sem alterar o motor CSP, e o motor CSP pode ser otimizado sem alterar a interface.
 
-O princípio \textit{stateless} (sem estado), que estabelece que cada requisição enviado pelo cliente ao servidor deve conter
+O princípio \textit{stateless} (sem estado), que estabelece que cada requisição enviada pelo cliente ao servidor deve conter
 todas as informações necessárias para ser compreendida e processada, sem depender de contexto ou sessão armazenada no servidor
 entre requisições \cite{Fielding2000}. No contexto do sistema proposto, isso significa que cada chamada à \textit{API} carrega o
 estado atual completo das seleções do usuário, quais componentes foram escolhidos e quais permanecem em aberto e o motor CSP
@@ -589,7 +589,7 @@ presente trabalho em relação a elas.
 
 \subsection{Plataformas Comerciais de Compatibilidade de Hardware}
 O PC Part Picker é a plataforma de referência global para montagem de computadores. Permite ao usuário
-selecionar componentes de um catálogo extenso e verifica automaticamente incompatibilidades entre as pelas
+selecionar componentes de um catálogo extenso e verifica automaticamente incompatibilidades entre as peças
 escolhidas \cite{PCPARTPICKER2024}. Quando uma incompatibilidade é detectada, a plataforma exibe um alerta
 genérico indicando que os componentes são incompatíveis, mas sem detalhar a regra técnica violada, por exemplo, ao selecionar uma
 CPU AM5 com um módulo DDR4, o sistema indica o conflito sem explicar a diferença entre os padrões de memória
@@ -602,7 +602,7 @@ ao PC Part Picker com catálogo voltado ao mercado local \cite{MEUPC2024}. Apres
 em termos de explicação, as incompatibilidades são sinalizadas visualmente, mas sem justificativa técnica que
 permita ao usuário compreender o princípio de \textit{hardware} subjacente à restrição.
 
-A limitação comum a ambas as plataformas é estrutural, por operaram como mecanismos de filtragem e não
+A limitação comum a ambas as plataformas é estrutural, por operarem como mecanismos de filtragem e não
 como sistemas especialistas com capacidade explicativa, não transferem conhecimento ao usuário, apenas
 restringem escolhas. Um usuário que utiliza PC Part Picker repetidamente aprende quais componentes são
 compatíveis entre si, mas não aprende por que são compatíveis, o que o impede de generalizar

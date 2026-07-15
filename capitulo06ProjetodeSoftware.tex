@@ -300,7 +300,7 @@ O projeto procedimental detalha o comportamento interno do sistema, traduzindo o
 
 \subsection{Diagrama de Sequência}
 \label{sub:diagramaSequencia}
-Os diagramas de sequência modelam as interações entre objetos em um caso de uso, ilustrando como as diferentes partes do sistema interagem para realizar uma função e a ordem em que essas interações ocorrem \cite{creately}. A Figura~\ref{fig:diagramaDeSequencia} apresenta o diagrama de sequência para o caso de uso \textit{Propagar restrições via AC-3}.
+Os diagramas de sequência modelam as interações entre objetos em um caso de uso, ilustrando como as diferentes partes do sistema interagem para realizar uma função e a ordem em que essas interações ocorrem \cite{Booch1999}. A Figura~\ref{fig:diagramaDeSequencia} apresenta o diagrama de sequência para o caso de uso \textit{Propagar restrições via AC-3}.
 
 Ao selecionar um componente, a camada de apresentação (Next.js) envia o estado completo das seleções à API REST (NestJS). A camada de lógica de negócio executa o algoritmo AC-3 sobre o grafo de restrições, consultando a base de conhecimento (PostgreSQL) para obter os domínios e as restrições aplicáveis. Em seguida, poda os valores inconsistentes e, para cada bloqueio detectado, aciona o módulo de geração de justificativas. O resultado — domínios atualizados e justificativas técnicas — é retornado à camada de apresentação, que atualiza a exibição em tempo real.
 

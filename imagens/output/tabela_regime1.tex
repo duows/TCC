@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Desempenho dos motores no regime irrestrito}
+  \label{tab:bench-regime1}
+  \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{rrrrrcr}
+      \toprule
+      $d$ & AC-3 checagens & AC-3 tempo (ms) & FB checagens         & FB tempo (ms) & FB concl. & Espaço residual       \\
+      \midrule
+      10  & 118            & 0,093           & 152000               & 5,586         & sim       & 100000                \\
+      25  & 302            & 0,039           & $1{,}46\times10^{7}$ & 510,548       & sim       & $9{,}77\times10^{6}$  \\
+      50  & 608            & 0,076           & $1{,}50\times10^{8}$ & 5183,057      & não       & $3{,}13\times10^{8}$  \\
+      75  & 915            & 0,101           & $1{,}51\times10^{8}$ & 5191,575      & não       & $2{,}37\times10^{9}$  \\
+      100 & 1225           & 0,128           & $1{,}50\times10^{8}$ & 5443,806      & não       & $1{,}00\times10^{10}$ \\
+      250 & 3058           & 0,288           & $1{,}63\times10^{8}$ & 6014,267      & não       & $9{,}77\times10^{11}$ \\
+      500 & 6125           & 0,637           & $2{,}26\times10^{8}$ & 10076,577     & não       & $3{,}13\times10^{13}$ \\
+      \bottomrule
+    \end{tabular}%
+  }
+  \fonte{Elaborada pelo autor}
+\end{table}

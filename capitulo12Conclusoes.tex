@@ -1,16 +1,69 @@
 \chapter{Conclusões Parciais}
 \label{cap:12}
 
-Este trabalho propôs o desenvolvimento de um sistema especialista educacional para validação de compatibilidade de hardware, fundamentado no formalismo de Problemas de Satisfação de Restrições e no algoritmo de propagação AC-3, com a finalidade de não apenas detectar incompatibilidades entre componentes, mas de comunicar ao usuário leigo a razão técnica de cada uma em linguagem acessível. Nesta etapa de Validação de Projeto, apresentam-se as conclusões parciais obtidas a partir do que já foi elicitado, modelado e implementado.
+Este trabalho propôs o desenvolvimento de um sistema especialista educacional para
+validação de compatibilidade de \textit{hardware}, fundamentado no formalismo de Problemas de
+Satisfação de Restrições e no algoritmo de propagação AC-3, com a finalidade de não apenas
+detectar incompatibilidades entre componentes, mas de comunicar ao usuário leigo a razão
+técnica de cada uma em linguagem acessível. Nesta etapa de Validação de Projeto,
+apresentam-se as conclusões parciais obtidas a partir do que já foi elicitado, modelado e
+implementado.
 
-O objetivo geral mostrou-se plenamente viável ao longo do desenvolvimento. A modelagem do problema de compatibilidade de hardware como um CSP revelou-se adequada, uma vez que as três categorias de restrições estudadas, soquete, padrão de memória e capacidade energética, ajustaram-se naturalmente à estrutura de variáveis, domínios e restrições. Sobre essa modelagem, o algoritmo AC-3 foi implementado como motor de inferência funcional, capaz de propagar restrições de forma incremental e podar os domínios das variáveis a cada seleção do usuário, sem recorrer à avaliação exaustiva por força bruta.
+O objetivo geral mostrou-se plenamente viável ao longo do desenvolvimento. A modelagem do
+problema de compatibilidade de \textit{hardware} como um CSP revelou-se adequada, uma vez que as
+três categorias de restrições estudadas, soquete, padrão de memória e capacidade
+energética, ajustaram-se naturalmente à estrutura de variáveis, domínios e restrições.
+Sobre essa modelagem, o algoritmo AC-3 foi implementado como motor de inferência funcional,
+capaz de propagar restrições de forma incremental e podar os domínios das variáveis a cada
+seleção do usuário, sem recorrer à avaliação exaustiva por força bruta. Essa afirmação
+deixou de ser apenas teórica: a avaliação de desempenho conduzida no
+Capítulo~\ref{cap:resultados} comprovou empiricamente que a propagação de restrições decide
+a consistência da rede em ordens de magnitude menos avaliações que a enumeração exaustiva,
+a qual sequer conclui dentro do teto estabelecido a partir de domínios com cinquenta
+componentes por categoria.
 
-Quanto aos objetivos específicos, os resultados parciais são igualmente favoráveis. A representação de conhecimento adotada, baseada em um modelo genérico de metadados, permitiu dissociar o motor de inferência do domínio de aplicação, de modo que as regras de compatibilidade residem inteiramente na base de conhecimento e não no código. Essa decisão concretizou os requisitos de expansibilidade estabelecidos, pois a inclusão de novas categorias, características ou restrições depende apenas da inserção de registros, sem alteração do algoritmo. O mecanismo de explicação também foi implementado, gerando para cada incompatibilidade uma justificativa em linguagem natural a partir de modelos de texto associados às restrições, o que assegura que nenhum bloqueio ocorra de forma silenciosa.
+Quanto aos objetivos específicos, os resultados parciais são igualmente favoráveis. A
+representação de conhecimento adotada, baseada em um modelo genérico de metadados, permitiu
+dissociar o motor de inferência do domínio de aplicação, de modo que as regras de
+compatibilidade residem inteiramente na base de conhecimento e não no código. Essa decisão
+concretizou os requisitos de expansibilidade estabelecidos, pois a inclusão de novas
+categorias, características ou restrições depende apenas da inserção de registros, sem
+alteração do algoritmo. O mecanismo de explicação também foi implementado, gerando para
+cada incompatibilidade uma justificativa em linguagem natural a partir de modelos de texto
+associados às restrições, o que assegura que nenhum bloqueio ocorra de forma silenciosa.
 
-A aplicação do motor ao domínio de compatibilidade de hardware, tomado como estudo de caso, confirmou a validade da abordagem. A base de conhecimento foi populada com componentes reais das plataformas AM4 e AM5, e os cenários de teste demonstraram que o sistema identifica corretamente as incompatibilidades de soquete, memória e potência, apresentando as justificativas correspondentes. A interface no formato \textit{wizard}, por sua vez, materializou o caráter educativo da solução ao manter os componentes incompatíveis visíveis e acompanhados de suas explicações, em vez de simplesmente ocultá-los.
+A aplicação do motor ao domínio de compatibilidade de \textit{hardware}, tomado como estudo de caso,
+confirmou a validade da abordagem. A base de conhecimento foi populada com componentes
+reais das plataformas AM4 e AM5, e os cenários de teste demonstraram que o sistema
+identifica corretamente as incompatibilidades de soquete, memória e potência, apresentando
+as justificativas correspondentes. A interface no formato wizard, por sua vez, materializou
+o caráter educativo da solução ao manter os componentes incompatíveis visíveis e
+acompanhados de suas explicações, em vez de simplesmente ocultá-los.
 
-Do ponto de vista do problema de pesquisa, os resultados parciais indicam que é possível construir um sistema especialista que valide a compatibilidade de hardware por meio de um motor formal e que, ao mesmo tempo, ensine o usuário comunicando a razão de cada incompatibilidade. A articulação entre a validação por propagação de restrições e a capacidade de explicação herdada dos sistemas especialistas mostrou-se não apenas possível, mas coerente, atendendo simultaneamente à dimensão técnica e à dimensão pedagógica que motivaram o trabalho.
+Do ponto de vista do problema de pesquisa, os resultados parciais indicam que é possível
+construir um sistema especialista que valide a compatibilidade de \textit{hardware} por meio de um
+motor formal e que, ao mesmo tempo, ensine o usuário comunicando a razão de cada
+incompatibilidade. A articulação entre a validação por propagação de restrições e a
+capacidade de explicação herdada dos sistemas especialistas mostrou-se não apenas possível,
+mas coerente, atendendo simultaneamente à dimensão técnica e à dimensão pedagógica que
+motivaram o trabalho. A evidência experimental reforça essa conclusão sob dois regimes
+complementares. Na ausência de seleção, a vantagem do motor é de natureza algorítmica, pois
+a consistência é decidida sem enumerar o espaço de configurações completas. Sob seleção
+parcial, situação que caracteriza o uso real do sistema, soma-se a esse ganho a redução
+efetiva do espaço de busca por propagação, o que confirma a adequação da abordagem à
+interação incremental do usuário com o wizard.
 
-Reconhecem-se, contudo, as limitações próprias do estágio atual. A corretude das validações depende do cadastro correto das restrições na base de conhecimento, característica inerente aos sistemas dirigidos a dados. A validação da capacidade energética é realizada de forma binária, componente a componente, preservando a natureza do grafo de restrições, ao passo que o consumo agregado da configuração é apresentado apenas como informação. Além disso, a estratégia de testes automatizados encontra-se parcialmente desenvolvida, com os testes de integração e de interface previstos como atividade posterior.
+Reconhecem-se, contudo, as limitações próprias do estágio atual. A corretude das validações
+depende do cadastro correto das restrições na base de conhecimento, característica inerente
+aos sistemas dirigidos a dados. A validação da capacidade energética é realizada de forma
+binária, componente a componente, preservando a natureza do grafo de restrições, ao passo
+que o consumo agregado da configuração é apresentado apenas como informação. Além disso, a
+estratégia de testes automatizados encontra-se parcialmente desenvolvida, com os testes de
+integração e de interface previstos como atividade posterior.
 
-Para a etapa de Avaliação Final, planeja-se a ampliação da base de conhecimento para contemplar outras plataformas e categorias de componentes, a complementação da estratégia de testes automatizados e a realização de uma avaliação da eficácia educativa da solução junto a usuários. As conclusões parciais aqui apresentadas confirmam que os objetivos propostos são alcançáveis e que o sistema desenvolvido cumpre, até o presente estágio, os propósitos técnico e educacional que fundamentaram este trabalho.
+Para a etapa de Avaliação Final, planeja-se a ampliação da base de conhecimento para
+contemplar outras plataformas e categorias de componentes, a complementação da estratégia
+de testes automatizados e a realização de uma avaliação da eficácia educativa da solução
+junto a usuários. As conclusões parciais aqui apresentadas confirmam que os objetivos
+propostos são alcançáveis e que o sistema desenvolvido cumpre, até o presente estágio, os
+propósitos técnico e educacional que fundamentaram este trabalho.

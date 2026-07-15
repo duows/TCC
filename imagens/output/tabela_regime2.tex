@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Desempenho dos motores no regime de seleção parcial}
+\label{tab:bench-regime2}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{rrrrrcrr}
+\toprule
+$d$ & AC-3 checagens & AC-3 tempo (ms) & FB checagens & FB tempo (ms) & FB concl. & Residual & Redução ($d^5$/residual) \\
+\midrule
+10 & 71 & 0,038 & 16000 & 0,558 & sim & 1500 & $\times$67 \\
+25 & 211 & 0,030 & 574375 & 21,256 & sim & 45000 & $\times$217 \\
+50 & 591 & 0,055 & $9{,}50\times10^{6}$ & 344,182 & sim & 812500 & $\times$385 \\
+75 & 1118 & 0,082 & $4{,}76\times10^{7}$ & 1711,388 & sim & $3{,}95\times10^{6}$ & $\times$600 \\
+100 & 1778 & 0,217 & $1{,}50\times10^{8}$ & 5433,302 & não & $1{,}25\times10^{7}$ & $\times$800 \\
+250 & 9191 & 0,294 & $1{,}63\times10^{8}$ & 6148,752 & não & $4{,}92\times10^{8}$ & $\times$1984 \\
+500 & 33878 & 1,222 & $1{,}00\times10^{8}$ & 2830,519 & não & $7{,}81\times10^{9}$ & $\times$4000 \\
+\bottomrule
+\end{tabular}%
+}
+\fonte{Elaborada pelo autor}
+\end{table}

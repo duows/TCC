@@ -3,6 +3,9 @@
 De acordo com a natureza e os objetivos do presente trabalho, foram adotadas as seguintes metodologias de pesquisa para
 embasar o desenvolvimento do sistema especialista educacional proposto.
 
+\section{Natureza da Pesquisa}
+\label{sec:natureza-pesquisa}
+
 \subsection{Bibliográfica}
 Durante o desenvolvimento deste trabalho, aplica-se a metodologia bibliográfica, por meio da qual foi realizada
 a análise de materiais já publicados. Para isso, fez-se necessária a avaliação e fundamentação sobre os conteúdos
@@ -72,7 +75,7 @@ e ao conhecimento prévio do desenvolvedor.
 \subsection{Node.js e NestJS}
 O Node.js é um ambiente de execução JavaScript de código aberto e multiplataforma, construído sobre o motor V8 do Google Chrome,
 que permite a execução de código JavaScript no lado do servidor, sendo amplamente empregado no desenvolvimento de aplicações \textit{web}
-escaláveis e de alta performance. O NestJS é um \textit{framework} para desenvolvimento de aplicações server-side organizada em módulos, \textit{controller}
+escaláveis e de alta performance. O NestJS é um \textit{framework} para desenvolvimento de aplicações server-side organizado em módulos, \textit{controllers}
 e \textit{services}. Essa estrutura favorece a separação de responsabilidades e a manutenibilidade do código, alinhando-se diretamente
 aos princípios da arquitetura em camadas descrito por \textcite{Fowler2002}.
 
@@ -86,7 +89,7 @@ O PostgreSQL é um banco de dados relacional de código aberto, com suporte a tr
 de integração com ecossistemas Node.js.
 
 No sistema proposto, o PostgreSQL é utilizado para armazenar a base de conhecimento do sistema especialista: os modelos de componentes de
-\textit{hardware}, sua especificações técnicas e as regras de compatibilidade que compõe o conjunto de restrições do CSP. Essas informações
+\textit{hardware}, suas especificações técnicas e as regras de compatibilidade que compõem o conjunto de restrições do CSP. Essas informações
 são consultadas pela camada de lógica de negócio a cada execução do algoritmo AC-3.
 
 O provisionamento do banco de dados foi realizado por meio do Docker, uma plataforma de código aberto para criação e execução de contêineres
@@ -95,10 +98,10 @@ garantindo consistência entre os ambientes de desenvolvimento e produção sem 
 
 \subsection{DBeaver}
 O DBeaver é uma ferramenta de administração de banco de dados de código aberto e multiplataforma, compatível com diversos sistemas gerenciadores,
-incluindo o PostgreSQL. A ferramente oferece uma interface visual para a execução de consultas SQL, navegação entre tabelas, modelagem de dados e
+incluindo o PostgreSQL. A ferramenta oferece uma interface visual para a execução de consultas SQL, navegação entre tabelas, modelagem de dados e
 exportação de resultados.
 
-No presentr trabalho, o DBeaver foi utilizado para o auxílio na administração e manipulação do banco de dados durante
+No presente trabalho, o DBeaver foi utilizado para o auxílio na administração e manipulação do banco de dados durante
 o desenvolvimento, permitindo a inspeção e validação dos dados cadastrados na base de conhecimento do sistema especialista.
 
 \subsection{Next.js}
@@ -106,9 +109,9 @@ O Next.js é um \textit{framework} de código aberto para o desenvolvimento de a
 e mantido pela Vercel. O \textit{framework} oferece recursos como renderização híbrida, roteamento baseado em sistemas de arquivos e
 suporte nativo a APIs, facilitando o desenvolvimento de aplicações \textit{web} com uma única base de código.
 
-No presente trabalho, o Next.js foi utilizado para o desenvolvimento da camada de apresentação do sistema, implementada como um interface
+No presente trabalho, o Next.js foi utilizado para o desenvolvimento da camada de apresentação do sistema, implementada como uma interface
 no formato \textit{wizard} que guia o usuário, passo a passo, na seleção dos componentes de \textit{hardware}. A escolha do Next.js
-deve-se à sua capacidade e integrar a interface e as chamadas à camada de lógica de negócio em um único projeto, além de atualizar
+deve-se à sua capacidade de integrar a interface e as chamadas à camada de lógica de negócio em um único projeto, além de atualizar
 dinamicamente os componentes exibidos na tela em resposta ao resultado das validações retornadas pelo motor de inferência.
 
 \subsection{Figma}
@@ -117,7 +120,7 @@ a criação de protótipos e \textit{layouts} de forma colaborativa em tempo rea
 de diferente modelos e ter uma visibilidade geral do projeto.
 
 No presente trabalho, o Figma foi utilizado para o desenvolvimento dos protótipos das interfaces do sistema, permitindo planejar e validar
-o \textit{layout} da interface \textit{wizard} antes da sua implementação na camada de apresentação. A escolha pela ferramente deve-se
+o \textit{layout} da interface \textit{wizard} antes da sua implementação na camada de apresentação. A escolha pela ferramenta deve-se
 à sua disponibilidade gratuita para uso acadêmico e ao conhecimento prévio do desenvolvedor.
 
 \subsection{Astah Community}
@@ -173,11 +176,86 @@ O desenvolvimento do sistema seguiu uma abordagem iterativa e incremental, na qu
 em etapas sucessivas. Em cada iteração, foram realizadas as atividades de análise de requisitos, projeto, implementação e teste, permitindo
 a identificação e correção precoce de inconsistências entre os requisitos especificados e o comportamento do sistema.
 
-A organização das tarefas foi realizada por meio de uma ferramente de gerenciamento de projetos, com atividades distribuídas conforme seu estado
+A organização das tarefas foi realizada por meio de uma ferramenta de gerenciamento de projetos, com atividades distribuídas conforme seu estado
 de desenvolvimento: a fazer, em desenvolvimento, em teste, concluído e adiado. Essa estrutura permitiu o acompanhamento contínuo do progresso
 do projeto e a priorização das atividades ao longo do ciclo de desenvolvimento.
 
 \subsection{Estratégia de Testes}
+\label{sec:estrategia-testes}
+
+A verificação do sistema foi conduzida em duas frentes complementares. A primeira, de
+natureza funcional, destina-se a confirmar que o sistema se comporta em conformidade com
+os requisitos funcionais especificados na etapa de elicitação. A segunda, de natureza
+quantitativa, destina-se a avaliar empiricamente o desempenho do motor de inferência,
+verificando o atendimento aos requisitos não funcionais de eficiência (RNF-01 e RNF-02)
+e fornecendo evidência para a questão de pesquisa relativa à viabilidade da validação
+sem recurso à avaliação exaustiva por força bruta.
+
+\subsubsection{Validação Funcional}
+
+A validação funcional foi conduzida por meio de casos de teste elaborados a partir dos
+requisitos funcionais identificados no Capítulo~\ref{cap:05} e registrados na
+ferramenta Testlink. Os casos de teste contemplam os cenários de compatibilidade e de
+incompatibilidade entre componentes, a exibição das justificativas educativas associadas
+a cada bloqueio e o comportamento da interface wizard nas diferentes etapas de seleção.
+Para cada caso de teste foram documentados o objetivo, as pré-condições necessárias à sua
+execução, os passos a serem seguidos e os resultados esperados. A execução foi realizada
+de forma manual, com os resultados registrados na própria ferramenta, o que possibilita a
+rastreabilidade entre os requisitos especificados e os comportamentos observados durante
+a validação.
+
+\subsubsection{Avaliação de Desempenho do Motor de Inferência}
+
+A avaliação de desempenho tem por objetivo comprovar empiricamente que o motor de
+inferência baseado no algoritmo AC-3 valida configurações de \textit{hardware} sem recorrer à
+avaliação exaustiva por força bruta, cuja inviabilidade decorre da natureza NP-completa do
+CSP, conforme discutido na Seção~\ref{sec:complexidade}. Para isso, o motor AC-3 foi
+comparado a uma implementação de referência por força bruta, que percorre o produto
+cartesiano dos domínios das cinco categorias de componentes, avaliando cada atribuição
+completa candidata.
+
+Com o intuito de assegurar a equidade da comparação, a implementação por força bruta
+reutiliza o mesmo avaliador de restrições empregado pelo AC-3. Dessa forma, a diferença de
+custo observada entre os dois motores é atribuível exclusivamente à estratégia de percurso
+do espaço de busca, e não a variações na avaliação das regras de compatibilidade. Em
+conformidade com os requisitos RNF-02 e RNF-06, a força bruta foi implementada estritamente
+como instrumento de avaliação experimental, isolada em um módulo externo à aplicação, sem
+exposição por meio da API REST e sem qualquer acesso pela interface do usuário.
+
+Os cenários de avaliação foram gerados de forma sintética e controlada, tendo o tamanho do
+domínio de cada categoria, denotado por $d$, como única variável independente do
+experimento. Os campos categóricos, a saber, o soquete e o padrão de memória, foram gerados
+de maneira determinística por rodízio (\textit{round-robin}) sobre as plataformas
+suportadas, o que assegura cobertura uniforme das plataformas e preserva a correlação entre
+soquete e padrão de memória fiel às plataformas reais, em conformidade com o requisito
+RNF-09. Os campos quantitativos, correspondentes ao TDP e à potência, foram amostrados por
+gerador pseudoaleatório inicializado com semente fixa. Essa construção isola o tamanho do
+domínio como único fator sob variação e assegura o determinismo exigido pelo requisito
+RNF-10, garantindo a reprodutibilidade integral do experimento.
+
+A avaliação foi conduzida sob dois regimes, correspondentes a dois momentos distintos da
+interação com o sistema. No regime irrestrito, os domínios de todas as categorias
+permanecem completos, situação que representa o catálogo antes de qualquer seleção do
+usuário. No regime de seleção parcial, uma das variáveis é fixada em um único valor,
+situação que representa uma etapa intermediária do wizard, na qual o usuário já selecionou
+um componente. Esse segundo regime reproduz o comportamento de um CSP dinâmico, no qual o
+conjunto de valores admissíveis é progressivamente restringido a cada decisão do usuário
+\cite{Mittal1989}.
+
+O desempenho de cada motor foi quantificado por duas métricas. A métrica principal é o
+número de avaliações de restrição executadas, escolhida por ser independente das
+características da máquina de teste e, portanto, comparável entre diferentes ambientes de
+execução. A métrica secundária é o tempo de execução, medido em milissegundos. Para cada
+valor de $d$, cada motor foi executado um número fixo de repetições, adotando-se a mediana
+como valor representativo, de modo a atenuar variações pontuais de medição.
+
+Dada a natureza exponencial do espaço percorrido pela força bruta, estabeleceu-se um teto de
+aborto, definido em termos de tempo máximo de execução e de número máximo de combinações
+avaliadas. Quando o teto é atingido, a execução é interrompida e registrada como não
+concluída, situação esperada para os valores mais elevados de $d$. Nesses casos, os valores
+registrados correspondem ao custo acumulado até o ponto de interrupção, e não ao custo total
+que a avaliação exaustiva demandaria. Os resultados obtidos por meio deste protocolo, para
+ambos os regimes, são apresentados e discutidos no Capítulo~\ref{cap:resultados}.
 
 % A metodologia especifica como os objetivos estabelecidos serão alcançados. As partes constitutivas da metodologia: a amostragem e as formas de coleta, de organização e de análise dos dados.
 

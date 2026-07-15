@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Comparação entre os regimes para $d = 50$}
+  \label{tab:bench-comparativa}
+  \begin{tabular}{lrr}
+    \toprule
+    Métrica                & Irrestrito           & Seleção parcial      \\
+    \midrule
+    Espaço residual (AC-3) & $3{,}13\times10^{8}$ & 812500               \\
+    $d^5$ (teórico)        & $3{,}13\times10^{8}$ & $3{,}13\times10^{8}$ \\
+    AC-3 checagens         & 608                  & 591                  \\
+    AC-3 tempo (ms)        & 0,076                & 0,055                \\
+    FB checagens           & $1{,}50\times10^{8}$ & $9{,}50\times10^{6}$ \\
+    FB concl.              & não                  & sim                  \\
+    FB config.\ válidas    & ---                  & 749125               \\
+    \bottomrule
+  \end{tabular}
+  \fonte{Elaborada pelo autor}
+\end{table}

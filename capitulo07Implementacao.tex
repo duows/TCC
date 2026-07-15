@@ -323,3 +323,35 @@ A primeira limitação decorre da própria generalidade do motor. Como a corretu
 A segunda limitação refere-se à modelagem da restrição de capacidade energética. Cada verificação de potência é realizada de forma binária, confrontando individualmente o TDP da CPU e o da GPU com a capacidade da fonte, o que preserva a natureza estritamente binária do grafo de restrições adotada em todo o trabalho. O consumo agregado da configuração é calculado e apresentado ao usuário na tela de resumo como informação, mas não é modelado como uma restrição do CSP, uma vez que uma restrição sobre a soma dos consumos seria de ordem superior à binária. Essa delimitação é intencional e mantém a coerência entre a fundamentação teórica e a implementação.
 
 Por fim, a estratégia de testes automatizados encontra-se parcialmente desenvolvida. O motor de inferência dispõe de testes unitários que asseguram seu determinismo e a corretude da propagação, mas os testes de integração da API e os testes da camada de apresentação estão previstos como atividade posterior, conforme registrado entre os requisitos adiados na Seção~\ref{sec:req-adiados} do Capítulo~\ref{cap:05}.
+
+\section{Módulo de Avaliação de Desempenho}
+\label{sec:impl-benchmark}
+
+Para viabilizar a avaliação de desempenho descrita na
+Subseção~\ref{sec:estrategia-testes}, implementou-se um módulo de comparação entre o
+motor AC-3 e uma implementação de referência por força bruta. Trata-se de instrumento
+de medição experimental, e não de funcionalidade do sistema, razão pela qual o módulo
+reside em diretório de scripts externo à aplicação, sem exposição por meio da API REST
+e sem qualquer ponto de acesso a partir da interface, em conformidade com os requisitos
+RNF-02 e RNF-06.
+
+O motor de força bruta percorre o produto cartesiano dos domínios das cinco categorias
+de componentes e avalia, para cada atribuição completa candidata, a totalidade das
+restrições do cenário. Ponto central da implementação, esse motor não reimplementa a
+lógica de compatibilidade, mas invoca o mesmo avaliador genérico de restrições utilizado
+pelo AC-3, descrito na Subseção~\ref{sub:impl-avaliador}. Dessa forma, ambos os motores
+aplicam predicado idêntico sobre os mesmos dados, e a diferença de custo observada é
+atribuível exclusivamente à estratégia de percurso do espaço de busca.
+
+A contagem de avaliações de restrição, adotada como métrica principal do experimento,
+é obtida por meio de um invólucro que intercepta as chamadas ao avaliador e incrementa
+um contador antes de delegar a execução ao procedimento original. A instrumentação é
+instalada apenas no contexto do experimento e restaurada ao final de cada medição, de
+modo que nenhuma alteração é introduzida na implementação do motor de inferência ou do
+avaliador, cujos testes automatizados permanecem íntegros.
+
+Os cenários são construídos integralmente em memória, sem escrita na base de dados de
+produção, uma vez que o procedimento de propagação opera sobre estruturas de dados puras
+e não realiza acesso a persistência. O módulo exporta os resultados em formato tabular,
+a partir do qual são geradas as tabelas e figuras apresentadas no
+Capítulo~\ref{cap:resultados}.
