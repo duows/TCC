@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  15 JUL 2026 19:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  15 JUL 2026 21:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1743,12 +1743,12 @@ Overfull \hbox (1.5877pt too wide) detected at line 124
 
 
 Overfull \hbox (1.5877pt too wide) detected at line 125
- \T1/lmss/bx/n/12 100
+ \T1/lmss/bx/n/12 101
  []
 
 
 Overfull \hbox (1.5877pt too wide) detected at line 126
- \T1/lmss/bx/n/12 101
+ \T1/lmss/bx/n/12 102
  []
 
 
@@ -1756,24 +1756,24 @@ Overfull \hbox (1.5877pt too wide) detected at line 127
  \T1/lmss/bx/n/12 102
  []
 
-
-Overfull \hbox (1.5877pt too wide) detected at line 129
+[14]
+Overfull \hbox (1.5877pt too wide) detected at line 128
  \T1/lmss/bx/n/12 103
  []
 
-[14]
-Overfull \hbox (1.5877pt too wide) detected at line 131
- \T1/lmss/bx/n/12 106
+
+Overfull \hbox (1.5877pt too wide) detected at line 130
+ \T1/lmss/bx/n/12 104
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 133
+Overfull \hbox (1.5877pt too wide) detected at line 132
  \T1/lmss/bx/n/12 107
  []
 
 
 Overfull \hbox (1.5877pt too wide) detected at line 134
- \T1/lmss/bx/n/12 107
+ \T1/lmss/bx/n/12 108
  []
 
 
@@ -1787,18 +1787,23 @@ Overfull \hbox (1.5877pt too wide) detected at line 136
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 138
- \T1/lmss/bx/n/12 111
+Overfull \hbox (1.5877pt too wide) detected at line 137
+ \T1/lmss/bx/n/12 110
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 140
- \T1/lmss/bx/n/12 113
+Overfull \hbox (1.5877pt too wide) detected at line 139
+ \T1/lmss/bx/n/12 112
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 143
+Overfull \hbox (1.5877pt too wide) detected at line 141
  \T1/lmss/bx/n/12 114
+ []
+
+
+Overfull \hbox (1.5877pt too wide) detected at line 144
+ \T1/lmss/bx/n/12 115
  []
 
 ) [15] (capitulo01Introducao.tex
@@ -1808,57 +1813,57 @@ Cap\'{\i }tulo 1.
 
 ]
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 65.
+(babel)             Reported on input line 66.
  [17]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 82.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 88.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [18{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]) (capitulo02RevisaoLiteratura.tex [19] [20]
+) [18{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [19]) (capitulo02RevisaoLiteratura.tex [20]
 Cap\'{\i }tulo 2.
 [21
 
 ] [22{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [23] [24]
-<imagens/grafo-restricoes.png, id=616, 332.24126pt x 296.10625pt>
+<imagens/grafo-restricoes.png, id=619, 332.24126pt x 296.10625pt>
 File: imagens/grafo-restricoes.png Graphic file (type png)
 <use imagens/grafo-restricoes.png>
 Package pdftex.def Info: imagens/grafo-restricoes.png  used on input line 181.
 (pdftex.def)             Requested size: 227.5pt x 202.75926pt.
- [25] [26 <./imagens/grafo-restricoes.png>] [27]
+ [25] [26 <./imagens/grafo-restricoes.png>] [27] [28]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [28] [29]
-<imagens/execucao-passo-a-passo-ac-3 (2).png, id=693, 1075.01625pt x 392.46625pt>
+ [29]
+<imagens/execucao-passo-a-passo-ac-3 (2).png, id=696, 1075.01625pt x 392.46625pt>
 File: imagens/execucao-passo-a-passo-ac-3 (2).png Graphic file (type png)
 <use imagens/execucao-passo-a-passo-ac-3 (2).png>
-Package pdftex.def Info: imagens/execucao-passo-a-passo-ac-3 (2).png  used on input line 351.
+Package pdftex.def Info: imagens/execucao-passo-a-passo-ac-3 (2).png  used on input line 392.
 (pdftex.def)             Requested size: 455.0pt x 166.11024pt.
- [30 <./imagens/execucao-passo-a-passo-ac-3 (2).png>] [31] [32] [33] [34]
-<imagens/DIAGRAMA REST.png, id=767, 1105.12875pt x 433.62pt>
+ [30] [31 <./imagens/execucao-passo-a-passo-ac-3 (2).png>] [32] [33] [34] [35]
+<imagens/DIAGRAMA REST.png, id=779, 1105.12875pt x 433.62pt>
 File: imagens/DIAGRAMA REST.png Graphic file (type png)
 <use imagens/DIAGRAMA REST.png>
-Package pdftex.def Info: imagens/DIAGRAMA REST.png  used on input line 547.
+Package pdftex.def Info: imagens/DIAGRAMA REST.png  used on input line 588.
 (pdftex.def)             Requested size: 455.0pt x 178.5264pt.
- [35] [36 <./imagens/DIAGRAMA REST.png>] [37]) (capitulo03Metodologia.tex [38]
+ [36] [37 <./imagens/DIAGRAMA REST.png>] [38]) (capitulo03Metodologia.tex [39]
 Cap\'{\i }tulo 3.
-[39
+[40
 
-] [40] [41] [42] [43] [44] [45]) (capitulo04DescricaoGeraldoProduto.tex [46]
+] [41] [42] [43] [44] [45] [46]) (capitulo04DescricaoGeraldoProduto.tex [47]
 Cap\'{\i }tulo 4.
-[47
+[48
 
-]) (capitulo05ElicitacaodeRequisitosEAnalise.tex [48]
+]) (capitulo05ElicitacaodeRequisitosEAnalise.tex [49]
 Cap\'{\i }tulo 5.
-[49
+[50
 
-] [50] [51] [52] [53
+] [51] [52] [53] [54
 
-] [54] [55] [56
+] [55] [56] [57
 
-] [57] [58] [59] [60] [61] [62
+] [58] [59] [60] [61] [62] [63
 
-] [63] [64] [65] [66] [67]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 906.
+] [64] [65] [66] [67] [68]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 907.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1866,146 +1871,146 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [68] [69]
-<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=1096, 1482.53876pt x 1013.7875pt>
+ [69] [70]
+<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=1109, 1482.53876pt x 1013.7875pt>
 File: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg Graphic file (type jpg)
 <use imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>
-Package pdftex.def Info: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg  used on input line 1008.
+Package pdftex.def Info: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg  used on input line 1009.
 (pdftex.def)             Requested size: 455.0pt x 311.13065pt.
- [70]
-Overfull \hbox (10.31131pt too wide) in paragraph at lines 1025--1039
+ [71]
+Overfull \hbox (10.31131pt too wide) in paragraph at lines 1026--1040
  [][] 
  []
 
-[71 <./imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>] [72] [73]
-<imagens/ModelodeDominio.png, id=1130, 1004.25188pt x 451.6875pt>
+[72 <./imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>] [73] [74]
+<imagens/ModelodeDominio.png, id=1143, 1004.25188pt x 451.6875pt>
 File: imagens/ModelodeDominio.png Graphic file (type png)
 <use imagens/ModelodeDominio.png>
-Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 1125.
+Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 1126.
 (pdftex.def)             Requested size: 455.0pt x 204.6497pt.
- [74 <./imagens/ModelodeDominio.png>]
-<imagens/diagrama-classe-v2.png, id=1140, 999.735pt x 451.6875pt>
+ [75 <./imagens/ModelodeDominio.png>]
+<imagens/diagrama-classe-v2.png, id=1153, 999.735pt x 451.6875pt>
 File: imagens/diagrama-classe-v2.png Graphic file (type png)
 <use imagens/diagrama-classe-v2.png>
-Package pdftex.def Info: imagens/diagrama-classe-v2.png  used on input line 1162.
+Package pdftex.def Info: imagens/diagrama-classe-v2.png  used on input line 1163.
 (pdftex.def)             Requested size: 455.0pt x 205.57326pt.
-) (capitulo06ProjetodeSoftware.tex [75 <./imagens/diagrama-classe-v2.png>]
+) (capitulo06ProjetodeSoftware.tex [76 <./imagens/diagrama-classe-v2.png>]
 Cap\'{\i }tulo 6.
-<imagens/Home/Desktop.png, id=1148, 1445.4pt x 1027.84pt>
+<imagens/Home/Desktop.png, id=1161, 1445.4pt x 1027.84pt>
 File: imagens/Home/Desktop.png Graphic file (type png)
 <use imagens/Home/Desktop.png>
 Package pdftex.def Info: imagens/Home/Desktop.png  used on input line 20.
 (pdftex.def)             Requested size: 450.4525pt x 320.32092pt.
-[76
+[77
 
 ]
-<imagens/Configuração/Desktop.png, id=1153, 1445.4pt x 1027.84pt>
+<imagens/Configuração/Desktop.png, id=1166, 1445.4pt x 1027.84pt>
 File: imagens/Configuração/Desktop.png Graphic file (type png)
 <use imagens/Configuração/Desktop.png>
 Package pdftex.def Info: imagens/Configuração/Desktop.png  used on input line 30.
 (pdftex.def)             Requested size: 450.4525pt x 320.32092pt.
- [77 <./imagens/Home/Desktop.png>] [78 <./imagens/Configuração/Desktop.png>]
-<imagens/Resultado/Desktop.png, id=1164, 1445.4pt x 1033.8625pt>
+ [78 <./imagens/Home/Desktop.png>] [79 <./imagens/Configuração/Desktop.png>]
+<imagens/Resultado/Desktop.png, id=1178, 1445.4pt x 1033.8625pt>
 File: imagens/Resultado/Desktop.png Graphic file (type png)
 <use imagens/Resultado/Desktop.png>
 Package pdftex.def Info: imagens/Resultado/Desktop.png  used on input line 40.
 (pdftex.def)             Requested size: 450.4525pt x 322.19781pt.
-<imagens/Home/Mobile.png, id=1167, 391.4625pt x 878.28125pt>
+<imagens/Home/Mobile.png, id=1181, 391.4625pt x 878.28125pt>
 File: imagens/Home/Mobile.png Graphic file (type png)
 <use imagens/Home/Mobile.png>
 Package pdftex.def Info: imagens/Home/Mobile.png  used on input line 52.
 (pdftex.def)             Requested size: 181.99722pt x 408.32956pt.
- [79
+ [80
 
  <./imagens/Resultado/Desktop.png>]
-<imagens/Configuração/Mobile.png, id=1174, 391.4625pt x 1260.71pt>
+<imagens/Configuração/Mobile.png, id=1187, 391.4625pt x 1260.71pt>
 File: imagens/Configuração/Mobile.png Graphic file (type png)
 <use imagens/Configuração/Mobile.png>
 Package pdftex.def Info: imagens/Configuração/Mobile.png  used on input line 62.
 (pdftex.def)             Requested size: 181.99722pt x 586.12791pt.
- [80 <./imagens/Home/Mobile.png>] [81 <./imagens/Configuração/Mobile.png>]
-<imagens/Resultado/Mobile.png, id=1185, 391.4625pt x 1260.71pt>
+ [81 <./imagens/Home/Mobile.png>] [82 <./imagens/Configuração/Mobile.png>]
+<imagens/Resultado/Mobile.png, id=1198, 391.4625pt x 1260.71pt>
 File: imagens/Resultado/Mobile.png Graphic file (type png)
 <use imagens/Resultado/Mobile.png>
 Package pdftex.def Info: imagens/Resultado/Mobile.png  used on input line 72.
 (pdftex.def)             Requested size: 186.86649pt x 601.80432pt.
- [82
+ [83
 
- <./imagens/Resultado/Mobile.png>] [83]
+ <./imagens/Resultado/Mobile.png>] [84]
 Overfull \hbox (7.2844pt too wide) in paragraph at lines 140--148
  [][] 
  []
 
-[84] [85]
-<imagens/bandoDados3.png, id=1215, 1368.11125pt x 546.04pt>
+[85] [86]
+<imagens/bandoDados3.png, id=1228, 1368.11125pt x 546.04pt>
 File: imagens/bandoDados3.png Graphic file (type png)
 <use imagens/bandoDados3.png>
 Package pdftex.def Info: imagens/bandoDados3.png  used on input line 280.
 (pdftex.def)             Requested size: 455.0pt x 181.5935pt.
- [86 <./imagens/bandoDados3.png>]
-<imagens/DiagramadeSequencia.png, id=1227, 322.20375pt x 223.58531pt>
+ [87 <./imagens/bandoDados3.png>]
+<imagens/DiagramadeSequencia.png, id=1240, 322.20375pt x 223.58531pt>
 File: imagens/DiagramadeSequencia.png Graphic file (type png)
 <use imagens/DiagramadeSequencia.png>
 Package pdftex.def Info: imagens/DiagramadeSequencia.png  used on input line 311.
 (pdftex.def)             Requested size: 455.0pt x 315.74998pt.
- [87]
-<imagens/ProjetoArquitetural.png, id=1239, 426.84468pt x 294.34969pt>
+ [88]
+<imagens/ProjetoArquitetural.png, id=1252, 426.84468pt x 294.34969pt>
 File: imagens/ProjetoArquitetural.png Graphic file (type png)
 <use imagens/ProjetoArquitetural.png>
 Package pdftex.def Info: imagens/ProjetoArquitetural.png  used on input line 328.
 (pdftex.def)             Requested size: 455.0pt x 313.78777pt.
- [88 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [89 <./imagens/ProjetoArquitetural.png>]
+ [89 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [90 <./imagens/ProjetoArquitetural.png>]
 Cap\'{\i }tulo 7.
-[90
+[91
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 47.
- [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]) (capitulo08Teste.tex [102]
+ [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]) (capitulo08Teste.tex [103]
 Cap\'{\i }tulo 8.
-[103
+[104
 
 ]
-<imagens/ExcemplodeCasodeTeste.png, id=1502, 417.81094pt x 328.22626pt>
+<imagens/ExcemplodeCasodeTeste.png, id=1518, 417.81094pt x 328.22626pt>
 File: imagens/ExcemplodeCasodeTeste.png Graphic file (type png)
 <use imagens/ExcemplodeCasodeTeste.png>
 Package pdftex.def Info: imagens/ExcemplodeCasodeTeste.png  used on input line 73.
 (pdftex.def)             Requested size: 417.80992pt x 328.22545pt.
- [104]) (capitulo09Implantacao.tex [105 <./imagens/ExcemplodeCasodeTeste.png>]
+ [105]) (capitulo09Implantacao.tex [106 <./imagens/ExcemplodeCasodeTeste.png>]
 Cap\'{\i }tulo 9.
-) (capitulo10ResultadosDiscussao.tex [106
+) (capitulo10ResultadosDiscussao.tex [107
 
 ]
 Cap\'{\i }tulo 10.
-(imagens/output/tabela_regime1.tex) [107
+(imagens/output/tabela_regime1.tex) [108
 
 ]
-<imagens/output/fig_checagens.png, id=1524, 650.43pt x 433.62pt>
+<imagens/output/fig_checagens.png, id=1539, 650.43pt x 433.62pt>
 File: imagens/output/fig_checagens.png Graphic file (type png)
 <use imagens/output/fig_checagens.png>
-Package pdftex.def Info: imagens/output/fig_checagens.png  used on input line 50.
+Package pdftex.def Info: imagens/output/fig_checagens.png  used on input line 43.
 (pdftex.def)             Requested size: 386.75278pt x 257.83838pt.
- (imagens/output/tabela_regime2.tex) [108 <./imagens/output/fig_checagens.png>] (imagens/output/tabela_comparativa.tex) [109]
-<imagens/output/fig_tempo.png, id=1540, 867.24pt x 361.35pt>
+ (imagens/output/tabela_regime2.tex) [109 <./imagens/output/fig_checagens.png>] (imagens/output/tabela_comparativa.tex) [110]
+<imagens/output/fig_tempo.png, id=1555, 867.24pt x 361.35pt>
 File: imagens/output/fig_tempo.png Graphic file (type png)
 <use imagens/output/fig_tempo.png>
-Package pdftex.def Info: imagens/output/fig_tempo.png  used on input line 114.
+Package pdftex.def Info: imagens/output/fig_tempo.png  used on input line 107.
 (pdftex.def)             Requested size: 386.75278pt x 161.15036pt.
-) (capitulo12Conclusoes.tex [110 <./imagens/output/fig_tempo.png>]
+) (capitulo12Conclusoes.tex [111 <./imagens/output/fig_tempo.png>]
 Cap\'{\i }tulo 11.
-[111
+[112
 
-]) (capitulo13Cronograma.tex [112]
+]) (capitulo13Cronograma.tex [113]
 Cap\'{\i }tulo 12.
-<imagens/cronograma.png, id=1556, 423.83344pt x 100.87688pt>
+<imagens/cronograma.png, id=1571, 423.83344pt x 100.87688pt>
 File: imagens/cronograma.png Graphic file (type png)
 <use imagens/cronograma.png>
 Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
 (pdftex.def)             Requested size: 423.83238pt x 100.87662pt.
-) [113
+) [114
 
- <./imagens/cronograma.png>] [114
+ <./imagens/cronograma.png>] [115
 
-] [115] [116] [117]
+] [116] [117] [118]
 \tf@lof=\write7
 \openout7 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.lof'.
 
@@ -2030,17 +2035,17 @@ Package logreq Info: Writing requests to 'Template_Latex_-_Monografia_-_IFSP_-_S
 
  ) 
 Here is how much of TeX's memory you used:
- 46627 strings out of 467867
- 868647 string characters out of 5416882
- 2046032 words of memory out of 5000000
- 73782 multiletter control sequences out of 15000+600000
- 736850 words of font info for 252 fonts, out of 8000000 for 9000
+ 46640 strings out of 467867
+ 868912 string characters out of 5416882
+ 2046113 words of memory out of 5000000
+ 73789 multiletter control sequences out of 15000+600000
+ 736937 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,108p,1261b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (117 pages, 2125001 bytes).
+Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (118 pages, 2132712 bytes).
 PDF statistics:
- 2315 PDF objects out of 2487 (max. 8388607)
- 608 named destinations out of 1000 (max. 500000)
- 59516 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2337 PDF objects out of 2487 (max. 8388607)
+ 612 named destinations out of 1000 (max. 500000)
+ 59524 words of extra memory for PDF output out of 61914 (max. 10000000)
 

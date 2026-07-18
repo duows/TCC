@@ -247,6 +247,16 @@ export function avaliarRestricao(
 
 A ausência deliberada de qualquer condicional específica por domínio é o que concretiza, no nível do algoritmo, os requisitos RNF-07 e RNF-08: o mesmo código avalia a compatibilidade de soquete, o padrão de memória ou a capacidade energética, distinguindo esses casos apenas pelo operador e pelas características cadastradas na base de conhecimento. O operador \texttt{IGUAL} implementa as restrições binárias absolutas de soquete e de padrão de memória; o operador \texttt{MAIOR\_OU\_IGUAL} implementa a restrição quantitativa de capacidade energética, na qual o parâmetro cadastrado, por exemplo, $1{,}25$, representa a margem de segurança aplicada sobre a demanda. Cada verificação de potência é realizada entre um par de variáveis, decisão que preserva a natureza estritamente binária do grafo de restrições; as implicações dessa modelagem são discutidas na Seção~\ref{sec:impl-limitacoes}.
 
+O sobredimensionamento da fonte em relação ao consumo calculado constitui prática
+recomendada pelos fabricantes, que incorporam reserva de potência às próprias ferramentas
+de dimensionamento, destinada a cobrir picos de carga, eventual substituição de componentes
+e a estabilidade da operação \cite{SEASONIC2026}. O valor de 25\% adotado neste trabalho
+foi definido de forma arbitrária e não deriva de norma técnica. Cabe observar que tal valor
+não se encontra codificado no motor de inferência, mas cadastrado como parâmetro da própria
+restrição na base de conhecimento, de modo que o sistema admite qualquer fator de acréscimo
+sem alteração do algoritmo. Essa característica reforça os requisitos de expansibilidade
+estabelecidos, uma vez que o ajuste da margem depende apenas da atualização de um registro.
+
 \subsection{Geração das Justificativas Educativas}
 \label{sub:impl-explicacoes}
 A \textit{explanation facility}, característica que distingue o sistema de um mero mecanismo de filtragem, é implementada no \texttt{ExplanationsService}. Para cada valor removido pelo AC-3, o serviço formula uma justificativa em linguagem natural a partir do \texttt{templateJustificativa} associado à restrição violada, substituindo marcadores por valores concretos dos componentes envolvidos. Os marcadores suportados são \texttt{\{comp1.nome\}}, \texttt{\{val1\}}, \texttt{\{comp2.nome\}}, \texttt{\{val2\}} e \texttt{\{val1\_com\_margem\}}, este último aplicável às restrições quantitativas, no qual o consumo é apresentado já acrescido da margem de segurança.

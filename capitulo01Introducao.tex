@@ -51,11 +51,17 @@ conceitos como soquetes de processador, padrões de memória e dimensionamento e
 se manifesta de forma concreta, erros de seleção, como a combinação de um processador AM5 com uma placa-mãe AM4 ou de módulo DDR4 com
 uma plataforma que suporta exclusivamente DDR5, resultam em incompatibilidade absoluta e em prejuízo financeiro.
 
-As plataformas comerciais disponíveis atualmente buscam mitigar esse problema, mas com uma abordagem limitada. O PC Part Picker e o Meupc.net
-realizam verificações de compatibilidade e alertam o usuário quando um conflito é detectado \cite{PCPARTPICKER2024,MEUPC2024}. No entanto,
-como demonstrado por \textcite{Clancey1983}, a limitação pedagógica desse modelo é nítida, um sistema que apenas filtra não transfere conhecimento,
-apenas restringe escolhas. Um usuário que utiliza essas plataformas repetidamente aprende quais componentes são compatíveis entre si,
-mas não aprende \textit{"por que"} são compatíveis, o que o impede de generalizar o conhecimento adquirido para novas situações de compra.
+As plataformas comerciais disponíveis atualmente buscam mitigar esse problema, mas com
+uma abordagem limitada. O PC Part Picker e o Meupc.net realizam verificações de
+compatibilidade e alertam o usuário quando um conflito é detectado \cite{PCPARTPICKER2024, MEUPC2024}.
+A verificação, contudo, não é acompanhada da razão técnica que a fundamenta, de modo que
+o usuário é informado de que dois componentes não podem ser combinados, mas não da regra
+física que impede a combinação. \textcite{Clancey1983} demonstrou, ao analisar o sistema
+especialista MYCIN e sua versão tutora GUIDON, que a mera aplicação de regras é insuficiente
+para a transferência de conhecimento, sendo necessário explicitar o conhecimento de suporte
+que as fundamenta. Sob essa perspectiva, um usuário que utiliza repetidamente tais
+plataformas aprende quais componentes são compatíveis entre si, mas não por que o são, o
+que o impede de generalizar o conhecimento adquirido para novas situações de compra.
 
 Essa lacuna motivou o questionamento central deste trabalho: seria possível desenvolver um sistema que realizasse a validação de compatibilidade
 de \textit{hardware} com um motor de inferência formal, baseado no formalismo de CSP, e que comunicasse ao usuário cada incompatibilidade

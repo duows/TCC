@@ -1530,6 +1530,40 @@
       \verb 10.1109/5254.708432
       \endverb
     \endentry
+    \entry{SEASONIC2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=132b5cf0e831f4c49b4284a5bdc96c65}{%
+           family={{Seasonic Electronics}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{fullhash}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{fullhashraw}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{bibnamehash}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{authorbibnamehash}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{authornamehash}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{authorfullhash}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \strng{authorfullhashraw}{132b5cf0e831f4c49b4284a5bdc96c65}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Ferramenta de dimensionamento. Documentação oficial do fabricante}
+      \field{title}{Wattage Calculator}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://seasonic.com/wattage-calculator/
+      \endverb
+      \verb{url}
+      \verb https://seasonic.com/wattage-calculator/
+      \endverb
+    \endentry
     \entry{Sipser2012}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%

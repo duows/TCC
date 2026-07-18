@@ -31,14 +31,7 @@ maior cenário, com $6{,}125$ checagens em $d=500$. Observa-se, contudo, que o e
 produzido pelo AC-3 permanece exatamente igual a $d^5$ em todos os casos, o que indica que a
 arco-consistência não removeu nenhum valor dos domínios.
 
-Essa ausência de poda não constitui ineficiência do motor de inferência, mas decorre
-diretamente da definição de consistência de arco apresentada na
-Seção~\ref{sec:ac3}. Com domínios completos, cada valor de uma variável encontra
-suporte em ao menos um valor de cada variável vizinha, de modo que nenhum valor se torna
-elegível à remoção. O motor executa, verifica que a rede já se encontra arco-consistente e
-encerra sem podar. A economia observada neste regime é, portanto, de natureza algorítmica e
-não de redução de domínio, o AC-3 decide a consistência da rede sem enumerar o espaço de
-configurações completas, enquanto a força bruta o percorre em sua totalidade. A
+Essa ausência de poda não constitui ineficiência do motor, mas era prevista pela análise estrutural da Subseção 2.4.2. Com domínios completos sobre um grafo acíclico, cada valor de uma variável encontra suporte em ao menos um valor de cada variável vizinha, de modo que a rede já se apresenta arco-consistente e nenhum valor se torna elegível à remoção. O motor executa, verifica a consistência e encerra sem podar. A
 Figura~\ref{fig:bench-checagens} ilustra esse contraste, no qual a curva da força bruta
 acompanha a progressão teórica de $d^5$ até atingir o teto de aborto, ao passo que a curva do
 AC-3 permanece praticamente constante em ordens de magnitude inferiores.

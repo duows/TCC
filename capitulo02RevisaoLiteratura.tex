@@ -229,8 +229,7 @@ Consequentemente, se qualquer problema NP-completo admitisse solução em tempo 
 toda classe NP colapsaria em P \cite{Sipser2012}.
 
 \subsection{Implicações para o Domínio de Hardware}
-Essa natureza NP-completa impõe restrições severas à arquitetura de qualquer sistema de verificação
-de compatibilidade de \textit{hardware} fundamentado em CSP. A primeira limitação é de ordem temporal,
+Essa natureza NP-completa condiciona a arquitetura de um sistema de verificação de compatibilidade que pretenda operar sobre catálogos de tamanho arbitrário e conjuntos de restrições extensíveis. A primeira limitação é de ordem temporal,
 a avaliação exaustiva de todas as combinações interdependentes de componentes é inviável na prática em razão
 da explosão combinatória intrínseca à classe \cite{Sipser2012,Cormen2001}. Para ilustrar concretamente, considere
 que cada categoria de componente possui em média 50 modelos disponíveis no catálogo do sistema. Com cinco
@@ -245,6 +244,48 @@ lógicas complexas por árvores de decisão pode exigir espaço de tamanho expon
 dessas limitações, a abordagem padrão para tornar CSPs tratáveis na prática é a busca sistemática
 com retrocesso combinada com técnicas de propagação de restrições, que reduzem o espaço efetivo
 de busca de forma incremental.
+
+\subsection{Tratabilidade Estrutural da Instância Modelada}
+
+A classificação do CSP como NP-completo, discutida na seção anterior,
+refere-se à classe do problema em seu caso geral e fundamenta a decisão de
+projeto por um motor de propagação genérico em detrimento de regras
+condicionais codificadas. Cabe, contudo, distinguir a dificuldade da classe
+da dificuldade da instância concreta modelada neste trabalho.
+
+O grafo de restrições apresentado na Subseção 2.3.3 possui cinco vértices e
+quatro arestas, dispostas na sequência RAM--Placa-mãe--CPU--Fonte--GPU.
+Trata-se, portanto, de um grafo conexo e acíclico, ou seja, uma árvore. Essa
+propriedade estrutural não é acidental, mas decorre da topologia física das
+dependências entre os componentes considerados.
+
+A literatura estabelece que CSPs cujo grafo de restrições é uma árvore
+constituem uma subclasse tratável, resolvível em tempo $O(nd^2)$ por meio de
+arco-consistência direcionada sobre uma ordenação topológica das variáveis,
+sem necessidade de busca com retrocesso (Russell; Norvig, 2010). Em redes
+acíclicas, a arco-consistência é suficiente para decidir a consistência
+global: uma vez estabelecida, qualquer atribuição pode ser estendida a uma
+solução completa sem retrocesso.
+
+Essa observação delimita com precisão o alcance da contribuição deste
+trabalho. A escolha do AC-3 como motor de inferência não se justifica pela
+intratabilidade da instância de hardware, que é estruturalmente favorável,
+mas por duas razões distintas. A primeira é a generalidade: o motor opera
+sobre qualquer grafo de restrições binárias fornecido pela base de
+conhecimento, sem pressupor topologia acíclica, o que preserva sua
+aplicabilidade à ampliação do catálogo prevista como trabalho futuro. A
+segunda é a explicabilidade: a propagação de restrições produz, no instante
+da poda, a informação necessária à geração das justificativas educativas,
+propriedade que a busca exaustiva não oferece.
+
+Registra-se, ainda, que a introdução de novas categorias de componentes
+tende a romper a aciclicidade do grafo. A inclusão de um cooler, por
+exemplo, estabeleceria restrições simultâneas com a CPU, por soquete e por
+capacidade térmica, e com a memória RAM, por altura física, fechando o ciclo
+CPU--Cooler--RAM--Placa-mãe--CPU. Nesse cenário, a arco-consistência deixa
+de ser suficiente para decidir a satisfatibilidade e passa a operar como
+filtro, demandando sua combinação com busca sistemática. Essa ampliação é
+discutida entre os trabalhos futuros no Capítulo 11.
 
 \section{Algoritmos de Busca e Backtracking}
 \label{sec:backtracking}

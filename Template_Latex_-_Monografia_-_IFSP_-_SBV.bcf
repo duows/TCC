@@ -2625,11 +2625,12 @@
     <bcf:citekey order="143" intorder="1">Mackworth1977</bcf:citekey>
     <bcf:citekey order="144" intorder="1">Russell2010</bcf:citekey>
     <bcf:citekey order="145" intorder="1">Russell2010</bcf:citekey>
-    <bcf:citekey order="146" intorder="1">ReactJS</bcf:citekey>
-    <bcf:citekey order="147" intorder="1">Fielding2000</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">SEASONIC2026</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">ReactJS</bcf:citekey>
     <bcf:citekey order="148" intorder="1">Fielding2000</bcf:citekey>
-    <bcf:citekey order="149" intorder="1">Todd1992</bcf:citekey>
-    <bcf:citekey order="150" intorder="1">Mittal1989</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">Fielding2000</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">Todd1992</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">Mittal1989</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

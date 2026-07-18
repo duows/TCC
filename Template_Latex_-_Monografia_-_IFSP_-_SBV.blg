@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [1] Config.pm:331> INFO - Logfile is 'Template_Latex_-_Monografia_-_IFSP_-_SBV.blg'
-[99] biber-MSWIN64:342> INFO - === 
-[194] Biber.pm:421> INFO - Reading 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'
-[361] Biber.pm:1002> INFO - Found 45 citekeys in bib section 0
-[380] Biber.pm:4487> INFO - Processing section 0
-[392] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[499] bibtex.pm:1713> INFO - LaTeX decoding ...
-[550] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[809] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[809] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[809] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
-[809] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
-[851] bbl.pm:676> INFO - Writing 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' with encoding 'UTF-8'
-[881] bbl.pm:779> INFO - Output to Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
+[87] biber-MSWIN64:342> INFO - === 
+[165] Biber.pm:421> INFO - Reading 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bcf'
+[317] Biber.pm:1002> INFO - Found 46 citekeys in bib section 0
+[332] Biber.pm:4487> INFO - Processing section 0
+[342] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[426] bibtex.pm:1713> INFO - LaTeX decoding ...
+[465] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[660] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[660] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[661] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[661] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[700] bbl.pm:676> INFO - Writing 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' with encoding 'UTF-8'
+[730] bbl.pm:779> INFO - Output to Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl
