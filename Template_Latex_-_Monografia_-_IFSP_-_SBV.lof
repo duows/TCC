@@ -3,25 +3,21 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Grafo de Restrições}}{26}{figure.caption.18}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Execução do AC-3}}{31}{figure.caption.20}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Diagrama da arquitetura em três camadas do sistema}}{37}{figure.caption.21}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Casos de Uso}}{72}{figure.caption.55}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Modelo de Domínio}}{75}{figure.caption.58}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de Classes de Análise}}{76}{figure.caption.59}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Tela inicial do sistema}}{78}{figure.caption.60}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Tela de seleção de componentes com sinalização de incompatibilidade}}{79}{figure.caption.61}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Tela de resumo da configuração finalizada}}{80}{figure.caption.62}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Tela inicial em dispositivo móvel}}{81}{figure.caption.63}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Tela de seleção de componentes em dispositivo móvel}}{82}{figure.caption.64}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Tela de resumo da configuração em dispositivo móvel}}{83}{figure.caption.65}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama Entidade-Relacionamento da base de conhecimento}}{87}{figure.caption.75}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de Sequência}}{89}{figure.caption.76}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Arquitetura em Três Camadas do Sistema}}{90}{figure.caption.77}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de Caso de Teste Elaborado na Ferramenta Testlink}}{106}{figure.caption.81}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Número de avaliações de restrição em função do tamanho do domínio $d$}}{109}{figure.caption.83}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Tempo de execução em função do tamanho do domínio $d$, por regime}}{111}{figure.caption.86}%
-\babel@toc {brazil}{}\relax 
-\babel@toc {brazil}{}\relax 
-\babel@toc {brazil}{}\relax 
-\babel@toc {brazil}{}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Casos de Uso}}{73}{figure.caption.55}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Modelo de Domínio}}{76}{figure.caption.58}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de Classes de Análise}}{77}{figure.caption.59}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Tela inicial do sistema}}{79}{figure.caption.60}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Tela de seleção de componentes com sinalização de incompatibilidade}}{80}{figure.caption.61}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Tela de resumo da configuração finalizada}}{81}{figure.caption.62}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Tela inicial em dispositivo móvel}}{82}{figure.caption.63}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Tela de seleção de componentes em dispositivo móvel}}{83}{figure.caption.64}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Tela de resumo da configuração em dispositivo móvel}}{84}{figure.caption.65}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama Entidade-Relacionamento da base de conhecimento}}{88}{figure.caption.75}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de Sequência}}{90}{figure.caption.76}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Arquitetura em Três Camadas do Sistema}}{91}{figure.caption.77}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de Caso de Teste Elaborado na Ferramenta Testlink}}{108}{figure.caption.81}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Número de avaliações de restrição em função do tamanho do domínio $d$}}{111}{figure.caption.83}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Tempo de execução em função do tamanho do domínio $d$, por regime}}{114}{figure.caption.86}%
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 

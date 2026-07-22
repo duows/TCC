@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  15 JUL 2026 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.23)  22 JUL 2026 20:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1142,21 +1142,54 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip278
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-05-15 v3.5.5 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count447
+\l__siunitx_number_exponent_fixed_int=\count448
+\l__siunitx_number_min_decimal_int=\count449
+\l__siunitx_number_min_integer_int=\count450
+\l__siunitx_number_round_precision_int=\count451
+\l__siunitx_number_lower_threshold_int=\count452
+\l__siunitx_number_upper_threshold_int=\count453
+\l__siunitx_number_group_first_int=\count454
+\l__siunitx_number_group_size_int=\count455
+\l__siunitx_number_group_min_int=\count456
+\l__siunitx_number_group_minimum_int=\count457
+\l__siunitx_compound_count_int=\count458
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box89
+\l__siunitx_table_tmp_dim=\dimen358
+\l__siunitx_table_column_width_dim=\dimen359
+\l__siunitx_table_integer_box=\box90
+\l__siunitx_table_decimal_box=\box91
+\l__siunitx_table_uncert_box=\box92
+\l__siunitx_table_before_box=\box93
+\l__siunitx_table_after_box=\box94
+\l__siunitx_table_before_dim=\dimen360
+\l__siunitx_table_carry_dim=\dimen361
+\l__siunitx_unit_tmp_int=\count459
+\l__siunitx_unit_position_int=\count460
+\l__siunitx_unit_total_int=\count461
+\l__siunitx_sexagesimal_tmp_dim=\dimen362
+\l__siunitx_sexagesimal_marker_box=\box95
+\l__siunitx_sexagesimal_unit_box=\box96
 ) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count447
-\l__lipsum_a_int=\count448
-\l__lipsum_b_int=\count449
+\g__lipsum_par_int=\count462
+\l__lipsum_a_int=\count463
+\l__lipsum_b_int=\count464
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count450
-\csq@gtype=\count451
-\csq@glevel=\count452
-\csq@qlevel=\count453
-\csq@maxlvl=\count454
-\csq@tshold=\count455
+\csq@reset=\count465
+\csq@gtype=\count466
+\csq@glevel=\count467
+\csq@qlevel=\count468
+\csq@maxlvl=\count469
+\csq@tshold=\count470
 \csq@ltx@everypar=\toks57
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -1169,53 +1202,53 @@ File: csquotes.cfg
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count456
+\lrq@indent=\count471
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count457
-\c@listtotal=\count458
-\c@listcount=\count459
-\c@liststart=\count460
-\c@liststop=\count461
-\c@citecount=\count462
-\c@citetotal=\count463
-\c@multicitecount=\count464
-\c@multicitetotal=\count465
-\c@instcount=\count466
-\c@maxnames=\count467
-\c@minnames=\count468
-\c@maxitems=\count469
-\c@minitems=\count470
-\c@citecounter=\count471
-\c@maxcitecounter=\count472
-\c@savedcitecounter=\count473
-\c@uniquelist=\count474
-\c@uniquename=\count475
-\c@refsection=\count476
-\c@refsegment=\count477
-\c@maxextratitle=\count478
-\c@maxextratitleyear=\count479
-\c@maxextraname=\count480
-\c@maxextradate=\count481
-\c@maxextraalpha=\count482
-\c@abbrvpenalty=\count483
-\c@highnamepenalty=\count484
-\c@lownamepenalty=\count485
-\c@maxparens=\count486
-\c@parenlevel=\count487
-\blx@tempcnta=\count488
-\blx@tempcntb=\count489
-\blx@tempcntc=\count490
-\c@blx@maxsection=\count491
-\blx@maxsegment@0=\count492
-\blx@notetype=\count493
-\blx@parenlevel@text=\count494
-\blx@parenlevel@foot=\count495
-\blx@sectionciteorder@0=\count496
-\blx@sectionciteorderinternal@0=\count497
-\blx@entrysetcounter=\count498
-\blx@biblioinstance=\count499
+\c@tabx@nest=\count472
+\c@listtotal=\count473
+\c@listcount=\count474
+\c@liststart=\count475
+\c@liststop=\count476
+\c@citecount=\count477
+\c@citetotal=\count478
+\c@multicitecount=\count479
+\c@multicitetotal=\count480
+\c@instcount=\count481
+\c@maxnames=\count482
+\c@minnames=\count483
+\c@maxitems=\count484
+\c@minitems=\count485
+\c@citecounter=\count486
+\c@maxcitecounter=\count487
+\c@savedcitecounter=\count488
+\c@uniquelist=\count489
+\c@uniquename=\count490
+\c@refsection=\count491
+\c@refsegment=\count492
+\c@maxextratitle=\count493
+\c@maxextratitleyear=\count494
+\c@maxextraname=\count495
+\c@maxextradate=\count496
+\c@maxextraalpha=\count497
+\c@abbrvpenalty=\count498
+\c@highnamepenalty=\count499
+\c@lownamepenalty=\count500
+\c@maxparens=\count501
+\c@parenlevel=\count502
+\blx@tempcnta=\count503
+\blx@tempcntb=\count504
+\blx@tempcntc=\count505
+\c@blx@maxsection=\count506
+\blx@maxsegment@0=\count507
+\blx@notetype=\count508
+\blx@parenlevel@text=\count509
+\blx@parenlevel@foot=\count510
+\blx@sectionciteorder@0=\count511
+\blx@sectionciteorderinternal@0=\count512
+\blx@entrysetcounter=\count513
+\blx@biblioinstance=\count514
 \labelnumberwidth=\skip279
 \labelalphawidth=\skip280
 \biblabelsep=\skip281
@@ -1226,9 +1259,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read5
 \blx@bcfout=\write5
 \blx@langwohyphens=\language80
-\c@mincomprange=\count500
-\c@maxcomprange=\count501
-\c@mincompwidth=\count502
+\c@mincomprange=\count515
+\c@maxcomprange=\count516
+\c@mincompwidth=\count517
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -1238,74 +1271,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'abnt.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count503
-\c@savedafterword=\count504
-\c@annotator=\count505
-\c@savedannotator=\count506
-\c@author=\count507
-\c@savedauthor=\count508
-\c@bookauthor=\count509
-\c@savedbookauthor=\count510
-\c@commentator=\count511
-\c@savedcommentator=\count512
-\c@editor=\count513
-\c@savededitor=\count514
-\c@editora=\count515
-\c@savededitora=\count516
-\c@editorb=\count517
-\c@savededitorb=\count518
-\c@editorc=\count519
-\c@savededitorc=\count520
-\c@foreword=\count521
-\c@savedforeword=\count522
-\c@holder=\count523
-\c@savedholder=\count524
-\c@introduction=\count525
-\c@savedintroduction=\count526
-\c@namea=\count527
-\c@savednamea=\count528
-\c@nameb=\count529
-\c@savednameb=\count530
-\c@namec=\count531
-\c@savednamec=\count532
-\c@translator=\count533
-\c@savedtranslator=\count534
-\c@shortauthor=\count535
-\c@savedshortauthor=\count536
-\c@shorteditor=\count537
-\c@savedshorteditor=\count538
-\c@labelname=\count539
-\c@savedlabelname=\count540
-\c@institution=\count541
-\c@savedinstitution=\count542
-\c@lista=\count543
-\c@savedlista=\count544
-\c@listb=\count545
-\c@savedlistb=\count546
-\c@listc=\count547
-\c@savedlistc=\count548
-\c@listd=\count549
-\c@savedlistd=\count550
-\c@liste=\count551
-\c@savedliste=\count552
-\c@listf=\count553
-\c@savedlistf=\count554
-\c@location=\count555
-\c@savedlocation=\count556
-\c@organization=\count557
-\c@savedorganization=\count558
-\c@origlocation=\count559
-\c@savedoriglocation=\count560
-\c@origpublisher=\count561
-\c@savedorigpublisher=\count562
-\c@publisher=\count563
-\c@savedpublisher=\count564
-\c@language=\count565
-\c@savedlanguage=\count566
-\c@origlanguage=\count567
-\c@savedoriglanguage=\count568
-\c@pageref=\count569
-\c@savedpageref=\count570
+\c@afterword=\count518
+\c@savedafterword=\count519
+\c@annotator=\count520
+\c@savedannotator=\count521
+\c@author=\count522
+\c@savedauthor=\count523
+\c@bookauthor=\count524
+\c@savedbookauthor=\count525
+\c@commentator=\count526
+\c@savedcommentator=\count527
+\c@editor=\count528
+\c@savededitor=\count529
+\c@editora=\count530
+\c@savededitora=\count531
+\c@editorb=\count532
+\c@savededitorb=\count533
+\c@editorc=\count534
+\c@savededitorc=\count535
+\c@foreword=\count536
+\c@savedforeword=\count537
+\c@holder=\count538
+\c@savedholder=\count539
+\c@introduction=\count540
+\c@savedintroduction=\count541
+\c@namea=\count542
+\c@savednamea=\count543
+\c@nameb=\count544
+\c@savednameb=\count545
+\c@namec=\count546
+\c@savednamec=\count547
+\c@translator=\count548
+\c@savedtranslator=\count549
+\c@shortauthor=\count550
+\c@savedshortauthor=\count551
+\c@shorteditor=\count552
+\c@savedshorteditor=\count553
+\c@labelname=\count554
+\c@savedlabelname=\count555
+\c@institution=\count556
+\c@savedinstitution=\count557
+\c@lista=\count558
+\c@savedlista=\count559
+\c@listb=\count560
+\c@savedlistb=\count561
+\c@listc=\count562
+\c@savedlistc=\count563
+\c@listd=\count564
+\c@savedlistd=\count565
+\c@liste=\count566
+\c@savedliste=\count567
+\c@listf=\count568
+\c@savedlistf=\count569
+\c@location=\count570
+\c@savedlocation=\count571
+\c@organization=\count572
+\c@savedorganization=\count573
+\c@origlocation=\count574
+\c@savedoriglocation=\count575
+\c@origpublisher=\count576
+\c@savedorigpublisher=\count577
+\c@publisher=\count578
+\c@savedpublisher=\count579
+\c@language=\count580
+\c@savedlanguage=\count581
+\c@origlanguage=\count582
+\c@savedoriglanguage=\count583
+\c@pageref=\count584
+\c@savedpageref=\count585
 \shorthandwidth=\skip286
 \shortjournalwidth=\skip287
 \shortserieswidth=\skip288
@@ -1329,19 +1362,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count571
-\c@textcitetotal=\count572
-\c@textcitemaxnames=\count573
-\c@biburlbigbreakpenalty=\count574
-\c@biburlbreakpenalty=\count575
-\c@biburlnumpenalty=\count576
-\c@biburlucpenalty=\count577
-\c@biburllcpenalty=\count578
+\c@textcitecount=\count586
+\c@textcitetotal=\count587
+\c@textcitemaxnames=\count588
+\c@biburlbigbreakpenalty=\count589
+\c@biburlbreakpenalty=\count590
+\c@biburlnumpenalty=\count591
+\c@biburlucpenalty=\count592
+\c@biburllcpenalty=\count593
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count579
+\c@smartand=\count594
 )
 Package biblatex Info: Trying to load bibliography style 'abnt'...
 Package biblatex Info: ... file 'abnt.bbx' found.
@@ -1351,8 +1384,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count580
-\c@bbx:relatedtotal=\count581
+\c@bbx:relatedcount=\count595
+\c@bbx:relatedtotal=\count596
 ))
 Package biblatex Info: Trying to load citation style 'abnt'...
 Package biblatex Info: ... file 'abnt.cbx' found.
@@ -1398,14 +1431,14 @@ Package biblatex Info: ... and expl3
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 221.
-\c@quadro=\count582
-\c@loqdepth=\count583
+Package hyperref Info: Option `colorlinks' set `true' on input line 233.
+\c@quadro=\count597
+\c@loqdepth=\count598
 \cftbeforequadroskip=\skip300
 \cftquadroindent=\skip301
 \cftquadronumwidth=\skip302
-\c@algorithm=\count584
-\c@loadepth=\count585
+\c@algorithm=\count599
+\c@loadepth=\count600
 \cftbeforealgorithmskip=\skip303
 \cftalgorithmindent=\skip304
 \cftalgorithmnumwidth=\skip305
@@ -1424,40 +1457,40 @@ Package babel Info: 'brazil' activates 'portuges' shorthands.
 )
 \openout1 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-Package hyperref Info: Link coloring ON on input line 294.
-LaTeX Info: Redefining \degres on input line 294.
-\myptabbox=\box89
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+Package hyperref Info: Link coloring ON on input line 306.
+LaTeX Info: Redefining \degres on input line 306.
+\myptabbox=\box97
 \myptabboxwidth=\skip306
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count586
-\scratchdimen=\dimen358
-\scratchbox=\box90
-\nofMPsegments=\count587
-\nofMParguments=\count588
+\scratchcounter=\count601
+\scratchdimen=\dimen363
+\scratchbox=\box98
+\nofMPsegments=\count602
+\nofMParguments=\count603
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count589
-\MPscratchDim=\dimen359
-\MPnumerator=\count590
-\makeMPintoPDFobject=\count591
+\MPscratchCnt=\count604
+\MPscratchDim=\dimen364
+\MPnumerator=\count605
+\makeMPintoPDFobject=\count606
 \everyMPtoPDFconversion=\toks59
 ) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1465,13 +1498,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 294.
-Package microtype Info: Applying patch `item' on input line 294.
-Package microtype Info: Applying patch `toc' on input line 294.
-Package microtype Info: Applying patch `eqnum' on input line 294.
-Package microtype Info: Applying patch `footnote' on input line 294.
-Package microtype Info: Applying patch `verbatim' on input line 294.
-LaTeX Info: Redefining \microtypesetup on input line 294.
+LaTeX Info: Redefining \microtypecontext on input line 306.
+Package microtype Info: Applying patch `item' on input line 306.
+Package microtype Info: Applying patch `toc' on input line 306.
+Package microtype Info: Applying patch `eqnum' on input line 306.
+Package microtype Info: Applying patch `footnote' on input line 306.
+Package microtype Info: Applying patch `verbatim' on input line 306.
+LaTeX Info: Redefining \microtypesetup on input line 306.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1494,7 +1527,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count592
+\c@lstlisting=\count607
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
@@ -1503,7 +1536,22 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-))
+)) (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-brazil.trsl
+File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 306.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
+File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 306.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-french.trsl
+File: translations-basic-dictionary-french.trsl (french translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `french'. on input line 306.
+ (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 306.
 Package biblatex Info: Trying to load language 'brazil' -> 'brazil-abnt'...
 Package biblatex Info: ... file 'brazil-abnt.lbx' found.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazil-abnt.lbx
@@ -1616,8 +1664,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl' found.
  (Template_Latex_-_Monografia_-_IFSP_-_SBV.bbl)
-Package biblatex Info: Reference section=0 on input line 294.
-Package biblatex Info: Reference segment=0 on input line 294.
+Package biblatex Info: Reference section=0 on input line 306.
+Package biblatex Info: Reference segment=0 on input line 306.
  (pre01Capa.tex
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 6.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
@@ -1726,7 +1774,12 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 
 {C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (Template_Latex_-_Monografia_-_IFSP_-_SBV.loq) [8
 
-] (Template_Latex_-_Monografia_-_IFSP_-_SBV.lot) [9
+] (Template_Latex_-_Monografia_-_IFSP_-_SBV.lot
+Overfull \hbox (4.89917pt too wide) in paragraph at lines 15--15
+ [][] [][][]\T1/lmr/m/n/12 (-20) Regime se-le-��o par-cial (CPU fi-xada em so-quete AM5): a arco-consist�ncia 
+ []
+
+) [9
 
 {C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] (pre10ListaSiglas.tex [10
 
@@ -1738,72 +1791,72 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 
 ] [13]
 Overfull \hbox (1.5877pt too wide) detected at line 124
- \T1/lmss/bx/n/12 100
- []
-
-
-Overfull \hbox (1.5877pt too wide) detected at line 125
  \T1/lmss/bx/n/12 101
  []
 
 
+Overfull \hbox (1.5877pt too wide) detected at line 125
+ \T1/lmss/bx/n/12 102
+ []
+
+
 Overfull \hbox (1.5877pt too wide) detected at line 126
- \T1/lmss/bx/n/12 102
- []
-
-
-Overfull \hbox (1.5877pt too wide) detected at line 127
- \T1/lmss/bx/n/12 102
- []
-
-[14]
-Overfull \hbox (1.5877pt too wide) detected at line 128
  \T1/lmss/bx/n/12 103
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 130
+Overfull \hbox (1.5877pt too wide) detected at line 127
  \T1/lmss/bx/n/12 104
+ []
+
+[14]
+Overfull \hbox (1.5877pt too wide) detected at line 128
+ \T1/lmss/bx/n/12 105
+ []
+
+
+Overfull \hbox (1.5877pt too wide) detected at line 130
+ \T1/lmss/bx/n/12 106
  []
 
 
 Overfull \hbox (1.5877pt too wide) detected at line 132
- \T1/lmss/bx/n/12 107
- []
-
-
-Overfull \hbox (1.5877pt too wide) detected at line 134
- \T1/lmss/bx/n/12 108
- []
-
-
-Overfull \hbox (1.5877pt too wide) detected at line 135
- \T1/lmss/bx/n/12 108
- []
-
-
-Overfull \hbox (1.5877pt too wide) detected at line 136
  \T1/lmss/bx/n/12 109
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 137
+Overfull \hbox (1.5877pt too wide) detected at line 134
  \T1/lmss/bx/n/12 110
  []
 
 
-Overfull \hbox (1.5877pt too wide) detected at line 139
+Overfull \hbox (1.5877pt too wide) detected at line 135
+ \T1/lmss/bx/n/12 110
+ []
+
+
+Overfull \hbox (1.5877pt too wide) detected at line 136
  \T1/lmss/bx/n/12 112
  []
 
 
+Overfull \hbox (1.5877pt too wide) detected at line 137
+ \T1/lmss/bx/n/12 113
+ []
+
+
+Overfull \hbox (1.5877pt too wide) detected at line 139
+ \T1/lmss/bx/n/12 115
+ []
+
+
 Overfull \hbox (1.5877pt too wide) detected at line 141
- \T1/lmss/bx/n/12 114
+ \T1/lmss/bx/n/12 117
  []
 
 
 Overfull \hbox (1.5877pt too wide) detected at line 144
- \T1/lmss/bx/n/12 115
+ \T1/lmss/bx/n/12 118
  []
 
 ) [15] (capitulo01Introducao.tex
@@ -1822,47 +1875,47 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 Cap\'{\i }tulo 2.
 [21
 
-] [22{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [23] [24]
-<imagens/grafo-restricoes.png, id=619, 332.24126pt x 296.10625pt>
+] [22] [23{C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [24] [25]
+<imagens/grafo-restricoes.png, id=638, 332.24126pt x 296.10625pt>
 File: imagens/grafo-restricoes.png Graphic file (type png)
 <use imagens/grafo-restricoes.png>
-Package pdftex.def Info: imagens/grafo-restricoes.png  used on input line 181.
+Package pdftex.def Info: imagens/grafo-restricoes.png  used on input line 198.
 (pdftex.def)             Requested size: 227.5pt x 202.75926pt.
- [25] [26 <./imagens/grafo-restricoes.png>] [27] [28]
+ [26 <./imagens/grafo-restricoes.png>] [27] [28]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [29]
-<imagens/execucao-passo-a-passo-ac-3 (2).png, id=696, 1075.01625pt x 392.46625pt>
+ [29] [30]
+<imagens/execucao-passo-a-passo-ac-3 (2).png, id=723, 1075.01625pt x 392.46625pt>
 File: imagens/execucao-passo-a-passo-ac-3 (2).png Graphic file (type png)
 <use imagens/execucao-passo-a-passo-ac-3 (2).png>
-Package pdftex.def Info: imagens/execucao-passo-a-passo-ac-3 (2).png  used on input line 392.
+Package pdftex.def Info: imagens/execucao-passo-a-passo-ac-3 (2).png  used on input line 415.
 (pdftex.def)             Requested size: 455.0pt x 166.11024pt.
- [30] [31 <./imagens/execucao-passo-a-passo-ac-3 (2).png>] [32] [33] [34] [35]
-<imagens/DIAGRAMA REST.png, id=779, 1105.12875pt x 433.62pt>
+ [31 <./imagens/execucao-passo-a-passo-ac-3 (2).png>] [32] [33] [34] [35]
+<imagens/DIAGRAMA REST.png, id=797, 1105.12875pt x 433.62pt>
 File: imagens/DIAGRAMA REST.png Graphic file (type png)
 <use imagens/DIAGRAMA REST.png>
-Package pdftex.def Info: imagens/DIAGRAMA REST.png  used on input line 588.
+Package pdftex.def Info: imagens/DIAGRAMA REST.png  used on input line 611.
 (pdftex.def)             Requested size: 455.0pt x 178.5264pt.
- [36] [37 <./imagens/DIAGRAMA REST.png>] [38]) (capitulo03Metodologia.tex [39]
+ [36] [37 <./imagens/DIAGRAMA REST.png>] [38] [39]) (capitulo03Metodologia.tex [40]
 Cap\'{\i }tulo 3.
-[40
+[41
 
-] [41] [42] [43] [44] [45] [46]) (capitulo04DescricaoGeraldoProduto.tex [47]
+] [42] [43] [44] [45] [46] [47]) (capitulo04DescricaoGeraldoProduto.tex [48]
 Cap\'{\i }tulo 4.
-[48
+[49
 
-]) (capitulo05ElicitacaodeRequisitosEAnalise.tex [49]
+]) (capitulo05ElicitacaodeRequisitosEAnalise.tex [50]
 Cap\'{\i }tulo 5.
-[50
+[51
 
-] [51] [52] [53] [54
+] [52] [53] [54] [55
 
-] [55] [56] [57
+] [56] [57] [58
 
-] [58] [59] [60] [61] [62] [63
+] [59] [60] [61] [62] [63] [64
 
-] [64] [65] [66] [67] [68]
+] [65] [66] [67] [68] [69]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 907.
  (C:\Users\Henrique\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1871,146 +1924,146 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [69] [70]
-<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=1109, 1482.53876pt x 1013.7875pt>
+ [70] [71]
+<imagens/DCU - Sistema de Compatibilidade de Hardware.jpg, id=1131, 1482.53876pt x 1013.7875pt>
 File: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg Graphic file (type jpg)
 <use imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>
 Package pdftex.def Info: imagens/DCU - Sistema de Compatibilidade de Hardware.jpg  used on input line 1009.
 (pdftex.def)             Requested size: 455.0pt x 311.13065pt.
- [71]
+ [72]
 Overfull \hbox (10.31131pt too wide) in paragraph at lines 1026--1040
  [][] 
  []
 
-[72 <./imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>] [73] [74]
-<imagens/ModelodeDominio.png, id=1143, 1004.25188pt x 451.6875pt>
+[73 <./imagens/DCU - Sistema de Compatibilidade de Hardware.jpg>] [74] [75]
+<imagens/ModelodeDominio.png, id=1165, 1004.25188pt x 451.6875pt>
 File: imagens/ModelodeDominio.png Graphic file (type png)
 <use imagens/ModelodeDominio.png>
 Package pdftex.def Info: imagens/ModelodeDominio.png  used on input line 1126.
 (pdftex.def)             Requested size: 455.0pt x 204.6497pt.
- [75 <./imagens/ModelodeDominio.png>]
-<imagens/diagrama-classe-v2.png, id=1153, 999.735pt x 451.6875pt>
+ [76 <./imagens/ModelodeDominio.png>]
+<imagens/diagrama-classe-v2.png, id=1175, 999.735pt x 451.6875pt>
 File: imagens/diagrama-classe-v2.png Graphic file (type png)
 <use imagens/diagrama-classe-v2.png>
 Package pdftex.def Info: imagens/diagrama-classe-v2.png  used on input line 1163.
 (pdftex.def)             Requested size: 455.0pt x 205.57326pt.
-) (capitulo06ProjetodeSoftware.tex [76 <./imagens/diagrama-classe-v2.png>]
+) (capitulo06ProjetodeSoftware.tex [77 <./imagens/diagrama-classe-v2.png>]
 Cap\'{\i }tulo 6.
-<imagens/Home/Desktop.png, id=1161, 1445.4pt x 1027.84pt>
+<imagens/Home/Desktop.png, id=1183, 1445.4pt x 1027.84pt>
 File: imagens/Home/Desktop.png Graphic file (type png)
 <use imagens/Home/Desktop.png>
 Package pdftex.def Info: imagens/Home/Desktop.png  used on input line 20.
 (pdftex.def)             Requested size: 450.4525pt x 320.32092pt.
-[77
+[78
 
 ]
-<imagens/Configuração/Desktop.png, id=1166, 1445.4pt x 1027.84pt>
+<imagens/Configuração/Desktop.png, id=1188, 1445.4pt x 1027.84pt>
 File: imagens/Configuração/Desktop.png Graphic file (type png)
 <use imagens/Configuração/Desktop.png>
 Package pdftex.def Info: imagens/Configuração/Desktop.png  used on input line 30.
 (pdftex.def)             Requested size: 450.4525pt x 320.32092pt.
- [78 <./imagens/Home/Desktop.png>] [79 <./imagens/Configuração/Desktop.png>]
-<imagens/Resultado/Desktop.png, id=1178, 1445.4pt x 1033.8625pt>
+ [79 <./imagens/Home/Desktop.png>] [80 <./imagens/Configuração/Desktop.png>]
+<imagens/Resultado/Desktop.png, id=1200, 1445.4pt x 1033.8625pt>
 File: imagens/Resultado/Desktop.png Graphic file (type png)
 <use imagens/Resultado/Desktop.png>
 Package pdftex.def Info: imagens/Resultado/Desktop.png  used on input line 40.
 (pdftex.def)             Requested size: 450.4525pt x 322.19781pt.
-<imagens/Home/Mobile.png, id=1181, 391.4625pt x 878.28125pt>
+<imagens/Home/Mobile.png, id=1203, 391.4625pt x 878.28125pt>
 File: imagens/Home/Mobile.png Graphic file (type png)
 <use imagens/Home/Mobile.png>
 Package pdftex.def Info: imagens/Home/Mobile.png  used on input line 52.
 (pdftex.def)             Requested size: 181.99722pt x 408.32956pt.
- [80
+ [81
 
  <./imagens/Resultado/Desktop.png>]
-<imagens/Configuração/Mobile.png, id=1187, 391.4625pt x 1260.71pt>
+<imagens/Configuração/Mobile.png, id=1209, 391.4625pt x 1260.71pt>
 File: imagens/Configuração/Mobile.png Graphic file (type png)
 <use imagens/Configuração/Mobile.png>
 Package pdftex.def Info: imagens/Configuração/Mobile.png  used on input line 62.
 (pdftex.def)             Requested size: 181.99722pt x 586.12791pt.
- [81 <./imagens/Home/Mobile.png>] [82 <./imagens/Configuração/Mobile.png>]
-<imagens/Resultado/Mobile.png, id=1198, 391.4625pt x 1260.71pt>
+ [82 <./imagens/Home/Mobile.png>] [83 <./imagens/Configuração/Mobile.png>]
+<imagens/Resultado/Mobile.png, id=1220, 391.4625pt x 1260.71pt>
 File: imagens/Resultado/Mobile.png Graphic file (type png)
 <use imagens/Resultado/Mobile.png>
 Package pdftex.def Info: imagens/Resultado/Mobile.png  used on input line 72.
 (pdftex.def)             Requested size: 186.86649pt x 601.80432pt.
- [83
+ [84
 
- <./imagens/Resultado/Mobile.png>] [84]
+ <./imagens/Resultado/Mobile.png>] [85]
 Overfull \hbox (7.2844pt too wide) in paragraph at lines 140--148
  [][] 
  []
 
-[85] [86]
-<imagens/bandoDados3.png, id=1228, 1368.11125pt x 546.04pt>
+[86] [87]
+<imagens/bandoDados3.png, id=1250, 1368.11125pt x 546.04pt>
 File: imagens/bandoDados3.png Graphic file (type png)
 <use imagens/bandoDados3.png>
 Package pdftex.def Info: imagens/bandoDados3.png  used on input line 280.
 (pdftex.def)             Requested size: 455.0pt x 181.5935pt.
- [87 <./imagens/bandoDados3.png>]
-<imagens/DiagramadeSequencia.png, id=1240, 322.20375pt x 223.58531pt>
+ [88 <./imagens/bandoDados3.png>]
+<imagens/DiagramadeSequencia.png, id=1262, 322.20375pt x 223.58531pt>
 File: imagens/DiagramadeSequencia.png Graphic file (type png)
 <use imagens/DiagramadeSequencia.png>
 Package pdftex.def Info: imagens/DiagramadeSequencia.png  used on input line 311.
 (pdftex.def)             Requested size: 455.0pt x 315.74998pt.
- [88]
-<imagens/ProjetoArquitetural.png, id=1252, 426.84468pt x 294.34969pt>
+ [89]
+<imagens/ProjetoArquitetural.png, id=1274, 426.84468pt x 294.34969pt>
 File: imagens/ProjetoArquitetural.png Graphic file (type png)
 <use imagens/ProjetoArquitetural.png>
 Package pdftex.def Info: imagens/ProjetoArquitetural.png  used on input line 328.
 (pdftex.def)             Requested size: 455.0pt x 313.78777pt.
- [89 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [90 <./imagens/ProjetoArquitetural.png>]
+ [90 <./imagens/DiagramadeSequencia.png>]) (capitulo07Implementacao.tex [91 <./imagens/ProjetoArquitetural.png>]
 Cap\'{\i }tulo 7.
-[91
+[92
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 47.
- [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]) (capitulo08Teste.tex [103]
+ [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]) (capitulo08Teste.tex [105]
 Cap\'{\i }tulo 8.
-[104
+[106
 
 ]
-<imagens/ExcemplodeCasodeTeste.png, id=1518, 417.81094pt x 328.22626pt>
+<imagens/ExcemplodeCasodeTeste.png, id=1550, 417.81094pt x 328.22626pt>
 File: imagens/ExcemplodeCasodeTeste.png Graphic file (type png)
 <use imagens/ExcemplodeCasodeTeste.png>
 Package pdftex.def Info: imagens/ExcemplodeCasodeTeste.png  used on input line 73.
 (pdftex.def)             Requested size: 417.80992pt x 328.22545pt.
- [105]) (capitulo09Implantacao.tex [106 <./imagens/ExcemplodeCasodeTeste.png>]
+ [107]) (capitulo09Implantacao.tex [108 <./imagens/ExcemplodeCasodeTeste.png>]
 Cap\'{\i }tulo 9.
-) (capitulo10ResultadosDiscussao.tex [107
+) (capitulo10ResultadosDiscussao.tex [109
 
 ]
 Cap\'{\i }tulo 10.
-(imagens/output/tabela_regime1.tex) [108
+(imagens/output/tabela_regime1.tex) [110
 
 ]
-<imagens/output/fig_checagens.png, id=1539, 650.43pt x 433.62pt>
+<imagens/output/fig_checagens.png, id=1577, 650.43pt x 433.62pt>
 File: imagens/output/fig_checagens.png Graphic file (type png)
 <use imagens/output/fig_checagens.png>
-Package pdftex.def Info: imagens/output/fig_checagens.png  used on input line 43.
+Package pdftex.def Info: imagens/output/fig_checagens.png  used on input line 58.
 (pdftex.def)             Requested size: 386.75278pt x 257.83838pt.
- (imagens/output/tabela_regime2.tex) [109 <./imagens/output/fig_checagens.png>] (imagens/output/tabela_comparativa.tex) [110]
-<imagens/output/fig_tempo.png, id=1555, 867.24pt x 361.35pt>
+ [111 <./imagens/output/fig_checagens.png>] (imagens/output/tabela_regime2.tex) (imagens/output/tabela_comparativa.tex [112])
+<imagens/output/fig_tempo.png, id=1594, 867.24pt x 361.35pt>
 File: imagens/output/fig_tempo.png Graphic file (type png)
 <use imagens/output/fig_tempo.png>
-Package pdftex.def Info: imagens/output/fig_tempo.png  used on input line 107.
+Package pdftex.def Info: imagens/output/fig_tempo.png  used on input line 122.
 (pdftex.def)             Requested size: 386.75278pt x 161.15036pt.
-) (capitulo12Conclusoes.tex [111 <./imagens/output/fig_tempo.png>]
+) (capitulo12Conclusoes.tex [113] [114 <./imagens/output/fig_tempo.png>]
 Cap\'{\i }tulo 11.
-[112
+[115
 
-]) (capitulo13Cronograma.tex [113]
+]) (capitulo13Cronograma.tex [116]
 Cap\'{\i }tulo 12.
-<imagens/cronograma.png, id=1571, 423.83344pt x 100.87688pt>
+<imagens/cronograma.png, id=1615, 423.83344pt x 100.87688pt>
 File: imagens/cronograma.png Graphic file (type png)
 <use imagens/cronograma.png>
 Package pdftex.def Info: imagens/cronograma.png  used on input line 11.
 (pdftex.def)             Requested size: 423.83238pt x 100.87662pt.
-) [114
+) [117
 
- <./imagens/cronograma.png>] [115
+ <./imagens/cronograma.png>] [118
 
-] [116] [117] [118]
+] [119] [120] [121]
 \tf@lof=\write7
 \openout7 = `Template_Latex_-_Monografia_-_IFSP_-_SBV.lof'.
 
@@ -2035,17 +2088,17 @@ Package logreq Info: Writing requests to 'Template_Latex_-_Monografia_-_IFSP_-_S
 
  ) 
 Here is how much of TeX's memory you used:
- 46640 strings out of 467867
- 868912 string characters out of 5416882
- 2046113 words of memory out of 5000000
- 73789 multiletter control sequences out of 15000+600000
- 736937 words of font info for 253 fonts, out of 8000000 for 9000
+ 51391 strings out of 467867
+ 1035818 string characters out of 5416882
+ 2154467 words of memory out of 5000000
+ 78502 multiletter control sequences out of 15000+600000
+ 737198 words of font info for 256 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,108p,1261b,4324s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Henrique/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (118 pages, 2132712 bytes).
+Output written on Template_Latex_-_Monografia_-_IFSP_-_SBV.pdf (121 pages, 2148655 bytes).
 PDF statistics:
- 2337 PDF objects out of 2487 (max. 8388607)
- 612 named destinations out of 1000 (max. 500000)
+ 2388 PDF objects out of 2487 (max. 8388607)
+ 622 named destinations out of 1000 (max. 500000)
  59524 words of extra memory for PDF output out of 61914 (max. 10000000)
 

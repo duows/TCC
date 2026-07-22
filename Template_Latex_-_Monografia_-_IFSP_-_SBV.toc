@@ -22,130 +22,126 @@
 \contentsline {subsection}{\numberline {2.1.1}Compatibilidade de Soquete CPU-Placa-mãe}{21}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Padrão de Memória RAM}{21}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Capacidade Energética e TDP}{22}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Formalização como Problema de Restrições}{22}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Problemas de Satisfação de Restrições (CSP)}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.4}Formalização como Problema de Restrições}{23}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Problemas de Satisfação de Restrições (CSP)}{23}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Tipos de Restrições}{23}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Aplicação ao Domínio de Hardware}{23}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Aplicação ao Domínio de Hardware}{24}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Representação em Grafo}{24}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Teoria dos Grafos e Grafo de Restrições}{24}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Definições Fundamentais}{24}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Representações Computacionais}{24}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.3}Teoria dos Grafos e Grafo de Restrições}{25}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definições Fundamentais}{25}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Representações Computacionais}{25}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Grafo de Restrições}{25}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Complexidade Computacional}{26}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Implicações para o Domínio de Hardware}{27}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Tratabilidade Estrutural da Instância Modelada}{27}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Algoritmos de Busca e Backtracking}{28}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Busca em Espaço de Atribuições}{28}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.4.2}Tratabilidade Estrutural da Instância Modelada}{28}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Algoritmos de Busca e Backtracking}{29}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Busca em Espaço de Atribuições}{29}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Backtracking}{29}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Forward Checking}{29}{subsection.2.5.3}%
 \contentsline {section}{\numberline {2.6}Propagação de Restrições e Algoritmo AC-3}{30}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Aplicação ao Domínio de Hardware}{30}{subsection.2.6.1}%
-\contentsline {section}{\numberline {2.7}Sistema Especialista}{31}{section.2.7}%
+\contentsline {subsection}{\numberline {2.6.1}Aplicação ao Domínio de Hardware}{31}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Sistema Especialista}{32}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Explanation Facilities}{32}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Inteligência Artificial Explicável (XAI)}{32}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.2}Inteligência Artificial Explicável (XAI)}{33}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}Mapeamento ao Sistema Proposto}{33}{subsection.2.7.3}%
-\contentsline {section}{\numberline {2.8}Dimensão Educativa em Sistemas Especialistas}{33}{section.2.8}%
+\contentsline {section}{\numberline {2.8}Dimensão Educativa em Sistemas Especialistas}{34}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Mecanismo de Filtragem versus Sistema com Explicação}{34}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Sistemas Tutores Inteligentes}{34}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Sistema Especialista Educacional}{34}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.3}Sistema Especialista Educacional}{35}{subsection.2.8.3}%
 \contentsline {section}{\numberline {2.9}Arquitetura de Software Orientada a Serviços}{35}{section.2.9}%
 \contentsline {subsection}{\numberline {2.9.1}Arquitetura em Camadas}{35}{subsection.2.9.1}%
 \contentsline {subsection}{\numberline {2.9.2}REST como Estilo Arquitetural}{36}{subsection.2.9.2}%
-\contentsline {subsection}{\numberline {2.9.3}Mapeamento ao Sistema Proposto}{36}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.3}Mapeamento ao Sistema Proposto}{37}{subsection.2.9.3}%
 \contentsline {section}{\numberline {2.10}Trabalhos Relacionados}{38}{section.2.10}%
 \contentsline {subsection}{\numberline {2.10.1}Plataformas Comerciais de Compatibilidade de Hardware}{38}{subsection.2.10.1}%
 \contentsline {subsection}{\numberline {2.10.2}Trabalhos Acadêmicos Relacionados}{38}{subsection.2.10.2}%
 \contentsline {subsection}{\numberline {2.10.3}Posicionamento do Trabalho Proposto}{39}{subsection.2.10.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Materiais e métodos}}{40}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Natureza da Pesquisa}{40}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Bibliográfica}{40}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Aplicada}{41}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Materiais}{41}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Equipamentos}{41}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Softwares}{41}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Ferramentas Utilizadas}{42}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Visual Studio Code}{42}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Node.js e NestJS}{42}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}PostgreSQL e Docker}{42}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}DBeaver}{43}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Next.js}{43}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Figma}{43}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Astah Community}{44}{subsection.3.3.7}%
-\contentsline {subsection}{\numberline {3.3.8}Teste?}{44}{subsection.3.3.8}%
-\contentsline {section}{\numberline {3.4}Métodos de Desenvolvimento}{44}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Modelagem do Problema como CSP}{44}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Implementação do Algoritmo AC-3}{44}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Implementação das Justificativas Educativas}{45}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Processo de Desenvolvimento de Software}{45}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Estratégia de Testes}{46}{subsection.3.4.5}%
-\contentsline {subsubsection}{\numberline {3.4.5.1}Validação Funcional}{46}{subsubsection.3.4.5.1}%
-\contentsline {subsubsection}{\numberline {3.4.5.2}Avaliação de Desempenho do Motor de Inferência}{46}{subsubsection.3.4.5.2}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Materiais e métodos}}{41}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Natureza da Pesquisa}{41}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Bibliográfica}{41}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Aplicada}{42}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Materiais}{42}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Equipamentos}{42}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Softwares}{42}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Ferramentas Utilizadas}{43}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Visual Studio Code}{43}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Node.js e NestJS}{43}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}PostgreSQL e Docker}{43}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}DBeaver}{44}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Next.js}{44}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Figma}{44}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Astah Community}{45}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Teste?}{45}{subsection.3.3.8}%
+\contentsline {section}{\numberline {3.4}Métodos de Desenvolvimento}{45}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Modelagem do Problema como CSP}{45}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Implementação do Algoritmo AC-3}{45}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Implementação das Justificativas Educativas}{46}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Processo de Desenvolvimento de Software}{46}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Estratégia de Testes}{47}{subsection.3.4.5}%
+\contentsline {subsubsection}{\numberline {3.4.5.1}Validação Funcional}{47}{subsubsection.3.4.5.1}%
+\contentsline {subsubsection}{\numberline {3.4.5.2}Avaliação de Desempenho do Motor de Inferência}{47}{subsubsection.3.4.5.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Descrição Geral do Produto}}{48}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Funcionalidades Principais}{48}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Diferencial do Produto}{49}{section.4.2}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Descrição Geral do Produto}}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Funcionalidades Principais}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Diferencial do Produto}{50}{section.4.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Elicitação de Requisitos e Análise}}{50}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Requisitos do Usuário}{50}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Requisitos do Sistema}{50}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Requisitos Funcionais}{51}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Requisitos Não Funcionais}{63}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Restrições, Suposições e Dependências}{70}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Requisitos Adiados}{71}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Casos de Uso}{71}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Diagrama de Casos de Uso}{71}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Especificação dos Casos de Uso}{72}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Modelo de Domínio}{75}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Diagrama de Classes de Análise}{75}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Diagrama de Atividades}{76}{section.5.6}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Elicitação de Requisitos e Análise}}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Requisitos do Usuário}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Requisitos do Sistema}{51}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Requisitos Funcionais}{52}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Requisitos Não Funcionais}{64}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Restrições, Suposições e Dependências}{71}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Requisitos Adiados}{72}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Casos de Uso}{72}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Diagrama de Casos de Uso}{72}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Especificação dos Casos de Uso}{73}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Modelo de Domínio}{76}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Diagrama de Classes de Análise}{76}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Diagrama de Atividades}{77}{section.5.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Projeto de Software}}{77}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Projeto de Interface}{77}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Projeto de Dados}{84}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Mapeamento Objeto-Relacional}{84}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Estrutura das Tabelas no Banco de Dados}{84}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Diagrama de Pacotes}{88}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Diagrama de Classes de Projeto}{88}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Projeto Procedimental}{88}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Diagrama de Sequência}{88}{subsection.6.3.1}%
-\contentsline {section}{\numberline {6.4}Projeto Arquitetural}{89}{section.6.4}%
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Projeto de Software}}{78}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Projeto de Interface}{78}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Projeto de Dados}{85}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Mapeamento Objeto-Relacional}{85}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Estrutura das Tabelas no Banco de Dados}{85}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Diagrama de Pacotes}{89}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Diagrama de Classes de Projeto}{89}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Projeto Procedimental}{89}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Diagrama de Sequência}{89}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Projeto Arquitetural}{90}{section.6.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Implementação}}{91}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Ambiente e Ferramentas de Desenvolvimento}{91}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Organização do Repositório}{92}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Camada de Dados}{93}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Camada de Lógica de Negócio}{95}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Isolamento do Motor de Inferência}{95}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Carregamento e Montagem do Grafo}{95}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}O Algoritmo AC-3}{97}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}Avaliação Genérica de Restrições}{98}{subsection.7.4.4}%
-\contentsline {subsection}{\numberline {7.4.5}Geração das Justificativas Educativas}{100}{subsection.7.4.5}%
-\contentsline {section}{\numberline {7.5}Camada de Apresentação}{100}{section.7.5}%
-\contentsline {section}{\numberline {7.6}A API REST}{101}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Execução do Ambiente}{102}{section.7.7}%
-\contentsline {section}{\numberline {7.8}Limitações Conhecidas da Implementação}{102}{section.7.8}%
-\contentsline {section}{\numberline {7.9}Módulo de Avaliação de Desempenho}{103}{section.7.9}%
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Implementação}}{92}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Ambiente e Ferramentas de Desenvolvimento}{92}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Organização do Repositório}{93}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Camada de Dados}{94}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Camada de Lógica de Negócio}{96}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Isolamento do Motor de Inferência}{96}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Carregamento e Montagem do Grafo}{96}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}O Algoritmo AC-3}{98}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Avaliação Genérica de Restrições}{99}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Geração das Justificativas Educativas}{101}{subsection.7.4.5}%
+\contentsline {section}{\numberline {7.5}Camada de Apresentação}{101}{section.7.5}%
+\contentsline {section}{\numberline {7.6}A API REST}{102}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Execução do Ambiente}{103}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Limitações Conhecidas da Implementação}{104}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Módulo de Avaliação de Desempenho}{105}{section.7.9}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Teste}}{104}{chapter.8}%
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Teste}}{106}{chapter.8}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase []{Implantação}}{107}{chapter.9}%
+\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase []{Implantação}}{109}{chapter.9}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {10}\MakeTextUppercase []{Resultados e Discussão}}{108}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Regime Irrestrito}{108}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Regime de Seleção Parcial}{109}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Análise Comparativa}{110}{section.10.3}%
+\contentsline {chapter}{\chapternumberline {10}\MakeTextUppercase []{Resultados e Discussão}}{110}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Regime Irrestrito}{110}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Regime de Seleção Parcial}{112}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Análise Comparativa}{113}{section.10.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {11}\MakeTextUppercase []{Conclusões Parciais}}{112}{chapter.11}%
+\contentsline {chapter}{\chapternumberline {11}\MakeTextUppercase []{Conclusões Parciais}}{115}{chapter.11}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {12}\MakeTextUppercase []{Cronograma}}{114}{chapter.12}%
+\contentsline {chapter}{\chapternumberline {12}\MakeTextUppercase []{Cronograma}}{117}{chapter.12}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{115}{section*.91}%
-\babel@toc {brazil}{}\relax 
-\babel@toc {brazil}{}\relax 
-\babel@toc {brazil}{}\relax 
-\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{Refer\^encias}{118}{section*.91}%
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 

@@ -205,6 +205,7 @@ rastreabilidade entre os requisitos especificados e os comportamentos observados
 a validação.
 
 \subsubsection{Avaliação de Desempenho do Motor de Inferência}
+\label{subsec:aval-desempenho}
 
 A avaliação de desempenho tem por objetivo comprovar empiricamente que o motor de
 inferência baseado no algoritmo AC-3 valida configurações de \textit{hardware} sem recorrer à
@@ -228,10 +229,13 @@ experimento. Os campos categóricos, a saber, o soquete e o padrão de memória,
 de maneira determinística por rodízio (\textit{round-robin}) sobre as plataformas
 suportadas, o que assegura cobertura uniforme das plataformas e preserva a correlação entre
 soquete e padrão de memória fiel às plataformas reais, em conformidade com o requisito
-RNF-09. Os campos quantitativos, correspondentes ao TDP e à potência, foram amostrados por
-gerador pseudoaleatório inicializado com semente fixa. Essa construção isola o tamanho do
-domínio como único fator sob variação e assegura o determinismo exigido pelo requisito
-RNF-10, garantindo a reprodutibilidade integral do experimento.
+RNF-09. Os campos quantitativos, correspondentes ao TDP da CPU (35 a 170\,W), ao TDP da GPU
+(75 a 450\,W) e à potência da fonte (300 a 1000\,W), foram amostrados por gerador
+pseudoaleatório inicializado com semente fixa, assegurando-se em todo cenário ao menos uma
+fonte no valor máximo da faixa, de modo a garantir suporte mútuo entre demanda e capacidade
+no regime irrestrito. Essa construção isola o tamanho do domínio como único fator sob
+variação e assegura o determinismo exigido pelo requisito RNF-10, garantindo a
+reprodutibilidade integral do experimento.
 
 A avaliação foi conduzida sob dois regimes, correspondentes a dois momentos distintos da
 interação com o sistema. No regime irrestrito, os domínios de todas as categorias

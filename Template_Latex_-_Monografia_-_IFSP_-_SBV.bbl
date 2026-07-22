@@ -607,6 +607,40 @@
       \field{title}{Patterns of Enterprise Application Architecture}
       \field{year}{2002}
     \endentry
+    \entry{Freuder1982}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1f8286ef3ecd8afc60704087241b3af0}{%
+           family={Freuder},
+           familyi={F\bibinitperiod},
+           given={Eugene\bibnamedelima C.},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{fullhash}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{fullhashraw}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{bibnamehash}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{authorbibnamehash}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{authornamehash}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{authorfullhash}{1f8286ef3ecd8afc60704087241b3af0}
+      \strng{authorfullhashraw}{1f8286ef3ecd8afc60704087241b3af0}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the ACM}
+      \field{number}{1}
+      \field{title}{A Sufficient Condition for Backtrack-Free Search}
+      \field{volume}{29}
+      \field{year}{1982}
+      \field{pages}{24\bibrangedash 32}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/322290.322292
+      \endverb
+    \endentry
     \entry{gerhardt2009}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=c7a7d89663a63a20fd01fb7d9800495b}{%
@@ -645,47 +679,6 @@
       \field{title}{Métodos de Pesquisa}
       \field{year}{2009}
     \endentry
-    \entry{ATXSPEC2022}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b7f0fb90e404efb48f8a85a517dec3c9}{%
-           family={{Intel Corporation}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Intel Corporation}%
-      }
-      \list{location}{1}{%
-        {Santa Clara}%
-      }
-      \strng{namehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{fullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{fullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{bibnamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorbibnamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authornamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorfullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \strng{authorfullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{ATX} Specification Version 3.0}
-      \field{type}{techreport}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://edc.intel.com
-      \endverb
-      \verb{url}
-      \verb https://edc.intel.com
-      \endverb
-    \endentry
     \entry{INTEL2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b7f0fb90e404efb48f8a85a517dec3c9}{%
@@ -700,7 +693,6 @@
       \strng{authornamehash}{b7f0fb90e404efb48f8a85a517dec3c9}
       \strng{authorfullhash}{b7f0fb90e404efb48f8a85a517dec3c9}
       \strng{authorfullhashraw}{b7f0fb90e404efb48f8a85a517dec3c9}
-      \field{extraname}{2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}

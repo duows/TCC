@@ -27,11 +27,26 @@ $3{,}13\times10^{13}$ combinações em $d=500$.
 
 A segunda observação diz respeito ao AC-3, que conclui em todos os valores de $d$ em tempo
 inferior a um milissegundo, executando algumas milhares de avaliações de restrição mesmo no
-maior cenário, com $6{,}125$ checagens em $d=500$. Observa-se, contudo, que o espaço residual
+maior cenário, com \num{6125} checagens em $d=500$. Observa-se, contudo, que o espaço residual
 produzido pelo AC-3 permanece exatamente igual a $d^5$ em todos os casos, o que indica que a
 arco-consistência não removeu nenhum valor dos domínios.
 
-Essa ausência de poda não constitui ineficiência do motor, mas era prevista pela análise estrutural da Subseção 2.4.2. Com domínios completos sobre um grafo acíclico, cada valor de uma variável encontra suporte em ao menos um valor de cada variável vizinha, de modo que a rede já se apresenta arco-consistente e nenhum valor se torna elegível à remoção. O motor executa, verifica a consistência e encerra sem podar. A
+Essa ausência de poda não constitui ineficiência do motor. Ela decorre da definição de
+consistência de arco apresentada na Seção~\ref{sec:ac3}, combinada com a construção dos
+cenários descrita na Subseção~\ref{subsec:aval-desempenho}: os campos categóricos são gerados
+por rodízio sobre as plataformas suportadas e os campos quantitativos são amostrados em faixas
+que asseguram suporte mútuo entre demanda e capacidade, de modo que todo valor de uma variável
+encontra suporte em ao menos um valor de cada variável vizinha. A rede já se apresenta,
+portanto, arco-consistente, e nenhum valor se torna elegível à remoção. O motor executa,
+verifica a consistência e encerra sem podar.
+
+A economia observada neste regime é, portanto, de natureza algorítmica e não de redução de
+domínio. Cabe observar que, sobre o grafo acíclico caracterizado na
+Subseção~\ref{subsec:tratabilidade}, o resultado é mais forte do que a arco-consistência
+isoladamente asseguraria: em redes acíclicas arco-consistentes cujos domínios permaneçam não
+vazios, garante-se a existência de solução \cite{Freuder1982}. O AC-3 decide, assim, a
+satisfatibilidade da rede com \num{608} avaliações de restrição em $d = 50$, ao passo que a
+força bruta não conclui a enumeração sequer dentro do teto estabelecido. A
 Figura~\ref{fig:bench-checagens} ilustra esse contraste, no qual a curva da força bruta
 acompanha a progressão teórica de $d^5$ até atingir o teto de aborto, ao passo que a curva do
 AC-3 permanece praticamente constante em ordens de magnitude inferiores.
@@ -63,7 +78,7 @@ o espaço residual cai muito abaixo de $d^5$, com uma redução que evolui de $\
 $d=10$ a $\times4000$ em $d=500$.
 
 A composição do espaço residual explicita o mecanismo da poda. Para $d=50$, o residual de
-$812{,}500$ configurações decompõe-se no produto entre a CPU fixada, as $13$ placas-mãe de
+\num{812500} configurações decompõe-se no produto entre a CPU fixada, as $13$ placas-mãe de
 soquete AM5 remanescentes, os $25$ módulos de memória de padrão DDR5 remanescentes e as $50$
 GPUs e $50$ fontes preservadas. As categorias GPU e Fonte não sofrem poda porque participam
 apenas da restrição quantitativa de capacidade energética, não sendo afetadas pela seleção do
@@ -72,7 +87,7 @@ decisão do usuário restringe o conjunto de valores admissíveis das variáveis
 \cite{Mittal1989}.
 
 Cabe observar que, neste regime, o AC-3 executa um número maior de avaliações de restrição
-que no regime irrestrito, alcançando $33{,}878$ checagens em $d=500$ contra $6{,}125$ no caso
+que no regime irrestrito, alcançando \num{33878} checagens em $d=500$ contra \num{6125} no caso
 irrestrito. Esse acréscimo decorre da própria propagação, pois cada remoção de valor implica
 a reinserção dos arcos afetados na fila para reverificação. O custo adicional é, todavia,
 desprezível em termos absolutos, mantendo-se em $1{,}222$ ms, e é largamente compensado pela
@@ -92,8 +107,8 @@ avaliações de restrição, ao passo que a força bruta não conclui a enumera�
 teto estabelecido. Trata-se de um ganho puramente algorítmico, decorrente de o motor não
 necessitar percorrer o espaço de configurações completas. No regime de seleção parcial,
 soma-se a esse ganho a poda propagada, que reduz o espaço residual de $3{,}13\times10^{8}$
-para $812{,}500$ configurações. Nesse cenário, a força bruta passa a concluir a enumeração e
-identifica $749{,}125$ configurações válidas, valor coerente com o espaço residual reportado
+para \num{812500} configurações. Nesse cenário, a força bruta passa a concluir a enumeração e
+identifica \num{749125} configurações válidas, valor coerente com o espaço residual reportado
 pelo AC-3, uma vez que este constitui um limite superior sobre o conjunto de soluções.
 
 A Figura~\ref{fig:bench-tempo} apresenta o tempo de execução dos dois motores em ambos os

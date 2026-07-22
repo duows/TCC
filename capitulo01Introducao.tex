@@ -9,22 +9,22 @@ A compatibilidade de soquete entre processador e placa-mãe, o padrão de memór
 e o dimensionamento energético da fonte de alimentação são exemplos de restrições binárias e determinísticas
 que não admitem adaptações. Esse cenário impõe ao usuário um desafio
 técnico considerável, uma vez que a violação de qualquer dessas restrições representa prejuízo financeiro
-imediato e frustrante.
+imediato e frustração.
 
 Diante dessa realidade, plataformas como o PC Part Picker e o Meupc.net se estabeleceram como referências
 globais e nacionais para a verificação de compatibilidade entre componentes. Ambas detectam automaticamente
 conflitos entre os itens selecionados e alertam o usuário quando uma incompatibilidade é identificada \cite{PCPARTPICKER2024,MEUPC2024}.
 No entanto, quando o conflito é detectado, a resposta do sistema se limita a sinalizar que os componentes não são compatíveis entre si,
-sem indicar a regra física que foi violada. O usuário aprende o que não pode fazer, mas não aprende o motivo,
-e portanto, não está em condições de generalizar esse conhecimento para outras situações, como a escolha de
+sem indicar a regra física que foi violada. O usuário aprende o que não pode fazer, mas não aprende o motivo
+e, portanto, não está em condições de generalizar esse conhecimento para outras situações, como a escolha de
 um processador diferente ou a adição de um módulo de memória RAM.
 
-Essa limitação não é acidental, ela decorre da arquitetura dessas plataformas que operam como mecanismos
+Essa limitação não é acidental. Ela decorre da arquitetura dessas plataformas que operam como mecanismos
 de filtragem e não como sistemas especialistas com capacidade de explicação. Segundo \textcite{Clancey1983},
 a capacidade de justificar o próprio raciocínio é o que distingue fundamentalmente um sistema especialista
 de um mecanismo de filtragem simples. Um filtro responde apenas à pergunta \textit{"quais opções são válidas?"},
 enquanto um sistema especialista dotado de \textit{explanation facility} responde também à pergunta \textit{"por que as
-  demais são inválidas?"}, articulando a cadeia de regras e restrições que levou aquela conclusão. Nesse sentido,
+  demais são inválidas?"}, articulando a cadeia de regras e restrições que levou àquela conclusão. Nesse sentido,
 cada bloqueio silencioso de um mecanismo de filtragem é uma oportunidade de aprendizagem perdida ao usuário.
 
 Do ponto de vista da ciência da computação, o problema de configuração de \textit{hardware} recai formalmente

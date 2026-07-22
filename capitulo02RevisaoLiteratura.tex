@@ -29,13 +29,29 @@ Os módulos de memória RAM seguem padrões técnicos definidos pela JEDEC (\tex
 responsável pela padronização internacional de semicondutores. Os padrões DDR4 e DDR5, por exemplo, diferem em números de pinos, tensão de operação,
 frequência base e formato físico do encaixe \cite{JEDEC2020}. Essa diferença torna os dois padrões eletricamente e fisicamente incompatíveis:
 uma placa-mãe projetada para DDR5 não aceita módulos DDR4, e o próprio conector possui geometria distinta que impede a inserção física incorreta.
-A seleção de memória compatível depende, portanto, da placa-mãe selecionada, que por sua vez depende do processador, criando uma cadeia de
-dependências transitivas no grafo de restrições.
+
+O padrão de memória suportado por uma plataforma é determinado, em última instância, pelo controlador de memória
+integrado ao próprio processador. Nas plataformas AM4 e AM5, adotadas neste trabalho, cada processador suporta um
+único padrão, DDR4 e DDR5 respectivamente, e as placas-mãe compatíveis reproduzem essa restrição na geometria de
+seus \textit{slots}. Nessas plataformas, portanto, a dependência da memória em relação ao processador manifesta-se
+integralmente por intermédio da placa-mãe, o que permite modelá-la como uma restrição binária entre Placa-mãe e RAM,
+preservando a cadeia de dependências transitivas do grafo de restrições.
+
+Essa delimitação é intencional e não se generaliza a toda plataforma. Existem processadores cujo controlador de
+memória admite mais de um padrão, situação em que placas-mãe distintas de um mesmo soquete oferecem padrões
+diferentes para o mesmo processador. Nesses casos, a modelagem fiel exigiria uma restrição adicional e direta entre
+CPU e RAM, que introduziria um ciclo no grafo de restrições e demandaria as considerações discutidas na
+Subseção~\ref{subsec:tratabilidade}. A ampliação da base de conhecimento a plataformas com essa característica é
+registrada entre os trabalhos futuros no Capítulo~\ref{cap:12}.
 
 \subsection{Capacidade Energética e TDP}
 Cada componente de \textit{hardware} possui um indicador de consumo máximo de energia denominado TDP (\textit{Thermal Design Power}),
-expresso em watts. A fonte de alimentação deve fornecer capacidade suficiente para atender à demanda energética dos componentes, com uma margem de segurança
-recomendada de aproximadamente 20\% a 30\% acima do consumo \cite{ATXSPEC2022}. Embora o dimensionamento físico de uma fonte considere o
+expresso em watts. A fonte de alimentação deve fornecer capacidade suficiente para atender à demanda energética dos componentes. O
+sobredimensionamento em relação ao consumo calculado constitui prática recomendada pelos fabricantes, que incorporam reserva de
+potência às próprias ferramentas de dimensionamento, destinada a cobrir picos de carga, eventual substituição de componentes e a
+estabilidade da operação \cite{SEASONIC2026}. Não há, contudo, norma técnica que fixe um percentual específico de folga, de modo que
+o fator adotado neste trabalho é declarado explicitamente como heurística de projeto, em conformidade com o requisito RNF-09 e
+conforme detalhado na Subseção~\ref{sub:impl-avaliador}. Embora o dimensionamento físico de uma fonte considere o
 consumo conjunto de todos os componentes, a verificação de compatibilidade adotada neste trabalho modela essa restrição de forma binária,
 confrontando individualmente a demanda dos componentes de maior consumo, o processador e a placa de vídeo, com a capacidade da fonte.
 Essa decisão de modelagem preserva a natureza binária do grafo de restrições e é detalhada no Capítulo~\ref{cap:05}. Uma fonte subdimensionada
@@ -149,11 +165,12 @@ O grafo de restrições do sistema proposto é esparso por natureza: com cinco
 vértices (componentes), o número máximo de arestas seria 10, mas o sistema
 possui apenas quatro restrições binárias efetivas, soquete entre CPU e Placa-mãe,
 padrão de memória entre Placa-mãe e RAM, TDP da CPU e Fonte, e TDP da GPU e  Fonte.
-Pares como GPU e RAM ou CPU e GPU, não possuem restrições física direta e portanto
+Pares como GPU e RAM ou CPU e GPU não possuem restrições físicas diretas e, portanto,
 não são conectados por arestas. A lista de adjacência é, portanto, a representação
 mais adequada para esse grafo.
 
 \subsection{Grafo de Restrições}
+\label{subsec:grafo-restricoes}
 Dado um CSP com variáveis $X$ e restrições $C$, o grafo de restrições $G_C = (X, E)$
 é construído de modo que existe uma aresta $\{X_i, X_j\} \in E$ se e somente se existe
 alguma restrição $C$ envolvendo simultaneamente as variáveis $X_i$ e $X_j$ \cite{Russell2010}.
@@ -246,6 +263,7 @@ com retrocesso combinada com técnicas de propagação de restrições, que redu
 de busca de forma incremental.
 
 \subsection{Tratabilidade Estrutural da Instância Modelada}
+\label{subsec:tratabilidade}
 
 A classificação do CSP como NP-completo, discutida na seção anterior,
 refere-se à classe do problema em seu caso geral e fundamenta a decisão de
@@ -253,19 +271,24 @@ projeto por um motor de propagação genérico em detrimento de regras
 condicionais codificadas. Cabe, contudo, distinguir a dificuldade da classe
 da dificuldade da instância concreta modelada neste trabalho.
 
-O grafo de restrições apresentado na Subseção 2.3.3 possui cinco vértices e
+O grafo de restrições apresentado na Subseção~\ref{subsec:grafo-restricoes} possui cinco vértices e
 quatro arestas, dispostas na sequência RAM--Placa-mãe--CPU--Fonte--GPU.
 Trata-se, portanto, de um grafo conexo e acíclico, ou seja, uma árvore. Essa
 propriedade estrutural não é acidental, mas decorre da topologia física das
-dependências entre os componentes considerados.
+dependências entre os componentes considerados: cada restrição vincula
+exatamente um par de categorias, e nenhum par é alcançado por dois caminhos
+distintos de dependência.
 
-A literatura estabelece que CSPs cujo grafo de restrições é uma árvore
-constituem uma subclasse tratável, resolvível em tempo $O(nd^2)$ por meio de
-arco-consistência direcionada sobre uma ordenação topológica das variáveis,
-sem necessidade de busca com retrocesso (Russell; Norvig, 2010). Em redes
-acíclicas, a arco-consistência é suficiente para decidir a consistência
-global: uma vez estabelecida, qualquer atribuição pode ser estendida a uma
-solução completa sem retrocesso.
+A literatura estabelece que CSPs cujo grafo de restrições é acíclico constituem uma subclasse tratável.
+\textcite{Freuder1982} demonstra que, em redes com essa estrutura, a arco-consistência é condição suficiente para
+busca livre de retrocesso, resultado que permite resolver o problema em tempo $O(nd^2)$ por meio de
+arco-consistência direcionada sobre uma ordenação topológica das variáveis \cite{Russell2010,Dechter2003}. Duas
+consequências decorrem desse resultado e são relevantes ao sistema proposto. A primeira é que, uma vez estabelecida
+a arco-consistência sobre domínios não vazios, a existência de solução está assegurada, de modo que o motor decide a
+satisfatibilidade da rede sem enumerar o espaço de configurações completas. A segunda é que todo valor remanescente
+participa de ao menos uma solução completa, o que, aplicado ao domínio de \textit{hardware}, significa que nenhum
+componente exibido ao usuário como disponível conduz a uma configuração impossível de completar: a interface está
+estruturalmente livre de becos sem saída.
 
 Essa observação delimita com precisão o alcance da contribuição deste
 trabalho. A escolha do AC-3 como motor de inferência não se justifica pela
@@ -285,7 +308,7 @@ capacidade térmica, e com a memória RAM, por altura física, fechando o ciclo
 CPU--Cooler--RAM--Placa-mãe--CPU. Nesse cenário, a arco-consistência deixa
 de ser suficiente para decidir a satisfatibilidade e passa a operar como
 filtro, demandando sua combinação com busca sistemática. Essa ampliação é
-discutida entre os trabalhos futuros no Capítulo 11.
+discutida entre os trabalhos futuros no Capítulo~\ref{cap:12}.
 
 \section{Algoritmos de Busca e Backtracking}
 \label{sec:backtracking}
@@ -360,8 +383,8 @@ o \textit{forward checking} percorre os vizinhos de CPU no grafo de restrições
 de Placa-mãe todos os modelos com soquete incompatível com AM5, antes mesmo de tentar atribuir um valor
 a Placa-mãe. Essa poda antecipada reduz significativamente o número de atribuições exploradas.
 Contudo, o \textit{forward checking} verifica apenas os vizinhos diretos da variável recém-atribuída,
-sem propagar as consequências dessas remoções para variáveis mais distantes no grafo. A forma mais
-completa e eficiente de propagação, que garante consistência global na rede, é o Algoritmo AC-3 \cite{Mackworth1977,Russell2010}.
+sem propagar as consequências dessas remoções para variáveis mais distantes no grafo. A forma mais completa
+de propagação, que estende esse raciocínio a toda a rede e garante consistência global, é o Algoritmo AC-3 \cite{Mackworth1977,Russell2010}.
 
 \section{Propagação de Restrições e Algoritmo AC-3}
 \label{sec:ac3}
@@ -450,7 +473,7 @@ acessível ao usuário. Um mecanismo de filtragem simples responde apenas à per
 apresentando resultados sem elaboração. Um SE com \textit{explanation facility} responde também à pergunta
 "por que as demais opções são inválidas?", articulando a regra específica que foi violada.
 
-No contexto do sistema proposto, essa capacidade se manifesta da seguinte forma, ao bloquear a seleção de um módulo DDR4 após
+No contexto do sistema proposto, essa capacidade se manifesta da seguinte forma: ao bloquear a seleção de um módulo DDR4 após
 a escolha de uma CPU AM5, o sistema não se limita a remover o componente da lista de opções,
 ele apresenta ao usuário uma justificativa explícita como "Este módulo de memória é incompatível: a placa-mãe
 compatível com o processador selecionado suporta exclusivamente DDR5 e este módulo é DDR4". Essa explicação
@@ -468,10 +491,10 @@ ser adotado em decisões reais.
 
 A distinção central que o campo de XAI estabelece é entre sistemas caixa-preta (\textit{black-box}), cujo processo
 de decisão interno é opaco ao usuário, e sistemas transparentes, cujo raciocínio pode ser inspecionado e compreendido \cite{Arrieta2020}.
-Sistemas especialistas baseados em CSP pertencem naturalmente à segunda categoria, as variáveis, os domínios e as restrições
+Sistemas especialistas baseados em CSP pertencem naturalmente à segunda categoria: as variáveis, os domínios e as restrições
 são explícitos e auditáveis e cada decisão de bloqueio pode ser rastreada até a restrição específica que a originou.
 Nesse sentido, o motor de inferência CSP/AC-3 proposto neste trabalho é intrinsecamente explicável por \textit{design}, não por
-técnica de pós-processamento, mas pela própria natureza simbólica do modelo. Isso posiciona o sistema proposto em alinhamento com
+técnica de pós-processamento, e sim pela própria natureza simbólica do modelo. Isso posiciona o sistema proposto em alinhamento com
 os princípios contemporâneos de XAI, cada resultado produzido pelo motor de inferência é acompanhado da justificativa técnica
 que o fundamenta, tornando o processo de validação de \textit{hardware} transparente e auditável pelo usuário.
 
@@ -522,7 +545,7 @@ de cada bloqueio como uma oportunidade de aprendizagem, sem a complexidade adici
 O sistema proposto se enquadra na categoria de Sistema Especialista Educacional, um SE dotado de \textit{explanation facility}
 cuja interface é projetada com objetivo pedagógico explícito. A distinção em relação a um SE convencional reside na forma como
 as conclusões são comunicadas. Enquanto um SE padrão pode simplesmente retornar um resultado binário (compatível ou incompatível),
-um SE educacional articula a cadeia de raciocínio que levou aquela conclusão em linguagem acessível ao usuário \cite{Clancey1983}.
+um SE educacional articula a cadeia de raciocínio que levou àquela conclusão em linguagem acessível ao usuário \cite{Clancey1983}.
 
 No sistema proposto, essa dimensão educativa se manifesta de forma precisa e delimitada: ao detectar uma violação de restrição
 via propagação AC-3, o sistema não se limita a bloquear o componente incompatível, ele apresenta ao usuário uma justificativa explícita
@@ -678,7 +701,7 @@ validando a abordagem adotada no sistema de compatibilidade de \textit{hardware}
 
 \subsection{Posicionamento do Trabalho Proposto}
 A análise das plataformas comerciais e dos trabalhos acadêmicos permite identificar com precisão a contribuição do presente
-trabalho. Em relação as plataformas comerciais, o diferencial está na \textit{explanation facility}. enquanto PC Part Picker
+trabalho. Em relação às plataformas comerciais, o diferencial está na \textit{explanation facility}: enquanto PC Part Picker
 e Meupc.net sinalizam incompatibilidades sem explicá-las, o sistema proposto articula a regra técnica violada em cada bloqueio,
 transformando a interação em uma oportunidade de aprendizagem. Em relação aos trabalhos acadêmicos, a contribuição está na combinação
 de três elementos que, individualmente, já são estudados na literatura, CSP como motor de inferência \cite{Sabin1998}, sistema

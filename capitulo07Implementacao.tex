@@ -8,7 +8,7 @@ Este capítulo descreve a concretização do sistema especialista educacional cu
 \label{sec:ambiente-implementacao}
 % ============================================================
 
-A escolha das tecnologias foi orientada por um princípio unificador: adotar um único ecossistema de linguagem em todas as camadas, de modo a permitir o compartilhamento de definições de tipos entre o servidor e o cliente. Por essa razão, o sistema foi desenvolvido integralmente em \textit{TypeScript}~\cite{TypeScript}, cuja tipagem estática permite que os contratos de dados trafegados entre as camadas sejam verificados em tempo de compilação, reduzindo a classe de erros que só se manifestaria em execução. O ambiente de execução do lado do servidor é o \textit{Node.js}~\cite{NodeJS}, escolhido justamente por executar TypeScript no servidor e, assim, viabilizar esse ecossistema unificado.
+A escolha das tecnologias foi orientada por um princípio unificador: adotar um único ecossistema de linguagem em todas as camadas, de modo a permitir o compartilhamento de definições de tipos entre o servidor e o cliente. Por essa razão, o sistema foi desenvolvido integralmente em \textit{TypeScript}~\cite{TypeScript}, cuja tipagem estática permite que os contratos de dados trafegados entre as camadas sejam verificados em tempo de compilação, reduzindo a classe de erros que só se manifestaria em execução. O ambiente de execução do lado do servidor é o \textit{Node.js}~\cite{NodeJS}, escolhido por constituir o ambiente de destino do código TypeScript após sua transpilação e, assim, viabilizar o ecossistema unificado pretendido. A verificação dos tipos ocorre em tempo de compilação, anteriormente à execução, de modo que os contratos de dados compartilhados entre servidor e cliente são validados antes da entrada em operação do sistema.
 
 A camada de dados é provida pelo \textit{PostgreSQL}~\cite{PostgreSQL} em sua versão 16, selecionado por sua robustez, conformidade com o padrão SQL e adequação ao modelo relacional exigido pela base de conhecimento. Sua execução em contêiner por meio do \textit{Docker}~\cite{Docker} foi uma decisão deliberada para garantir um ambiente de banco de dados reprodutível e idêntico entre as máquinas de desenvolvimento, atendendo diretamente ao requisito RNF-12 e dispensando a instalação manual do banco no sistema operacional. Durante o desenvolvimento, a inspeção e a manipulação manual dos dados foram realizadas com o \textit{DBeaver}~\cite{DBeaver}, e a codificação foi conduzida no \textit{Visual Studio Code}~\cite{VSCode}. O Quadro~\ref{qua:versoes} consolida as versões das principais tecnologias empregadas.
 
@@ -126,7 +126,7 @@ A camada de lógica de negócio é o núcleo inteligente do sistema e concentra 
 \label{sub:isolamento-motor}
 A decisão de projeto mais importante desta camada foi manter o motor de inferência inteiramente independente do \textit{framework} e do mecanismo de persistência. Os arquivos que implementam o algoritmo AC-3 (\texttt{ac3.ts}) e a avaliação de restrições (\texttt{constraint-evaluator.ts}) não importam qualquer artefato do NestJS ou do Prisma, não contêm decoradores nem efeitos colaterais de entrada e saída, operando como funções puras sobre estruturas de dados recebidas por parâmetro.
 
-Esse isolamento não é um detalhe de organização, mas o que garante três propriedades fundamentais do trabalho. Primeiro, o determinismo (RNF-10): sem qualquer dependência de estado externo ou de operações de entrada e saída, a mesma entrada produz invariavelmente a mesma saída. Segundo, a testabilidade: por não depender do \textit{framework}, o motor pode ser exercitado por testes unitários que não exigem servidor nem banco de dados em execução. Terceiro, e mais importante para a tese central deste trabalho, a agnosticidade ao domínio: o motor não conhece o conceito de \textit{hardware}, de soquete ou de TDP, opera exclusivamente sobre variáveis, domínios e restrições. Todo o conhecimento específico do domínio reside nos dados, e não no algoritmo, o que torna o motor, em princípio, aplicável a qualquer problema de configuração modelável como CSP.
+Esse isolamento não é um detalhe de organização, mas o que garante três propriedades fundamentais do trabalho. Primeiro, o determinismo (RNF-10): sem qualquer dependência de estado externo ou de operações de entrada e saída, a mesma entrada produz invariavelmente a mesma saída. Segundo, a testabilidade: por não depender do \textit{framework}, o motor pode ser exercitado por testes unitários que não exigem servidor nem banco de dados em execução. Terceiro, e mais importante para a tese central deste trabalho, a agnosticidade ao domínio: o motor não conhece o conceito de \textit{hardware}, de soquete ou de TDP, opera exclusivamente sobre variáveis, domínios e restrições. Todo o conhecimento específico do domínio reside nos dados, e não no algoritmo, o que torna o motor aplicável a problemas de configuração cujas restrições sejam expressáveis pelos operadores suportados, e cuja ampliação a novos operadores depende apenas da extensão do tipo enumerado correspondente e de seu tratamento no avaliador.
 
 \subsection{Carregamento e Montagem do Grafo}
 \label{sub:montagem-grafo}
@@ -236,11 +236,18 @@ export function avaliarRestricao(
   const val2 = getValor(valorVar2, restricao.caracteristica2Id);
   if (val1 === undefined || val2 === undefined) return true;
 
-  if (restricao.operador === 'IGUAL') {
-    return val1 === val2;
+  switch (restricao.operador) {
+    case 'IGUAL':
+      return val1 === val2;
+    case 'MAIOR_OU_IGUAL': {
+      const parametro = Number(restricao.parametro ?? '1');
+      return Number(val2) >= Number(val1) * parametro;
+    }
+    default: {
+      const _exaustivo: never = restricao.operador;
+      throw new Error(`Operador de restricao nao suportado: ${_exaustivo}`);
+    }
   }
-  const parametro = Number(restricao.parametro ?? '1');
-  return Number(val2) >= Number(val1) * parametro;
 }
 \end{lstlisting}
 \fonte{Elaborado pelo autor}
@@ -256,6 +263,14 @@ não se encontra codificado no motor de inferência, mas cadastrado como parâme
 restrição na base de conhecimento, de modo que o sistema admite qualquer fator de acréscimo
 sem alteração do algoritmo. Essa característica reforça os requisitos de expansibilidade
 estabelecidos, uma vez que o ajuste da margem depende apenas da atualização de um registro.
+
+A aplicação do operador é realizada por meio de uma estrutura de seleção exaustiva sobre o
+tipo enumerado \texttt{OperadorRestricao}, cuja completude é verificada pelo compilador: a
+inclusão de um novo operador na base de conhecimento sem o correspondente tratamento no
+avaliador impede a compilação do projeto, em vez de produzir comportamento silencioso em
+tempo de execução. Essa propriedade é relevante ao requisito RNF-07, pois assegura que a
+expansibilidade do motor por meio de dados permaneça acompanhada de verificação estática do
+avaliador que os interpreta.
 
 \subsection{Geração das Justificativas Educativas}
 \label{sub:impl-explicacoes}
@@ -331,6 +346,17 @@ Em conformidade com o rigor esperado de um trabalho de engenharia, registram-se 
 A primeira limitação decorre da própria generalidade do motor. Como a corretude das validações depende do cadastro correto das restrições na base de conhecimento, uma restrição quantitativa cadastrada com as características de demanda e de capacidade invertidas seria avaliada na ordem trocada, podendo produzir um falso-positivo. Trata-se de uma característica inerente aos sistemas especialistas dirigidos a dados, nos quais a qualidade da inferência é indissociável da qualidade da base de conhecimento\cite{Todd1992}; a mitigação estrutural desse risco, por meio de validação de esquema no momento do cadastro, é identificada como trabalho futuro.
 
 A segunda limitação refere-se à modelagem da restrição de capacidade energética. Cada verificação de potência é realizada de forma binária, confrontando individualmente o TDP da CPU e o da GPU com a capacidade da fonte, o que preserva a natureza estritamente binária do grafo de restrições adotada em todo o trabalho. O consumo agregado da configuração é calculado e apresentado ao usuário na tela de resumo como informação, mas não é modelado como uma restrição do CSP, uma vez que uma restrição sobre a soma dos consumos seria de ordem superior à binária. Essa delimitação é intencional e mantém a coerência entre a fundamentação teórica e a implementação.
+
+A terceira limitação decorre do tratamento de características ausentes. O avaliador genérico
+considera satisfeita toda restrição cujos operandos não estejam cadastrados para o par de
+componentes avaliado, decisão que evita bloqueios espúrios decorrentes de cadastro
+incompleto, mas que admite, como contrapartida, que uma característica omitida na base de
+conhecimento resulte na liberação de um componente efetivamente incompatível. Trata-se de
+manifestação particular da dependência entre a qualidade da inferência e a qualidade da base
+de conhecimento já apontada. A mitigação estrutural, por meio de validação de completude no
+momento do cadastro que assegure que toda categoria participante de uma restrição possua as
+características correspondentes registradas para todos os seus componentes, é identificada
+como trabalho futuro.
 
 Por fim, a estratégia de testes automatizados encontra-se parcialmente desenvolvida. O motor de inferência dispõe de testes unitários que asseguram seu determinismo e a corretude da propagação, mas os testes de integração da API e os testes da camada de apresentação estão previstos como atividade posterior, conforme registrado entre os requisitos adiados na Seção~\ref{sec:req-adiados} do Capítulo~\ref{cap:05}.
 

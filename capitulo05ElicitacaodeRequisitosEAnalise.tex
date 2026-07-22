@@ -246,7 +246,7 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
     \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
       \item Os padrões DDR4 e DDR5 são física e eletricamente incompatíveis.
       \item O padrão do módulo deve corresponder exatamente ao suportado pela placa-mãe.
-      \item A restrição é transitiva: depende da placa-mãe, que por sua vez depende da CPU selecionada.
+      \item A restrição é transitiva nas plataformas AM4 e AM5 modeladas: depende da placa-mãe, que por sua vez depende da CPU selecionada.
       \item Incompatibilidade detectada deve bloquear o componente e acionar o módulo de explicação (RF-12).
     \end{enumerate} \\ \hline
     \textbf{Prioridade} & Essencial                                                                         \\ \hline
@@ -269,11 +269,11 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
     \textbf{Descrição}  &
     \textbf{Ação:} Validar.
     \textbf{Objeto:} Capacidade energética da fonte de alimentação em relação ao consumo de cada componente (instâncias de restrição quantitativa do conjunto $C$).
-    \textbf{Atributos:} TDP da CPU (W), TDP da GPU (W), potência da fonte (W), margem de segurança recomendada (20--30\%).
-    \textbf{Exemplos:} \{GPU TDP: 170\,W, Fonte: 250\,W\} $\rightarrow$ bloqueado (170\,W $\times$ 1,25 = 212,5\,W, porém a fonte deve suportar cada demanda com margem e a configuração completa a excede); \{GPU TDP: 170\,W, Fonte: 550\,W\} $\rightarrow$ válido.
+    \textbf{Atributos:} TDP da CPU (W), TDP da GPU (W), potência da fonte (W), margem de segurança cadastrada (25\%).
+    \textbf{Exemplos:} \{GPU TDP: 220\,W, Fonte: 250\,W\} $\rightarrow$ incompatível, pois 220\,W $\times$ 1,25 = 275\,W e a fonte oferece 250\,W; \{GPU TDP: 220\,W, Fonte: 550\,W\} $\rightarrow$ compatível, pois 550\,W $\geq$ 275\,W.
     \textbf{Restrições:}
     \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
-      \item A fonte deve suprir a demanda energética de cada componente de maior consumo (CPU e GPU) individualmente, acrescida de margem de segurança de 20--30\%, preservando a natureza binária das restrições do grafo.
+      \item A fonte deve suprir a demanda energética de cada componente de maior consumo (CPU e GPU) individualmente, acrescida de margem de segurança de 25\%, preservando a natureza binária das restrições do grafo.
       \item A restrição é quantitativa (desigualdade), diferentemente das restrições binárias de soquete e memória.
       \item Fonte subdimensionada deve ser bloqueada e acionar o módulo de explicação com os valores calculados (RF-13).
       \item O consumo agregado da configuração é calculado e exibido ao usuário a título informativo, não constituindo restrição do CSP.
@@ -413,7 +413,7 @@ quanto à operação (\textit{Entrada}, \textit{Processamento} ou \textit{Saída
     \textbf{Ação:} Exibir alerta com explicação e valores calculados.
     \textbf{Objeto:} Fonte de alimentação com potência insuficiente para um componente.
     \textbf{Atributos:} consumo do componente (W), potência mínima recomendada com margem (W), potência da fonte bloqueada (W).
-    \textbf{Exemplos:} ``Esta fonte de 250\,W é insuficiente para a Radeon RX 7900 XT, que exige no mínimo 212,5\,W com a margem de segurança de 25\%.''
+    \textbf{Exemplos:} ``Esta fonte de 350\,W é insuficiente para a Radeon RX 7900 XT, cujo consumo de 315\,W exige no mínimo 393,75\,W com a margem de segurança de 25\% aplicada.''
     \textbf{Restrições:}
     \begin{enumerate}[nosep,leftmargin=1.2em,topsep=2pt,partopsep=0pt,parsep=0pt,itemsep=1pt]
       \item O alerta deve exibir o consumo do componente e a potência mínima recomendada com a margem aplicada.
